@@ -53,10 +53,7 @@
   a[rel="permalink"]::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
   }
 
   a + a {
@@ -64,7 +61,7 @@
   }
 }
 
-/* remove border*/
+/* remove border */
 .page__content {
   .archive__item-title {
     margin-top: 1em;
@@ -168,8 +165,8 @@
   }
 
   @include breakpoint($medium) {
-    margin-left: 0; /* override margin*/
-    margin-right: 0; /* override margin*/
+    margin-left: 0; /* override margin */
+    margin-right: 0; /* override margin */
     width: span(3 of 12);
 
     &:nth-child(2n + 1) {
@@ -239,7 +236,8 @@
    ========================================================================== */
 
 .feature__wrapper {
-  @include clearfix();
+  @include clearfix;
+
   margin-bottom: 2em;
   border-bottom: 1px solid $border-color;
 
@@ -287,10 +285,7 @@
   a.btn::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
   }
 
   &--left {
@@ -313,10 +308,7 @@
     a.btn::before {
       content: '';
       position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
     }
 
     @include breakpoint($small) {
@@ -354,10 +346,7 @@
     a.btn::before {
       content: '';
       position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
     }
 
     @include breakpoint($small) {
@@ -398,10 +387,7 @@
     a.btn::before {
       content: '';
       position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
     }
 
     @include breakpoint($small) {

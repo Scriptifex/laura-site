@@ -123,7 +123,7 @@
   $span,
   $columns: susy-get('columns')
 ) {
-  @if ($span == 'all') {
+  @if $span == 'all' {
     @return length($columns);
   }
 
@@ -166,16 +166,17 @@
     @return _susy-flatten($columns);
   }
 
-  @if (type-of($columns) == 'number') and (unitless($columns)) {
+  @if type-of($columns) == 'number' and unitless($columns) {
     $span: $columns;
     $context: map-get($context, 'columns');
     $symmetrical: susy-repeat(length($context), nth($context, 1));
 
-    @if ($context == $symmetrical) {
+    @if $context == $symmetrical {
       @return susy-repeat($span, nth($context, 1));
     } @else {
       $actual: 'of `#{$span}`';
       $columns: 'grid-columns `#{$context}`';
+
       @return _susy-error(
         'context-slice #{$actual} can not be determined based on #{$columns}.',
         'susy-normalize-columns');

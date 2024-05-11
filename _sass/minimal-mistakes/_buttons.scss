@@ -25,7 +25,7 @@
   }
 
   .icon + .hidden {
-    margin-left: -0.5em; /* override for hidden text*/
+    margin-left: -0.5em; /* override for hidden text */
   }
 
   /* button colors */
@@ -44,10 +44,12 @@
   @each $buttoncolor, $color in $buttoncolors {
     &--#{$buttoncolor} {
       @include yiq-contrasted($color);
-      @if ($buttoncolor == inverse) {
+
+      @if $buttoncolor == inverse {
         border: 1px solid $border-color;
       }
-      @if ($buttoncolor == light-outline) {
+
+      @if $buttoncolor == light-outline {
         border: 1px solid #fff;
       }
 

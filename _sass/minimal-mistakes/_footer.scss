@@ -4,20 +4,20 @@
 
 .page__footer {
   @include clearfix;
+
   float: left;
   margin-left: 0;
   margin-right: 0;
   width: 100%;
   margin-top: 3em;
   color: $muted-text-color;
-  -webkit-animation: $intro-transition;
   animation: $intro-transition;
-  -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
   background-color: $footer-background-color;
 
   footer {
     @include clearfix;
+
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
@@ -67,7 +67,7 @@
     text-transform: uppercase;
   }
 
-  li + li:before {
+  li + li::before {
     content: "";
     padding-right: 5px;
   }

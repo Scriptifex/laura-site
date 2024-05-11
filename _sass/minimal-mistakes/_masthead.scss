@@ -5,20 +5,19 @@
 .masthead {
   position: relative;
   border-bottom: 1px solid $border-color;
-  -webkit-animation: $intro-transition;
   animation: $intro-transition;
-  -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
 
   &__inner-wrap {
     @include clearfix;
+
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
     max-width: 100%;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -45,11 +44,12 @@
 
 .site-title {
   display: -webkit-box;
-  display: -ms-flexbox;
+  display: flexbox;
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
+
   // z-index: 20;
 }
 

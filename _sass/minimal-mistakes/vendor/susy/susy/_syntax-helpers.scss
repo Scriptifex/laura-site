@@ -110,7 +110,7 @@
   $normal-config: susy-normalize($config);
 
   // Parse and normalize shorthand
-  @if (type-of($short) != 'map') and (length($short) > 0) {
+  @if type-of($short) != 'map' and length($short) > 0 {
     $short: susy-parse($short, $context-only);
   }
 
@@ -169,11 +169,11 @@
     'su-gutter': ('columns', 'gutters', 'container-spread'),
     'su-slice': ('span', 'columns', 'location'),
   );
-
   $args: map-get($grid-function-args, $name);
 
   @if not $args {
     $options: 'Try one of these: #{map-keys($grid-function-args)}';
+
     @return _susy-error(
       '#{$name} is not a public Su function. #{$options}',
       'su-call');

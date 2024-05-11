@@ -24,7 +24,7 @@
 ) {
   $x: $column - 1;
 
-  @if ($x > 0) {
+  @if $x > 0 {
     $x: susy-span(first $x wide, $grid);
   }
 
@@ -53,13 +53,13 @@
   $gutters: su-valid-gutters(map-get($grid, 'gutters'));
   $container: su-valid-spread(map-get($grid, 'container-spread')) + 1;
 
-  @if ($container == 0) {
+  @if $container == 0 {
     @return null;
   }
 
   $gutter: su-call('su-gutter', $grid);
 
-  @if (type-of($gutter) == 'string') {
+  @if type-of($gutter) == 'string' {
     @return 'calc(#{$container} * #{$gutter} / 2)';
   }
 

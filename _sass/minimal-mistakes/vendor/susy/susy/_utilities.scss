@@ -63,13 +63,12 @@ $_susy-error-output-override: false !default;
 ) {
   $first: nth($lengths, 1);
 
-  @if (length($lengths) == 1) {
+  @if length($lengths) == 1 {
     @return if(unitless($first), 'fluid', 'static');
   }
 
   @for $i from 2 through length($lengths) {
     $comp: nth($lengths, $i);
-
     $fail: not comparable($first, $comp);
     $fail: $fail or (unitless($first) and not unitless($comp));
     $fail: $fail or (unitless($comp) and not unitless($first));
@@ -115,7 +114,7 @@ $_susy-error-output-override: false !default;
   $unit: $value * 0;
   $has: map-get($map, $unit) or 0;
 
-  @if ($has == 0) {
+  @if $has == 0 {
     @each $try, $could in $map {
       $match: comparable($try, $value);
       $unit: if($match, $try, $unit);
@@ -148,13 +147,13 @@ $_susy-error-output-override: false !default;
   $flat: ();
 
   // Don't iterate over maps
-  @if (type-of($list) == 'map') {
+  @if type-of($list) == 'map' {
     @return $list;
   }
 
   // Iterate over lists (or single items)
   @each $item in $list {
-    @if (type-of($item) == 'list') {
+    @if type-of($item) == 'list' {
       $item: _susy-flatten($item);
       $flat: join($flat, $item);
     } @else {

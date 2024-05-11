@@ -74,8 +74,8 @@
   $gutters: su-valid-gutters($gutters);
   $spread: su-valid-spread($spread);
 
-  @if (type-of($span) == 'number') {
-    @if (not unitless($span)) {
+  @if type-of($span) == 'number' {
+    @if not unitless($span) {
       @return $span;
     }
 
@@ -92,6 +92,7 @@
   @if unitless($span-width) {
     $container-spread: su-valid-spread($container-spread);
     $container: _su-sum($columns, $gutters, $container-spread, $validate: false);
+
     @return percentage(math.div($span-width, $container));
   }
 
@@ -132,8 +133,8 @@
   $gutters,
   $container-spread
 ) {
-  @if (type-of($gutters) == 'number') {
-    @if ($gutters == 0) or (not unitless($gutters)) {
+  @if type-of($gutters) == 'number' {
+    @if $gutters == 0 or not unitless($gutters) {
       @return $gutters;
     }
   }
@@ -143,6 +144,7 @@
   }
 
   $container: _su-sum($columns, $gutters, $container-spread);
+
   @return percentage(math.div($gutters, $container));
 }
 
@@ -231,6 +233,7 @@
 
   // Calculate column-sum
   $column-sum: 0;
+
   @each $column in $columns {
     $column-sum: $column-sum + $column;
   }
@@ -293,14 +296,13 @@
   $fluid-span: map-get($span, 'fluid');
   $fixed-context: map-get($context, 'fixed');
   $fluid-context: map-get($context, 'fluid');
-
   $calc: '#{$fixed-span}';
   $fluid-calc: '(100% - #{$fixed-context})';
 
   // Fluid-values
-  @if (not $fluid-span) {
+  @if not $fluid-span {
     $fluid-calc: null;
-  } @else if ($fluid-span != $fluid-context) {
+  } @else if $fluid-span != $fluid-context {
     $fluid-span: '* #{$fluid-span}';
     $fluid-context: if($fluid-context, '/ #{$fluid-context}', '');
     $fluid-calc: '(#{$fluid-calc $fluid-context $fluid-span})';
@@ -354,7 +356,7 @@
   $calc: null;
 
   // Gutters
-  $gutters:  $gutters * (length($columns) + $spread);
+  $gutters: $gutters * (length($columns) + $spread);
 
   // Columns
   @each $col in append($columns, $gutters) {
@@ -367,7 +369,7 @@
 
   // Compile Fixed Units
   @each $unit, $total in $fixed {
-    @if ($total != (0 * $total)) {
+    @if $total != (0 * $total) {
       $calc: if($calc, '#{$calc} + #{$total}', '#{$total}');
     }
   }
@@ -431,9 +433,9 @@
   $check: if($has-gutter, append($span, $gutters), $span);
   $safe-span: _su-is-comparable($check...);
 
-  @if ($safe-span == 'static') {
+  @if $safe-span == 'static' {
     @return false;
-  } @else if (not $safe-span) {
+  } @else if not $safe-span {
     @return true;
   }
 

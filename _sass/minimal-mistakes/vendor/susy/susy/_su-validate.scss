@@ -34,13 +34,15 @@
   $span
 ) {
   $type: type-of($span);
-  @if ($type == 'number') {
+
+  @if $type == 'number' {
     @return $span;
-  } @else if ($type == 'list') and su-valid-columns($span, 'silent-failure') {
+  } @else if $type == 'list' and su-valid-columns($span, 'silent-failure') {
     @return $span;
   }
 
   $actual: '[#{type-of($span)}] `#{inspect($span)}`';
+
   @return _susy-error(
     '#{$actual} is not a valid number, length, or column-list for $span.',
     'su-valid-span');
@@ -69,11 +71,11 @@
   $columns,
   $silent-failure: false
 ) {
-  @if (type-of($columns) == 'list') {
+  @if type-of($columns) == 'list' {
     $fail: false;
 
     @each $col in $columns {
-      @if (type-of($col) != 'number') {
+      @if type-of($col) != 'number' {
         $fail: true;
       }
     }
@@ -117,11 +119,12 @@
 ) {
   $type: type-of($gutters);
 
-  @if ($type == 'number') {
+  @if $type == 'number' {
     @return $gutters;
   }
 
   $actual: '[#{$type}] `#{inspect($gutters)}`';
+
   @return _susy-error(
     '#{$actual} is not a number or length for $gutters.',
     'su-valid-gutters');
@@ -153,6 +156,7 @@
   }
 
   $actual: '[#{type-of($spread)}] `#{inspect($spread)}`';
+
   @return _susy-error(
     '#{$actual} is not a normalized [0 | 1 | -1] value for `$spread`.',
     'su-valid-spread');
@@ -188,21 +192,23 @@
   $count: length($columns);
 
   @if $location {
-    @if (type-of($location) != 'number') or (not unitless($location)) {
+    @if type-of($location) != 'number' or not unitless($location) {
       $actual: '[#{type-of($location)}] `#{$location}`';
+
       @return _susy-error(
         '#{$actual} is not a unitless number for $location.',
         'su-valid-location');
-    } @else if (round($location) != $location) {
+    } @else if round($location) != $location {
       @return _susy-error(
         'Location (`#{$location}`) must be a 1-indexed intiger position.',
         'su-valid-location');
-    } @else if ($location > $count) or ($location < 1) {
+    } @else if $location > $count or $location < 1 {
       @return _susy-error(
         'Position `#{$location}` does not exist in grid `#{$columns}`.',
         'su-valid-location');
-    } @else if ($location + $span - 1 > $count) {
+    } @else if $location + $span - 1 > $count {
       $details: 'grid `#{$columns}` for span `#{$span}` at `#{$location}`';
+
       @return _susy-error(
         'There are not enough columns in #{$details}.',
         'su-valid-location');

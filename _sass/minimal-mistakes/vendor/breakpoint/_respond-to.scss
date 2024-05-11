@@ -10,6 +10,7 @@ $BREAKPOINTS: () !default;
 @mixin respond-to($context, $no-query: false) {
   @if length($breakpoints) > 0 and length($BREAKPOINTS) == 0 {
     @warn "In order to avoid variable namespace collisions, we have updated the way to add breakpoints for respond-to. Please change all instances of `$breakpoints: add-breakpoint()` to `@include add-breakpoint()`. The `add-breakpoint()` function will be deprecated in a future release.";
+
     $BREAKPOINTS: $breakpoints !global;
     $breakpoints: () !global;
   }
@@ -18,17 +19,14 @@ $BREAKPOINTS: () !default;
     // Just in case someone writes gibberish to the $breakpoints variable.
     @warn "Your breakpoints aren't a map! `respond-to` expects a map. Please check the value of $BREAKPOINTS variable.";
     @content;
-  }
-  @else if map-has-key($BREAKPOINTS, $context) {
+  } @else if map-has-key($BREAKPOINTS, $context) {
     @include breakpoint(map-get($BREAKPOINTS, $context), $no-query) {
       @content;
     }
-  }
-  @else if not map-has-key($BREAKPOINTS, $context) {
+  } @else if not map-has-key($BREAKPOINTS, $context) {
     @warn "`#{$context}` isn't a defined breakpoint! Please add it using `$breakpoints: add-breakpoint(`#{$context}`, $value);`";
     @content;
-  }
-  @else {
+  } @else {
     @warn "You haven't created any breakpoints yet! Make some already! `@include add-breakpoint($name, $bkpt)`";
     @content;
   }
@@ -43,13 +41,11 @@ $BREAKPOINTS: () !default;
 
   @if length($breakpoints) == 0 {
     @return $output;
-  }
-  @else {
+  } @else {
     @if map-has-key($breakpoints, $name) and $overwrite != true {
       @warn "You already have a breakpoint named `#{$name}`, please choose another breakpoint name, or pass in `$overwrite: true` to overwrite the previous breakpoint.";
       @return $breakpoints;
-    }
-    @else if not map-has-key($breakpoints, $name) or $overwrite == true {
+    } @else if not map-has-key($breakpoints, $name) or $overwrite == true {
       @return map-merge($breakpoints, $output);
     }
   }
@@ -60,13 +56,12 @@ $BREAKPOINTS: () !default;
 
   @if length($BREAKPOINTS) == 0 {
     $BREAKPOINTS: $output !global;
-  }
-  @else {
+  } @else {
     @if map-has-key($BREAKPOINTS, $name) and $overwrite != true {
       @warn "You already have a breakpoint named `#{$name}`, please choose another breakpoint name, or pass in `$overwrite: true` to overwrite the previous breakpoint.";
+
       $BREAKPOINTS: $BREAKPOINTS !global;
-    }
-    @else if not map-has-key($BREAKPOINTS, $name) or $overwrite == true {
+    } @else if not map-has-key($BREAKPOINTS, $name) or $overwrite == true {
       $BREAKPOINTS: map-merge($BREAKPOINTS, $output) !global;
     }
   }
@@ -75,8 +70,7 @@ $BREAKPOINTS: () !default;
 @function get-breakpoint($name: false) {
   @if $name == false {
     @return $BREAKPOINTS;
-  }
-  @else {
+  } @else {
     @return map-get($BREAKPOINTS, $name);
   }
 }

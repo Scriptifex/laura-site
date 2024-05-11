@@ -2,6 +2,7 @@
 
 @function breakpoint-build-resolution($query-print, $query-resolution, $empty-media, $first) {
   $leader: '';
+
   // If we're forcing
   @if not ($empty-media) or not ($first) {
     $leader: 'and ';
@@ -14,17 +15,16 @@
 
     @for $i from 1 through $length {
       $query: '#{$query-print} #{$leader}#{nth($resolutions, $i)}';
+
       @if $i == 1 {
         $query-holder: $query;
-      }
-      @else {
+      } @else {
         $query-holder: '#{$query-holder}, #{$query}';
       }
     }
 
     @return $query-holder;
-  }
-  @else {
+  } @else {
     // Return with attached resolution
     @return $query-print;
   }

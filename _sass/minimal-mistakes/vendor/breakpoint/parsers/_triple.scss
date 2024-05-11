@@ -15,15 +15,14 @@
   // separate the string features from the value numbers
   $string: null;
   $numbers: null;
+
   @each $val in $feature {
     @if type-of($val) == string {
       $string: $val;
-    }
-    @else {
+    } @else {
       @if type-of($numbers) == 'null' {
         $numbers: $val;
-      }
-      @else {
+      } @else {
         $numbers: append($numbers, $val);
       }
     }

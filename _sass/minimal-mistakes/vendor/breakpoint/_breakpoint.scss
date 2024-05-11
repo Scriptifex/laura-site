@@ -17,7 +17,6 @@ $Breakpoint-Settings: (
 
   'legacy syntax': false
 );
-
 $breakpoint: () !default;
 
 //////////////////////////////
@@ -28,9 +27,7 @@ $breakpoint: () !default;
 @import "helpers";
 @import "parsers";
 @import "no-query";
-
 @import "respond-to";
-
 @import "legacy-settings";
 
 //////////////////////////////
@@ -41,13 +38,11 @@ $breakpoint: () !default;
   @include legacy-settings-warning;
 
   // Reset contexts
-  @include private-breakpoint-reset-contexts();
+  @include private-breakpoint-reset-contexts;
 
   $breakpoint: breakpoint($query, false);
-
   $query-string: map-get($breakpoint, 'query');
   $query-fallback: map-get($breakpoint, 'fallback');
-
   $private-breakpoint-context-holder: map-get($breakpoint, 'context holder') !global;
   $private-breakpoint-query-count: map-get($breakpoint, 'query count') !global;
 
@@ -68,19 +63,16 @@ $breakpoint: () !default;
   }
 
   @if breakpoint-get('no query fallbacks') != false or breakpoint-get('no queries') == true {
-
     $type: type-of(breakpoint-get('no query fallbacks'));
     $print: false;
 
-    @if ($type == 'bool') {
+    @if $type == 'bool' {
       $print: true;
-    }
-    @else if ($type == 'string') {
+    } @else if $type == 'string' {
       @if $query-fallback == breakpoint-get('no query fallbacks') {
         $print: true;
       }
-    }
-    @else if ($type == 'list') {
+    } @else if $type == 'list' {
       @each $wrapper in breakpoint-get('no query fallbacks') {
         @if $query-fallback == $wrapper {
           $print: true;
@@ -89,21 +81,20 @@ $breakpoint: () !default;
     }
 
     // Write Fallback
-    @if ($query-fallback != false) and ($print == true) {
+    @if $query-fallback != false and $print == true {
       $type-fallback: type-of($query-fallback);
 
-      @if ($type-fallback != 'bool') {
+      @if $type-fallback != 'bool' {
         #{$query-fallback} & {
           @content;
         }
-      }
-      @else {
+      } @else {
         @content;
       }
     }
   }
 
-  @include private-breakpoint-reset-contexts();
+  @include private-breakpoint-reset-contexts;
 }
 
 

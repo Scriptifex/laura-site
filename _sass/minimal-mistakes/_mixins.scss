@@ -5,9 +5,10 @@
 @use "sass:math";
 
 %tab-focus {
-  /* Default*/
+  /* Default */
   outline: thin dotted $focus-color;
-  /* Webkit*/
+
+  /* Webkit */
   outline: 5px auto $focus-color;
   outline-offset: -2px;
 }
@@ -66,7 +67,6 @@
   $red: red($color);
   $green: green($color);
   $blue: blue($color);
-
   $yiq: (($red*299)+($green*587)+($blue*114))*0.001;
 
   @if $yiq-debug { @debug $yiq, $threshold; }

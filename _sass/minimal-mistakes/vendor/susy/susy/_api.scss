@@ -147,6 +147,7 @@
   }
 
   $actual: '[#{type-of($span)}] `#{inspect($span)}`';
+
   @return _susy-error(
     'Unable to determine span value from #{$actual}.',
     'susy-span');

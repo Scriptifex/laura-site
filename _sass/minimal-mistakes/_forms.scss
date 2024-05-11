@@ -3,7 +3,7 @@
    ========================================================================== */
 
 form {
-  margin: 0 0 5px 0;
+  margin: 0 0 5px;
   padding: 1em;
   background-color: $form-background-color;
 
@@ -30,7 +30,7 @@ form {
 
   ul {
     list-style-type: none;
-    margin: 0 0 5px 0;
+    margin: 0 0 5px;
     padding: 0;
   }
 
@@ -332,7 +332,7 @@ select:focus {
      .form--loading
      ========================================================================== */
 
-.form--loading:before {
+.form--loading::before {
   content: "";
 }
 
@@ -340,13 +340,13 @@ select:focus {
   display: block;
 }
 
-.form:before {
+.form::before {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgb(255 255 255 / 70%);
   z-index: 10;
 }
 

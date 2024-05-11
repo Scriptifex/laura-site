@@ -26,7 +26,7 @@
   $_svg-units: ('em', 'ex', 'px', 'pt', 'pc', 'cm', 'mm', 'in', '%');
   $string: type-of($length) == 'string';
 
-  @if ($length == 0) or ($string) or index($_svg-units, unit($length)) {
+  @if $length == 0 or ($string) or index($_svg-units, unit($length)) {
     @return $length;
   }
 
@@ -61,7 +61,7 @@
   $width: _susy-svg-validate-units($width);
   $offset: if($offset == 0, null, $offset);
 
-  @if (type-of($offset) == 'number') and (type-of($x) == 'number') {
+  @if type-of($offset) == 'number' and type-of($x) == 'number' {
     @if comparable($x, $offset) {
       $x: $x + $offset;
     } @else {
@@ -94,7 +94,7 @@
 ) {
   $color: inspect($color); // convert to string
 
-  @if (str-index($color, '#') == 1) {
+  @if str-index($color, '#') == 1 {
     $color: '%23' + str-slice($color, 2);
   }
 
@@ -127,7 +127,6 @@
     $color: _susy-svg-color(nth($colors, $i));
     $offset: percentage(math.div($i - 1, length($colors) - 1));
     $stop: '%3Cstop offset="#{$offset}" style="stop-color:#{$color};" /%3E';
-
     $gradient: $gradient + $stop;
   }
 
