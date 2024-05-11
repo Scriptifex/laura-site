@@ -308,6 +308,7 @@ DEPENDENCIES
   bigdecimal
   csv
   github-pages
+  jekyll (~> 3.9.3)
   jekyll-admin
   jekyll-data
   jekyll-feed
