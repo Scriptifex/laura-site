@@ -1,5 +1,6 @@
 ---
 layout: programs
+permalink: /programs/
 ---
 
 # Programs & Services
