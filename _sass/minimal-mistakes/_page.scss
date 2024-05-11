@@ -231,7 +231,7 @@ body {
 .page__hero-image {
   width: 100%;
   height: auto;
-  interpolation-mode: bicubic;
+  -ms-interpolation-mode: bicubic;
 }
 
 .page__hero-caption {

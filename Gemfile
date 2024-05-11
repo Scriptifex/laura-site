@@ -2,6 +2,8 @@
 
 source 'https://rubygems.org'
 
+ruby File.read('.ruby-version').strip
+
 gem 'bigdecimal'
 gem 'csv'
 gem 'jekyll', '~> 4.3.3'
