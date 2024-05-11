@@ -25,7 +25,7 @@ group :jekyll_plugins do
   gem 'jekyll-gist'
   gem 'jekyll-include-cache'
   gem 'jekyll-paginate-v2'
-  gem 'jekyll-sass-converter' # , '~> 3.0.0'
+  gem 'jekyll-sass-converter', '~> 3.0.0'
   gem 'jekyll-sitemap'
   # gem 'jekyll-postcss-v2'
 end

@@ -150,7 +150,7 @@ DEPENDENCIES
   jekyll-gist
   jekyll-include-cache
   jekyll-paginate-v2
-  jekyll-sass-converter
+  jekyll-sass-converter (~> 3.0.0)
   jekyll-sitemap
   nokogiri
   rack
