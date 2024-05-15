@@ -3,6 +3,8 @@ GEM
   specs:
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    autoprefixer-rails (10.4.16.0)
+      execjs (~> 2)
     base64 (0.2.0)
     bigdecimal (3.1.8)
     coffee-script (2.4.1)
@@ -48,6 +50,8 @@ GEM
       jekyll (>= 3.7, < 5.0)
       sinatra (>= 1.4)
       sinatra-contrib (>= 1.4)
+    jekyll-autoprefixer-v2 (2.0.0)
+      autoprefixer-rails (~> 10.4)
     jekyll-coffeescript (2.0.0)
       coffee-script (~> 2.2)
       coffee-script-source (~> 1.12)
@@ -144,6 +148,7 @@ DEPENDENCIES
   csv
   jekyll (~> 4.3.3)
   jekyll-admin
+  jekyll-autoprefixer-v2
   jekyll-coffeescript
   jekyll-data
   jekyll-feed

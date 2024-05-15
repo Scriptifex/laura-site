@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version').strip
 
 gem 'bigdecimal'
+# gem 'effective-bootstrap'
 gem 'csv'
 gem 'jekyll', '~> 4.3.3'
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
@@ -19,6 +20,7 @@ gem 'webrick'
 group :jekyll_plugins do
   # gem 'github-pages'
   gem 'jekyll-admin'
+  gem 'jekyll-autoprefixer-v2'
   gem 'jekyll-coffeescript'
   gem 'jekyll-data'
   gem 'jekyll-feed' # , '~> 0.12'

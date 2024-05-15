@@ -14,7 +14,3 @@ We know together we can go farther, making a difference in our communities.
 Contact us today to get started!
 
 (contact form)
-
-## Upcoming Events
-
-(cards for events)
