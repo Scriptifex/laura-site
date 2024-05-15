@@ -1,24 +1,38 @@
 ---
-layout: archive
+layout: homepage
+title: Femme Venture
+logo: light
 ---
 
-{{ content }}
-
-
-
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Upcoming Events" }}</h3>
-
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
-
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in site.posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
-</div>
-
-{% include paginator.html %}
+<body>
+  <div class="uk-background-cover uk-background-bottom-center" style="background-image: url({{ "/assets/img/merge.jpg" | relative_url }});background-color:#333333;">
+    {% include header.html %}
+    <div class="uk-section uk-section-large">
+      <div class="intro-text uk-container">
+        <h2 class="uk-heading-medium uk-animation-slide-left-small">Supporting Female Entrepreneurs</h2>
+        <div class="uk-grid-match uk-child-width-1-1@m" uk-grid>
+          <div>
+            <h3 class="uk-h4 uk-animation-slide-left-small">Helping you take your small business to the next level.</h3>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{content}}
+  {%  include contact-form.html  %}
+  <div id="Connect" class="uk-section uk-section-secondary">
+    <div class="uk-container">
+      <h2 class="uk-heading-line"><span>Connect</span></h2>
+      <div class="uk-child-width-1-2@m" uk-grid>
+        <div>
+          <p>
+            Located in Southwest Portland, Oregon.
+          </p>
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,7 +1,6 @@
 ---
-layout: programs
+layout: default
 title: Programs
-permalink: /programs/
 ---
 
 # Programs & Services

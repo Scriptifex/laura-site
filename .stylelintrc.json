@@ -1,1 +1,11 @@
-{ "extends": ["stylelint-config-standard-scss"] }
+{
+    "extends": ["stylelint-config-standard", "stylelint-config-standard-scss", "stylelint-config-recommended-scss"],
+    "fix": true,
+    "rules": {
+        "no-descending-specificity": null,
+        "number-max-precision": null,
+        "no-duplicate-selectors": null,
+        "selector-class-pattern": null,
+        "declaration-block-single-line-max-declarations": null
+    }
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap');
+
+pre {
+	background-color:#282c34;
+}
+
+.uk-navbar-nav>li>a {
+	color:#000;
+}
+.uk-button.uk-button-primary, .uk-button.uk-button-default, .uk-button.uk-button-secondary {
+	border-radius:50px;
+}
+.uk-navbar-left.uk-light.black, .blackback {
+    background-color: black;
+}
+.uk-navbar-left.uk-light.black .uk-navbar-nav>li>a {
+color: white;
+}
+.blackback {
+	width:10px;
+	height:80px;
+	display:block;
+}
+h1, h2, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, .uk-heading-2xlarge {
+	font-family: 'Raleway', sans-serif;
+	font-weight:700;
+}
+h3, h4, h5, h6 {
+	font-family: 'Raleway', sans-serif;
+	font-weight:500;
+}
+.uk-card {
+	border-radius:8px;
+}
+.svgiconcard span {
+	margin: 0 25px 25px 0;
+}
+pre code {
+	padding:20px;
+	display:block;
+	border-radius:5px;
+}
+.highlight, pre.highlight {
+    background: #282c34;
+    color: #abb2bf;
+    border-radius: 5px;
+}
+.mi-padline {
+	padding: 10px 15px;
+	border: 1px solid #ccc;
+	margin-right: 5px;
+	display:inline-block;
+}
+.tm-main.uk-sticky.uk-active {
+	background-color:#fff;
+}

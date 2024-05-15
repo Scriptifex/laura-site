@@ -1,8 +1,4 @@
 ---
-layout: default
-title: About
-permalink: /about/
+layout: page
+title: About miniml
 ---
-//# About page
-
-This page tells you a little bit about me.
