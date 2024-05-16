@@ -1,4 +1,4 @@
 ---
 layout: page
-title: About miniml
+title: About Us
 ---

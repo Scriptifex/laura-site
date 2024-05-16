@@ -19,8 +19,20 @@ logo: light
       </div>
     </div>
   </div>
-  {{content}}
-  {%  include contact-form.html  %}
+  {{ content }}
+  <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="assets/images/laura-site-stock-background.jpg" uk-img></div>
+  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+    <div class="uk-card-media-left uk-cover-container">
+        <img src="assets/images/laura-site-contact-form-stock-image.jpg" alt="" uk-cover>
+        <canvas width="uk-width-auto" height="600"></canvas>
+    </div>
+    <div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">Contact Us Today!</h3>
+            <p>{%  include contact-form.html  %}</p>
+        </div>
+    </div>
+  </div>
   <div id="Connect" class="uk-section uk-section-secondary">
     <div class="uk-container">
       <h2 class="uk-heading-line"><span>Connect</span></h2>
