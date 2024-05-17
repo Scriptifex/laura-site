@@ -1,6 +1,5 @@
 ---
-layout: event
-title: Meet and Greet
+title: "Meet and Greet"
 date: 2024-05-27
 ---
 

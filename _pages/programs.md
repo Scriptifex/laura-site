@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Programs
+layout: page
+title: Programs & Services
+permalink: /programs
 ---
-
-# Programs & Services
 
 As a teaser here's what services you can receive at Femme Venture.
 

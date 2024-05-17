@@ -1,5 +1,11 @@
-<div class="uk-section">
-    <div class="uk-container">
-        {% render card.html %}
+
+<div class="uk-section uk-section-muted">
+    <h3>Upcoming Events</h3>
+    <div class="uk-container uk-container-expand"=>
+        <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
+            {% for event in site.events %}
+                {% include card.html title=event.title date=event.date %}
+            {% endfor %}
+        </div>
     </div>
 </div>
