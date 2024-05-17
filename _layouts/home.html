@@ -5,25 +5,27 @@ logo: light
 ---
 
 <body>
-  <div class="uk-background-cover uk-background-bottom-center" style="background-image: url({{ "/assets/img/merge.jpg" | relative_url }});background-color:#333333;">
-    {% include header.html %}
-    <div class="uk-section uk-section-large">
-      <div class="intro-text uk-container">
-        <h2 class="uk-heading-medium uk-animation-slide-left-small">Supporting Female Entrepreneurs</h2>
-        <div class="uk-grid-match uk-child-width-1-1@m" uk-grid>
-          <div>
-            <h3 class="uk-h4 uk-animation-slide-left-small">Helping you take your small business to the next level.</h3>
-            
-          </div>
+  {% include header.html %}
+  <div class="uk-section uk-section-medium uk-section-primary">
+    <div class="intro-text uk-container">
+      <h2 class="uk-heading-medium uk-animation-slide-left-small">Femme Venture</h2>
+      <div class="uk-grid-match uk-child-width-1-1@m" uk-grid>
+        <div>
+          <h3 class="uk-h4 uk-animation-slide-left-small">Supporting Female Entrepreneurs</h3>
+          
         </div>
       </div>
     </div>
   </div>
-  {{ content }}
-  <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="assets/images/laura-site-stock-background.jpg" uk-img></div>
+  <div class="uk-section">
+    <div class="uk-container">
+      {{ content }}
+    </div>
+  </div>
+  <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src={{"assets/images/laura-site-stock-background.jpg" | relative_url }} alt="stock image of women holding hands and raising them in the air with a dusky pink background. the image is a closeup of the hands only" uk-img></div>
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
     <div class="uk-card-media-left uk-cover-container">
-        <img src="assets/images/laura-site-contact-form-stock-image.jpg" alt="" uk-cover>
+        <img src={{"assets/images/laura-site-contact-form-stock-image.jpg" | relative_url }} alt="stock image of women having a meeting in a warm, cozy environment" uk-cover>
         <canvas width="uk-width-auto" height="600"></canvas>
     </div>
     <div>
@@ -39,7 +41,7 @@ logo: light
       <div class="uk-child-width-1-2@m" uk-grid>
         <div>
           <p>
-            Located in Southwest Portland, Oregon.
+            Helping you take your small business to the next level.
           </p>
         </div>
         <div>

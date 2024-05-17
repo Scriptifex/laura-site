@@ -97,6 +97,15 @@ RSS: true
 
 # Build settings
 
+collections: 
+  events:
+    output: true
+  programs: 
+    output: true
+  members:
+    output: true
+
+
 markdown: kramdown
 defaults:
   -
@@ -106,6 +115,24 @@ defaults:
     values:
       layout: "post"
       comments: true  # add comments to all blog posts
+  -
+    scope:
+      path: ""
+      type: "events"
+    values: 
+      layout: "event"
+  -
+    scope:
+      path: ""
+      type: "programs"
+    values: 
+      layout: "program"
+  -
+    scope:
+      path: ""
+      type: "members"
+    values: 
+      layout: "member"
   -
     scope:
       path: "" # all files

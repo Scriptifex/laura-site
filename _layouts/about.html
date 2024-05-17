@@ -1,0 +1,15 @@
+---
+layout: page
+---
+
+{{ content }}
+
+<ul>
+    {% for member in site.members %}
+        <li>
+            <h2>{{ member.name }}</h2>
+            <h3>{{ member.position }}</h3>
+            <p>{{ member.content | markdownify }}</p>
+        </li>
+    {% endfor %}
+</ul>
