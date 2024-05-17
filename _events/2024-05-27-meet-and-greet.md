@@ -1,5 +1,7 @@
 ---
 layout: event
 title: Meet and Greet
-date: 05/27/2024
+date: 2024-05-27
 ---
+
+meeting and greeting!
