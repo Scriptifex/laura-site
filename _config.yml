@@ -38,7 +38,7 @@ exclude:
 
 # 2. Installed Gems
 plugins:
-  - github-pages
+  - jekyll-v4-github-pages
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
@@ -90,6 +90,10 @@ permalink: /:title/
 Twitter: "kre8t_"
 GitHub: "kre8t_"
 RSS: true
+
+sass:
+  sass_dir: _sass
+  # load_paths: node_modules/uikit/src/scss
 
 
 # 8. Site navigation
@@ -147,7 +151,7 @@ defaults:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - node_modules
+#   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
