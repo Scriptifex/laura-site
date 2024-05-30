@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Align
 // Description:     Utilities to align embedded content
@@ -27,10 +28,10 @@
 
 [class*="uk-align"] {
     display: block;
-    margin-bottom: $align-margin-vertical;
+    margin-bottom: variables.$align-margin-vertical;
 }
 
-* + [class*="uk-align"] { margin-top: $align-margin-vertical; }
+* + [class*="uk-align"] { margin-top: variables.$align-margin-vertical; }
 
 /*
  * Center
@@ -47,13 +48,13 @@
 
 .uk-align-left {
     margin-top: 0;
-    margin-right: $align-margin-horizontal;
+    margin-right: variables.$align-margin-horizontal;
     float: left;
 }
 
 .uk-align-right {
     margin-top: 0;
-    margin-left: $align-margin-horizontal;
+    margin-left: variables.$align-margin-horizontal;
     float: right;
 }
 
@@ -62,13 +63,13 @@
 
     .uk-align-left\@s {
         margin-top: 0;
-        margin-right: $align-margin-horizontal;
+        margin-right: variables.$align-margin-horizontal;
         float: left;
     }
 
     .uk-align-right\@s {
         margin-top: 0;
-        margin-left: $align-margin-horizontal;
+        margin-left: variables.$align-margin-horizontal;
         float: right;
     }
 
@@ -79,13 +80,13 @@
 
     .uk-align-left\@m {
         margin-top: 0;
-        margin-right: $align-margin-horizontal;
+        margin-right: variables.$align-margin-horizontal;
         float: left;
     }
 
     .uk-align-right\@m {
         margin-top: 0;
-        margin-left: $align-margin-horizontal;
+        margin-left: variables.$align-margin-horizontal;
         float: right;
     }
 
@@ -107,12 +108,12 @@
     .uk-align-left,
     .uk-align-left\@s,
     .uk-align-left\@m,
-    .uk-align-left\@l { margin-right: $align-margin-horizontal-l; }
+    .uk-align-left\@l { margin-right: variables.$align-margin-horizontal-l; }
 
     .uk-align-right,
     .uk-align-right\@s,
     .uk-align-right\@m,
-    .uk-align-right\@l { margin-left: $align-margin-horizontal-l; }
+    .uk-align-right\@l { margin-left: variables.$align-margin-horizontal-l; }
 
 }
 
@@ -121,13 +122,13 @@
 
     .uk-align-left\@xl {
         margin-top: 0;
-        margin-right: $align-margin-horizontal-l;
+        margin-right: variables.$align-margin-horizontal-l;
         float: left;
     }
 
     .uk-align-right\@xl {
         margin-top: 0;
-        margin-left: $align-margin-horizontal-l;
+        margin-left: variables.$align-margin-horizontal-l;
         float: right;
     }
 

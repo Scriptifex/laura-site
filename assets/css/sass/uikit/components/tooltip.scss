@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Tooltip
 // Description:     Component to create tooltips
 //
@@ -41,20 +43,20 @@
     display: none;
     /* 2 */
     position: absolute;
-    z-index: $tooltip-z-index;
-    --uk-position-offset: #{$tooltip-margin};
+    z-index: variables.$tooltip-z-index;
+    --uk-position-offset: #{variables.$tooltip-margin};
     --uk-position-viewport-offset: 10;
     /* 3 */
     top: 0;
     /* 4 */
     box-sizing: border-box;
-    max-width: $tooltip-max-width;
-    padding: $tooltip-padding-vertical $tooltip-padding-horizontal;
+    max-width: variables.$tooltip-max-width;
+    padding: variables.$tooltip-padding-vertical variables.$tooltip-padding-horizontal;
     /* 5 */
-    background: $tooltip-background;
-    border-radius: $tooltip-border-radius;
-    color: $tooltip-color;
-    font-size: $tooltip-font-size;
+    background: variables.$tooltip-background;
+    border-radius: variables.$tooltip-border-radius;
+    color: variables.$tooltip-color;
+    font-size: variables.$tooltip-font-size;
     @if(meta.mixin-exists(hook-tooltip)) {@include hook-tooltip();}
 }
 

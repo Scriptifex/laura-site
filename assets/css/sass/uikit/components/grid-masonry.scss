@@ -1,3 +1,5 @@
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Grid
 // Description:     Component to create two dimensional grids
 //
@@ -8,7 +10,7 @@
 
 // Variables
 // ========================================================================
-
+/*
 $grid-column-xsmall:                             100px !default;
 $grid-column-small:                              200px !default;
 $grid-column-medium:                             300px !default;
@@ -19,7 +21,7 @@ $grid-column-xxlarge:                            600px !default;
 $grid-gap-small:                                 $global-small-gutter !default;
 $grid-gap-medium:                                $global-gutter !default;
 $grid-gap-large:                                 $global-large-gutter !default;
-
+*/
 
 /* ========================================================================
    Component: Grid
@@ -32,21 +34,21 @@ $grid-gap-large:                                 $global-large-gutter !default;
 /* Columns Width
  ========================================================================== */
 
-.uk-grid-column-xsmall { grid-template-columns: repeat(auto-fill, minmax($grid-column-xsmall,1fr)); }
-.uk-grid-column-small { grid-template-columns: repeat(auto-fill, minmax($grid-column-small,1fr)); }
-.uk-grid-column-medium { grid-template-columns: repeat(auto-fill, minmax($grid-column-medium,1fr)); }
-.uk-grid-column-large { grid-template-columns: repeat(auto-fill, minmax($grid-column-large,1fr)); }
-.uk-grid-column-xlarge { grid-template-columns: repeat(auto-fill, minmax($grid-column-xlarge,1fr)); }
-.uk-grid-column-xxlarge { grid-template-columns: repeat(auto-fill, minmax($grid-column-xxlarge,1fr)); }
+.uk-grid-column-xsmall { grid-template-columns: repeat(auto-fill, minmax(variables.$grid-column-xsmall,1fr)); }
+.uk-grid-column-small { grid-template-columns: repeat(auto-fill, minmax(variables.$grid-column-small,1fr)); }
+.uk-grid-column-medium { grid-template-columns: repeat(auto-fill, minmax(variables.$grid-column-medium,1fr)); }
+.uk-grid-column-large { grid-template-columns: repeat(auto-fill, minmax(variables.$grid-column-large,1fr)); }
+.uk-grid-column-xlarge { grid-template-columns: repeat(auto-fill, minmax(variables.$grid-column-xlarge,1fr)); }
+.uk-grid-column-xxlarge { grid-template-columns: repeat(auto-fill, minmax(variables.$grid-column-xxlarge,1fr)); }
 
 
 /* Gap
  ========================================================================== */
 
 .uk-grid-gap-none { grid-gap: 0; }
-.uk-grid-gap-small { grid-gap: $grid-gap-small; }
-.uk-grid-gap-medium { grid-gap: $grid-gap-medium; }
-.uk-grid-gap-large { grid-gap: $grid-gap-large; }
+.uk-grid-gap-small { grid-gap: variables.$grid-gap-small; }
+.uk-grid-gap-medium { grid-gap: variables.$grid-gap-medium; }
+.uk-grid-gap-large { grid-gap: variables.$grid-gap-large; }
 
 
 /* Auto Placement

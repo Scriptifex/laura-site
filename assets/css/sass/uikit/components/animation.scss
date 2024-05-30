@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Animation
 // Description:     Utilities for keyframe animations
 //
@@ -34,7 +36,7 @@
    Component: Animation
  ========================================================================== */
 
-[class*="uk-animation-"] { animation: $animation-duration ease-out both; }
+[class*="uk-animation-"] { animation: variables.$animation-duration ease-out both; }
 
 
 /* Animations
@@ -46,7 +48,7 @@
 
 .uk-animation-fade {
     animation-name: uk-fade;
-    animation-duration: $animation-fade-duration;
+    animation-duration: variables.$animation-fade-duration;
     animation-timing-function: linear;
 }
 
@@ -90,7 +92,7 @@
 
 .uk-animation-kenburns {
     animation-name: uk-kenburns;
-    animation-duration: $animation-kenburns-duration;
+    animation-duration: variables.$animation-kenburns-duration;
 }
 
 /*
@@ -109,7 +111,7 @@
 
 .uk-animation-stroke {
     animation-name: uk-stroke;
-    animation-duration: $animation-stroke-duration;
+    animation-duration: variables.$animation-stroke-duration;
     stroke-dasharray: var(--uk-animation-stroke);
 }
 
@@ -126,7 +128,7 @@
 /* Duration modifier
  ========================================================================== */
 
-.uk-animation-fast { animation-duration: $animation-fast-duration; }
+.uk-animation-fast { animation-duration: variables.$animation-fast-duration; }
 
 
 /* Toggle animation based on the State of the Parent Element
@@ -190,22 +192,22 @@
  */
 
 @keyframes uk-slide-top-small {
-    0% { transform: translateY(-$animation-slide-small-translate); }
+    0% { transform: translateY -(variables.$animation-slide-small-translate); }
     100% { transform: translateY(0); }
 }
 
 @keyframes uk-slide-bottom-small {
-    0% { transform: translateY($animation-slide-small-translate); }
+    0% { transform: translateY(variables.$animation-slide-small-translate); }
     100% { transform: translateY(0); }
 }
 
 @keyframes uk-slide-left-small {
-    0% { transform: translateX(-$animation-slide-small-translate); }
+    0% { transform: translateX -(variables.$animation-slide-small-translate); }
     100% { transform: translateX(0); }
 }
 
 @keyframes uk-slide-right-small {
-    0% { transform: translateX($animation-slide-small-translate); }
+    0% { transform: translateX(variables.$animation-slide-small-translate); }
     100% { transform: translateX(0); }
 }
 
@@ -214,22 +216,22 @@
  */
 
 @keyframes uk-slide-top-medium {
-    0% { transform: translateY(-$animation-slide-medium-translate); }
+    0% { transform: translateY -(variables.$animation-slide-medium-translate); }
     100% { transform: translateY(0); }
 }
 
 @keyframes uk-slide-bottom-medium {
-    0% { transform: translateY($animation-slide-medium-translate); }
+    0% { transform: translateY(variables.$animation-slide-medium-translate); }
     100% { transform: translateY(0); }
 }
 
 @keyframes uk-slide-left-medium {
-    0% { transform: translateX(-$animation-slide-medium-translate); }
+    0% { transform: translateX -(variables.$animation-slide-medium-translate); }
     100% { transform: translateX(0); }
 }
 
 @keyframes uk-slide-right-medium {
-    0% { transform: translateX($animation-slide-medium-translate); }
+    0% { transform: translateX(variables.$animation-slide-medium-translate); }
     100% { transform: translateX(0); }
 }
 

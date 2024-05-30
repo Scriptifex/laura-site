@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Tab
 // Description:     Component to create a tabbed navigation
 //
@@ -35,7 +37,7 @@
     /* 1 */
     flex-wrap: wrap;
     /* 2 */
-    margin-left: (-$tab-margin-horizontal);
+    margin-left: (variables.$tab-margin-horizontal);
     /* 3 */
     padding: 0;
     list-style: none;
@@ -52,7 +54,7 @@
     /* 1 */
     flex: none;
     /* 2 */
-    padding-left: $tab-margin-horizontal;
+    padding-left: variables.$tab-margin-horizontal;
     /* 3 */
     position: relative;
 }
@@ -78,27 +80,27 @@
     /* 3 */
     justify-content: center;
     /* 4 */
-    padding: $tab-item-padding-vertical $tab-item-padding-horizontal;
-    color: $tab-item-color;
+    padding: variables.$tab-item-padding-vertical variables.$tab-item-padding-horizontal;
+    color: variables.$tab-item-color;
     @if(meta.mixin-exists(hook-tab-item)) {@include hook-tab-item();}
 }
 
 /* Hover */
 .uk-tab > * > a:hover {
-    color: $tab-item-hover-color;
-    text-decoration: $tab-item-hover-text-decoration;
+    color: variables.$tab-item-hover-color;
+    text-decoration: variables.$tab-item-hover-text-decoration;
     @if(meta.mixin-exists(hook-tab-item-hover)) {@include hook-tab-item-hover();}
 }
 
 /* Active */
 .uk-tab > .uk-active > a {
-    color: $tab-item-active-color;
+    color: variables.$tab-item-active-color;
     @if(meta.mixin-exists(hook-tab-item-active)) {@include hook-tab-item-active();}
 }
 
 /* Disabled */
 .uk-tab > .uk-disabled > a {
-    color: $tab-item-disabled-color;
+    color: variables.$tab-item-disabled-color;
     @if(meta.mixin-exists(hook-tab-item-disabled)) {@include hook-tab-item-disabled();}
 }
 

@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Marker
 // Description:     Component to create a marker icon
 //
@@ -22,15 +24,15 @@
  */
 
 .uk-marker {
-    padding: $marker-padding;
-    background: $marker-background;
-    color: $marker-color;
+    padding: variables.$marker-padding;
+    background: variables.$marker-background;
+    color: variables.$marker-color;
     @if(meta.mixin-exists(hook-marker)) {@include hook-marker();}
 }
 
 /* Hover */
 .uk-marker:hover {
-    color: $marker-hover-color;
+    color: variables.$marker-hover-color;
     @if(meta.mixin-exists(hook-marker-hover)) {@include hook-marker-hover();}
 }
 

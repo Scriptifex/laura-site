@@ -1,6 +1,7 @@
 @use "sass:meta";
 @use "sass:string";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Position
 // Description:     Utilities to position content
@@ -190,26 +191,26 @@
  ========================================================================== */
 
 .uk-position-small {
-    margin: $position-small-margin;
-    --uk-position-margin-offset: #{$position-small-margin};
+    margin: variables.$position-small-margin;
+    --uk-position-margin-offset: #{variables.$position-small-margin};
 }
 
 .uk-position-medium {
-    margin: $position-medium-margin;
-    --uk-position-margin-offset: #{$position-medium-margin};
+    margin: variables.$position-medium-margin;
+    --uk-position-margin-offset: #{variables.$position-medium-margin};
 }
 
 .uk-position-large {
-    margin: $position-large-margin;
-    --uk-position-margin-offset: #{$position-large-margin};
+    margin: variables.$position-large-margin;
+    --uk-position-margin-offset: #{variables.$position-large-margin};
 }
 
 /* Desktop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
     .uk-position-large {
-        margin: $position-large-margin-l;
-        --uk-position-margin-offset: #{$position-large-margin-l};
+        margin: variables.$position-large-margin-l;
+        --uk-position-margin-offset: #{variables.$position-large-margin-l};
     }
 
 }
@@ -230,7 +231,7 @@
 .uk-position-z-index { z-index: 1; }
 .uk-position-z-index-zero { z-index: 0; }
 .uk-position-z-index-negative { z-index: -1; }
-.uk-position-z-index-high { z-index: $global-z-index - 10; } // Higher than dropbar so it is behind
+.uk-position-z-index-high { z-index: variables.$global-z-index - 10; } // Higher than dropbar so it is behind
 
 
 // Hooks

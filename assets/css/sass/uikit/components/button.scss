@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Button
 // Description:     Styles for buttons
 //
@@ -70,11 +72,11 @@
     /* 7 */
     display: inline-block;
     box-sizing: border-box;
-    padding: 0 $button-padding-horizontal;
+    padding: 0 variables.$button-padding-horizontal;
     vertical-align: middle;
-    font-size: $button-font-size;
+    font-size: variables.$button-font-size;
     /* 8 */
-    line-height: $button-line-height;
+    line-height: variables.$button-line-height;
     /* 9 */
     text-align: center;
     /* 10 */
@@ -115,23 +117,23 @@
  */
 
 .uk-button-default {
-    background-color: $button-default-background;
-    color: $button-default-color;
+    background-color: variables.$button-default-background;
+    color: variables.$button-default-color;
     @if(meta.mixin-exists(hook-button-default)) {@include hook-button-default();}
 }
 
 /* Hover */
 .uk-button-default:hover {
-    background-color: $button-default-hover-background;
-    color: $button-default-hover-color;
+    background-color: variables.$button-default-hover-background;
+    color: variables.$button-default-hover-color;
     @if(meta.mixin-exists(hook-button-default-hover)) {@include hook-button-default-hover();}
 }
 
 /* OnClick + Active */
 .uk-button-default:active,
 .uk-button-default.uk-active {
-    background-color: $button-default-active-background;
-    color: $button-default-active-color;
+    background-color: variables.$button-default-active-background;
+    color: variables.$button-default-active-color;
     @if(meta.mixin-exists(hook-button-default-active)) {@include hook-button-default-active();}
 }
 
@@ -140,23 +142,23 @@
  */
 
 .uk-button-primary {
-    background-color: $button-primary-background;
-    color: $button-primary-color;
+    background-color: variables.$button-primary-background;
+    color: variables.$button-primary-color;
     @if(meta.mixin-exists(hook-button-primary)) {@include hook-button-primary();}
 }
 
 /* Hover */
 .uk-button-primary:hover {
-    background-color: $button-primary-hover-background;
-    color: $button-primary-hover-color;
+    background-color: variables.$button-primary-hover-background;
+    color: variables.$button-primary-hover-color;
     @if(meta.mixin-exists(hook-button-primary-hover)) {@include hook-button-primary-hover();}
 }
 
 /* OnClick + Active */
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
-    background-color: $button-primary-active-background;
-    color: $button-primary-active-color;
+    background-color: variables.$button-primary-active-background;
+    color: variables.$button-primary-active-color;
     @if(meta.mixin-exists(hook-button-primary-active)) {@include hook-button-primary-active();}
 }
 
@@ -165,23 +167,23 @@
  */
 
 .uk-button-secondary {
-    background-color: $button-secondary-background;
-    color: $button-secondary-color;
+    background-color: variables.$button-secondary-background;
+    color: variables.$button-secondary-color;
     @if(meta.mixin-exists(hook-button-secondary)) {@include hook-button-secondary();}
 }
 
 /* Hover */
 .uk-button-secondary:hover {
-    background-color: $button-secondary-hover-background;
-    color: $button-secondary-hover-color;
+    background-color: variables.$button-secondary-hover-background;
+    color: variables.$button-secondary-hover-color;
     @if(meta.mixin-exists(hook-button-secondary-hover)) {@include hook-button-secondary-hover();}
 }
 
 /* OnClick + Active */
 .uk-button-secondary:active,
 .uk-button-secondary.uk-active {
-    background-color: $button-secondary-active-background;
-    color: $button-secondary-active-color;
+    background-color: variables.$button-secondary-active-background;
+    color: variables.$button-secondary-active-color;
     @if(meta.mixin-exists(hook-button-secondary-active)) {@include hook-button-secondary-active();}
 }
 
@@ -190,23 +192,23 @@
  */
 
 .uk-button-danger {
-    background-color: $button-danger-background;
-    color: $button-danger-color;
+    background-color: variables.$button-danger-background;
+    color: variables.$button-danger-color;
     @if(meta.mixin-exists(hook-button-danger)) {@include hook-button-danger();}
 }
 
 /* Hover */
 .uk-button-danger:hover {
-    background-color: $button-danger-hover-background;
-    color: $button-danger-hover-color;
+    background-color: variables.$button-danger-hover-background;
+    color: variables.$button-danger-hover-color;
     @if(meta.mixin-exists(hook-button-danger-hover)) {@include hook-button-danger-hover();}
 }
 
 /* OnClick + Active */
 .uk-button-danger:active,
 .uk-button-danger.uk-active {
-    background-color: $button-danger-active-background;
-    color: $button-danger-active-color;
+    background-color: variables.$button-danger-active-background;
+    color: variables.$button-danger-active-color;
     @if(meta.mixin-exists(hook-button-danger-active)) {@include hook-button-danger-active();}
 }
 
@@ -219,8 +221,8 @@
 .uk-button-primary:disabled,
 .uk-button-secondary:disabled,
 .uk-button-danger:disabled {
-    background-color: $button-disabled-background;
-    color: $button-disabled-color;
+    background-color: variables.$button-disabled-background;
+    color: variables.$button-disabled-color;
     @if(meta.mixin-exists(hook-button-disabled)) {@include hook-button-disabled();}
 }
 
@@ -229,16 +231,16 @@
  ========================================================================== */
 
 .uk-button-small {
-    padding: 0 $button-small-padding-horizontal;
-    line-height: $button-small-line-height;
-    font-size: $button-small-font-size;
+    padding: 0 variables.$button-small-padding-horizontal;
+    line-height: variables.$button-small-line-height;
+    font-size: variables.$button-small-font-size;
     @if(meta.mixin-exists(hook-button-small)) {@include hook-button-small();}
 }
 
 .uk-button-large {
-    padding: 0 $button-large-padding-horizontal;
-    line-height: $button-large-line-height;
-    font-size: $button-large-font-size;
+    padding: 0 variables.$button-large-padding-horizontal;
+    line-height: variables.$button-large-line-height;
+    font-size: variables.$button-large-font-size;
     @if(meta.mixin-exists(hook-button-large)) {@include hook-button-large();}
 }
 
@@ -255,22 +257,22 @@
 .uk-button-text {
     /* 1 */
     padding: 0;
-    line-height: $button-text-line-height;
+    line-height: variables.$button-text-line-height;
     background: none;
     /* 2 */
-    color: $button-text-color;
+    color: variables.$button-text-color;
     @if(meta.mixin-exists(hook-button-text)) {@include hook-button-text();}
 }
 
 /* Hover */
 .uk-button-text:hover {
-    color: $button-text-hover-color;
+    color: variables.$button-text-hover-color;
     @if(meta.mixin-exists(hook-button-text-hover)) {@include hook-button-text-hover();}
 }
 
 /* Disabled */
 .uk-button-text:disabled {
-    color: $button-text-disabled-color;
+    color: variables.$button-text-disabled-color;
     @if(meta.mixin-exists(hook-button-text-disabled)) {@include hook-button-text-disabled();}
 }
 
@@ -283,22 +285,22 @@
 .uk-button-link {
     /* 1 */
     padding: 0;
-    line-height: $button-link-line-height;
+    line-height: variables.$button-link-line-height;
     background: none;
     /* 2 */
-    color: $button-link-color;
+    color: variables.$button-link-color;
     @if(meta.mixin-exists(hook-button-link)) {@include hook-button-link();}
 }
 
 /* Hover */
 .uk-button-link:hover {
-    color: $button-link-hover-color;
-    text-decoration: $button-link-hover-text-decoration;
+    color: variables.$button-link-hover-color;
+    text-decoration: variables.$button-link-hover-text-decoration;
 }
 
 /* Disabled */
 .uk-button-link:disabled {
-    color: $button-link-disabled-color;
+    color: variables.$button-link-disabled-color;
     text-decoration: none;
 }
 

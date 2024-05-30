@@ -1,6 +1,7 @@
+//@use "../variables.scss";
 @use "sass:meta";
 @use "sass:string";
-@use "variables";
+@use "../variables.scss" as variables;
 
 // Name:            Base
 // Description:     Default values for HTML elements
@@ -17,16 +18,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -39,15 +30,15 @@
 
 html {
     /* 1 */
-    font-family: $base-body-font-family;
-    font-size: $base-body-font-size;
-    font-weight: $base-body-font-weight;
-    line-height: $base-body-line-height;
+    font-family: variables.$base-body-font-family;
+    font-size: variables.$base-body-font-size;
+    font-weight: variables.$base-body-font-weight;
+    line-height: variables.$base-body-line-height;
     /* 2 */
     -webkit-text-size-adjust: 100%;
     /* 3 */
-    background: $base-body-background;
-    color: $base-body-color;
+    background: variables.$base-body-background;
+    color: variables.$base-body-color;
     @if(meta.mixin-exists(hook-base-body)) {@include hook-base-body();}
 }
 
@@ -67,8 +58,8 @@ body { margin: 0; }
 
 a,
 .uk-link {
-    color: $base-link-color;
-    text-decoration: $base-link-text-decoration;
+    color: variables.$base-link-color;
+    text-decoration: variables.$base-link-text-decoration;
     cursor: pointer;
     @if(meta.mixin-exists(hook-base-link)) {@include hook-base-link();}
 }
@@ -76,8 +67,8 @@ a,
 a:hover,
 .uk-link:hover,
 .uk-link-toggle:hover .uk-link {
-    color: $base-link-hover-color;
-    text-decoration: $base-link-hover-text-decoration;
+    color: variables.$base-link-hover-color;
+    text-decoration: variables.$base-link-hover-text-decoration;
     @if(meta.mixin-exists(hook-base-link-hover)) {@include hook-base-link-hover();}
 }
 
@@ -102,7 +93,7 @@ abbr[title] {
  */
 
 b,
-strong { font-weight: $base-strong-font-weight; }
+strong { font-weight: variables.$base-strong-font-weight; }
 
 /*
  * 1. Consolas has a better baseline in running text compared to `Courier`
@@ -114,11 +105,11 @@ strong { font-weight: $base-strong-font-weight; }
 :not(pre) > kbd,
 :not(pre) > samp {
     /* 1 */
-    font-family: $base-code-font-family;
+    font-family: variables.$base-code-font-family;
     /* 2 */
-    font-size: $base-code-font-size;
+    font-size: variables.$base-code-font-size;
     /* 3 */
-    color: $base-code-color;
+    color: variables.$base-code-color;
     white-space: nowrap;
     @if(meta.mixin-exists(hook-base-code)) {@include hook-base-code();}
 }
@@ -127,15 +118,15 @@ strong { font-weight: $base-strong-font-weight; }
  * Emphasize
  */
 
-em { color: $base-em-color; }
+em { color: variables.$base-em-color; }
 
 /*
  * Insert
  */
 
 ins {
-    background: $base-ins-background;
-    color: $base-ins-color;
+    background: variables.$base-ins-background;
+    color: variables.$base-ins-color;
     text-decoration: none;
 }
 
@@ -144,21 +135,21 @@ ins {
  */
 
 mark {
-    background: $base-mark-background;
-    color: $base-mark-color;
+    background: variables.$base-mark-background;
+    color: variables.$base-mark-color;
 }
 
 /*
  * Quote
  */
 
-q { font-style: $base-quote-font-style; }
+q { font-style: variables.$base-quote-font-style; }
 
 /*
  * Add the correct font size in all browsers.
  */
 
-small { font-size: $base-small-font-size; }
+small { font-size: variables.$base-small-font-size; }
 
 /*
  * Prevents `sub` and `sup` affecting `line-height` in all browsers.
@@ -243,7 +234,7 @@ dl,
 pre,
 address,
 fieldset,
-figure { margin: 0 0 $base-margin-vertical 0; }
+figure { margin: 0 0 variables.$base-margin-vertical 0; }
 
 /* Add margin if adjacent element */
 * + p,
@@ -253,7 +244,7 @@ figure { margin: 0 0 $base-margin-vertical 0; }
 * + pre,
 * + address,
 * + fieldset,
-* + figure { margin-top: $base-margin-vertical; }
+* + figure { margin-top: variables.$base-margin-vertical; }
 
 
 /* Headings
@@ -271,11 +262,11 @@ h6, .uk-h6,
 .uk-heading-xlarge,
 .uk-heading-2xlarge,
 .uk-heading-3xlarge {
-    margin: 0 0 $base-margin-vertical 0;
-    font-family: $base-heading-font-family;
-    font-weight: $base-heading-font-weight;
-    color: $base-heading-color;
-    text-transform: $base-heading-text-transform;
+    margin: 0 0 variables.$base-margin-vertical 0;
+    font-family: variables.$base-heading-font-family;
+    font-weight: variables.$base-heading-font-weight;
+    color: variables.$base-heading-color;
+    text-transform: variables.$base-heading-text-transform;
     @if(meta.mixin-exists(hook-base-heading)) {@include hook-base-heading();}
 }
 
@@ -291,53 +282,53 @@ h6, .uk-h6,
 * + .uk-heading-large,
 * + .uk-heading-xlarge,
 * + .uk-heading-2xlarge,
-* + .uk-heading-3xlarge { margin-top: $base-heading-margin-top; }
+* + .uk-heading-3xlarge { margin-top: variables.$base-heading-margin-top; }
 
 /*
  * Sizes
  */
 
 h1, .uk-h1 {
-    font-size: $base-h1-font-size;
-    line-height: $base-h1-line-height;
+    font-size: variables.$base-h1-font-size;
+    line-height: variables.$base-h1-line-height;
     @if(meta.mixin-exists(hook-base-h1)) {@include hook-base-h1();}
 }
 
 h2, .uk-h2 {
-    font-size: $base-h2-font-size;
-    line-height: $base-h2-line-height;
+    font-size: variables.$base-h2-font-size;
+    line-height: variables.$base-h2-line-height;
     @if(meta.mixin-exists(hook-base-h2)) {@include hook-base-h2();}
 }
 
 h3, .uk-h3 {
-    font-size: $base-h3-font-size;
-    line-height: $base-h3-line-height;
+    font-size: variables.$base-h3-font-size;
+    line-height: variables.$base-h3-line-height;
     @if(meta.mixin-exists(hook-base-h3)) {@include hook-base-h3();}
 }
 
 h4, .uk-h4 {
-    font-size: $base-h4-font-size;
-    line-height: $base-h4-line-height;
+    font-size: variables.$base-h4-font-size;
+    line-height: variables.$base-h4-line-height;
     @if(meta.mixin-exists(hook-base-h4)) {@include hook-base-h4();}
 }
 
 h5, .uk-h5 {
-    font-size: $base-h5-font-size;
-    line-height: $base-h5-line-height;
+    font-size: variables.$base-h5-font-size;
+    line-height: variables.$base-h5-line-height;
     @if(meta.mixin-exists(hook-base-h5)) {@include hook-base-h5();}
 }
 
 h6, .uk-h6 {
-    font-size: $base-h6-font-size;
-    line-height: $base-h6-line-height;
+    font-size: variables.$base-h6-font-size;
+    line-height: variables.$base-h6-line-height;
     @if(meta.mixin-exists(hook-base-h6)) {@include hook-base-h6();}
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: variables.$breakpoint-medium) {
 
-    h1, .uk-h1 { font-size: $base-h1-font-size-m; }
-    h2, .uk-h2 { font-size: $base-h2-font-size-m; }
+    h1, .uk-h1 { font-size: variables.$base-h1-font-size-m; }
+    h2, .uk-h2 { font-size: variables.$base-h2-font-size-m; }
 
 }
 
@@ -346,7 +337,7 @@ h6, .uk-h6 {
  ========================================================================== */
 
 ul,
-ol { padding-left: $base-list-padding-left; }
+ol { padding-left: variables.$base-list-padding-left; }
 
 /*
  * Reset margin for nested lists
@@ -380,15 +371,15 @@ hr, .uk-hr {
     /* 2 */
     text-align: inherit;
     /* 3 */
-    margin: 0 0 $base-hr-margin-vertical 0;
+    margin: 0 0 variables.$base-hr-margin-vertical 0;
     border: 0;
-    border-top: $base-hr-border-width solid $base-hr-border;
+    border-top: variables.$base-hr-border-width solid variables.$base-hr-border;
     @if(meta.mixin-exists(hook-base-hr)) {@include hook-base-hr();}
 }
 
 /* Add margin if adjacent element */
 * + hr,
-* + .uk-hr { margin-top: $base-hr-margin-vertical; }
+* + .uk-hr { margin-top: variables.$base-hr-margin-vertical; }
 
 
 /* Address
@@ -401,15 +392,15 @@ address { font-style: normal; }
  ========================================================================== */
 
 blockquote {
-    margin: 0 0 $base-blockquote-margin-vertical 0;
-    font-size: $base-blockquote-font-size;
-    line-height: $base-blockquote-line-height;
-    font-style: $base-blockquote-font-style;
+    margin: 0 0 variables.$base-blockquote-margin-vertical 0;
+    font-size: variables.$base-blockquote-font-size;
+    line-height: variables.$base-blockquote-line-height;
+    font-style: variables.$base-blockquote-font-style;
     @if(meta.mixin-exists(hook-base-blockquote)) {@include hook-base-blockquote();}
 }
 
 /* Add margin if adjacent element */
-* + blockquote { margin-top: $base-blockquote-margin-vertical; }
+* + blockquote { margin-top: variables.$base-blockquote-margin-vertical; }
 
 /*
  * Content
@@ -418,9 +409,9 @@ blockquote {
 blockquote p:last-of-type { margin-bottom: 0; }
 
 blockquote footer {
-    margin-top: $base-blockquote-footer-margin-top;
-    font-size: $base-blockquote-footer-font-size;
-    line-height: $base-blockquote-footer-line-height;
+    margin-top: variables.$base-blockquote-footer-margin-top;
+    font-size: variables.$base-blockquote-footer-font-size;
+    line-height: variables.$base-blockquote-footer-line-height;
     @if(meta.mixin-exists(hook-base-blockquote-footer)) {@include hook-base-blockquote-footer();}
 }
 
@@ -433,8 +424,8 @@ blockquote footer {
  */
 
 pre {
-    font: $base-pre-font-size string.unquote("/") $base-pre-line-height $base-pre-font-family;
-    color: $base-pre-color;
+    font: variables.$base-pre-font-size string.unquote("/") variables.$base-pre-line-height variables.$base-pre-font-family;
+    color: variables.$base-pre-color;
     -moz-tab-size: 4;
     tab-size: 4;
     /* 1 */
@@ -442,7 +433,7 @@ pre {
     @if(meta.mixin-exists(hook-base-pre)) {@include hook-base-pre();}
 }
 
-pre code { font-family: $base-pre-font-family; }
+pre code { font-family: variables.$base-pre-font-family; }
 
 
 /* Focus
@@ -450,15 +441,15 @@ pre code { font-family: $base-pre-font-family; }
 
 :focus { outline: none; }
 
-:focus-visible { outline: $base-focus-outline-width $base-focus-outline-style $base-focus-outline; }
+:focus-visible { outline: variables.$base-focus-outline-width variables.$base-focus-outline-style variables.$base-focus-outline; }
 
 
 /* Selection pseudo-element
  ========================================================================== */
 
 ::selection {
-    background: $base-selection-background;
-    color: $base-selection-color;
+    background: variables.$base-selection-background;
+    color: variables.$base-selection-color;
     text-shadow: none;
 }
 

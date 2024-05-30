@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Notification
 // Description:     Component to create notification messages
 //
@@ -41,12 +43,12 @@
 .uk-notification {
     /* 1 */
     position: fixed;
-    top: $notification-position;
-    left: $notification-position;
-    z-index: $notification-z-index;
+    top: variables.$notification-position;
+    left: variables.$notification-position;
+    z-index: variables.$notification-z-index;
     /* 2 */
     box-sizing: border-box;
-    width: $notification-width;
+    width: variables.$notification-width;
     @if(meta.mixin-exists(hook-notification)) {@include hook-notification();}
 }
 
@@ -57,20 +59,20 @@
 .uk-notification-top-right,
 .uk-notification-bottom-right {
     left: auto;
-    right: $notification-position;
+    right: variables.$notification-position;
 }
 
 .uk-notification-top-center,
 .uk-notification-bottom-center {
     left: 50%;
-    margin-left: ($notification-width * -0.5);
+    margin-left: (variables.$notification-width * -0.5);
 }
 
 .uk-notification-bottom-left,
 .uk-notification-bottom-right,
 .uk-notification-bottom-center {
     top: auto;
-    bottom: $notification-position;
+    bottom: variables.$notification-position;
 }
 
 
@@ -78,11 +80,11 @@
 ========================================================================== */
 
 /* Phones portrait and smaller */
-@media (max-width: $breakpoint-xsmall-max) {
+@media (max-width: variables.$breakpoint-xsmall-max) {
 
     .uk-notification {
-        left: $notification-position;
-        right: $notification-position;
+        left: variables.$notification-position;
+        right: variables.$notification-position;
         width: auto;
         margin: 0;
     }
@@ -95,16 +97,16 @@
 
 .uk-notification-message {
     position: relative;
-    padding: $notification-message-padding;
-    background: $notification-message-background;
-    color: $notification-message-color;
-    font-size: $notification-message-font-size;
-    line-height: $notification-message-line-height;
+    padding: variables.$notification-message-padding;
+    background: variables.$notification-message-background;
+    color: variables.$notification-message-color;
+    font-size: variables.$notification-message-font-size;
+    line-height: variables.$notification-message-line-height;
     cursor: pointer;
     @if(meta.mixin-exists(hook-notification-message)) {@include hook-notification-message();}
 }
 
-* + .uk-notification-message { margin-top: $notification-message-margin-top; }
+* + .uk-notification-message { margin-top: variables.$notification-message-margin-top; }
 
 
 /* Close
@@ -114,8 +116,8 @@
 .uk-notification-close {
     display: none;
     position: absolute;
-    top: $notification-close-top;
-    right: $notification-close-right;
+    top: variables.$notification-close-top;
+    right: variables.$notification-close-right;
     @if(meta.mixin-exists(hook-notification-close)) {@include hook-notification-close();}
 }
 
@@ -130,7 +132,7 @@
  */
 
 .uk-notification-message-primary {
-    color: $notification-message-primary-color;
+    color: variables.$notification-message-primary-color;
     @if(meta.mixin-exists(hook-notification-message-primary)) {@include hook-notification-message-primary();}
 }
 
@@ -139,7 +141,7 @@
  */
 
 .uk-notification-message-success {
-    color: $notification-message-success-color;
+    color: variables.$notification-message-success-color;
     @if(meta.mixin-exists(hook-notification-message-success)) {@include hook-notification-message-success();}
 }
 
@@ -148,7 +150,7 @@
  */
 
 .uk-notification-message-warning {
-    color: $notification-message-warning-color;
+    color: variables.$notification-message-warning-color;
     @if(meta.mixin-exists(hook-notification-message-warning)) {@include hook-notification-message-warning();}
 }
 
@@ -157,7 +159,7 @@
  */
 
 .uk-notification-message-danger {
-    color: $notification-message-danger-color;
+    color: variables.$notification-message-danger-color;
     @if(meta.mixin-exists(hook-notification-message-danger)) {@include hook-notification-message-danger();}
 }
 

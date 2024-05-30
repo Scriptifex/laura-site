@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Column
 // Description:     Utilities for text columns
@@ -23,12 +24,12 @@
    Component: Column
  ========================================================================== */
 
-[class*="uk-column-"] { column-gap: $column-gutter; }
+[class*="uk-column-"] { column-gap: variables.$column-gutter; }
 
 /* Desktop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
-    [class*="uk-column-"] { column-gap: $column-gutter-l; }
+    [class*="uk-column-"] { column-gap: variables.$column-gutter-l; }
 
 }
 
@@ -47,16 +48,16 @@
  */
 
 .uk-column-divider {
-    column-rule: $column-divider-rule-width solid $column-divider-rule-color;
+    column-rule: variables.$column-divider-rule-width solid variables.$column-divider-rule-color;
     /* 1 */
-    column-gap: ($column-gutter * 2);
+    column-gap: (variables.$column-gutter * 2);
 }
 
 /* Desktop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
     .uk-column-divider {
-        column-gap: ($column-gutter-l * 2);
+        column-gap: (variables.$column-gutter-l * 2);
     }
 
 }

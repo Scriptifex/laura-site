@@ -1,6 +1,6 @@
 @use "sass:meta";
-@use "variables";
-
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Article
 // Description:     Component to create articles
 //
@@ -39,7 +39,7 @@
  ========================================================================== */
 
 .uk-article + .uk-article {
-    margin-top: $article-margin-top;
+    margin-top: variables.$article-margin-top;
     @if(meta.mixin-exists(hook-article-adjacent)) {@include hook-article-adjacent();}
 }
 
@@ -48,15 +48,15 @@
  ========================================================================== */
 
 .uk-article-title {
-    font-size: $article-title-font-size;
-    line-height: $article-title-line-height;
+    font-size: variables.$article-title-font-size;
+    line-height: variables.$article-title-line-height;
     @if(meta.mixin-exists(hook-article-title)) {@include hook-article-title();}
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: variables.$breakpoint-medium) {
 
-    .uk-article-title { font-size: $article-title-font-size-m; }
+    .uk-article-title { font-size: variables.$article-title-font-size-m; }
 
 }
 
@@ -65,9 +65,9 @@
  ========================================================================== */
 
 .uk-article-meta {
-    font-size: $article-meta-font-size;
-    line-height: $article-meta-line-height;
-    color: $article-meta-color;
+    font-size: variables.$article-meta-font-size;
+    line-height: variables.$article-meta-line-height;
+    color: variables.$article-meta-color;
     @if(meta.mixin-exists(hook-article-meta)) {@include hook-article-meta();}
 }
 

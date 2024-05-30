@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Totop
 // Description:     Component to create an icon to scroll back to top
 //
@@ -23,20 +25,20 @@
  */
 
 .uk-totop {
-    padding: $totop-padding;
-    color: $totop-color;
+    padding: variables.$totop-padding;
+    color: variables.$totop-color;
     @if(meta.mixin-exists(hook-totop)) {@include hook-totop();}
 }
 
 /* Hover */
 .uk-totop:hover {
-    color: $totop-hover-color;
+    color: variables.$totop-hover-color;
     @if(meta.mixin-exists(hook-totop-hover)) {@include hook-totop-hover();}
 }
 
 /* OnClick */
 .uk-totop:active {
-    color: $totop-active-color;
+    color: variables.$totop-active-color;
     @if(meta.mixin-exists(hook-totop-active)) {@include hook-totop-active();}
 }
 

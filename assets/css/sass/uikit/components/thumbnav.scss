@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Thumbnav
 // Description:     Component to create thumbnail navigations
 //
@@ -35,7 +37,7 @@
     padding: 0;
     list-style: none;
     /* 3 */
-    margin-left: (-$thumbnav-margin-horizontal);
+    margin-left: (variables.$thumbnav-margin-horizontal);
     @if(meta.mixin-exists(hook-thumbnav)) {@include hook-thumbnav();}
 }
 
@@ -46,7 +48,7 @@
 
 .uk-thumbnav > * {
     /* 1 */
-    padding-left: $thumbnav-margin-horizontal;
+    padding-left: variables.$thumbnav-margin-horizontal;
 }
 
 
@@ -86,13 +88,13 @@
     flex-direction: column;
     /* 2 */
     margin-left: 0;
-    margin-top: (-$thumbnav-margin-vertical);
+    margin-top: (variables.$thumbnav-margin-vertical);
 }
 
 /* 2 */
 .uk-thumbnav-vertical > * {
     padding-left: 0;
-    padding-top: $thumbnav-margin-vertical;
+    padding-top: variables.$thumbnav-margin-vertical;
 }
 
 

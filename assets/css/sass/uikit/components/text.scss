@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Text
 // Description:     Utilities for text
@@ -28,16 +29,16 @@
  ========================================================================== */
 
 .uk-text-lead {
-    font-size: $text-lead-font-size;
-    line-height: $text-lead-line-height;
-    color: $text-lead-color;
+    font-size: variables.$text-lead-font-size;
+    line-height: variables.$text-lead-line-height;
+    color: variables.$text-lead-color;
     @if(meta.mixin-exists(hook-text-lead)) {@include hook-text-lead();}
 }
 
 .uk-text-meta {
-    font-size: $text-meta-font-size;
-    line-height: $text-meta-line-height;
-    color: $text-meta-color;
+    font-size: variables.$text-meta-font-size;
+    line-height: variables.$text-meta-line-height;
+    color: variables.$text-meta-color;
     @if(meta.mixin-exists(hook-text-meta)) {@include hook-text-meta();}
 }
 
@@ -46,19 +47,19 @@
  ========================================================================== */
 
 .uk-text-small {
-    font-size: $text-small-font-size;
-    line-height: $text-small-line-height;
+    font-size: variables.$text-small-font-size;
+    line-height: variables.$text-small-line-height;
     @if(meta.mixin-exists(hook-text-small)) {@include hook-text-small();}
 }
 
 .uk-text-large {
-    font-size: $text-large-font-size;
-    line-height: $text-large-line-height;
+    font-size: variables.$text-large-font-size;
+    line-height: variables.$text-large-line-height;
     @if(meta.mixin-exists(hook-text-large)) {@include hook-text-large();}
 }
 
 .uk-text-default {
-    font-size: $global-font-size;
+    font-size: variables.$global-font-size;
     line-height: variables.$global-line-height;
 }
 
@@ -97,13 +98,13 @@
 /* Color modifiers
  ========================================================================== */
 
-.uk-text-muted { color: $text-muted-color !important; }
-.uk-text-emphasis { color: $text-emphasis-color !important; }
-.uk-text-primary { color: $text-primary-color !important; }
-.uk-text-secondary { color: $text-secondary-color !important; }
-.uk-text-success { color: $text-success-color !important; }
-.uk-text-warning { color: $text-warning-color !important; }
-.uk-text-danger { color: $text-danger-color !important; }
+.uk-text-muted { color: variables.$text-muted-color !important; }
+.uk-text-emphasis { color: variables.$text-emphasis-color !important; }
+.uk-text-primary { color: variables.$text-primary-color !important; }
+.uk-text-secondary { color: variables.$text-secondary-color !important; }
+.uk-text-success { color: variables.$text-success-color !important; }
+.uk-text-warning { color: variables.$text-warning-color !important; }
+.uk-text-danger { color: variables.$text-danger-color !important; }
 
 
 /* Background modifier
@@ -124,7 +125,7 @@
     /* 3 */
     display: inline-block;
     /* 4 */
-    background-color: $text-background-color;
+    background-color: variables.$text-background-color;
     @if(meta.mixin-exists(hook-text-background)) {@include hook-text-background();}
 }
 

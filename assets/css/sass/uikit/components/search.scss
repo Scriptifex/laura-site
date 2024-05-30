@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Search
 // Description:     Component to create the search
 //
@@ -102,14 +104,14 @@
     width: 100%;
     /* 9 */
     border: none;
-    color: $search-color;
+    color: variables.$search-color;
     @if(meta.mixin-exists(hook-search-input)) {@include hook-search-input();}
 }
 
 .uk-search-input:focus { outline: none; }
 
 /* Placeholder */
-.uk-search-input::placeholder { color: $search-placeholder-color; }
+.uk-search-input::placeholder { color: variables.$search-placeholder-color; }
 
 
 /* Icon (Adopts `uk-icon`)
@@ -133,7 +135,7 @@
     justify-content: center;
     align-items: center;
     /* 3 */
-    color: $search-icon-color;
+    color: variables.$search-icon-color;
     @if(meta.mixin-exists(hook-search-icon)) {@include hook-search-icon();}
 }
 
@@ -141,7 +143,7 @@
  * Required for `a`.
  */
 
-.uk-search .uk-search-icon:hover { color: $search-icon-color; }
+.uk-search .uk-search-icon:hover { color: variables.$search-icon-color; }
 
 /*
  * Make `input` element clickable through icon, e.g. if it's a `span`
@@ -162,23 +164,23 @@
 /* Default modifier
  ========================================================================== */
 
-.uk-search-default { width: $search-default-width; }
+.uk-search-default { width: variables.$search-default-width; }
 
 /*
  * Input
  */
 
 .uk-search-default .uk-search-input {
-    height: $search-default-height;
-    padding-left: $search-default-padding-horizontal;
-    padding-right: $search-default-padding-horizontal;
-    background: $search-default-background;
+    height: variables.$search-default-height;
+    padding-left: variables.$search-default-padding-horizontal;
+    padding-right: variables.$search-default-padding-horizontal;
+    background: variables.$search-default-background;
     @if(meta.mixin-exists(hook-search-default-input)) {@include hook-search-default-input();}
 }
 
 /* Focus */
 .uk-search-default .uk-search-input:focus {
-    background-color: $search-default-focus-background;
+    background-color: variables.$search-default-focus-background;
     @if(meta.mixin-exists(hook-search-default-input-focus)) {@include hook-search-default-input-focus();}
 }
 
@@ -186,32 +188,32 @@
  * Icon
  */
 
-.uk-search-default .uk-search-icon { width: $search-default-icon-width; }
+.uk-search-default .uk-search-icon { width: variables.$search-default-icon-width; }
 
-.uk-search-default:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: ($search-default-icon-width + $search-default-icon-padding); }
-.uk-search-default:has(.uk-search-icon-flip) .uk-search-input { padding-right: ($search-default-icon-width + $search-default-icon-padding); }
+.uk-search-default:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: (variables.$search-default-icon-width + variables.$search-default-icon-padding); }
+.uk-search-default:has(.uk-search-icon-flip) .uk-search-input { padding-right: (variables.$search-default-icon-width + variables.$search-default-icon-padding); }
 
 
 /* Navbar modifier
  ========================================================================== */
 
-.uk-search-navbar { width: $search-navbar-width; }
+.uk-search-navbar { width: variables.$search-navbar-width; }
 
 /*
  * Input
  */
 
 .uk-search-navbar .uk-search-input {
-    height: $search-navbar-height;
-    padding-left: $search-navbar-padding-horizontal;
-    padding-right: $search-navbar-padding-horizontal;
-    background: $search-navbar-background;
+    height: variables.$search-navbar-height;
+    padding-left: variables.$search-navbar-padding-horizontal;
+    padding-right: variables.$search-navbar-padding-horizontal;
+    background: variables.$search-navbar-background;
     @if(meta.mixin-exists(hook-search-navbar-input)) {@include hook-search-navbar-input();}
 }
 
 /* Focus */
 .uk-search-navbar .uk-search-input:focus {
-    background-color: $search-navbar-focus-background;
+    background-color: variables.$search-navbar-focus-background;
     @if(meta.mixin-exists(hook-search-navbar-input-focus)) {@include hook-search-navbar-input-focus();}
 }
 
@@ -219,25 +221,25 @@
  * Icon
  */
 
-.uk-search-navbar .uk-search-icon { width: $search-navbar-icon-width; }
+.uk-search-navbar .uk-search-icon { width: variables.$search-navbar-icon-width; }
 
-.uk-search-navbar:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: ($search-navbar-icon-width + $search-navbar-icon-padding); }
-.uk-search-navbar:has(.uk-search-icon-flip) .uk-search-input { padding-right: ($search-navbar-icon-width + $search-navbar-icon-padding); }
+.uk-search-navbar:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: (variables.$search-navbar-icon-width + variables.$search-navbar-icon-padding); }
+.uk-search-navbar:has(.uk-search-icon-flip) .uk-search-input { padding-right: (variables.$search-navbar-icon-width + variables.$search-navbar-icon-padding); }
 
 
 /* Medium modifier
  ========================================================================== */
 
-.uk-search-medium { width: $search-medium-width; }
+.uk-search-medium { width: variables.$search-medium-width; }
 
 /*
  * Input
  */
 
 .uk-search-medium .uk-search-input {
-    height: $search-medium-height;
-    background: $search-medium-background;
-    font-size: $search-medium-font-size;
+    height: variables.$search-medium-height;
+    background: variables.$search-medium-background;
+    font-size: variables.$search-medium-font-size;
     @if(meta.mixin-exists(hook-search-medium-input)) {@include hook-search-medium-input();}
 }
 
@@ -250,25 +252,25 @@
  * Icon
  */
 
-.uk-search-medium .uk-search-icon { width: $search-medium-icon-width; }
+.uk-search-medium .uk-search-icon { width: variables.$search-medium-icon-width; }
 
-.uk-search-medium:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: ($search-medium-icon-width + $search-medium-icon-padding); }
-.uk-search-medium:has(.uk-search-icon-flip) .uk-search-input { padding-right: ($search-medium-icon-width + $search-medium-icon-padding); }
+.uk-search-medium:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: (variables.$search-medium-icon-width + variables.$search-medium-icon-padding); }
+.uk-search-medium:has(.uk-search-icon-flip) .uk-search-input { padding-right: (variables.$search-medium-icon-width + variables.$search-medium-icon-padding); }
 
 
 /* Large modifier
  ========================================================================== */
 
-.uk-search-large { width: $search-large-width; }
+.uk-search-large { width: variables.$search-large-width; }
 
 /*
  * Input
  */
 
 .uk-search-large .uk-search-input {
-    height: $search-large-height;
-    background: $search-large-background;
-    font-size: $search-large-font-size;
+    height: variables.$search-large-height;
+    background: variables.$search-large-background;
+    font-size: variables.$search-large-font-size;
     @if(meta.mixin-exists(hook-search-large-input)) {@include hook-search-large-input();}
 }
 
@@ -281,23 +283,23 @@
  * Icon
  */
 
-.uk-search-large .uk-search-icon { width: $search-large-icon-width; }
+.uk-search-large .uk-search-icon { width: variables.$search-large-icon-width; }
 
-.uk-search-large:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: ($search-large-icon-width + $search-large-icon-padding); }
-.uk-search-large:has(.uk-search-icon-flip) .uk-search-input { padding-right: ($search-large-icon-width + $search-large-icon-padding); }
+.uk-search-large:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: (variables.$search-large-icon-width + variables.$search-large-icon-padding); }
+.uk-search-large:has(.uk-search-icon-flip) .uk-search-input { padding-right: (variables.$search-large-icon-width + variables.$search-large-icon-padding); }
 
 
 /* Toggle
  ========================================================================== */
 
 .uk-search-toggle {
-    color: $search-toggle-color;
+    color: variables.$search-toggle-color;
     @if(meta.mixin-exists(hook-search-toggle)) {@include hook-search-toggle();}
 }
 
 /* Hover */
 .uk-search-toggle:hover {
-    color: $search-toggle-hover-color;
+    color: variables.$search-toggle-hover-color;
     @if(meta.mixin-exists(hook-search-toggle-hover)) {@include hook-search-toggle-hover();}
 }
 

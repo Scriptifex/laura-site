@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Lightbox
 // Description:     Component to create an lightbox image gallery
 //
@@ -52,9 +54,9 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: $lightbox-z-index;
+    z-index: variables.$lightbox-z-index;
     /* 5 */
-    background: $lightbox-background;
+    background: variables.$lightbox-background;
     /* 6 */
     opacity: 0;
     transition: opacity 0.15s linear;
@@ -79,7 +81,7 @@
  * Focus
  */
 
-.uk-lightbox :focus-visible { outline-color: $lightbox-focus-outline; }
+.uk-lightbox :focus-visible { outline-color: variables.$lightbox-focus-outline; }
 
 
 /* Page
@@ -116,7 +118,7 @@
     justify-content: center;
     align-items: center;
     /* 3 */
-    color: $lightbox-item-color;
+    color: variables.$lightbox-item-color;
     /* 4 */
     will-change: transform, opacity;
     @if(meta.mixin-exists(hook-lightbox-item)) {@include hook-lightbox-item();}
@@ -124,8 +126,8 @@
 
 /* 5 */
 .uk-lightbox-items > * > * {
-    max-width: $lightbox-item-max-width;
-    max-height: $lightbox-item-max-height;
+    max-width: variables.$lightbox-item-max-width;
+    max-height: variables.$lightbox-item-max-height;
 }
 
 .uk-lightbox-items > * > :not(iframe) {
@@ -139,21 +141,21 @@
  ========================================================================== */
 
 .uk-lightbox-toolbar {
-    padding: $lightbox-toolbar-padding-vertical $lightbox-toolbar-padding-horizontal;
-    background: $lightbox-toolbar-background;
-    color: $lightbox-toolbar-color;
+    padding: variables.$lightbox-toolbar-padding-vertical variables.$lightbox-toolbar-padding-horizontal;
+    background: variables.$lightbox-toolbar-background;
+    color: variables.$lightbox-toolbar-color;
     @if(meta.mixin-exists(hook-lightbox-toolbar)) {@include hook-lightbox-toolbar();}
 }
 
-.uk-lightbox-toolbar > * { color: $lightbox-toolbar-color; }
+.uk-lightbox-toolbar > * { color: variables.$lightbox-toolbar-color; }
 
 
 /* Toolbar Icon (Close)
  ========================================================================== */
 
 .uk-lightbox-toolbar-icon {
-    padding: $lightbox-toolbar-icon-padding;
-    color: $lightbox-toolbar-icon-color;
+    padding: variables.$lightbox-toolbar-icon-padding;
+    color: variables.$lightbox-toolbar-icon-color;
     @if(meta.mixin-exists(hook-lightbox-toolbar-icon)) {@include hook-lightbox-toolbar-icon();}
 }
 
@@ -162,7 +164,7 @@
  */
 
 .uk-lightbox-toolbar-icon:hover {
-    color: $lightbox-toolbar-icon-hover-color;
+    color: variables.$lightbox-toolbar-icon-hover-color;
     @if(meta.mixin-exists(hook-lightbox-toolbar-icon-hover)) {@include hook-lightbox-toolbar-icon-hover();}
 }
 
@@ -177,10 +179,10 @@
 
 .uk-lightbox-button {
     box-sizing: border-box;
-    width: $lightbox-button-size;
-    height: $lightbox-button-size;
-    background: $lightbox-button-background;
-    color: $lightbox-button-color;
+    width: variables.$lightbox-button-size;
+    height: variables.$lightbox-button-size;
+    background: variables.$lightbox-button-background;
+    color: variables.$lightbox-button-color;
     /* 1 */
     display: inline-flex;
     justify-content: center;
@@ -190,7 +192,7 @@
 
 /* Hover */
 .uk-lightbox-button:hover {
-    color: $lightbox-button-hover-color;
+    color: variables.$lightbox-button-hover-color;
     @if(meta.mixin-exists(hook-lightbox-button-hover)) {@include hook-lightbox-button-hover();}
 }
 

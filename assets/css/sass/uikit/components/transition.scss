@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Transition
 // Description:     Utilities for transitions
 //
@@ -62,7 +64,7 @@
     transform: translate(var(--uk-position-translate-x), var(--uk-position-translate-y))
                translate(var(--uk-translate-x), var(--uk-translate-y))
                scale(var(--uk-scale-x), var(--uk-scale-y));
-    transition: $transition-duration ease-out;
+    transition: variables.$transition-duration ease-out;
     transition-property: opacity, transform, filter;
     opacity: 0;
 }
@@ -89,8 +91,8 @@
     --uk-scale-y: 1;
 }
 .uk-transition-scale-down {
-    --uk-scale-x: #{$transition-scale};
-    --uk-scale-y: #{$transition-scale};
+    --uk-scale-x: #{variables.$transition-scale};
+    --uk-scale-y: #{variables.$transition-scale};
 }
 
 /* Show */
@@ -98,8 +100,8 @@
 .uk-transition-toggle:focus .uk-transition-scale-up,
 .uk-transition-toggle .uk-transition-scale-up:focus-within,
 .uk-transition-active.uk-active .uk-transition-scale-up {
-    --uk-scale-x: #{$transition-scale};
-    --uk-scale-y: #{$transition-scale};
+    --uk-scale-x: #{variables.$transition-scale};
+    --uk-scale-y: #{variables.$transition-scale};
     opacity: 1;
 }
 
@@ -121,15 +123,15 @@
 .uk-transition-slide-left { --uk-translate-x: -100%; }
 .uk-transition-slide-right { --uk-translate-x: 100%; }
 
-.uk-transition-slide-top-small { --uk-translate-y: calc(-1 * #{$transition-slide-small-translate}); }
-.uk-transition-slide-bottom-small { --uk-translate-y: #{$transition-slide-small-translate}; }
-.uk-transition-slide-left-small { --uk-translate-x: calc(-1 * #{$transition-slide-small-translate}); }
-.uk-transition-slide-right-small { --uk-translate-x: #{$transition-slide-small-translate}; }
+.uk-transition-slide-top-small { --uk-translate-y: calc(-1 * #{variables.$transition-slide-small-translate}); }
+.uk-transition-slide-bottom-small { --uk-translate-y: #{variables.$transition-slide-small-translate}; }
+.uk-transition-slide-left-small { --uk-translate-x: calc(-1 * #{variables.$transition-slide-small-translate}); }
+.uk-transition-slide-right-small { --uk-translate-x: #{variables.$transition-slide-small-translate}; }
 
-.uk-transition-slide-top-medium { --uk-translate-y: calc(-1 * #{$transition-slide-medium-translate}); }
-.uk-transition-slide-bottom-medium { --uk-translate-y: #{$transition-slide-medium-translate}; }
-.uk-transition-slide-left-medium { --uk-translate-x: calc(-1 * #{$transition-slide-medium-translate}); }
-.uk-transition-slide-right-medium { --uk-translate-x: #{$transition-slide-medium-translate}; }
+.uk-transition-slide-top-medium { --uk-translate-y: calc(-1 * #{variables.$transition-slide-medium-translate}); }
+.uk-transition-slide-bottom-medium { --uk-translate-y: #{variables.$transition-slide-medium-translate}; }
+.uk-transition-slide-left-medium { --uk-translate-x: calc(-1 * #{variables.$transition-slide-medium-translate}); }
+.uk-transition-slide-right-medium { --uk-translate-x: #{variables.$transition-slide-medium-translate}; }
 
 /* Show */
 .uk-transition-toggle:hover [class*="uk-transition-slide"],
@@ -151,7 +153,7 @@
 /* Duration modifier
  ========================================================================== */
 
-.uk-transition-slow { transition-duration: $transition-slow-duration; }
+.uk-transition-slow { transition-duration: variables.$transition-slow-duration; }
 
 /* Disable modifier
  ========================================================================== */

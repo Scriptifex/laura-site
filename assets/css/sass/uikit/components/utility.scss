@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Utility
 // Description:     Utilities collection
 //
@@ -66,9 +68,9 @@
  */
 
 .uk-panel-scrollable {
-    height: $panel-scrollable-height;
-    padding: $panel-scrollable-padding;
-    border: $panel-scrollable-border-width solid $panel-scrollable-border;
+    height: variables.$panel-scrollable-height;
+    padding: variables.$panel-scrollable-padding;
+    border: variables.$panel-scrollable-border-width solid variables.$panel-scrollable-border;
     overflow: auto;
     resize: both;
     @if(meta.mixin-exists(hook-panel-scrollable)) {@include hook-panel-scrollable();}
@@ -267,7 +269,7 @@
 
 .uk-border-circle { border-radius: 50%; }
 .uk-border-pill { border-radius: 500px; }
-.uk-border-rounded { border-radius: $border-rounded-border-radius; }
+.uk-border-rounded { border-radius: variables.$border-rounded-border-radius; }
 
 /*
  * Fix `overflow: hidden` to be ignored with border-radius and CSS transforms in Webkit
@@ -279,21 +281,21 @@
 /* Box-shadow
  ========================================================================== */
 
-.uk-box-shadow-small { box-shadow: $global-small-box-shadow; }
-.uk-box-shadow-medium { box-shadow: $global-medium-box-shadow; }
-.uk-box-shadow-large { box-shadow: $global-large-box-shadow; }
-.uk-box-shadow-xlarge { box-shadow: $global-xlarge-box-shadow; }
+.uk-box-shadow-small { box-shadow: variables.$global-small-box-shadow; }
+.uk-box-shadow-medium { box-shadow: variables.$global-medium-box-shadow; }
+.uk-box-shadow-large { box-shadow: variables.$global-large-box-shadow; }
+.uk-box-shadow-xlarge { box-shadow: variables.$global-xlarge-box-shadow; }
 
 /*
  * Hover
  */
 
-[class*="uk-box-shadow-hover"] { transition: box-shadow $box-shadow-duration ease-in-out; }
+[class*="uk-box-shadow-hover"] { transition: box-shadow variables.$box-shadow-duration ease-in-out; }
 
-.uk-box-shadow-hover-small:hover { box-shadow: $global-small-box-shadow; }
-.uk-box-shadow-hover-medium:hover { box-shadow: $global-medium-box-shadow; }
-.uk-box-shadow-hover-large:hover { box-shadow: $global-large-box-shadow; }
-.uk-box-shadow-hover-xlarge:hover { box-shadow: $global-xlarge-box-shadow; }
+.uk-box-shadow-hover-small:hover { box-shadow: variables.$global-small-box-shadow; }
+.uk-box-shadow-hover-medium:hover { box-shadow: variables.$global-medium-box-shadow; }
+.uk-box-shadow-hover-large:hover { box-shadow: variables.$global-large-box-shadow; }
+.uk-box-shadow-hover-xlarge:hover { box-shadow: variables.$global-xlarge-box-shadow; }
 
 
 /* Box-shadow bottom
@@ -319,15 +321,15 @@
         content: "";
         /* 1 */
         position: absolute;
-        bottom: $box-shadow-bottom-bottom;
+        bottom: variables.$box-shadow-bottom-bottom;
         left: 0;
         right: 0;
         z-index: -1;
         /* 2 */
-        height: $box-shadow-bottom-height;
-        border-radius: $box-shadow-bottom-border-radius;
-        background: $box-shadow-bottom-background;
-        filter: blur($box-shadow-bottom-blur);
+        height: variables.$box-shadow-bottom-height;
+        border-radius: variables.$box-shadow-bottom-border-radius;
+        background: variables.$box-shadow-bottom-background;
+        filter: blur(variables.$box-shadow-bottom-blur);
         /* 3 */
         will-change: filter;
         @if(meta.mixin-exists(hook-box-shadow-bottom)) {@include hook-box-shadow-bottom();}
@@ -350,9 +352,9 @@
 /* 1 */
 .uk-dropcap > p:first-of-type::first-letter {
     display: block;
-    margin-right: $dropcap-margin-right;
+    margin-right: variables.$dropcap-margin-right;
     float: left;
-    font-size: $dropcap-font-size;
+    font-size: variables.$dropcap-font-size;
     line-height: 1;
     @if(meta.mixin-exists(hook-dropcap)) {@include hook-dropcap();}
 }
@@ -377,9 +379,9 @@
 
 .uk-logo {
     /* 1 */
-    font-size: $logo-font-size;
-    font-family: $logo-font-family;
-    color: $logo-color;
+    font-size: variables.$logo-font-size;
+    font-family: variables.$logo-font-family;
+    color: variables.$logo-color;
     /* 2 */
     text-decoration: none;
     @if(meta.mixin-exists(hook-logo)) {@include hook-logo();}
@@ -393,7 +395,7 @@
 
 /* Hover */
 .uk-logo:hover {
-    color: $logo-hover-color;
+    color: variables.$logo-hover-color;
     /* 1 */
     text-decoration: none;
     @if(meta.mixin-exists(hook-logo-hover)) {@include hook-logo-hover();}
@@ -433,7 +435,7 @@
  * Create a box-shadow when dragging a file over the upload area
  */
 
-.uk-dragover { box-shadow: $dragover-box-shadow; }
+.uk-dragover { box-shadow: variables.$dragover-box-shadow; }
 
 
 /* Blend modes

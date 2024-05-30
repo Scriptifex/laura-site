@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Flex
 // Description:     Utilities for layouts based on flexbox

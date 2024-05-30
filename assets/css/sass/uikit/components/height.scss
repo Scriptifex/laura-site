@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Height
 // Description:     Utilities for heights
 //
@@ -38,13 +40,13 @@
  * Useful for `overflow: auto`
  */
 
-.uk-height-small { height: $height-small-height; }
-.uk-height-medium { height: $height-medium-height; }
-.uk-height-large { height: $height-large-height; }
+.uk-height-small { height: variables.$height-small-height; }
+.uk-height-medium { height: variables.$height-medium-height; }
+.uk-height-large { height: variables.$height-large-height; }
 
-.uk-height-max-small { max-height: $height-small-height; }
-.uk-height-max-medium { max-height: $height-medium-height; }
-.uk-height-max-large { max-height: $height-large-height; }
+.uk-height-max-small { max-height: variables.$height-small-height; }
+.uk-height-max-medium { max-height: variables.$height-medium-height; }
+.uk-height-max-large { max-height: variables.$height-large-height; }
 
 
 // Hooks

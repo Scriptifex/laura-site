@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Placeholder
 // Description:     Component to create placeholder boxes
 //
@@ -17,14 +19,14 @@
  ========================================================================== */
 
 .uk-placeholder {
-    margin-bottom: $placeholder-margin-vertical;
-    padding: $placeholder-padding-vertical $placeholder-padding-horizontal;
-    background: $placeholder-background;
+    margin-bottom: variables.$placeholder-margin-vertical;
+    padding: variables.$placeholder-padding-vertical variables.$placeholder-padding-horizontal;
+    background: variables.$placeholder-background;
     @if(meta.mixin-exists(hook-placeholder)) {@include hook-placeholder();}
 }
 
 /* Add margin if adjacent element */
-* + .uk-placeholder { margin-top: $placeholder-margin-vertical; }
+* + .uk-placeholder { margin-top: variables.$placeholder-margin-vertical; }
 
 /*
  * Remove margin from the last-child

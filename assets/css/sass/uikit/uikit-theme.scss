@@ -2,8 +2,8 @@
 // Theme
 //
 
-@use "theme/_import.scss";
+@forward "theme/import.scss";
 
-@use "components/_import.scss" as import2;
+@forward "components/import.scss" as import2*;
 
 

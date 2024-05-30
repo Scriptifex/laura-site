@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Dropbar
 // Description:     Component to create a dropbar based on Drop component
@@ -32,16 +33,16 @@
  */
 
 .uk-dropbar {
-    --uk-position-offset: #{$dropbar-margin};
+    --uk-position-offset: #{variables.$dropbar-margin};
     --uk-position-shift-offset: 0;
     --uk-position-viewport-offset: 0;
-    --uk-inverse: #{$dropbar-color-mode};
+    --uk-inverse: #{variables.$dropbar-color-mode};
     /* 1 */
     width: auto;
     /* 2 */
-    padding: $dropbar-padding-top $dropbar-padding-horizontal $dropbar-padding-bottom $dropbar-padding-horizontal;
-    background: $dropbar-background;
-    color: $dropbar-color;
+    padding: variables.$dropbar-padding-top variables.$dropbar-padding-horizontal variables.$dropbar-padding-bottom variables.$dropbar-padding-horizontal;
+    background: variables.$dropbar-background;
+    color: variables.$dropbar-color;
     @if(meta.mixin-exists(hook-dropbar)) {@include hook-dropbar();}
 }
 
@@ -55,8 +56,8 @@
 @media (min-width: variables.$breakpoint-small) {
 
     .uk-dropbar {
-        padding-left: $dropbar-padding-horizontal-s;
-        padding-right: $dropbar-padding-horizontal-s;
+        padding-left: variables.$dropbar-padding-horizontal-s;
+        padding-right: variables.$dropbar-padding-horizontal-s;
     }
 
 }
@@ -65,19 +66,19 @@
 @media (min-width: variables.$breakpoint-medium) {
 
     .uk-dropbar {
-        padding-left: $dropbar-padding-horizontal-m;
-        padding-right: $dropbar-padding-horizontal-m;
+        padding-left: variables.$dropbar-padding-horizontal-m;
+        padding-right: variables.$dropbar-padding-horizontal-m;
     }
 
 }
 
 // Color Mode
-@if ( $dropbar-color-mode == light ) { .uk-dropbar { @extend .uk-light !optional;} }
-@if ( $dropbar-color-mode == dark ) { .uk-dropbar { @extend .uk-dark !optional;} }
+@if ( variables.$dropbar-color-mode == light ) { .uk-dropbar { @extend .uk-light !optional;} }
+@if ( variables.$dropbar-color-mode == dark ) { .uk-dropbar { @extend .uk-dark !optional;} }
 
-@if ($dropbar-color-mode != $inverse-global-color-mode) {
+@if (variables.$dropbar-color-mode != variables.$inverse-global-color-mode) {
 .uk-dropbar :focus-visible {
-    outline-color: $dropbar-focus-outline !important;
+    outline-color: variables.$dropbar-focus-outline !important;
 }
 }
 
@@ -86,8 +87,8 @@
  ========================================================================== */
 
 .uk-dropbar-large {
-    padding-top: $dropbar-large-padding-top;
-    padding-bottom: $dropbar-large-padding-bottom;
+    padding-top: variables.$dropbar-large-padding-top;
+    padding-bottom: variables.$dropbar-large-padding-bottom;
 }
 
 

@@ -1,5 +1,7 @@
 @use "sass:meta";
 @use "mixin";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            List
 // Description:     Styles for lists
@@ -63,7 +65,7 @@
  */
 
 .uk-list > :nth-child(n+2),
-.uk-list > * > ul { margin-top: $list-margin-top; }
+.uk-list > * > ul { margin-top: variables.$list-margin-top; }
 
 
 /* Marker modifiers
@@ -75,7 +77,7 @@
 .uk-list-circle > *,
 .uk-list-square > *,
 .uk-list-decimal > *,
-.uk-list-hyphen > * { padding-left: $list-padding-left; }
+.uk-list-hyphen > * { padding-left: variables.$list-padding-left; }
 
 /*
  * Type modifiers
@@ -91,10 +93,10 @@
 .uk-list-hyphen > ::before {
     content: "";
     position: relative;
-    left: (-$list-padding-left);
-    width: $list-padding-left;
-    height: $list-marker-height;
-    margin-bottom: (-$list-marker-height);
+    left: (variables.$list-padding-left);
+    width: variables.$list-padding-left;
+    height: variables.$list-marker-height;
+    margin-bottom: (variables.$list-marker-height);
     display: list-item;
     list-style-position: inside;
     text-align: right;
@@ -110,26 +112,26 @@
  * Color modifiers
  */
 
-.uk-list-muted > ::before { color: $list-muted-color !important; }
-.uk-list-emphasis > ::before { color: $list-emphasis-color !important; }
-.uk-list-primary > ::before { color: $list-primary-color !important; }
-.uk-list-secondary > ::before { color: $list-secondary-color !important; }
+.uk-list-muted > ::before { color: variables.$list-muted-color !important; }
+.uk-list-emphasis > ::before { color: variables.$list-emphasis-color !important; }
+.uk-list-primary > ::before { color: variables.$list-primary-color !important; }
+.uk-list-secondary > ::before { color: variables.$list-secondary-color !important; }
 
 
 /* Image bullet modifier
  ========================================================================== */
 
-.uk-list-bullet > * { padding-left: $list-padding-left; }
+.uk-list-bullet > * { padding-left: variables.$list-padding-left; }
 
 .uk-list-bullet > ::before {
     content: "";
     display: list-item;
     position: relative;
-    left: (-$list-padding-left);
-    width: $list-padding-left;
-    height: $list-marker-height;
-    margin-bottom: (-$list-marker-height);
-    @include mixin.svg-fill($internal-list-bullet-image, "#000", $list-bullet-icon-color);
+    left: (variables.$list-padding-left);
+    width: variables.$list-padding-left;
+    height: variables.$list-marker-height;
+    margin-bottom: (variables.$list-marker-height);
+    @include mixin.svg-fill(variables.$internal-list-bullet-image, "#000", variables.$list-bullet-icon-color);
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
@@ -143,9 +145,9 @@
  */
 
 .uk-list-divider > :nth-child(n+2) {
-    margin-top: $list-divider-margin-top;
-    padding-top: $list-divider-margin-top;
-    border-top: $list-divider-border-width solid $list-divider-border;
+    margin-top: variables.$list-divider-margin-top;
+    padding-top: variables.$list-divider-margin-top;
+    border-top: variables.$list-divider-border-width solid variables.$list-divider-border;
     @if(meta.mixin-exists(hook-list-divider)) {@include hook-list-divider();}
 }
 
@@ -154,11 +156,11 @@
  */
 
 .uk-list-striped > * {
-    padding: $list-striped-padding-vertical $list-striped-padding-horizontal;
+    padding: variables.$list-striped-padding-vertical variables.$list-striped-padding-horizontal;
     @if(meta.mixin-exists(hook-list-striped)) {@include hook-list-striped();}
 }
 
-.uk-list-striped > :nth-of-type(odd) { background: $list-striped-background; }
+.uk-list-striped > :nth-of-type(odd) { background: variables.$list-striped-background; }
 
 .uk-list-striped > :nth-child(n+2) { margin-top: 0; }
 
@@ -167,7 +169,7 @@
  ========================================================================== */
 
 .uk-list-large > :nth-child(n+2),
-.uk-list-large > * > ul { margin-top: $list-large-margin-top; }
+.uk-list-large > * > ul { margin-top: variables.$list-large-margin-top; }
 
 .uk-list-collapse > :nth-child(n+2),
 .uk-list-collapse > * > ul { margin-top: 0; }
@@ -177,8 +179,8 @@
  */
 
 .uk-list-large.uk-list-divider > :nth-child(n+2) {
-    margin-top: $list-large-divider-margin-top;
-    padding-top: $list-large-divider-margin-top;
+    margin-top: variables.$list-large-divider-margin-top;
+    padding-top: variables.$list-large-divider-margin-top;
 }
 
 .uk-list-collapse.uk-list-divider > :nth-child(n+2) {
@@ -190,7 +192,7 @@
  * Striped
  */
 
-.uk-list-large.uk-list-striped > * { padding: $list-large-striped-padding-vertical $list-large-striped-padding-horizontal; }
+.uk-list-large.uk-list-striped > * { padding: variables.$list-large-striped-padding-vertical variables.$list-large-striped-padding-horizontal; }
 
 .uk-list-collapse.uk-list-striped > * {
     padding-top: 0;

@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Sortable
 // Description:     Component to create sortable grids and lists
 //
@@ -43,7 +45,7 @@
 
 .uk-sortable-drag {
     position: fixed !important;
-    z-index: $sortable-dragged-z-index !important;
+    z-index: variables.$sortable-dragged-z-index !important;
     pointer-events: none;
     @if(meta.mixin-exists(hook-sortable-drag)) {@include hook-sortable-drag();}
 }
@@ -53,7 +55,7 @@
  ========================================================================== */
 
 .uk-sortable-placeholder {
-    opacity: $sortable-placeholder-opacity;
+    opacity: variables.$sortable-placeholder-opacity;
     pointer-events: none;
     @if(meta.mixin-exists(hook-sortable-placeholder)) {@include hook-sortable-placeholder();}
 }
@@ -63,7 +65,7 @@
  ========================================================================== */
 
 .uk-sortable-empty {
-    min-height: $sortable-empty-height;
+    min-height: variables.$sortable-empty-height;
     @if(meta.mixin-exists(hook-sortable-empty)) {@include hook-sortable-empty();}
 }
 

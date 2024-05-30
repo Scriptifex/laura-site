@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Close
 // Description:     Component to create a close button
 //
@@ -21,13 +23,13 @@
  */
 
 .uk-close {
-    color: $close-color;
+    color: variables.$close-color;
     @if(meta.mixin-exists(hook-close)) {@include hook-close();}
 }
 
 /* Hover */
 .uk-close:hover {
-    color: $close-hover-color;
+    color: variables.$close-hover-color;
     @if(meta.mixin-exists(hook-close-hover)) {@include hook-close-hover();}
 }
 

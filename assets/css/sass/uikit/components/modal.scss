@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Modal
 // Description:     Component to create modal dialogs
@@ -62,13 +63,13 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: $modal-z-index;
+    z-index: variables.$modal-z-index;
     /* 3 */
     overflow-y: auto;
     /* 4 */
-    padding: $modal-padding-vertical $modal-padding-horizontal;
+    padding: variables.$modal-padding-vertical variables.$modal-padding-horizontal;
     /* 5 */
-    background: $modal-background;
+    background: variables.$modal-background;
     /* 6 */
     opacity: 0;
     transition: opacity 0.15s linear;
@@ -78,7 +79,7 @@
 /* Phone landscape and bigger */
 @media (min-width: variables.$breakpoint-small) {
 
-    .uk-modal { padding: $modal-padding-vertical-s $modal-padding-horizontal-s; }
+    .uk-modal { padding: variables.$modal-padding-vertical-s variables.$modal-padding-horizontal-s; }
 
 }
 
@@ -86,8 +87,8 @@
 @media (min-width: variables.$breakpoint-medium) {
 
     .uk-modal {
-        padding-left: $modal-padding-horizontal-m;
-        padding-right: $modal-padding-horizontal-m;
+        padding-left: variables.$modal-padding-horizontal-m;
+        padding-right: variables.$modal-padding-horizontal-m;
     }
 
 }
@@ -126,11 +127,11 @@
     /* 2 */
     box-sizing: border-box;
     margin: 0 auto;
-    width: $modal-dialog-width;
+    width: variables.$modal-dialog-width;
     /* 3 */
     max-width: 100% !important;
     /* 4 */
-    background: $modal-dialog-background;
+    background: variables.$modal-dialog-background;
     /* 5 */
     opacity: 0;
     transform: translateY(-100px);
@@ -157,7 +158,7 @@
  * Take the same size as the Container component
  */
 
-.uk-modal-container .uk-modal-dialog { width: $modal-container-width; }
+.uk-modal-container .uk-modal-dialog { width: variables.$modal-container-width; }
 
 /*
  * Full size
@@ -186,30 +187,30 @@
 
 .uk-modal-body {
     display: flow-root;
-    padding: $modal-body-padding-vertical $modal-body-padding-horizontal;
+    padding: variables.$modal-body-padding-vertical variables.$modal-body-padding-horizontal;
     @if(meta.mixin-exists(hook-modal-body)) {@include hook-modal-body();}
 }
 
 .uk-modal-header {
     display: flow-root;
-    padding: $modal-header-padding-vertical $modal-header-padding-horizontal;
-    background: $modal-header-background;
+    padding: variables.$modal-header-padding-vertical variables.$modal-header-padding-horizontal;
+    background: variables.$modal-header-background;
     @if(meta.mixin-exists(hook-modal-header)) {@include hook-modal-header();}
 }
 
 .uk-modal-footer {
     display: flow-root;
-    padding: $modal-footer-padding-vertical $modal-footer-padding-horizontal;
-    background: $modal-footer-background;
+    padding: variables.$modal-footer-padding-vertical variables.$modal-footer-padding-horizontal;
+    background: variables.$modal-footer-background;
     @if(meta.mixin-exists(hook-modal-footer)) {@include hook-modal-footer();}
 }
 
 /* Phone landscape and bigger */
 @media (min-width: variables.$breakpoint-small) {
 
-    .uk-modal-body { padding: $modal-body-padding-vertical-s $modal-body-padding-horizontal-s; }
-    .uk-modal-header { padding: $modal-header-padding-vertical-s $modal-header-padding-horizontal-s; }
-    .uk-modal-footer { padding: $modal-footer-padding-vertical-s $modal-footer-padding-horizontal-s; }
+    .uk-modal-body { padding: variables.$modal-body-padding-vertical-s variables.$modal-body-padding-horizontal-s; }
+    .uk-modal-header { padding: variables.$modal-header-padding-vertical-s variables.$modal-header-padding-horizontal-s; }
+    .uk-modal-footer { padding: variables.$modal-footer-padding-vertical-s variables.$modal-footer-padding-horizontal-s; }
 
 }
 
@@ -226,8 +227,8 @@
  ========================================================================== */
 
 .uk-modal-title {
-    font-size: $modal-title-font-size;
-    line-height: $modal-title-line-height;
+    font-size: variables.$modal-title-font-size;
+    line-height: variables.$modal-title-line-height;
     @if(meta.mixin-exists(hook-modal-title)) {@include hook-modal-title();}
 }
 
@@ -238,10 +239,10 @@
 
 [class*="uk-modal-close-"] {
     position: absolute;
-    z-index: $modal-z-index;
-    top: $modal-close-position;
-    right: $modal-close-position;
-    padding: $modal-close-padding;
+    z-index: variables.$modal-z-index;
+    top: variables.$modal-close-position;
+    right: variables.$modal-close-position;
+    padding: variables.$modal-close-padding;
     @if(meta.mixin-exists(hook-modal-close)) {@include hook-modal-close();}
 }
 
@@ -277,16 +278,16 @@
  */
 
 .uk-modal-close-outside {
-    top: $modal-close-outside-position;
+    top: variables.$modal-close-outside-position;
     /* 1 */
-    right: (-$modal-close-padding);
-    transform: translate(0, -($modal-close-outside-translate));
-    color: $modal-close-outside-color;
+    right: (variables.$modal-close-padding);
+    transform: translate(0, -(variables.$modal-close-outside-translate));
+    color: variables.$modal-close-outside-color;
     @if(meta.mixin-exists(hook-modal-close-outside)) {@include hook-modal-close-outside();}
 }
 
 .uk-modal-close-outside:hover {
-    color: $modal-close-outside-hover-color;
+    color: variables.$modal-close-outside-hover-color;
     @if(meta.mixin-exists(hook-modal-close-outside-hover)) {@include hook-modal-close-outside-hover();}
 }
 
@@ -295,8 +296,8 @@
 
     /* 1 */
     .uk-modal-close-outside {
-        right: $modal-close-outside-position;
-        transform: translate($modal-close-outside-translate, -($modal-close-outside-translate));
+        right: variables.$modal-close-outside-position;
+        transform: translate(variables.$modal-close-outside-translate, -(variables.$modal-close-outside-translate));
     }
 
 }

@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Iconnav
 // Description:     Component to create icon navigations
 //
@@ -38,7 +40,7 @@
     padding: 0;
     list-style: none;
     /* 3 */
-    margin-left: (-$iconnav-margin-horizontal);
+    margin-left: (variables.$iconnav-margin-horizontal);
     @if(meta.mixin-exists(hook-iconnav)) {@include hook-iconnav();}
 }
 
@@ -49,7 +51,7 @@
 
 .uk-iconnav > * {
     /* 1 */
-    padding-left: $iconnav-margin-horizontal;
+    padding-left: variables.$iconnav-margin-horizontal;
 }
 
 
@@ -74,7 +76,7 @@
     /* 3 */
     line-height: 0;
     /* 4 */
-    color: $iconnav-item-color;
+    color: variables.$iconnav-item-color;
     /* 5 */
     text-decoration: none;
     @if(meta.mixin-exists(hook-iconnav-item)) {@include hook-iconnav-item();}
@@ -82,13 +84,13 @@
 
 /* Hover */
 .uk-iconnav > * > a:hover {
-    color: $iconnav-item-hover-color;
+    color: variables.$iconnav-item-hover-color;
     @if(meta.mixin-exists(hook-iconnav-item-hover)) {@include hook-iconnav-item-hover();}
 }
 
 /* Active */
 .uk-iconnav > .uk-active > a {
-    color: $iconnav-item-active-color;
+    color: variables.$iconnav-item-active-color;
     @if(meta.mixin-exists(hook-iconnav-item-active)) {@include hook-iconnav-item-active();}
 }
 
@@ -106,13 +108,13 @@
     flex-direction: column;
     /* 2 */
     margin-left: 0;
-    margin-top: (-$iconnav-margin-vertical);
+    margin-top: (variables.$iconnav-margin-vertical);
 }
 
 /* 2 */
 .uk-iconnav-vertical > * {
     padding-left: 0;
-    padding-top: $iconnav-margin-vertical;
+    padding-top: variables.$iconnav-margin-vertical;
 }
 
 

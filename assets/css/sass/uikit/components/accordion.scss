@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+
 // Name:            Accordion
 // Description:     Component to create accordions
 //
@@ -34,7 +36,7 @@
  ========================================================================== */
 
 .uk-accordion > :nth-child(n+2) {
-    margin-top: $accordion-item-margin-top;
+    margin-top: variables.$accordion-item-margin-top;
     @if(meta.mixin-exists(hook-accordion-item)) {@include hook-accordion-item();}
 }
 
@@ -44,15 +46,15 @@
 
 .uk-accordion-title {
     display: block;
-    font-size: $accordion-title-font-size;
-    line-height: $accordion-title-line-height;
-    color: $accordion-title-color;
+    font-size: variables.$accordion-title-font-size;
+    line-height: variables.$accordion-title-line-height;
+    color: variables.$accordion-title-color;
     @if(meta.mixin-exists(hook-accordion-title)) {@include hook-accordion-title();}
 }
 
 /* Hover */
 .uk-accordion-title:hover {
-    color: $accordion-title-hover-color;
+    color: variables.$accordion-title-hover-color;
     text-decoration: none;
     @if(meta.mixin-exists(hook-accordion-title-hover)) {@include hook-accordion-title-hover();}
 }
@@ -63,7 +65,7 @@
 
 .uk-accordion-content {
     display: flow-root;
-    margin-top: $accordion-content-margin-top;
+    margin-top: variables.$accordion-content-margin-top;
     @if(meta.mixin-exists(hook-accordion-content)) {@include hook-accordion-content();}
 }
 

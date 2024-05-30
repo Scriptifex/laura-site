@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Badge
 // Description:     Component to create notification badges
 //
@@ -23,15 +25,15 @@
 
 .uk-badge {
     box-sizing: border-box;
-    min-width: $badge-size;
-    height: $badge-size;
-    padding: $badge-padding-vertical $badge-padding-horizontal;
-    border-radius: $badge-border-radius;
+    min-width: variables.$badge-size;
+    height: variables.$badge-size;
+    padding: variables.$badge-padding-vertical variables.$badge-padding-horizontal;
+    border-radius: variables.$badge-border-radius;
     vertical-align: middle;
     /* 1 */
-    background: $badge-background;
-    color: $badge-color !important;
-    font-size: $badge-font-size;
+    background: variables.$badge-background;
+    color: variables.$badge-color !important;
+    font-size: variables.$badge-font-size;
     /* 2 */
     display: inline-flex;
     justify-content: center;

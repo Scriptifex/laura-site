@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Comment
 // Description:     Component to create nested comments
@@ -47,7 +48,7 @@
 
 .uk-comment-header {
     display: flow-root;
-    margin-bottom: $comment-header-margin-bottom;
+    margin-bottom: variables.$comment-header-margin-bottom;
     @if(meta.mixin-exists(hook-comment-header)) {@include hook-comment-header();}
 }
 
@@ -63,8 +64,8 @@
  ========================================================================== */
 
 .uk-comment-title {
-    font-size: $comment-title-font-size;
-    line-height: $comment-title-line-height;
+    font-size: variables.$comment-title-font-size;
+    line-height: variables.$comment-title-line-height;
     @if(meta.mixin-exists(hook-comment-title)) {@include hook-comment-title();}
 }
 
@@ -73,9 +74,9 @@
  ========================================================================== */
 
 .uk-comment-meta {
-    font-size: $comment-meta-font-size;
-    line-height: $comment-meta-line-height;
-    color: $comment-meta-color;
+    font-size: variables.$comment-meta-font-size;
+    line-height: variables.$comment-meta-line-height;
+    color: variables.$comment-meta-color;
     @if(meta.mixin-exists(hook-comment-meta)) {@include hook-comment-meta();}
 }
 
@@ -98,7 +99,7 @@
 
 /* Adjacent siblings */
 .uk-comment-list > :nth-child(n+2) {
-    margin-top: $comment-list-margin-top;
+    margin-top: variables.$comment-list-margin-top;
     @if(meta.mixin-exists(hook-comment-list-adjacent)) {@include hook-comment-list-adjacent();}
 }
 
@@ -108,8 +109,8 @@
  */
 
 .uk-comment-list .uk-comment ~ ul {
-    margin: $comment-list-margin-top 0 0 0;
-    padding-left: $comment-list-padding-left;
+    margin: variables.$comment-list-margin-top 0 0 0;
+    padding-left: variables.$comment-list-padding-left;
     list-style: none;
     @if(meta.mixin-exists(hook-comment-list-sub)) {@include hook-comment-list-sub();}
 }
@@ -117,13 +118,13 @@
 /* Tablet and bigger */
 @media (min-width: variables.$breakpoint-medium) {
 
-    .uk-comment-list .uk-comment ~ ul { padding-left: $comment-list-padding-left-m; }
+    .uk-comment-list .uk-comment ~ ul { padding-left: variables.$comment-list-padding-left-m; }
 
 }
 
 /* Adjacent siblings */
 .uk-comment-list .uk-comment ~ ul > :nth-child(n+2) {
-    margin-top: $comment-list-margin-top;
+    margin-top: variables.$comment-list-margin-top;
     @if(meta.mixin-exists(hook-comment-list-sub-adjacent)) {@include hook-comment-list-sub-adjacent();}
 }
 

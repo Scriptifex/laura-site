@@ -1,5 +1,7 @@
 @use "sass:math";
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Form Range
 // Description:     Styles for the range input type
 //
@@ -65,27 +67,27 @@
 
 /* Webkit */
 .uk-range::-webkit-slider-runnable-track {
-    height: $form-range-track-height;
-    background: $form-range-track-background;
+    height: variables.$form-range-track-height;
+    background: variables.$form-range-track-background;
     @if(meta.mixin-exists(hook-form-range-track)) {@include hook-form-range-track();}
 }
 
 .uk-range:focus::-webkit-slider-runnable-track,
 /* 1 */
 .uk-range:active::-webkit-slider-runnable-track {
-    background: $form-range-track-focus-background;
+    background: variables.$form-range-track-focus-background;
     @if(meta.mixin-exists(hook-form-range-track-focus)) {@include hook-form-range-track-focus();}
 }
 
 /* Firefox */
 .uk-range::-moz-range-track {
-    height: $form-range-track-height;
-    background: $form-range-track-background;
+    height: variables.$form-range-track-height;
+    background: variables.$form-range-track-background;
     @if(meta.mixin-exists(hook-form-range-track)) {@include hook-form-range-track();}
 }
 
 .uk-range:focus::-moz-range-track {
-    background: $form-range-track-focus-background;
+    background: variables.$form-range-track-focus-background;
     @if(meta.mixin-exists(hook-form-range-track-focus)) {@include hook-form-range-track-focus();}
 }
 
@@ -99,12 +101,12 @@
 .uk-range::-webkit-slider-thumb {
     /* 1 */
     -webkit-appearance: none;
-    margin-top: (math.floor(($form-range-thumb-height * 0.5)) * -1);
+    margin-top: (math.floor((variables.$form-range-thumb-height * 0.5)) * -1);
     /* 2 */
-    height: $form-range-thumb-height;
-    width: $form-range-thumb-width;
-    border-radius: $form-range-thumb-border-radius;
-    background: $form-range-thumb-background;
+    height: variables.$form-range-thumb-height;
+    width: variables.$form-range-thumb-width;
+    border-radius: variables.$form-range-thumb-border-radius;
+    background: variables.$form-range-thumb-background;
     @if(meta.mixin-exists(hook-form-range-thumb)) {@include hook-form-range-thumb();}
 }
 
@@ -113,11 +115,11 @@
     /* 1 */
     border: none;
     /* 2 */
-    height: $form-range-thumb-height;
-    width: $form-range-thumb-width;
-    margin-top: (math.floor(($form-range-thumb-height * 0.5)) * -1);
-    border-radius: $form-range-thumb-border-radius;
-    background: $form-range-thumb-background;
+    height: variables.$form-range-thumb-height;
+    width: variables.$form-range-thumb-width;
+    margin-top: (math.floor((variables.$form-range-thumb-height * 0.5)) * -1);
+    border-radius: variables.$form-range-thumb-border-radius;
+    background: variables.$form-range-thumb-background;
     @if(meta.mixin-exists(hook-form-range-thumb)) {@include hook-form-range-thumb();}
 }
 

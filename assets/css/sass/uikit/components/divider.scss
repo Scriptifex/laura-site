@@ -1,6 +1,8 @@
 @use "sass:meta";
 @use "sass:string";
 @use "mixin";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Divider
 // Description:     Styles for dividers
@@ -34,11 +36,11 @@
     /* 1 */
     border: none;
     /* 2 */
-    margin-bottom: $divider-margin-vertical;
+    margin-bottom: variables.$divider-margin-vertical;
 }
 
 /* Add margin if adjacent element */
-* + [class*="uk-divider"] { margin-top: $divider-margin-vertical; }
+* + [class*="uk-divider"] { margin-top: variables.$divider-margin-vertical; }
 
 
 /* Icon
@@ -46,8 +48,8 @@
 
 .uk-divider-icon {
     position: relative;
-    height: $divider-icon-height;
-    @include mixin.svg-fill($internal-divider-icon-image, "#000", $divider-icon-color);
+    height: variables.$divider-icon-height;
+    @include mixin.svg-fill(variables.$internal-divider-icon-image, "#000", variables.$divider-icon-color);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     @if(meta.mixin-exists(hook-divider-icon)) {@include hook-divider-icon();}
@@ -57,21 +59,21 @@
 .uk-divider-icon::after {
     content: "";
     position: absolute;
-    top: $divider-icon-line-top;
-    max-width: string.unquote('calc(50% - (#{$divider-icon-width} / 2))');
-    border-bottom: $divider-icon-line-border-width solid $divider-icon-line-border;
+    top: variables.$divider-icon-line-top;
+    max-width: string.unquote('calc(50% - (#{variables.$divider-icon-width} / 2))');
+    border-bottom: variables.$divider-icon-line-border-width solid variables.$divider-icon-line-border;
     @if(meta.mixin-exists(hook-divider-icon-line)) {@include hook-divider-icon-line();}
 }
 
 .uk-divider-icon::before {
-    right: string.unquote('calc(50% + (#{$divider-icon-width} / 2))');
-    width: $divider-icon-line-width;
+    right: string.unquote('calc(50% + (#{variables.$divider-icon-width} / 2))');
+    width: variables.$divider-icon-line-width;
     @if(meta.mixin-exists(hook-divider-icon-line-left)) {@include hook-divider-icon-line-left();}
 }
 
 .uk-divider-icon::after {
-    left: string.unquote('calc(50% + (#{$divider-icon-width} / 2))');
-    width: $divider-icon-line-width;
+    left: string.unquote('calc(50% + (#{variables.$divider-icon-width} / 2))');
+    width: variables.$divider-icon-line-width;
     @if(meta.mixin-exists(hook-divider-icon-line-right)) {@include hook-divider-icon-line-right();}
 }
 
@@ -91,9 +93,9 @@
 .uk-divider-small::after {
     content: "";
     display: inline-block;
-    width: $divider-small-width;
+    width: variables.$divider-small-width;
     max-width: 100%;
-    border-top: $divider-small-border-width solid $divider-small-border;
+    border-top: variables.$divider-small-border-width solid variables.$divider-small-border;
     vertical-align: top;
     @if(meta.mixin-exists(hook-divider-small)) {@include hook-divider-small();}
 }
@@ -104,10 +106,10 @@
 
 .uk-divider-vertical {
     width: max-content;
-    height: $divider-vertical-height;
+    height: variables.$divider-vertical-height;
     margin-left: auto;
     margin-right: auto;
-    border-left: $divider-vertical-border-width solid $divider-vertical-border;
+    border-left: variables.$divider-vertical-border-width solid variables.$divider-vertical-border;
     @if(meta.mixin-exists(hook-divider-vertical)) {@include hook-divider-vertical();}
 }
 

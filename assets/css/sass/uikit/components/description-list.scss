@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Description list
 // Description:     Styles for description lists
 //
@@ -24,12 +26,12 @@
  */
 
 .uk-description-list > dt {
-    color: $description-list-term-color;
+    color: variables.$description-list-term-color;
     @if(meta.mixin-exists(hook-description-list-term)) {@include hook-description-list-term();}
 }
 
 .uk-description-list > dt:nth-child(n+2) {
-    margin-top: $description-list-term-margin-top;
+    margin-top: variables.$description-list-term-margin-top;
 }
 
 /*
@@ -49,9 +51,9 @@
  */
 
 .uk-description-list-divider > dt:nth-child(n+2) {
-    margin-top: $description-list-divider-term-margin-top;
-    padding-top: $description-list-divider-term-margin-top;
-    border-top: $description-list-divider-term-border-width solid $description-list-divider-term-border;
+    margin-top: variables.$description-list-divider-term-margin-top;
+    padding-top: variables.$description-list-divider-term-margin-top;
+    border-top: variables.$description-list-divider-term-border-width solid variables.$description-list-divider-term-border;
     @if(meta.mixin-exists(hook-description-list-divider-term)) {@include hook-description-list-divider-term();}
 }
 

@@ -1,5 +1,7 @@
 @use "sass:meta";
 @use "sass:string";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Breadcrumb
 // Description:     Component to create a breadcrumb navigation
 //
@@ -41,15 +43,15 @@
  ========================================================================== */
 
 .uk-breadcrumb > * > * {
-    font-size: $breadcrumb-item-font-size;
-    color: $breadcrumb-item-color;
+    font-size: variables.$breadcrumb-item-font-size;
+    color: variables.$breadcrumb-item-color;
     @if(meta.mixin-exists(hook-breadcrumb-item)) {@include hook-breadcrumb-item();}
 }
 
 /* Hover */
 .uk-breadcrumb > * > :hover {
-    color: $breadcrumb-item-hover-color;
-    text-decoration: $breadcrumb-item-hover-text-decoration;
+    color: variables.$breadcrumb-item-hover-color;
+    text-decoration: variables.$breadcrumb-item-hover-text-decoration;
     @if(meta.mixin-exists(hook-breadcrumb-item-hover)) {@include hook-breadcrumb-item-hover();}
 }
 
@@ -61,7 +63,7 @@
 /* Active */
 .uk-breadcrumb > :last-child > span,
 .uk-breadcrumb > :last-child > a:not([href]) {
-    color: $breadcrumb-item-active-color;
+    color: variables.$breadcrumb-item-active-color;
     @if(meta.mixin-exists(hook-breadcrumb-item-active)) {@include hook-breadcrumb-item-active();}
 }
 
@@ -73,13 +75,13 @@
  */
 
 .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
-    content: $breadcrumb-divider;
+    content: variables.$breadcrumb-divider;
     display: inline-block;
     /* 1 */
-    margin: 0 $breadcrumb-divider-margin-horizontal 0 string.unquote('calc(#{$breadcrumb-divider-margin-horizontal} - 4px)');
+    margin: 0 variables.$breadcrumb-divider-margin-horizontal 0 string.unquote('calc(#{variables.$breadcrumb-divider-margin-horizontal} - 4px)');
     /* 2 */
-    font-size: $breadcrumb-divider-font-size;
-    color: $breadcrumb-divider-color;
+    font-size: variables.$breadcrumb-divider-font-size;
+    color: variables.$breadcrumb-divider-color;
     @if(meta.mixin-exists(hook-breadcrumb-divider)) {@include hook-breadcrumb-divider();}
 }
 

@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Margin
 // Description:     Utilities for margins
@@ -32,60 +33,60 @@
  * Default
  */
 
-.uk-margin { margin-bottom: $margin-margin; }
-* + .uk-margin { margin-top: $margin-margin !important; }
+.uk-margin { margin-bottom: variables.$margin-margin; }
+* + .uk-margin { margin-top: variables.$margin-margin !important; }
 
-.uk-margin-top { margin-top: $margin-margin !important; }
-.uk-margin-bottom { margin-bottom: $margin-margin !important; }
-.uk-margin-left { margin-left: $margin-margin !important; }
-.uk-margin-right { margin-right: $margin-margin !important; }
+.uk-margin-top { margin-top: variables.$margin-margin !important; }
+.uk-margin-bottom { margin-bottom: variables.$margin-margin !important; }
+.uk-margin-left { margin-left: variables.$margin-margin !important; }
+.uk-margin-right { margin-right: variables.$margin-margin !important; }
 
 
 /* Small
  ========================================================================== */
 
-.uk-margin-small { margin-bottom: $margin-small-margin; }
-* + .uk-margin-small { margin-top: $margin-small-margin !important; }
+.uk-margin-small { margin-bottom: variables.$margin-small-margin; }
+* + .uk-margin-small { margin-top: variables.$margin-small-margin !important; }
 
-.uk-margin-small-top { margin-top: $margin-small-margin !important; }
-.uk-margin-small-bottom { margin-bottom: $margin-small-margin !important; }
-.uk-margin-small-left { margin-left: $margin-small-margin !important; }
-.uk-margin-small-right { margin-right: $margin-small-margin !important; }
+.uk-margin-small-top { margin-top: variables.$margin-small-margin !important; }
+.uk-margin-small-bottom { margin-bottom: variables.$margin-small-margin !important; }
+.uk-margin-small-left { margin-left: variables.$margin-small-margin !important; }
+.uk-margin-small-right { margin-right: variables.$margin-small-margin !important; }
 
 
 /* Medium
  ========================================================================== */
 
-.uk-margin-medium { margin-bottom: $margin-medium-margin; }
-* + .uk-margin-medium { margin-top: $margin-medium-margin !important; }
+.uk-margin-medium { margin-bottom: variables.$margin-medium-margin; }
+* + .uk-margin-medium { margin-top: variables.$margin-medium-margin !important; }
 
-.uk-margin-medium-top { margin-top: $margin-medium-margin !important; }
-.uk-margin-medium-bottom { margin-bottom: $margin-medium-margin !important; }
-.uk-margin-medium-left { margin-left: $margin-medium-margin !important; }
-.uk-margin-medium-right { margin-right: $margin-medium-margin !important; }
+.uk-margin-medium-top { margin-top: variables.$margin-medium-margin !important; }
+.uk-margin-medium-bottom { margin-bottom: variables.$margin-medium-margin !important; }
+.uk-margin-medium-left { margin-left: variables.$margin-medium-margin !important; }
+.uk-margin-medium-right { margin-right: variables.$margin-medium-margin !important; }
 
 
 /* Large
  ========================================================================== */
 
-.uk-margin-large { margin-bottom: $margin-large-margin; }
-* + .uk-margin-large { margin-top: $margin-large-margin !important; }
+.uk-margin-large { margin-bottom: variables.$margin-large-margin; }
+* + .uk-margin-large { margin-top: variables.$margin-large-margin !important; }
 
-.uk-margin-large-top { margin-top: $margin-large-margin !important; }
-.uk-margin-large-bottom { margin-bottom: $margin-large-margin !important; }
-.uk-margin-large-left { margin-left: $margin-large-margin !important; }
-.uk-margin-large-right { margin-right: $margin-large-margin !important; }
+.uk-margin-large-top { margin-top: variables.$margin-large-margin !important; }
+.uk-margin-large-bottom { margin-bottom: variables.$margin-large-margin !important; }
+.uk-margin-large-left { margin-left: variables.$margin-large-margin !important; }
+.uk-margin-large-right { margin-right: variables.$margin-large-margin !important; }
 
 /* Desktop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
-    .uk-margin-large { margin-bottom: $margin-large-margin-l; }
-    * + .uk-margin-large { margin-top: $margin-large-margin-l !important; }
+    .uk-margin-large { margin-bottom: variables.$margin-large-margin-l; }
+    * + .uk-margin-large { margin-top: variables.$margin-large-margin-l !important; }
 
-    .uk-margin-large-top { margin-top: $margin-large-margin-l !important; }
-    .uk-margin-large-bottom { margin-bottom: $margin-large-margin-l !important; }
-    .uk-margin-large-left { margin-left: $margin-large-margin-l !important; }
-    .uk-margin-large-right { margin-right: $margin-large-margin-l !important; }
+    .uk-margin-large-top { margin-top: variables.$margin-large-margin-l !important; }
+    .uk-margin-large-bottom { margin-bottom: variables.$margin-large-margin-l !important; }
+    .uk-margin-large-left { margin-left: variables.$margin-large-margin-l !important; }
+    .uk-margin-large-right { margin-right: variables.$margin-large-margin-l !important; }
 
 }
 
@@ -93,24 +94,24 @@
 /* XLarge
  ========================================================================== */
 
-.uk-margin-xlarge { margin-bottom: $margin-xlarge-margin; }
-* + .uk-margin-xlarge { margin-top: $margin-xlarge-margin !important; }
+.uk-margin-xlarge { margin-bottom: variables.$margin-xlarge-margin; }
+* + .uk-margin-xlarge { margin-top: variables.$margin-xlarge-margin !important; }
 
-.uk-margin-xlarge-top { margin-top: $margin-xlarge-margin !important; }
-.uk-margin-xlarge-bottom { margin-bottom: $margin-xlarge-margin !important; }
-.uk-margin-xlarge-left { margin-left: $margin-xlarge-margin !important; }
-.uk-margin-xlarge-right { margin-right: $margin-xlarge-margin !important; }
+.uk-margin-xlarge-top { margin-top: variables.$margin-xlarge-margin !important; }
+.uk-margin-xlarge-bottom { margin-bottom: variables.$margin-xlarge-margin !important; }
+.uk-margin-xlarge-left { margin-left: variables.$margin-xlarge-margin !important; }
+.uk-margin-xlarge-right { margin-right: variables.$margin-xlarge-margin !important; }
 
 /* Desktop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
-    .uk-margin-xlarge { margin-bottom: $margin-xlarge-margin-l; }
-    * + .uk-margin-xlarge { margin-top: $margin-xlarge-margin-l !important; }
+    .uk-margin-xlarge { margin-bottom: variables.$margin-xlarge-margin-l; }
+    * + .uk-margin-xlarge { margin-top: variables.$margin-xlarge-margin-l !important; }
 
-    .uk-margin-xlarge-top { margin-top: $margin-xlarge-margin-l !important; }
-    .uk-margin-xlarge-bottom { margin-bottom: $margin-xlarge-margin-l !important; }
-    .uk-margin-xlarge-left { margin-left: $margin-xlarge-margin-l !important; }
-    .uk-margin-xlarge-right { margin-right: $margin-xlarge-margin-l !important; }
+    .uk-margin-xlarge-top { margin-top: variables.$margin-xlarge-margin-l !important; }
+    .uk-margin-xlarge-bottom { margin-bottom: variables.$margin-xlarge-margin-l !important; }
+    .uk-margin-xlarge-left { margin-left: variables.$margin-xlarge-margin-l !important; }
+    .uk-margin-xlarge-right { margin-right: variables.$margin-xlarge-margin-l !important; }
 
 }
 

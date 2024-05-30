@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Section
 // Description:     Component to create horizontal layout section
@@ -45,8 +46,8 @@
 .uk-section {
     display: flow-root;
     box-sizing: border-box; /* 1 */
-    padding-top: $section-padding-vertical;
-    padding-bottom: $section-padding-vertical;
+    padding-top: variables.$section-padding-vertical;
+    padding-bottom: variables.$section-padding-vertical;
     @if(meta.mixin-exists(hook-section)) {@include hook-section();}
 }
 
@@ -54,8 +55,8 @@
 @media (min-width: variables.$breakpoint-medium) {
 
     .uk-section {
-        padding-top: $section-padding-vertical-m;
-        padding-bottom: $section-padding-vertical-m;
+        padding-top: variables.$section-padding-vertical-m;
+        padding-bottom: variables.$section-padding-vertical-m;
     }
 
 }
@@ -75,8 +76,8 @@
  */
 
 .uk-section-xsmall {
-    padding-top: $section-xsmall-padding-vertical;
-    padding-bottom: $section-xsmall-padding-vertical;
+    padding-top: variables.$section-xsmall-padding-vertical;
+    padding-bottom: variables.$section-xsmall-padding-vertical;
 }
 
 /*
@@ -84,8 +85,8 @@
  */
 
 .uk-section-small {
-    padding-top: $section-small-padding-vertical;
-    padding-bottom: $section-small-padding-vertical;
+    padding-top: variables.$section-small-padding-vertical;
+    padding-bottom: variables.$section-small-padding-vertical;
 }
 
 /*
@@ -93,16 +94,16 @@
  */
 
 .uk-section-large {
-    padding-top: $section-large-padding-vertical;
-    padding-bottom: $section-large-padding-vertical;
+    padding-top: variables.$section-large-padding-vertical;
+    padding-bottom: variables.$section-large-padding-vertical;
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: variables.$breakpoint-medium) {
 
     .uk-section-large {
-        padding-top: $section-large-padding-vertical-m;
-        padding-bottom: $section-large-padding-vertical-m;
+        padding-top: variables.$section-large-padding-vertical-m;
+        padding-bottom: variables.$section-large-padding-vertical-m;
     }
 
 }
@@ -112,16 +113,16 @@
  */
 
 .uk-section-xlarge {
-    padding-top: $section-xlarge-padding-vertical;
-    padding-bottom: $section-xlarge-padding-vertical;
+    padding-top: variables.$section-xlarge-padding-vertical;
+    padding-bottom: variables.$section-xlarge-padding-vertical;
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: variables.$breakpoint-medium) {
 
     .uk-section-xlarge {
-        padding-top: $section-xlarge-padding-vertical-m;
-        padding-bottom: $section-xlarge-padding-vertical-m;
+        padding-top: variables.$section-xlarge-padding-vertical-m;
+        padding-bottom: variables.$section-xlarge-padding-vertical-m;
     }
 
 }
@@ -135,26 +136,26 @@
  */
 
 .uk-section-default {
-    --uk-inverse: #{$section-default-color-mode};
-    background: $section-default-background;
+    --uk-inverse: #{variables.$section-default-color-mode};
+    background: variables.$section-default-background;
     @if(meta.mixin-exists(hook-section-default)) {@include hook-section-default();}
 }
 
-@if ( $section-default-color-mode == light ) { .uk-section-default:not(.uk-preserve-color) { @extend .uk-light !optional;} }
-@if ( $section-default-color-mode == dark ) { .uk-section-default:not(.uk-preserve-color) { @extend .uk-dark !optional;} }
+@if ( variables.$section-default-color-mode == light ) { .uk-section-default:not(.uk-preserve-color) { @extend .uk-light !optional;} }
+@if ( variables.$section-default-color-mode == dark ) { .uk-section-default:not(.uk-preserve-color) { @extend .uk-dark !optional;} }
 
 /*
  * Muted
  */
 
 .uk-section-muted {
-    --uk-inverse: #{$section-muted-color-mode};
-    background: $section-muted-background;
+    --uk-inverse: #{variables.$section-muted-color-mode};
+    background: variables.$section-muted-background;
     @if(meta.mixin-exists(hook-section-muted)) {@include hook-section-muted();}
 }
 
-@if ( $section-muted-color-mode == light ) { .uk-section-muted:not(.uk-preserve-color) { @extend .uk-light !optional;} }
-@if ( $section-muted-color-mode == dark ) { .uk-section-muted:not(.uk-preserve-color) { @extend .uk-dark !optional;} }
+@if ( variables.$section-muted-color-mode == light ) { .uk-section-muted:not(.uk-preserve-color) { @extend .uk-light !optional;} }
+@if ( variables.$section-muted-color-mode == dark ) { .uk-section-muted:not(.uk-preserve-color) { @extend .uk-dark !optional;} }
 
 
 /*
@@ -162,26 +163,26 @@
  */
 
 .uk-section-primary {
-    --uk-inverse: #{$section-primary-color-mode};
-    background: $section-primary-background;
+    --uk-inverse: #{variables.$section-primary-color-mode};
+    background: variables.$section-primary-background;
     @if(meta.mixin-exists(hook-section-primary)) {@include hook-section-primary();}
 }
 
-@if ( $section-primary-color-mode == light ) { .uk-section-primary:not(.uk-preserve-color) { @extend .uk-light !optional;} }
-@if ( $section-primary-color-mode == dark ) { .uk-section-primary:not(.uk-preserve-color) { @extend .uk-dark !optional;} }
+@if ( variables.$section-primary-color-mode == light ) { .uk-section-primary:not(.uk-preserve-color) { @extend .uk-light !optional;} }
+@if ( variables.$section-primary-color-mode == dark ) { .uk-section-primary:not(.uk-preserve-color) { @extend .uk-dark !optional;} }
 
 /*
  * Secondary
  */
 
 .uk-section-secondary {
-    --uk-inverse: #{$section-secondary-color-mode};
-    background: $section-secondary-background;
+    --uk-inverse: #{variables.$section-secondary-color-mode};
+    background: variables.$section-secondary-background;
     @if(meta.mixin-exists(hook-section-secondary)) {@include hook-section-secondary();}
 }
 
-@if ( $section-secondary-color-mode == light ) { .uk-section-secondary:not(.uk-preserve-color) { @extend .uk-light !optional;} }
-@if ( $section-secondary-color-mode == dark ) { .uk-section-secondary:not(.uk-preserve-color) { @extend .uk-dark !optional;} }
+@if ( variables.$section-secondary-color-mode == light ) { .uk-section-secondary:not(.uk-preserve-color) { @extend .uk-light !optional;} }
+@if ( variables.$section-secondary-color-mode == dark ) { .uk-section-secondary:not(.uk-preserve-color) { @extend .uk-dark !optional;} }
 
 
 /* Overlap modifier

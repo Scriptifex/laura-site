@@ -1,6 +1,7 @@
 @use "sass:meta";
 @use "mixin";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Form
 // Description:     Styles for forms
@@ -195,9 +196,9 @@
     /* 3 */
     border: 0 none;
     /* 4 */
-    padding: 0 $form-padding-horizontal;
-    background: $form-background;
-    color: $form-color;
+    padding: 0 variables.$form-padding-horizontal;
+    background: variables.$form-background;
+    color: variables.$form-color;
     @if(meta.mixin-exists(hook-form)) {@include hook-form();}
 }
 
@@ -210,7 +211,7 @@
 
 .uk-input,
 .uk-select:not([multiple]):not([size]) {
-    height: $form-height;
+    height: variables.$form-height;
     vertical-align: middle;
     /* 1 */
     display: inline-block;
@@ -219,7 +220,7 @@
 
 /* 2 */
 .uk-input:not(input),
-.uk-select:not(select) { line-height: $form-line-height; }
+.uk-select:not(select) { line-height: variables.$form-line-height; }
 
 /*
  * Multi-line
@@ -228,8 +229,8 @@
 .uk-select[multiple],
 .uk-select[size],
 .uk-textarea {
-    padding-top: $form-padding-vertical;
-    padding-bottom: $form-padding-vertical;
+    padding-top: variables.$form-padding-vertical;
+    padding-bottom: variables.$form-padding-vertical;
     vertical-align: top;
     @if(meta.mixin-exists(hook-form-multi-line)) {@include hook-form-multi-line();}
 }
@@ -242,8 +243,8 @@
 .uk-select:focus,
 .uk-textarea:focus {
     outline: none;
-    background-color: $form-focus-background;
-    color: $form-focus-color;
+    background-color: variables.$form-focus-background;
+    color: variables.$form-focus-color;
     @if(meta.mixin-exists(hook-form-focus)) {@include hook-form-focus();}
 }
 
@@ -251,8 +252,8 @@
 .uk-input:disabled,
 .uk-select:disabled,
 .uk-textarea:disabled {
-    background-color: $form-disabled-background;
-    color: $form-disabled-color;
+    background-color: variables.$form-disabled-background;
+    color: variables.$form-disabled-color;
     @if(meta.mixin-exists(hook-form-disabled)) {@include hook-form-disabled();}
 }
 
@@ -260,9 +261,9 @@
  * Placeholder
  */
 
-.uk-input::placeholder { color: $form-placeholder-color; }
+.uk-input::placeholder { color: variables.$form-placeholder-color; }
 
-.uk-textarea::placeholder { color: $form-placeholder-color; }
+.uk-textarea::placeholder { color: variables.$form-placeholder-color; }
 
 
 /* Style modifier (`uk-input`, `uk-select` and `uk-textarea`)
@@ -272,41 +273,41 @@
  * Small
  */
 
-.uk-form-small { font-size: $form-small-font-size; }
+.uk-form-small { font-size: variables.$form-small-font-size; }
 
 /* Single-line */
 .uk-form-small:not(textarea):not([multiple]):not([size]) {
-    height: $form-small-height;
-    padding-left: $form-small-padding-horizontal;
-    padding-right: $form-small-padding-horizontal;
+    height: variables.$form-small-height;
+    padding-left: variables.$form-small-padding-horizontal;
+    padding-right: variables.$form-small-padding-horizontal;
 }
 
 /* Multi-line */
 textarea.uk-form-small,
 [multiple].uk-form-small,
-[size].uk-form-small { padding: $form-small-padding-vertical $form-small-padding-horizontal; }
+[size].uk-form-small { padding: variables.$form-small-padding-vertical variables.$form-small-padding-horizontal; }
 
-.uk-form-small:not(select):not(input):not(textarea) { line-height: $form-small-line-height; }
+.uk-form-small:not(select):not(input):not(textarea) { line-height: variables.$form-small-line-height; }
 
 /*
  * Large
  */
 
-.uk-form-large { font-size: $form-large-font-size; }
+.uk-form-large { font-size: variables.$form-large-font-size; }
 
 /* Single-line */
 .uk-form-large:not(textarea):not([multiple]):not([size]) {
-    height: $form-large-height;
-    padding-left: $form-large-padding-horizontal;
-    padding-right: $form-large-padding-horizontal;
+    height: variables.$form-large-height;
+    padding-left: variables.$form-large-padding-horizontal;
+    padding-right: variables.$form-large-padding-horizontal;
 }
 
 /* Multi-line */
 textarea.uk-form-large,
 [multiple].uk-form-large,
-[size].uk-form-large { padding: $form-large-padding-vertical $form-large-padding-horizontal; }
+[size].uk-form-large { padding: variables.$form-large-padding-vertical variables.$form-large-padding-horizontal; }
 
-.uk-form-large:not(select):not(input):not(textarea) { line-height: $form-large-line-height; }
+.uk-form-large:not(select):not(input):not(textarea) { line-height: variables.$form-large-line-height; }
 
 
 /* Style modifier (`uk-input`, `uk-select` and `uk-textarea`)
@@ -318,7 +319,7 @@ textarea.uk-form-large,
 
 .uk-form-danger,
 .uk-form-danger:focus {
-    color: $form-danger-color;
+    color: variables.$form-danger-color;
     @if(meta.mixin-exists(hook-form-danger)) {@include hook-form-danger();}
 }
 
@@ -328,7 +329,7 @@ textarea.uk-form-large,
 
 .uk-form-success,
 .uk-form-success:focus {
-    color: $form-success-color;
+    color: variables.$form-success-color;
     @if(meta.mixin-exists(hook-form-success)) {@include hook-form-success();}
 }
 
@@ -354,15 +355,15 @@ textarea.uk-form-large,
  * Different widths for mini sized `input` and `select` elements
  */
 
-input.uk-form-width-xsmall { width: $form-width-xsmall; }
+input.uk-form-width-xsmall { width: variables.$form-width-xsmall; }
 
-select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
+select.uk-form-width-xsmall { width: (variables.$form-width-xsmall + 25px); }
 
-.uk-form-width-small { width: $form-width-small; }
+.uk-form-width-small { width: variables.$form-width-small; }
 
-.uk-form-width-medium { width: $form-width-medium; }
+.uk-form-width-medium { width: variables.$form-width-medium; }
 
-.uk-form-width-large { width: $form-width-large; }
+.uk-form-width-large { width: variables.$form-width-large; }
 
 
 /* Select
@@ -379,20 +380,20 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
     -webkit-appearance: none;
     -moz-appearance: none;
     /* 2 */
-    padding-right: $form-select-padding-right;
-    @include mixin.svg-fill($internal-form-select-image, "#000", $form-select-icon-color);
+    padding-right: variables.$form-select-padding-right;
+    @include mixin.svg-fill(variables.$internal-form-select-image, "#000", variables.$form-select-icon-color);
     background-repeat: no-repeat;
     background-position: 100% 50%;
 }
 
 /* 3 */
-.uk-select:not([multiple]):not([size]) option { color: $form-select-option-color; }
+.uk-select:not([multiple]):not([size]) option { color: variables.$form-select-option-color; }
 
 /*
  * Disabled
  */
 
-.uk-select:not([multiple]):not([size]):disabled { @include mixin.svg-fill($internal-form-select-image, "#000", $form-select-disabled-icon-color); }
+.uk-select:not([multiple]):not([size]):disabled { @include mixin.svg-fill(variables.$internal-form-select-image, "#000", variables.$form-select-disabled-icon-color); }
 
 
 /* Datalist
@@ -403,13 +404,13 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  */
 
  .uk-input[list] {
-    padding-right: $form-datalist-padding-right;
+    padding-right: variables.$form-datalist-padding-right;
     background-repeat: no-repeat;
     background-position: 100% 50%;
 }
 
 .uk-input[list]:hover,
-.uk-input[list]:focus { @include mixin.svg-fill($internal-form-datalist-image, "#000", $form-datalist-icon-color); }
+.uk-input[list]:focus { @include mixin.svg-fill(variables.$internal-form-datalist-image, "#000", variables.$form-datalist-icon-color); }
 
 /* 1 */
 .uk-input[list]::-webkit-calendar-picker-indicator { display: none !important; }
@@ -431,18 +432,18 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 .uk-checkbox {
     /* 1 */
     display: inline-block;
-    height: $form-radio-size;
-    width: $form-radio-size;
+    height: variables.$form-radio-size;
+    width: variables.$form-radio-size;
     /* 2 */
     overflow: hidden;
     /* 3 */
-    margin-top: $form-radio-margin-top;
+    margin-top: variables.$form-radio-margin-top;
     vertical-align: middle;
     /* 4 */
     -webkit-appearance: none;
     -moz-appearance: none;
     /* 5 */
-    background-color: $form-radio-background;
+    background-color: variables.$form-radio-background;
     /* 6 */
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -454,7 +455,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 /* Focus */
 .uk-radio:focus,
 .uk-checkbox:focus {
-    background-color: $form-radio-focus-background;
+    background-color: variables.$form-radio-focus-background;
     outline: none;
     @if(meta.mixin-exists(hook-form-radio-focus)) {@include hook-form-radio-focus();}
 }
@@ -466,7 +467,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 .uk-radio:checked,
 .uk-checkbox:checked,
 .uk-checkbox:indeterminate {
-    background-color: $form-radio-checked-background;
+    background-color: variables.$form-radio-checked-background;
     @if(meta.mixin-exists(hook-form-radio-checked)) {@include hook-form-radio-checked();}
 }
 
@@ -474,7 +475,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 .uk-radio:checked:focus,
 .uk-checkbox:checked:focus,
 .uk-checkbox:indeterminate:focus {
-    background-color: $form-radio-checked-focus-background;
+    background-color: variables.$form-radio-checked-focus-background;
     @if(meta.mixin-exists(hook-form-radio-checked-focus)) {@include hook-form-radio-checked-focus();}
 }
 
@@ -482,9 +483,9 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * Icons
  */
 
-.uk-radio:checked { @include mixin.svg-fill($internal-form-radio-image, "#000", $form-radio-checked-icon-color); }
-.uk-checkbox:checked { @include mixin.svg-fill($internal-form-checkbox-image, "#000", $form-radio-checked-icon-color); }
-.uk-checkbox:indeterminate { @include mixin.svg-fill($internal-form-checkbox-indeterminate-image, "#000", $form-radio-checked-icon-color); }
+.uk-radio:checked { @include mixin.svg-fill(variables.$internal-form-radio-image, "#000", variables.$form-radio-checked-icon-color); }
+.uk-checkbox:checked { @include mixin.svg-fill(variables.$internal-form-checkbox-image, "#000", variables.$form-radio-checked-icon-color); }
+.uk-checkbox:indeterminate { @include mixin.svg-fill(variables.$internal-form-checkbox-indeterminate-image, "#000", variables.$form-radio-checked-icon-color); }
 
 /*
  * Disabled
@@ -492,13 +493,13 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 
 .uk-radio:disabled,
 .uk-checkbox:disabled {
-    background-color: $form-radio-disabled-background;
+    background-color: variables.$form-radio-disabled-background;
     @if(meta.mixin-exists(hook-form-radio-disabled)) {@include hook-form-radio-disabled();}
 }
 
-.uk-radio:disabled:checked { @include mixin.svg-fill($internal-form-radio-image, "#000", $form-radio-disabled-icon-color); }
-.uk-checkbox:disabled:checked { @include mixin.svg-fill($internal-form-checkbox-image, "#000", $form-radio-disabled-icon-color); }
-.uk-checkbox:disabled:indeterminate { @include mixin.svg-fill($internal-form-checkbox-indeterminate-image, "#000", $form-radio-disabled-icon-color); }
+.uk-radio:disabled:checked { @include mixin.svg-fill(variables.$internal-form-radio-image, "#000", variables.$form-radio-disabled-icon-color); }
+.uk-checkbox:disabled:checked { @include mixin.svg-fill(variables.$internal-form-checkbox-image, "#000", variables.$form-radio-disabled-icon-color); }
+.uk-checkbox:disabled:indeterminate { @include mixin.svg-fill(variables.$internal-form-checkbox-indeterminate-image, "#000", variables.$form-radio-disabled-icon-color); }
 
 
 /* Legend
@@ -520,8 +521,8 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
     /* 3 */
     padding: 0;
     /* 4 */
-    font-size: $form-legend-font-size;
-    line-height: $form-legend-line-height;
+    font-size: variables.$form-legend-font-size;
+    line-height: variables.$form-legend-line-height;
     @if(meta.mixin-exists(hook-form-legend)) {@include hook-form-legend();}
 }
 
@@ -598,7 +599,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 
 .uk-form-stacked .uk-form-label {
     display: block;
-    margin-bottom: $form-stacked-margin-bottom;
+    margin-bottom: variables.$form-stacked-margin-bottom;
     @if(meta.mixin-exists(hook-form-stacked-label)) {@include hook-form-stacked-label();}
 }
 
@@ -607,12 +608,12 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  */
 
 /* Tablet portrait and smaller */
-@media (max-width: $breakpoint-small-max) {
+@media (max-width: variables.$breakpoint-small-max) {
 
     /* Behave like `uk-form-stacked` */
     .uk-form-horizontal .uk-form-label {
         display: block;
-        margin-bottom: $form-stacked-margin-bottom;
+        margin-bottom: variables.$form-stacked-margin-bottom;
         @if(meta.mixin-exists(hook-form-stacked-label)) {@include hook-form-stacked-label();}
     }
 
@@ -622,16 +623,16 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 @media (min-width: variables.$breakpoint-medium) {
 
     .uk-form-horizontal .uk-form-label {
-        width: $form-horizontal-label-width;
-        margin-top: $form-horizontal-label-margin-top;
+        width: variables.$form-horizontal-label-width;
+        margin-top: variables.$form-horizontal-label-margin-top;
         float: left;
         @if(meta.mixin-exists(hook-form-horizontal-label)) {@include hook-form-horizontal-label();}
     }
 
-    .uk-form-horizontal .uk-form-controls { margin-left: $form-horizontal-controls-margin-left; }
+    .uk-form-horizontal .uk-form-controls { margin-left: variables.$form-horizontal-controls-margin-left; }
 
     /* Better vertical alignment if controls are checkboxes and radio buttons with text */
-    .uk-form-horizontal .uk-form-controls-text { padding-top: $form-horizontal-controls-text-padding-top; }
+    .uk-form-horizontal .uk-form-controls-text { padding-top: variables.$form-horizontal-controls-text-padding-top; }
 
 }
 
@@ -653,13 +654,13 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
     bottom: 0;
     left: 0;
     /* 2 */
-    width: $form-icon-width;
+    width: variables.$form-icon-width;
     /* 3 */
     display: inline-flex;
     justify-content: center;
     align-items: center;
     /* 4 */
-    color: $form-icon-color;
+    color: variables.$form-icon-color;
     @if(meta.mixin-exists(hook-form-icon)) {@include hook-form-icon();}
 }
 
@@ -667,7 +668,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * Required for `a`.
  */
 
-.uk-form-icon:hover { color: $form-icon-hover-color; }
+.uk-form-icon:hover { color: variables.$form-icon-hover-color; }
 
 /*
  * Make `input` element clickable through icon, e.g. if it's a `span`
@@ -679,7 +680,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * Input padding
  */
 
-.uk-form-icon:not(.uk-form-icon-flip) ~ .uk-input { padding-left: $form-icon-width !important; }
+.uk-form-icon:not(.uk-form-icon-flip) ~ .uk-input { padding-left: variables.$form-icon-width !important; }
 
 /*
  * Position modifier
@@ -690,7 +691,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
     left: auto;
 }
 
-.uk-form-icon-flip ~ .uk-input { padding-right: $form-icon-width !important; }
+.uk-form-icon-flip ~ .uk-input { padding-right: variables.$form-icon-width !important; }
 
 
 // Hooks

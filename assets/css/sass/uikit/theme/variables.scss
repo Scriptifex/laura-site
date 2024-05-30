@@ -1,3 +1,7 @@
+@forward '../variables-theme.scss';
+@forward '../mixins-theme.scss';
+@use '../variables-theme.scss';
+@use '../mixins-theme.scss';
 //
 // Component: Variables
 //

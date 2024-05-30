@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Slidenav
 // Description:     Component to create previous/next icon navigations
 //
@@ -29,20 +31,20 @@
  */
 
 .uk-slidenav {
-    padding: $slidenav-padding-vertical $slidenav-padding-horizontal;
-    color: $slidenav-color;
+    padding: variables.$slidenav-padding-vertical variables.$slidenav-padding-horizontal;
+    color: variables.$slidenav-color;
     @if(meta.mixin-exists(hook-slidenav)) {@include hook-slidenav();}
 }
 
 /* Hover */
 .uk-slidenav:hover {
-    color: $slidenav-hover-color;
+    color: variables.$slidenav-hover-color;
     @if(meta.mixin-exists(hook-slidenav-hover)) {@include hook-slidenav-hover();}
 }
 
 /* OnClick */
 .uk-slidenav:active {
-    color: $slidenav-active-color;
+    color: variables.$slidenav-active-color;
     @if(meta.mixin-exists(hook-slidenav-active)) {@include hook-slidenav-active();}
 }
 
@@ -71,7 +73,7 @@
  ========================================================================== */
 
 .uk-slidenav-large {
-    padding: $slidenav-large-padding-vertical $slidenav-large-padding-horizontal;
+    padding: variables.$slidenav-large-padding-vertical variables.$slidenav-large-padding-horizontal;
     @if(meta.mixin-exists(hook-slidenav-large)) {@include hook-slidenav-large();}
 }
 

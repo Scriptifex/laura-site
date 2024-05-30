@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Slider
 // Description:     Component to create horizontal sliders
 //
@@ -52,8 +54,8 @@
  */
 
 .uk-slider-container-offset {
-    margin: $slider-container-margin-top $slider-container-margin-right $slider-container-margin-bottom $slider-container-margin-left;
-    padding: ($slider-container-margin-top * -1) ($slider-container-margin-right * -1) ($slider-container-margin-bottom * -1) ($slider-container-margin-left * -1);
+    margin: variables.$slider-container-margin-top variables.$slider-container-margin-right variables.$slider-container-margin-bottom variables.$slider-container-margin-left;
+    padding: (variables.$slider-container-margin-top * -1) (variables.$slider-container-margin-right * -1) (variables.$slider-container-margin-bottom * -1) (variables.$slider-container-margin-left * -1);
 }
 
 /* Items

@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Padding
 // Description:     Utilities for padding
@@ -22,12 +23,12 @@
    Component: Padding
  ========================================================================== */
 
-.uk-padding { padding: $padding-padding; }
+.uk-padding { padding: variables.$padding-padding; }
 
 /* Desktop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
-    .uk-padding { padding: $padding-padding-l; }
+    .uk-padding { padding: variables.$padding-padding-l; }
 
 }
 
@@ -35,18 +36,18 @@
 /* Small
  ========================================================================== */
 
-.uk-padding-small { padding: $padding-small-padding; }
+.uk-padding-small { padding: variables.$padding-small-padding; }
 
 
 /* Large
  ========================================================================== */
 
-.uk-padding-large { padding: $padding-large-padding; }
+.uk-padding-large { padding: variables.$padding-large-padding; }
 
 /* Desktop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
-    .uk-padding-large { padding: $padding-large-padding-l; }
+    .uk-padding-large { padding: variables.$padding-large-padding-l; }
 
 }
 

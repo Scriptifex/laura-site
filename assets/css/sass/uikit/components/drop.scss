@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Drop
 // Description:     Component to position any element next to any other element.
 //
@@ -37,12 +39,12 @@
     display: none;
     /* 2 */
     position: absolute;
-    z-index: $drop-z-index;
-    --uk-position-offset: #{$drop-margin};
-    --uk-position-viewport-offset: #{$drop-viewport-margin};
+    z-index: variables.$drop-z-index;
+    --uk-position-offset: #{variables.$drop-margin};
+    --uk-position-viewport-offset: #{variables.$drop-viewport-margin};
     /* 3 */
     box-sizing: border-box;
-    width: $drop-width;
+    width: variables.$drop-width;
 }
 
 /* Show */
@@ -59,7 +61,7 @@
  ========================================================================== */
 
 .uk-drop-parent-icon {
-    margin-left: $drop-parent-icon-margin-left;
+    margin-left: variables.$drop-parent-icon-margin-left;
     transition: transform 0.3s ease-out;
 }
 

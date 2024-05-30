@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Nav
 // Description:     Defines styles for list navigations
@@ -32,26 +33,19 @@
 // Variables
 // ========================================================================
 
-
-
-
-
-
-
-
-
-$nav-medium-font-size:                           $nav-medium-font-size-m * 0.825 !default;    // 40px 0.714
-$nav-medium-font-size-m:                         $nav-medium-font-size-l * 0.875 !default;    // 3.5rem / 56px
+/*
+$nav-medium-font-size:                           variables.$nav-medium-font-size-m * 0.825 !default;    // 40px 0.714
+$nav-medium-font-size-m:                         variables.$nav-medium-font-size-l * 0.875 !default;    // 3.5rem / 56px
 $nav-medium-font-size-l:                         4rem !default; // 64px
 
-$nav-large-font-size:                            $nav-large-font-size-m * 0.85 !default;      // 50px 0.78
+$nav-large-font-size:                            variables.$nav-large-font-size-m * 0.85 !default;      // 50px 0.78
 $nav-large-font-size-m:                          4rem !default; // 64px
 $nav-large-font-size-l:                          6rem !default; // 96px
 
 $nav-xlarge-font-size:                           4rem !default; // 64px
 $nav-xlarge-font-size-m:                         6rem !default; // 96px
 $nav-xlarge-font-size-l:                         8rem !default; // 128px
-
+*/
 
 
 /* ========================================================================
@@ -90,7 +84,7 @@ $nav-xlarge-font-size-l:                         8rem !default; // 128px
  * Must target `a` elements to exclude other elements (e.g. lists)
  */
 
-.uk-nav > li > a { padding: $nav-item-padding-vertical $nav-item-padding-horizontal; }
+.uk-nav > li > a { padding: variables.$nav-item-padding-vertical variables.$nav-item-padding-horizontal; }
 
 
 /* Sublists
@@ -102,7 +96,7 @@ $nav-xlarge-font-size-l:                         8rem !default; // 128px
  */
 
 ul.uk-nav-sub {
-    padding: $nav-sublist-padding-vertical 0 $nav-sublist-padding-vertical $nav-sublist-padding-left;
+    padding: variables.$nav-sublist-padding-vertical 0 variables.$nav-sublist-padding-vertical variables.$nav-sublist-padding-left;
     @if(meta.mixin-exists(hook-nav-sub)) {@include hook-nav-sub();}
 }
 
@@ -110,13 +104,13 @@ ul.uk-nav-sub {
  * Level 3 and deeper
  */
 
-.uk-nav-sub ul { padding-left: $nav-sublist-deeper-padding-left; }
+.uk-nav-sub ul { padding-left: variables.$nav-sublist-deeper-padding-left; }
 
 /*
  * Items
  */
 
-.uk-nav-sub a { padding: $nav-sublist-item-padding-vertical 0; }
+.uk-nav-sub a { padding: variables.$nav-sublist-item-padding-vertical 0; }
 
 
 /* Parent icon
@@ -134,20 +128,20 @@ ul.uk-nav-sub {
  ========================================================================== */
 
 .uk-nav-header {
-    padding: $nav-header-padding-vertical $nav-header-padding-horizontal;
-    text-transform: $nav-header-text-transform;
-    font-size: $nav-header-font-size;
+    padding: variables.$nav-header-padding-vertical variables.$nav-header-padding-horizontal;
+    text-transform: variables.$nav-header-text-transform;
+    font-size: variables.$nav-header-font-size;
     @if(meta.mixin-exists(hook-nav-header)) {@include hook-nav-header();}
 }
 
-.uk-nav-header:not(:first-child) { margin-top: $nav-header-margin-top; }
+.uk-nav-header:not(:first-child) { margin-top: variables.$nav-header-margin-top; }
 
 
 /* Divider
  ========================================================================== */
 
 .uk-nav .uk-nav-divider {
-    margin: $nav-divider-margin-vertical $nav-divider-margin-horizontal;
+    margin: variables.$nav-divider-margin-vertical variables.$nav-divider-margin-horizontal;
     @if(meta.mixin-exists(hook-nav-divider)) {@include hook-nav-divider();}
 }
 
@@ -156,8 +150,8 @@ ul.uk-nav-sub {
  ========================================================================== */
 
 .uk-nav-default {
-    font-size: $nav-default-font-size;
-    line-height: $nav-default-line-height;
+    font-size: variables.$nav-default-font-size;
+    line-height: variables.$nav-default-line-height;
     @if(meta.mixin-exists(hook-nav-default)) {@include hook-nav-default();}
 }
 
@@ -166,19 +160,19 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-default > li > a {
-    color: $nav-default-item-color;
+    color: variables.$nav-default-item-color;
     @if(meta.mixin-exists(hook-nav-default-item)) {@include hook-nav-default-item();}
 }
 
 /* Hover */
 .uk-nav-default > li > a:hover {
-    color: $nav-default-item-hover-color;
+    color: variables.$nav-default-item-hover-color;
     @if(meta.mixin-exists(hook-nav-default-item-hover)) {@include hook-nav-default-item-hover();}
 }
 
 /* Active */
 .uk-nav-default > li.uk-active > a {
-    color: $nav-default-item-active-color;
+    color: variables.$nav-default-item-active-color;
     @if(meta.mixin-exists(hook-nav-default-item-active)) {@include hook-nav-default-item-active();}
 }
 
@@ -187,7 +181,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-default .uk-nav-subtitle {
-    font-size: $nav-default-subtitle-font-size;
+    font-size: variables.$nav-default-subtitle-font-size;
     @if(meta.mixin-exists(hook-nav-default-subtitle)) {@include hook-nav-default-subtitle();}
 }
 
@@ -196,7 +190,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-default .uk-nav-header {
-    color: $nav-default-header-color;
+    color: variables.$nav-default-header-color;
     @if(meta.mixin-exists(hook-nav-default-header)) {@include hook-nav-default-header();}
 }
 
@@ -205,7 +199,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-default .uk-nav-divider {
-    border-top: $nav-default-divider-border-width solid $nav-default-divider-border;
+    border-top: variables.$nav-default-divider-border-width solid variables.$nav-default-divider-border;
     @if(meta.mixin-exists(hook-nav-default-divider)) {@include hook-nav-default-divider();}
 }
 
@@ -214,23 +208,23 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-default .uk-nav-sub {
-    font-size: $nav-default-sublist-font-size;
-    line-height: $nav-default-sublist-line-height;
+    font-size: variables.$nav-default-sublist-font-size;
+    line-height: variables.$nav-default-sublist-line-height;
 }
 
-.uk-nav-default .uk-nav-sub a { color: $nav-default-sublist-item-color; }
+.uk-nav-default .uk-nav-sub a { color: variables.$nav-default-sublist-item-color; }
 
-.uk-nav-default .uk-nav-sub a:hover { color: $nav-default-sublist-item-hover-color; }
+.uk-nav-default .uk-nav-sub a:hover { color: variables.$nav-default-sublist-item-hover-color; }
 
-.uk-nav-default .uk-nav-sub li.uk-active > a { color: $nav-default-sublist-item-active-color; }
+.uk-nav-default .uk-nav-sub li.uk-active > a { color: variables.$nav-default-sublist-item-active-color; }
 
 
 /* Primary modifier
  ========================================================================== */
 
 .uk-nav-primary {
-    font-size: $nav-primary-font-size;
-    line-height: $nav-primary-line-height;
+    font-size: variables.$nav-primary-font-size;
+    line-height: variables.$nav-primary-line-height;
     @if(meta.mixin-exists(hook-nav-primary)) {@include hook-nav-primary();}
 }
 
@@ -239,19 +233,19 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-primary > li > a {
-    color: $nav-primary-item-color;
+    color: variables.$nav-primary-item-color;
     @if(meta.mixin-exists(hook-nav-primary-item)) {@include hook-nav-primary-item();}
 }
 
 /* Hover */
 .uk-nav-primary > li > a:hover {
-    color: $nav-primary-item-hover-color;
+    color: variables.$nav-primary-item-hover-color;
     @if(meta.mixin-exists(hook-nav-primary-item-hover)) {@include hook-nav-primary-item-hover();}
 }
 
 /* Active */
 .uk-nav-primary > li.uk-active > a {
-    color: $nav-primary-item-active-color;
+    color: variables.$nav-primary-item-active-color;
     @if(meta.mixin-exists(hook-nav-primary-item-active)) {@include hook-nav-primary-item-active();}
 }
 
@@ -260,7 +254,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-primary .uk-nav-subtitle {
-    font-size: $nav-primary-subtitle-font-size;
+    font-size: variables.$nav-primary-subtitle-font-size;
     @if(meta.mixin-exists(hook-nav-primary-subtitle)) {@include hook-nav-primary-subtitle();}
 }
 
@@ -269,7 +263,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-primary .uk-nav-header {
-    color: $nav-primary-header-color;
+    color: variables.$nav-primary-header-color;
     @if(meta.mixin-exists(hook-nav-primary-header)) {@include hook-nav-primary-header();}
 }
 
@@ -278,7 +272,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-primary .uk-nav-divider {
-    border-top: $nav-primary-divider-border-width solid $nav-primary-divider-border;
+    border-top: variables.$nav-primary-divider-border-width solid variables.$nav-primary-divider-border;
     @if(meta.mixin-exists(hook-nav-primary-divider)) {@include hook-nav-primary-divider();}
 }
 
@@ -287,23 +281,23 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-primary .uk-nav-sub {
-    font-size: $nav-primary-sublist-font-size;
-    line-height: $nav-primary-sublist-line-height;
+    font-size: variables.$nav-primary-sublist-font-size;
+    line-height: variables.$nav-primary-sublist-line-height;
 }
 
-.uk-nav-primary .uk-nav-sub a { color: $nav-primary-sublist-item-color; }
+.uk-nav-primary .uk-nav-sub a { color: variables.$nav-primary-sublist-item-color; }
 
-.uk-nav-primary .uk-nav-sub a:hover { color: $nav-primary-sublist-item-hover-color; }
+.uk-nav-primary .uk-nav-sub a:hover { color: variables.$nav-primary-sublist-item-hover-color; }
 
-.uk-nav-primary .uk-nav-sub li.uk-active > a { color: $nav-primary-sublist-item-active-color; }
+.uk-nav-primary .uk-nav-sub li.uk-active > a { color: variables.$nav-primary-sublist-item-active-color; }
 
 
 /* Secondary modifier
  ========================================================================== */
 
 .uk-nav-secondary {
-    font-size: $nav-secondary-font-size;
-    line-height: $nav-secondary-line-height;
+    font-size: variables.$nav-secondary-font-size;
+    line-height: variables.$nav-secondary-line-height;
     @if(meta.mixin-exists(hook-nav-secondary)) {@include hook-nav-secondary();}
 }
 
@@ -313,19 +307,19 @@ ul.uk-nav-sub {
 
 .uk-nav-secondary > li > a {
 
-    color: $nav-secondary-item-color;
+    color: variables.$nav-secondary-item-color;
     @if(meta.mixin-exists(hook-nav-secondary-item)) {@include hook-nav-secondary-item();}
 }
 
 /* Hover */
 .uk-nav-secondary > li > a:hover {
-    color: $nav-secondary-item-hover-color;
+    color: variables.$nav-secondary-item-hover-color;
     @if(meta.mixin-exists(hook-nav-secondary-item-hover)) {@include hook-nav-secondary-item-hover();}
 }
 
 /* Active */
 .uk-nav-secondary > li.uk-active > a {
-    color: $nav-secondary-item-active-color;
+    color: variables.$nav-secondary-item-active-color;
     @if(meta.mixin-exists(hook-nav-secondary-item-active)) {@include hook-nav-secondary-item-active();}
 }
 
@@ -334,20 +328,20 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-secondary .uk-nav-subtitle {
-    font-size: $nav-secondary-subtitle-font-size;
-    color: $nav-secondary-subtitle-color;
+    font-size: variables.$nav-secondary-subtitle-font-size;
+    color: variables.$nav-secondary-subtitle-color;
     @if(meta.mixin-exists(hook-nav-secondary-subtitle)) {@include hook-nav-secondary-subtitle();}
 }
 
 /* Hover */
 .uk-nav-secondary > li > a:hover .uk-nav-subtitle {
-    color: $nav-secondary-subtitle-hover-color;
+    color: variables.$nav-secondary-subtitle-hover-color;
     @if(meta.mixin-exists(hook-nav-secondary-subtitle-hover)) {@include hook-nav-secondary-subtitle-hover();}
 }
 
 /* Active */
 .uk-nav-secondary > li.uk-active > a .uk-nav-subtitle {
-    color: $nav-secondary-subtitle-active-color;
+    color: variables.$nav-secondary-subtitle-active-color;
     @if(meta.mixin-exists(hook-nav-secondary-subtitle-active)) {@include hook-nav-secondary-subtitle-active();}
 }
 
@@ -356,7 +350,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-secondary .uk-nav-header {
-    color: $nav-secondary-header-color;
+    color: variables.$nav-secondary-header-color;
     @if(meta.mixin-exists(hook-nav-secondary-header)) {@include hook-nav-secondary-header();}
 }
 
@@ -365,7 +359,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-secondary .uk-nav-divider {
-    border-top: $nav-secondary-divider-border-width solid $nav-secondary-divider-border;
+    border-top: variables.$nav-secondary-divider-border-width solid variables.$nav-secondary-divider-border;
     @if(meta.mixin-exists(hook-nav-secondary-divider)) {@include hook-nav-secondary-divider();}
 }
 
@@ -374,15 +368,15 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-secondary .uk-nav-sub {
-    font-size: $nav-secondary-sublist-font-size;
-    line-height: $nav-secondary-sublist-line-height;
+    font-size: variables.$nav-secondary-sublist-font-size;
+    line-height: variables.$nav-secondary-sublist-line-height;
 }
 
-.uk-nav-secondary .uk-nav-sub a { color: $nav-secondary-sublist-item-color; }
+.uk-nav-secondary .uk-nav-sub a { color: variables.$nav-secondary-sublist-item-color; }
 
-.uk-nav-secondary .uk-nav-sub a:hover { color: $nav-secondary-sublist-item-hover-color; }
+.uk-nav-secondary .uk-nav-sub a:hover { color: variables.$nav-secondary-sublist-item-hover-color; }
 
-.uk-nav-secondary .uk-nav-sub li.uk-active > a { color: $nav-secondary-sublist-item-active-color; }
+.uk-nav-secondary .uk-nav-sub li.uk-active > a { color: variables.$nav-secondary-sublist-item-active-color; }
 
 
 /* Size modifier
@@ -393,38 +387,38 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-medium {
-    font-size: $nav-medium-font-size;
-    line-height: $nav-medium-line-height;
+    font-size: variables.$nav-medium-font-size;
+    line-height: variables.$nav-medium-line-height;
     @if(meta.mixin-exists(hook-nav-medium)) {@include hook-nav-medium();}
 }
 
 .uk-nav-large {
-    font-size: $nav-large-font-size;
-    line-height: $nav-large-line-height;
+    font-size: variables.$nav-large-font-size;
+    line-height: variables.$nav-large-line-height;
     @if(meta.mixin-exists(hook-nav-large)) {@include hook-nav-large();}
 }
 
 .uk-nav-xlarge {
-    font-size: $nav-xlarge-font-size;
-    line-height: $nav-xlarge-line-height;
+    font-size: variables.$nav-xlarge-font-size;
+    line-height: variables.$nav-xlarge-line-height;
     @if(meta.mixin-exists(hook-nav-xlarge)) {@include hook-nav-xlarge();}
 }
 
 /* Tablet Landscape and bigger */
 @media (min-width: variables.$breakpoint-medium) {
 
-    .uk-nav-medium { font-size: $nav-medium-font-size-m; }
-    .uk-nav-large { font-size: $nav-large-font-size-m; }
-    .uk-nav-xlarge { font-size: $nav-xlarge-font-size-m; }
+    .uk-nav-medium { font-size: variables.$nav-medium-font-size-m; }
+    .uk-nav-large { font-size: variables.$nav-large-font-size-m; }
+    .uk-nav-xlarge { font-size: variables.$nav-xlarge-font-size-m; }
 
 }
 
 /* Laptop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
-    .uk-nav-medium { font-size: $nav-medium-font-size-l; }
-    .uk-nav-large { font-size: $nav-large-font-size-l; }
-    .uk-nav-xlarge { font-size: $nav-xlarge-font-size-l; }
+    .uk-nav-medium { font-size: variables.$nav-medium-font-size-l; }
+    .uk-nav-large { font-size: variables.$nav-large-font-size-l; }
+    .uk-nav-xlarge { font-size: variables.$nav-xlarge-font-size-l; }
 
 }
 
@@ -447,7 +441,7 @@ ul.uk-nav-sub {
 .uk-nav-center .uk-nav-sub ul { padding-left: 0; }
 
 /* Parent icon  */
-.uk-nav-center .uk-nav-parent-icon { margin-left: $nav-parent-icon-margin-left; }
+.uk-nav-center .uk-nav-parent-icon { margin-left: variables.$nav-parent-icon-margin-left; }
 
 
 /* Style modifier
@@ -459,9 +453,9 @@ ul.uk-nav-sub {
  */
 
 .uk-nav.uk-nav-divider > :not(.uk-nav-header, .uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider) {
-    margin-top: $nav-dividers-margin-top;
-    padding-top: $nav-dividers-margin-top;
-    border-top: $nav-dividers-border-width solid $nav-dividers-border;
+    margin-top: variables.$nav-dividers-margin-top;
+    padding-top: variables.$nav-dividers-margin-top;
+    border-top: variables.$nav-dividers-border-width solid variables.$nav-dividers-border;
     @if(meta.mixin-exists(hook-nav-dividers)) {@include hook-nav-dividers();}
 }
 

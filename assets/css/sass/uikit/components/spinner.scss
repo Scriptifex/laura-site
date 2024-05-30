@@ -1,5 +1,7 @@
 @use "sass:math";
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Spinner
 // Description:     Component to create a loading spinner
 //
@@ -10,9 +12,9 @@
 
 // Variables
 // ========================================================================
-
-$spinner-radius:                                 math.floor((($spinner-size - $spinner-stroke-width) * 0.5)) !default; // Minus stroke width to prevent overflow clipping
-
+/*
+$spinner-radius:                                 math.floor(((variables.$spinner-size - variables.$spinner-stroke-width) * 0.5)) !default; // Minus stroke width to prevent overflow clipping
+*/
 
 /* ========================================================================
    Component: Spinner
@@ -30,7 +32,7 @@ $spinner-radius:                                 math.floor((($spinner-size - $s
 /* SVG
  ========================================================================== */
 
-.uk-spinner > * { animation: uk-spinner-rotate $spinner-duration linear infinite; }
+.uk-spinner > * { animation: uk-spinner-rotate variables.$spinner-duration linear infinite; }
 
 @keyframes uk-spinner-rotate {
     0% { transform: rotate(0deg); }
@@ -42,22 +44,22 @@ $spinner-radius:                                 math.floor((($spinner-size - $s
  */
 
 .uk-spinner > * > * {
-    stroke-dasharray: $spinner-circumference;
+    stroke-dasharray: variables.$spinner-circumference;
     stroke-dashoffset: 0;
     transform-origin: center;
-    animation: uk-spinner-dash $spinner-duration ease-in-out infinite;
-    stroke-width: $spinner-stroke-width;
+    animation: uk-spinner-dash variables.$spinner-duration ease-in-out infinite;
+    stroke-width: variables.$spinner-stroke-width;
     stroke-linecap: round;
 }
 
 @keyframes uk-spinner-dash {
-    0% { stroke-dashoffset: $spinner-circumference; }
+    0% { stroke-dashoffset: variables.$spinner-circumference; }
     50% {
-        stroke-dashoffset: ($spinner-circumference * 0.25);
+        stroke-dashoffset: (variables.$spinner-circumference * 0.25);
         transform: rotate(135deg);
     }
     100% {
-        stroke-dashoffset: $spinner-circumference;
+        stroke-dashoffset: variables.$spinner-circumference;
         transform: rotate(450deg);
     }
 }

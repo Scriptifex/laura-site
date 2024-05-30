@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Grid
 // Description:     Component to create responsive, fluid and nestable grids
@@ -77,25 +78,25 @@
  */
 
 /* Horizontal */
-.uk-grid { margin-left: (-$grid-gutter-horizontal); }
-.uk-grid > * { padding-left: $grid-gutter-horizontal; }
+.uk-grid { margin-left: -(variables.$grid-gutter-horizontal); }
+.uk-grid > * { padding-left: variables.$grid-gutter-horizontal; }
 
 /* Vertical */
 .uk-grid + .uk-grid,
 .uk-grid > .uk-grid-margin,
-* + .uk-grid-margin { margin-top: $grid-gutter-vertical; }
+* + .uk-grid-margin { margin-top: variables.$grid-gutter-vertical; }
 
 /* Desktop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
     /* Horizontal */
-    .uk-grid { margin-left: (-$grid-gutter-horizontal-l); }
-    .uk-grid > * { padding-left: $grid-gutter-horizontal-l; }
+    .uk-grid { margin-left: -(variables.$grid-gutter-horizontal-l); }
+    .uk-grid > * { padding-left: variables.$grid-gutter-horizontal-l; }
 
     /* Vertical */
     .uk-grid + .uk-grid,
     .uk-grid > .uk-grid-margin,
-    * + .uk-grid-margin { margin-top: $grid-gutter-vertical-l; }
+    * + .uk-grid-margin { margin-top: variables.$grid-gutter-vertical-l; }
 
 }
 
@@ -105,16 +106,16 @@
 
 /* Horizontal */
 .uk-grid-small,
-.uk-grid-column-small { margin-left: (-$grid-small-gutter-horizontal); }
+.uk-grid-column-small { margin-left: -(variables.$grid-small-gutter-horizontal); }
 .uk-grid-small > *,
-.uk-grid-column-small > * { padding-left: $grid-small-gutter-horizontal; }
+.uk-grid-column-small > * { padding-left: variables.$grid-small-gutter-horizontal; }
 
 /* Vertical */
 .uk-grid + .uk-grid-small,
 .uk-grid + .uk-grid-row-small,
 .uk-grid-small > .uk-grid-margin,
 .uk-grid-row-small > .uk-grid-margin,
-* + .uk-grid-margin-small { margin-top: $grid-small-gutter-vertical; }
+* + .uk-grid-margin-small { margin-top: variables.$grid-small-gutter-vertical; }
 
 /*
  * Medium
@@ -122,16 +123,16 @@
 
 /* Horizontal */
 .uk-grid-medium,
-.uk-grid-column-medium { margin-left: (-$grid-medium-gutter-horizontal); }
+.uk-grid-column-medium { margin-left: -(variables.$grid-medium-gutter-horizontal); }
 .uk-grid-medium > *,
-.uk-grid-column-medium > * { padding-left: $grid-medium-gutter-horizontal; }
+.uk-grid-column-medium > * { padding-left: variables.$grid-medium-gutter-horizontal; }
 
 /* Vertical */
 .uk-grid + .uk-grid-medium,
 .uk-grid + .uk-grid-row-medium,
 .uk-grid-medium > .uk-grid-margin,
 .uk-grid-row-medium > .uk-grid-margin,
-* + .uk-grid-margin-medium { margin-top: $grid-medium-gutter-vertical; }
+* + .uk-grid-margin-medium { margin-top: variables.$grid-medium-gutter-vertical; }
 
 /*
  * Large
@@ -139,32 +140,32 @@
 
 /* Horizontal */
 .uk-grid-large,
-.uk-grid-column-large { margin-left: (-$grid-large-gutter-horizontal); }
+.uk-grid-column-large { margin-left: -(variables.$grid-large-gutter-horizontal); }
 .uk-grid-large > *,
-.uk-grid-column-large > * { padding-left: $grid-large-gutter-horizontal; }
+.uk-grid-column-large > * { padding-left: variables.$grid-large-gutter-horizontal; }
 
 /* Vertical */
 .uk-grid + .uk-grid-large,
 .uk-grid + .uk-grid-row-large,
 .uk-grid-large > .uk-grid-margin,
 .uk-grid-row-large > .uk-grid-margin,
-* + .uk-grid-margin-large { margin-top: $grid-large-gutter-vertical; }
+* + .uk-grid-margin-large { margin-top: variables.$grid-large-gutter-vertical; }
 
 /* Desktop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
     /* Horizontal */
     .uk-grid-large,
-    .uk-grid-column-large { margin-left: (-$grid-large-gutter-horizontal-l); }
+    .uk-grid-column-large { margin-left: -(variables.$grid-large-gutter-horizontal-l); }
     .uk-grid-large > *,
-    .uk-grid-column-large > * { padding-left: $grid-large-gutter-horizontal-l; }
+    .uk-grid-column-large > * { padding-left: variables.$grid-large-gutter-horizontal-l; }
 
     /* Vertical */
     .uk-grid + .uk-grid-large,
     .uk-grid + .uk-grid-row-large,
     .uk-grid-large > .uk-grid-margin,
     .uk-grid-row-large > .uk-grid-margin,
-    * + .uk-grid-margin-large { margin-top: $grid-large-gutter-vertical-l; }
+    * + .uk-grid-margin-large { margin-top: variables.$grid-large-gutter-vertical-l; }
 
 }
 
@@ -195,7 +196,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    border-left: $grid-divider-border-width solid $grid-divider-border;
+    border-left: variables.$grid-divider-border-width solid variables.$grid-divider-border;
     @if(meta.mixin-exists(hook-grid-divider-horizontal)) {@include hook-grid-divider-horizontal();}
 }
 
@@ -205,7 +206,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    border-top: $grid-divider-border-width solid $grid-divider-border;
+    border-top: variables.$grid-divider-border-width solid variables.$grid-divider-border;
     @if(meta.mixin-exists(hook-grid-divider-vertical)) {@include hook-grid-divider-vertical();}
 }
 
@@ -214,34 +215,34 @@
  */
 
 /* Horizontal */
-.uk-grid-divider { margin-left: -($grid-gutter-horizontal * 2); }
-.uk-grid-divider > * { padding-left: ($grid-gutter-horizontal * 2); }
+.uk-grid-divider { margin-left: -(variables.$grid-gutter-horizontal * 2); }
+.uk-grid-divider > * { padding-left: (variables.$grid-gutter-horizontal * 2); }
 
-.uk-grid-divider > :not(.uk-first-column)::before { left: $grid-gutter-horizontal; }
+.uk-grid-divider > :not(.uk-first-column)::before { left: variables.$grid-gutter-horizontal; }
 
 /* Vertical */
-.uk-grid-divider.uk-grid-stack > .uk-grid-margin { margin-top: ($grid-gutter-vertical * 2); }
+.uk-grid-divider.uk-grid-stack > .uk-grid-margin { margin-top: (variables.$grid-gutter-vertical * 2); }
 
 .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before {
-    top: (-$grid-gutter-vertical);
-    left: ($grid-gutter-horizontal * 2);
+    top: -(variables.$grid-gutter-vertical);
+    left: (variables.$grid-gutter-horizontal * 2);
 }
 
 /* Desktop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
     /* Horizontal */
-    .uk-grid-divider { margin-left: -($grid-gutter-horizontal-l * 2); }
-    .uk-grid-divider > * { padding-left: ($grid-gutter-horizontal-l * 2); }
+    .uk-grid-divider { margin-left: -(variables.$grid-gutter-horizontal-l * 2); }
+    .uk-grid-divider > * { padding-left: (variables.$grid-gutter-horizontal-l * 2); }
 
-    .uk-grid-divider > :not(.uk-first-column)::before { left: $grid-gutter-horizontal-l; }
+    .uk-grid-divider > :not(.uk-first-column)::before { left: variables.$grid-gutter-horizontal-l; }
 
     /* Vertical */
-    .uk-grid-divider.uk-grid-stack > .uk-grid-margin { margin-top: ($grid-gutter-vertical-l * 2); }
+    .uk-grid-divider.uk-grid-stack > .uk-grid-margin { margin-top: (variables.$grid-gutter-vertical-l * 2); }
 
     .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before {
-        top: (-$grid-gutter-vertical-l);
-        left: ($grid-gutter-horizontal-l * 2);
+        top: -(variables.$grid-gutter-vertical-l);
+        left: (variables.$grid-gutter-horizontal-l * 2);
     }
 
 }
@@ -252,24 +253,24 @@
 
 /* Horizontal */
 .uk-grid-divider.uk-grid-small,
-.uk-grid-divider.uk-grid-column-small { margin-left: -($grid-small-gutter-horizontal * 2); }
+.uk-grid-divider.uk-grid-column-small { margin-left: -(variables.$grid-small-gutter-horizontal * 2); }
 .uk-grid-divider.uk-grid-small > *,
-.uk-grid-divider.uk-grid-column-small > * { padding-left: ($grid-small-gutter-horizontal * 2); }
+.uk-grid-divider.uk-grid-column-small > * { padding-left: (variables.$grid-small-gutter-horizontal * 2); }
 
 .uk-grid-divider.uk-grid-small > :not(.uk-first-column)::before,
-.uk-grid-divider.uk-grid-column-small > :not(.uk-first-column)::before { left: $grid-small-gutter-horizontal; }
+.uk-grid-divider.uk-grid-column-small > :not(.uk-first-column)::before { left: variables.$grid-small-gutter-horizontal; }
 
 /* Vertical */
 .uk-grid-divider.uk-grid-small.uk-grid-stack > .uk-grid-margin,
-.uk-grid-divider.uk-grid-row-small.uk-grid-stack > .uk-grid-margin { margin-top: ($grid-small-gutter-vertical * 2); }
+.uk-grid-divider.uk-grid-row-small.uk-grid-stack > .uk-grid-margin { margin-top: (variables.$grid-small-gutter-vertical * 2); }
 
 .uk-grid-divider.uk-grid-small.uk-grid-stack > .uk-grid-margin::before {
-    top: (-$grid-small-gutter-vertical);
-    left: ($grid-small-gutter-horizontal * 2);
+    top: -(variables.$grid-small-gutter-vertical);
+    left: (variables.$grid-small-gutter-horizontal * 2);
 }
 
-.uk-grid-divider.uk-grid-row-small.uk-grid-stack > .uk-grid-margin::before { top: (-$grid-small-gutter-vertical); }
-.uk-grid-divider.uk-grid-column-small.uk-grid-stack > .uk-grid-margin::before { left: ($grid-small-gutter-horizontal * 2); }
+.uk-grid-divider.uk-grid-row-small.uk-grid-stack > .uk-grid-margin::before { top: -(variables.$grid-small-gutter-vertical); }
+.uk-grid-divider.uk-grid-column-small.uk-grid-stack > .uk-grid-margin::before { left: (variables.$grid-small-gutter-horizontal * 2); }
 
 /*
  * Medium
@@ -277,24 +278,24 @@
 
 /* Horizontal */
 .uk-grid-divider.uk-grid-medium,
-.uk-grid-divider.uk-grid-column-medium { margin-left: -($grid-medium-gutter-horizontal * 2); }
+.uk-grid-divider.uk-grid-column-medium { margin-left: -(variables.$grid-medium-gutter-horizontal * 2); }
 .uk-grid-divider.uk-grid-medium > *,
-.uk-grid-divider.uk-grid-column-medium > * { padding-left: ($grid-medium-gutter-horizontal * 2); }
+.uk-grid-divider.uk-grid-column-medium > * { padding-left: (variables.$grid-medium-gutter-horizontal * 2); }
 
 .uk-grid-divider.uk-grid-medium > :not(.uk-first-column)::before,
-.uk-grid-divider.uk-grid-column-medium > :not(.uk-first-column)::before { left: $grid-medium-gutter-horizontal; }
+.uk-grid-divider.uk-grid-column-medium > :not(.uk-first-column)::before { left: variables.$grid-medium-gutter-horizontal; }
 
 /* Vertical */
 .uk-grid-divider.uk-grid-medium.uk-grid-stack > .uk-grid-margin,
-.uk-grid-divider.uk-grid-row-medium.uk-grid-stack > .uk-grid-margin { margin-top: ($grid-medium-gutter-vertical * 2); }
+.uk-grid-divider.uk-grid-row-medium.uk-grid-stack > .uk-grid-margin { margin-top: (variables.$grid-medium-gutter-vertical * 2); }
 
 .uk-grid-divider.uk-grid-medium.uk-grid-stack > .uk-grid-margin::before {
-    top: (-$grid-medium-gutter-vertical);
-    left: ($grid-medium-gutter-horizontal * 2);
+    top: -(variables.$grid-medium-gutter-vertical);
+    left: (variables.$grid-medium-gutter-horizontal * 2);
 }
 
-.uk-grid-divider.uk-grid-row-medium.uk-grid-stack > .uk-grid-margin::before { top: (-$grid-medium-gutter-vertical); }
-.uk-grid-divider.uk-grid-column-medium.uk-grid-stack > .uk-grid-margin::before { left: ($grid-medium-gutter-horizontal * 2); }
+.uk-grid-divider.uk-grid-row-medium.uk-grid-stack > .uk-grid-margin::before { top: -(variables.$grid-medium-gutter-vertical); }
+.uk-grid-divider.uk-grid-column-medium.uk-grid-stack > .uk-grid-margin::before { left: (variables.$grid-medium-gutter-horizontal * 2); }
 
 /*
  * Large
@@ -302,48 +303,48 @@
 
 /* Horizontal */
 .uk-grid-divider.uk-grid-large,
-.uk-grid-divider.uk-grid-column-large { margin-left: -($grid-large-gutter-horizontal * 2); }
+.uk-grid-divider.uk-grid-column-large { margin-left: -(variables.$grid-large-gutter-horizontal * 2); }
 .uk-grid-divider.uk-grid-large > *,
-.uk-grid-divider.uk-grid-column-large > * { padding-left: ($grid-large-gutter-horizontal * 2); }
+.uk-grid-divider.uk-grid-column-large > * { padding-left: (variables.$grid-large-gutter-horizontal * 2); }
 
 .uk-grid-divider.uk-grid-large > :not(.uk-first-column)::before,
-.uk-grid-divider.uk-grid-column-large > :not(.uk-first-column)::before { left: $grid-large-gutter-horizontal; }
+.uk-grid-divider.uk-grid-column-large > :not(.uk-first-column)::before { left: variables.$grid-large-gutter-horizontal; }
 
 /* Vertical */
 .uk-grid-divider.uk-grid-large.uk-grid-stack > .uk-grid-margin,
-.uk-grid-divider.uk-grid-row-large.uk-grid-stack > .uk-grid-margin { margin-top: ($grid-large-gutter-vertical * 2); }
+.uk-grid-divider.uk-grid-row-large.uk-grid-stack > .uk-grid-margin { margin-top: (variables.$grid-large-gutter-vertical * 2); }
 
 .uk-grid-divider.uk-grid-large.uk-grid-stack > .uk-grid-margin::before {
-    top: (-$grid-large-gutter-vertical);
-    left: ($grid-large-gutter-horizontal * 2);
+    top: -(variables.$grid-large-gutter-vertical);
+    left: (variables.$grid-large-gutter-horizontal * 2);
 }
 
-.uk-grid-divider.uk-grid-row-large.uk-grid-stack > .uk-grid-margin::before { top: (-$grid-large-gutter-vertical); }
-.uk-grid-divider.uk-grid-column-large.uk-grid-stack > .uk-grid-margin::before { left: ($grid-large-gutter-horizontal * 2); }
+.uk-grid-divider.uk-grid-row-large.uk-grid-stack > .uk-grid-margin::before { top: -(variables.$grid-large-gutter-vertical); }
+.uk-grid-divider.uk-grid-column-large.uk-grid-stack > .uk-grid-margin::before { left: (variables.$grid-large-gutter-horizontal * 2); }
 
 /* Desktop and bigger */
 @media (min-width: variables.$breakpoint-large) {
 
     /* Horizontal */
     .uk-grid-divider.uk-grid-large,
-    .uk-grid-divider.uk-grid-column-large { margin-left: -($grid-large-gutter-horizontal-l * 2); }
+    .uk-grid-divider.uk-grid-column-large { margin-left: -(variables.$grid-large-gutter-horizontal-l * 2); }
     .uk-grid-divider.uk-grid-large > *,
-    .uk-grid-divider.uk-grid-column-large > * { padding-left: ($grid-large-gutter-horizontal-l * 2); }
+    .uk-grid-divider.uk-grid-column-large > * { padding-left: (variables.$grid-large-gutter-horizontal-l * 2); }
 
     .uk-grid-divider.uk-grid-large > :not(.uk-first-column)::before,
-    .uk-grid-divider.uk-grid-column-large > :not(.uk-first-column)::before { left: $grid-large-gutter-horizontal-l; }
+    .uk-grid-divider.uk-grid-column-large > :not(.uk-first-column)::before { left: variables.$grid-large-gutter-horizontal-l; }
 
     /* Vertical */
     .uk-grid-divider.uk-grid-large.uk-grid-stack > .uk-grid-margin,
-    .uk-grid-divider.uk-grid-row-large.uk-grid-stack > .uk-grid-margin { margin-top: ($grid-large-gutter-vertical-l * 2); }
+    .uk-grid-divider.uk-grid-row-large.uk-grid-stack > .uk-grid-margin { margin-top: (variables.$grid-large-gutter-vertical-l * 2); }
 
     .uk-grid-divider.uk-grid-large.uk-grid-stack > .uk-grid-margin::before {
-        top: (-$grid-large-gutter-vertical-l);
-        left: ($grid-large-gutter-horizontal-l * 2);
+        top: -(variables.$grid-large-gutter-vertical-l);
+        left: (variables.$grid-large-gutter-horizontal-l * 2);
     }
 
-    .uk-grid-divider.uk-grid-row-large.uk-grid-stack > .uk-grid-margin::before { top: (-$grid-large-gutter-vertical-l); }
-    .uk-grid-divider.uk-grid-column-large.uk-grid-stack > .uk-grid-margin::before { left: ($grid-large-gutter-horizontal-l * 2); }
+    .uk-grid-divider.uk-grid-row-large.uk-grid-stack > .uk-grid-margin::before { top: -(variables.$grid-large-gutter-vertical-l); }
+    .uk-grid-divider.uk-grid-column-large.uk-grid-stack > .uk-grid-margin::before { left: (variables.$grid-large-gutter-horizontal-l * 2); }
 
 }
 

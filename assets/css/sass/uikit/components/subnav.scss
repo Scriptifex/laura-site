@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Subnav
 // Description:     Component to create a sub navigation
 //
@@ -40,7 +42,7 @@
     /* 2 */
     align-items: center;
     /* 3 */
-    margin-left: (-$subnav-margin-horizontal);
+    margin-left: (variables.$subnav-margin-horizontal);
     /* 4 */
     padding: 0;
     list-style: none;
@@ -57,7 +59,7 @@
     /* 1 */
     flex: none;
     /* 2 */
-    padding-left: $subnav-margin-horizontal;
+    padding-left: variables.$subnav-margin-horizontal;
     /* 3 */
     position: relative;
 }
@@ -81,20 +83,20 @@
     /* 2 */
     column-gap: 0.25em;
     /* 3 */
-    color: $subnav-item-color;
+    color: variables.$subnav-item-color;
     @if(meta.mixin-exists(hook-subnav-item)) {@include hook-subnav-item();}
 }
 
 /* Hover */
 .uk-subnav > * > a:hover {
-    color: $subnav-item-hover-color;
-    text-decoration: $subnav-item-hover-text-decoration;
+    color: variables.$subnav-item-hover-color;
+    text-decoration: variables.$subnav-item-hover-text-decoration;
     @if(meta.mixin-exists(hook-subnav-item-hover)) {@include hook-subnav-item-hover();}
 }
 
 /* Active */
 .uk-subnav > .uk-active > a {
-    color: $subnav-item-active-color;
+    color: variables.$subnav-item-active-color;
     @if(meta.mixin-exists(hook-subnav-item-active)) {@include hook-subnav-item-active();}
 }
 
@@ -106,7 +108,7 @@
  * Set gutter
  */
 
-.uk-subnav-divider { margin-left: -(($subnav-divider-margin-horizontal * 2) + $subnav-divider-border-width); }
+.uk-subnav-divider { margin-left: -((variables.$subnav-divider-margin-horizontal * 2) + variables.$subnav-divider-border-width); }
 
 /*
  * Align items and divider vertically
@@ -124,15 +126,15 @@
 
 .uk-subnav-divider > ::before {
     content: "";
-    height: $subnav-divider-border-height;
-    margin-left: ($subnav-divider-margin-horizontal - $subnav-margin-horizontal);
-    margin-right: $subnav-divider-margin-horizontal;
-    border-left: $subnav-divider-border-width solid transparent;
+    height: variables.$subnav-divider-border-height;
+    margin-left: (variables.$subnav-divider-margin-horizontal - variables.$subnav-margin-horizontal);
+    margin-right: variables.$subnav-divider-margin-horizontal;
+    border-left: variables.$subnav-divider-border-width solid transparent;
 }
 
 /* 1 */
 .uk-subnav-divider > :nth-child(n+2):not(.uk-first-column)::before {
-    border-left-color: $subnav-divider-border;
+    border-left-color: variables.$subnav-divider-border;
     @if(meta.mixin-exists(hook-subnav-divider)) {@include hook-subnav-divider();}
 }
 
@@ -141,30 +143,30 @@
  ========================================================================== */
 
 .uk-subnav-pill > * > :first-child {
-    padding: $subnav-pill-item-padding-vertical $subnav-pill-item-padding-horizontal;
-    background: $subnav-pill-item-background;
-    color: $subnav-pill-item-color;
+    padding: variables.$subnav-pill-item-padding-vertical variables.$subnav-pill-item-padding-horizontal;
+    background: variables.$subnav-pill-item-background;
+    color: variables.$subnav-pill-item-color;
     @if(meta.mixin-exists(hook-subnav-pill-item)) {@include hook-subnav-pill-item();}
 }
 
 /* Hover */
 .uk-subnav-pill > * > a:hover {
-    background-color: $subnav-pill-item-hover-background;
-    color: $subnav-pill-item-hover-color;
+    background-color: variables.$subnav-pill-item-hover-background;
+    color: variables.$subnav-pill-item-hover-color;
     @if(meta.mixin-exists(hook-subnav-pill-item-hover)) {@include hook-subnav-pill-item-hover();}
 }
 
 /* OnClick */
 .uk-subnav-pill > * > a:active {
-    background-color: $subnav-pill-item-onclick-background;
-    color: $subnav-pill-item-onclick-color;
+    background-color: variables.$subnav-pill-item-onclick-background;
+    color: variables.$subnav-pill-item-onclick-color;
     @if(meta.mixin-exists(hook-subnav-pill-item-onclick)) {@include hook-subnav-pill-item-onclick();}
 }
 
 /* Active */
 .uk-subnav-pill > .uk-active > a {
-    background-color: $subnav-pill-item-active-background;
-    color: $subnav-pill-item-active-color;
+    background-color: variables.$subnav-pill-item-active-background;
+    color: variables.$subnav-pill-item-active-color;
     @if(meta.mixin-exists(hook-subnav-pill-item-active)) {@include hook-subnav-pill-item-active();}
 }
 
@@ -174,7 +176,7 @@
  ========================================================================== */
 
 .uk-subnav > .uk-disabled > a {
-    color: $subnav-item-disabled-color;
+    color: variables.$subnav-item-disabled-color;
     @if(meta.mixin-exists(hook-subnav-item-disabled)) {@include hook-subnav-item-disabled();}
 }
 

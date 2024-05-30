@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Icon
 // Description:     Component to create icons
 //
@@ -101,8 +103,8 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  */
 
 .uk-icon-image {
-    width: $icon-image-size;
-    height: $icon-image-size;
+    width: variables.$icon-image-size;
+    height: variables.$icon-image-size;
     /* 1 */
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -123,21 +125,21 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  */
 
 .uk-icon-link {
-    color: $icon-link-color;
+    color: variables.$icon-link-color;
     /* 1 */
     text-decoration: none !important;
     @if(meta.mixin-exists(hook-icon-link)) {@include hook-icon-link();}
 }
 
 .uk-icon-link:hover {
-    color: $icon-link-hover-color;
+    color: variables.$icon-link-hover-color;
     @if(meta.mixin-exists(hook-icon-link-hover)) {@include hook-icon-link-hover();}
 }
 
 /* OnClick + Active */
 .uk-icon-link:active,
 .uk-active > .uk-icon-link {
-    color: $icon-link-active-color;
+    color: variables.$icon-link-active-color;
     @if(meta.mixin-exists(hook-icon-link-active)) {@include hook-icon-link-active();}
 }
 
@@ -148,11 +150,11 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
 
 .uk-icon-button {
     box-sizing: border-box;
-    width: $icon-button-size;
-    height: $icon-button-size;
-    border-radius: $icon-button-border-radius;
-    background: $icon-button-background;
-    color: $icon-button-color;
+    width: variables.$icon-button-size;
+    height: variables.$icon-button-size;
+    border-radius: variables.$icon-button-border-radius;
+    background: variables.$icon-button-background;
+    color: variables.$icon-button-color;
     vertical-align: middle;
     /* 1 */
     display: inline-flex;
@@ -163,16 +165,16 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
 
 /* Hover */
 .uk-icon-button:hover {
-    background-color: $icon-button-hover-background;
-    color: $icon-button-hover-color;
+    background-color: variables.$icon-button-hover-background;
+    color: variables.$icon-button-hover-color;
     @if(meta.mixin-exists(hook-icon-button-hover)) {@include hook-icon-button-hover();}
 }
 
 /* OnClick + Active */
 .uk-icon-button:active,
 .uk-active > .uk-icon-button {
-    background-color: $icon-button-active-background;
-    color: $icon-button-active-color;
+    background-color: variables.$icon-button-active-background;
+    color: variables.$icon-button-active-color;
     @if(meta.mixin-exists(hook-icon-button-active)) {@include hook-icon-button-active();}
 }
 

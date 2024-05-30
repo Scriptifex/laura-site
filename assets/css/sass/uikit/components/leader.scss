@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Leader
 // Description:     Component to create dot leaders
 //
@@ -28,7 +30,7 @@
 .uk-leader-fill::after {
     /* 1 */
     display: inline-block;
-    margin-left: $leader-fill-margin-left;
+    margin-left: variables.$leader-fill-margin-left;
     /* 2 */
     width: 0;
     /* 3 */
@@ -48,7 +50,7 @@
  * Pass fill character to JS
  */
 
-:root { --uk-leader-fill-content: #{$leader-fill-content}; }
+:root { --uk-leader-fill-content: #{variables.$leader-fill-content}; }
 
 
 // Hooks

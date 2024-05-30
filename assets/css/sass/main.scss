@@ -1,7 +1,12 @@
+
+@forward 'uikit/variables-theme.scss';
+@forward 'uikit/mixins-theme.scss';
+@forward 'uikit/uikit-theme.scss';
+//@forward 'custom.scss';
 @use 'uikit/variables-theme.scss';
 @use 'uikit/mixins-theme.scss';
 @use 'uikit/uikit-theme.scss';
-@use 'custom.scss';
+//@use 'custom.scss';
 
 // 1. Your custom variables and variable overwrites.
 // $global-link-color: #DA7D02;

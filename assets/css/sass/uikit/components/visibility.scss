@@ -1,5 +1,6 @@
 @use "sass:meta";
-@use "variables";
+@use "../variables.scss" as variables;
+//variables.
 
 // Name:            Visibility
 // Description:     Utilities to show or hide content on breakpoints, hover or touch
@@ -62,28 +63,28 @@
  */
 
 /* Phone portrait and smaller */
-@media (max-width: $breakpoint-xsmall-max) {
+@media (max-width: variables.$breakpoint-xsmall-max) {
 
     .uk-visible\@s { display: none !important; }
 
 }
 
 /* Phone landscape and smaller */
-@media (max-width: $breakpoint-small-max) {
+@media (max-width: variables.$breakpoint-small-max) {
 
     .uk-visible\@m { display: none !important; }
 
 }
 
 /* Tablet landscape and smaller */
-@media (max-width: $breakpoint-medium-max) {
+@media (max-width: variables.$breakpoint-medium-max) {
 
     .uk-visible\@l { display: none !important; }
 
 }
 
 /* Desktop and smaller */
-@media (max-width: $breakpoint-large-max) {
+@media (max-width: variables.$breakpoint-large-max) {
 
     .uk-visible\@xl { display: none !important; }
 

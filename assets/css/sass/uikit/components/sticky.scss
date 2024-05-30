@@ -1,4 +1,6 @@
 @use "sass:meta";
+@use "../variables.scss" as variables;
+//variables.
 // Name:            Sticky
 // Description:     Component to make elements sticky in the viewport
 //
@@ -32,7 +34,7 @@
     /* 1 */
     position: relative;
     /* 2 */
-    z-index: $sticky-z-index;
+    z-index: variables.$sticky-z-index;
     /* 3 */
     box-sizing: border-box;
 }
@@ -52,9 +54,9 @@
  * Faster animations
  */
 
-.uk-sticky[class*="uk-animation-"] { animation-duration: $sticky-animation-duration; }
+.uk-sticky[class*="uk-animation-"] { animation-duration: variables.$sticky-animation-duration; }
 
-.uk-sticky.uk-animation-reverse { animation-duration: $sticky-reverse-animation-duration; }
+.uk-sticky.uk-animation-reverse { animation-duration: variables.$sticky-reverse-animation-duration; }
 
 /*
  * Placeholder
