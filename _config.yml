@@ -92,8 +92,8 @@ GitHub: "kre8t_"
 RSS: true
 
 sass:
-  sass_dir: _sass
-  # load_paths: node_modules/uikit/src/scss
+  sass_dir: assets/css/sass
+  load_paths: assets/css/sass/uikit
 
 
 # 8. Site navigation
