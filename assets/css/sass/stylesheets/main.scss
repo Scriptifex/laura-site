@@ -1,0 +1,48 @@
+/* stylelint-disable no-irregular-whitespace */
+@forward '../uikit/variables-theme.scss';
+@forward '../uikit/mixins-theme.scss';
+@forward '../uikit/uikit-theme.scss';
+//@forward 'custom.scss';
+@use '../uikit/variables-theme.scss';
+@use '../uikit/mixins-theme.scss';
+@use '../uikit/uikit-theme.scss';
+//@use 'custom.scss';
+
+$primary-clr: #f87171;
+$secondary-clr: #fda4af;
+$accent-clr: #fecdd3;
+$muted-clr: #5a3333;
+$accent-muted-clr: #d08a92;
+$accent-darker-clr: #cb6e7a; 
+
+$global-primary-color: $primary-clr;
+$global-secondary-color: $secondary-clr;
+$global-muted-color: $muted-clr;
+$global-color: $accent-clr;
+$global-emphasis-color: $accent-darker-clr;
+
+//$global-primary-color: #f87171 !default;
+//$global-secondary-color: #fda4af !default;
+$global-success-color: #32d296 !default;
+$global-warning-color: #faa05a !default;
+$global-danger-color: #f0506e !default;
+$global-primary-background: $global-primary-color !default;
+$global-secondary-background: $global-secondary-color !default;
+$global-success-background: $global-success-color !default;
+$global-warning-background: $global-warning-color !default;
+$global-danger-background: $global-danger-color !default;
+
+
+
+// 1. Your custom variables and variable overwrites.
+// $global-link-color: #DA7D02;
+
+// 2. Import default variables and available mixins.
+// @import "uikit/variables-theme.scss";
+// @import "uikit/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+// @mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+// @import "uikit/uikit-theme.scss";

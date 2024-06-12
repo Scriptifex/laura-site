@@ -24,3 +24,6 @@ group :dependabot do
   gem 'dependabot-git_submodules'
   gem 'dependabot-npm_and_yarn'
 end
+
+# gem 'sorbet-static-and-runtime'
+# gem 'tapioca', require: false, :group => [:development, :test]

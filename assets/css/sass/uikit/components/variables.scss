@@ -1,7 +1,7 @@
-@forward '../variables';
-@forward '../mixins';
-@use '../variables';
-@use '../mixins';
+@forward '../variables-theme';
+@forward '../mixins-theme';
+@use '../variables-theme';
+@use '../mixins-theme';
 //
 // Component:       Variables
 // Description:     Defines common values which are used across all components
@@ -23,3 +23,9 @@
 // Tablet Portrait:  iPad (768x1024), Galaxy Tab (800x1280),
 // Tablet Landscape: iPad (1024x768), iPad Pro (1024x1366),
 // Desktop:          Galaxy Tab (1280x800), iPad Pro (1366x1024)
+
+$breakpoint-small:                              640px !default;  // Phone landscape
+$breakpoint-medium:                             960px !default;  // Tablet Landscape
+$breakpoint-large:                              1200px !default; // Desktop
+$breakpoint-xlarge:                             1600px !default; // Large Screens
+

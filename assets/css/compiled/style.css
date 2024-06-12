@@ -1,0 +1,17 @@
+/* stylelint-disable no-irregular-whitespace */
+.intro-text {
+  text-shadow: 1px 1px 2px black;
+}
+
+blockquote {
+  border-left: 5px solid #cb6e7a;
+  background: #fecdd3;
+  border-radius: 0 4px 4px 0;
+  padding: 5px 10px;
+}
+
+.button, input[type=submit] {
+  appearance: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

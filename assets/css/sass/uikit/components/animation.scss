@@ -1,5 +1,5 @@
 @use "sass:meta";
-@use "../variables.scss" as variables;
+@use "variables.scss" as variables;
 //variables.
 // Name:            Animation
 // Description:     Utilities for keyframe animations
@@ -192,7 +192,7 @@
  */
 
 @keyframes uk-slide-top-small {
-    0% { transform: translateY -(variables.$animation-slide-small-translate); }
+    0% { transform: translateY - (variables.$animation-slide-small-translate); }
     100% { transform: translateY(0); }
 }
 
@@ -202,7 +202,7 @@
 }
 
 @keyframes uk-slide-left-small {
-    0% { transform: translateX -(variables.$animation-slide-small-translate); }
+    0% { transform: translateX - (variables.$animation-slide-small-translate); }
     100% { transform: translateX(0); }
 }
 
@@ -216,7 +216,7 @@
  */
 
 @keyframes uk-slide-top-medium {
-    0% { transform: translateY -(variables.$animation-slide-medium-translate); }
+    0% { transform: translateY - (variables.$animation-slide-medium-translate); }
     100% { transform: translateY(0); }
 }
 
@@ -226,7 +226,7 @@
 }
 
 @keyframes uk-slide-left-medium {
-    0% { transform: translateX -(variables.$animation-slide-medium-translate); }
+    0% { transform: translateX - (variables.$animation-slide-medium-translate); }
     100% { transform: translateX(0); }
 }
 

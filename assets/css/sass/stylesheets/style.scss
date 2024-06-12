@@ -1,3 +1,16 @@
+/* stylelint-disable no-irregular-whitespace */
+//@use 'uikit-theme';
+
+//@use 'sass/uikit/variables.scss' as variables;
+//@use 'sass/uikit/mixins-theme.scss';
+//@use 'sass/uikit/uikit-theme.scss';
+//@use 'sass/custom.scss';
+//@use 'sass/syntax.scss' as syntax;
+//@use 'sass/theme-overrides.scss';
+
+//@use 'main';
+//@import 'custom';
+//@import 'syntax';
 
 $primary-clr: #f87171;
 $secondary-clr: #fda4af;
@@ -6,8 +19,8 @@ $muted-clr: #5a3333;
 $accent-muted-clr: #d08a92;
 $accent-darker-clr: #cb6e7a; 
 
-$global-primary-background: $primary-clr;
-$global-secondary-background: $secondary-clr;
+$global-primary-color: $primary-clr;
+$global-secondary-color: $secondary-clr;
 $global-muted-color: $muted-clr;
 $global-color: $accent-clr;
 $global-emphasis-color: $accent-darker-clr;
