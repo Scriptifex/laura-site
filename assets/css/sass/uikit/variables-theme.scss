@@ -20,53 +20,34 @@ $global-large-font-size:                         1.5rem !default;   // 24px
 $global-xlarge-font-size:                        2rem !default;     // 32px
 $global-2xlarge-font-size:                       2.625rem !default; // 42px
 // Colors
+$misty-rose: #fce4e3ff;
+$tea-rose-red: #facac8ff;
+$melon: #f5a9a6ff;
+$light-coral: #f28985ff;
+$indian-red: #d46763ff;
+$redwood: #ad4744ff;
+$garnet: #823531ff;
+$caput-mortuum: #5c2b29ff;
+$van-dyke: #452c2aff;
 
-$misty-rose: #fce3e4ff;
-$tea-rose-red: #fac8c9ff;
-$cherry-blossom-pink: #f5a6a9ff;
-$light-coral: #f28589ff;
-$indian-red: #d46366ff;
-$redwood: #ad4447ff;
-$garnet: #823133ff;
-$caput-mortuum: #5c292bff;
-$rose-ebony: #4f3232ff;
-$tea-rose-red-2: #f8bcbeff;
-$salmon-pink: #f6a2a3ff;
-$light-coral-2: #f2868aff;
-$light-coral-3: #ef686dff;
-$bittersweet-shimmer: #ce4d51ff;
-$cordovan: #9d3d40ff;
-$garnet-2: #762d2eff;
-$caput-mortuum-2: #532527ff;
-$van-dyke: #472d2dff;
-$tea-rose-red-3: #f9cacbff;
-$tea-rose-red-4: #f8b8b9ff;
-$salmon-pink-2: #f5a3a5ff;
-$light-coral-4: #f38a8dff;
-$light-coral-5: #d97478ff;
-$indian-red-2: #c05e61ff;
-$redwood-2: #b04345ff;
-$cordovan-2: #924246ff;
-$rose-taupe: #7f5151ff;
-
-$page-background-color: #F6E7D8 !default;
-$large-background-color: #ffadad !default;
-$medium-background-color: #f68989 !default;
+$page-background-color: #fce4e3ff !default;
+$large-background-color: #facac8ff !default;
+$medium-background-color: #f5a9a6ff !default;
 $small-background-color: #f68989 !default;
 $emphasis-background-color: #C65D7B !default;
-$muted-background-color: #fac8c9ff !default;
+$muted-background-color: #facac8ff !default;
 $bright-background-color: #d46366ff !default;
 $bold-background-color: #823133ff !default;
-$fade-background-color: #fde9e8ff !default;
+$fade-background-color: #facac8ff !default;
 $page-element-color: #874356 !default;
 $large-element-color: #da627d !default;
 $medium-element-color: #a53860 !default;
 $small-element-color: #a53860 !default;
-$emphasis-element-color: #450920 !default;
+$emphasis-element-color: #452c2aff !default;
 $muted-element-color: #4f3232ff !default;
 $bright-element-color: #d46366ff !default;
 $bold-element-color: #823133ff !default;
-$fade-element-color: #fde9e8ff !default;
+$fade-element-color: #f5a9a6ff !default;
 $page-text-color: color.adjust($page-element-color, $saturation: -10%) !default;
 $large-text-color: color.adjust($large-element-color, $saturation: -10%) !default;
 $medium-text-color: color.adjust($medium-element-color, $saturation: -10%) !default;
@@ -217,46 +198,46 @@ $inverse-bright-text-color-active: color.adjust($inverse-bright-element-color-ac
 $inverse-bold-text-color-active: color.adjust($inverse-bold-element-color-active, $saturation: -10%) !default;
 $inverse-fade-text-color-active: color.adjust($inverse-fade-element-color-active, $saturation: -10%) !default;
 
-$global-color: #666 /*#4d3a3c*/ !default;
+$global-color: #8b605f /*#4d3a3c*/ !default;
 $global-primary-color: #f87171 !default;
 $global-secondary-color: #fda4af !default;
-$global-emphasis-color: #333 /*#bb3c4b*/ !default;
+$global-emphasis-color: #892e29ff /*#bb3c4b*/ !default;
 $global-accent-color-1: #ffd /*#ffddf1*/ !default;
 $global-dark-color: #000 /*#6b1b32*/ !default;
-$global-inverse-color: #ffffff /*#fecdd3*/ !default;
-$global-link-color: #1e87f0 /*$global-primary-color*/ !default;
-$global-link-hover-color: #0f6ecd /*#ff714e*/ !default;
-$global-muted-color: #999 /*#d08a92*/ !default;
+$global-inverse-color: #fce4e3ff /*#fecdd3*/ !default;
+$global-link-color: #f68989ff /*$global-primary-color*/ !default;
+$global-link-hover-color: #d35f5f /*#ff714e*/ !default;
+$global-muted-color: #d46763ff /*#d08a92*/ !default;
 $global-success-color: #32d296 !default;
 $global-warning-color: #faa05a !default;
 $global-danger-color: #f0506e !default;
 $inverse-global-color-mode: light !default;
-$inverse-global-color: #ffffffb3 !default;
-$inverse-global-inverse-color: #666 !default;
-$inverse-global-emphasis-color: #fff !default;
-$inverse-global-muted-color: #ffffff80 !default;
+$inverse-global-color: rgba($global-inverse-color, 0.7) !default;
+$inverse-global-inverse-color: #8b605f !default;
+$inverse-global-emphasis-color: $global-inverse-color !default;
+$inverse-global-muted-color: rgba($global-inverse-color, 0.5) !default;
 $close-color: $global-muted-color !default;
 $close-hover-color: $global-color !default;
-$inverse-close-color: #ffffff80 !default;
-$inverse-close-hover-color: #ffffffb3 !default;
+$inverse-close-color: rgba($global-inverse-color, 0.5) !default;
+$inverse-close-hover-color: rgba($global-inverse-color, 0.7) !default;
 $global-shadow-color: #000 !default;
-$global-select-color: #39f /*#f8714e8*/ !default;
+$global-select-color: #f68989ff /*#f8714e8*/ !default;
 
 
 // Backgrounds
-$global-background: #fff /*$page-background-color*/ !default;
-$global-muted-background: #f8f8f8 /*$page-background-color*/ !default;
-$global-primary-background: #1e87f0 /*rgba($global-primary-color, 0.7)*/ !default;
-$global-secondary-background: #222 /*rgba($global-secondary-color, 0.4)*/ !default;
+$global-background: #fce4e3ff /*$page-background-color*/ !default;
+$global-muted-background: #facac8ff /*$page-background-color*/ !default;
+$global-primary-background: #f68989ff /*rgba($global-primary-color, 0.7)*/ !default;
+$global-secondary-background: #452c2aff /*rgba($global-secondary-color, 0.4)*/ !default;
 $global-success-background: #32d296/*$global-success-color*/ !default;
 $global-warning-background: #faa05a/*$global-warning-color*/ !default;
 $global-danger-background: #f0506e/*$global-danger-color*/ !default;
-$inverse-global-muted-background: #ffffff1a !default;
-$inverse-global-primary-background: #fff !default;
+$inverse-global-muted-background: rgba($global-background, 0.1) !default;
+$inverse-global-primary-background: $global-background !default;
 // Borders
 $global-border: #e5e5e5 !default;
 $global-border-width: 1px !default;
-$inverse-global-border: #ffffff33 !default;
+$inverse-global-border: rgba($global-background, 0.2) !default;
 $border-rounded-border-radius: 5px !default;
 // Box-Shadows
 $global-small-box-shadow: 0 2px 8px rgba($global-shadow-color,0.08) !default;
