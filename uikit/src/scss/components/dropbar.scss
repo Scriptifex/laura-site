@@ -1,6 +1,3 @@
-@use "sass:meta";
-@use "variables";
-
 // Name:            Dropbar
 // Description:     Component to create a dropbar based on Drop component
 //
@@ -42,7 +39,7 @@
     padding: $dropbar-padding-top $dropbar-padding-horizontal $dropbar-padding-bottom $dropbar-padding-horizontal;
     background: $dropbar-background;
     color: $dropbar-color;
-    @if(meta.mixin-exists(hook-dropbar)) {@include hook-dropbar();}
+    @if(mixin-exists(hook-dropbar)) {@include hook-dropbar();}
 }
 
 /*
@@ -52,7 +49,7 @@
 .uk-dropbar > :last-child { margin-bottom: 0; }
 
 /* Phone landscape and bigger */
-@media (min-width: variables.$breakpoint-small) {
+@media (min-width: $breakpoint-small) {
 
     .uk-dropbar {
         padding-left: $dropbar-padding-horizontal-s;
@@ -62,7 +59,7 @@
 }
 
 /* Tablet landscape and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-dropbar {
         padding-left: $dropbar-padding-horizontal-m;
@@ -95,26 +92,26 @@
  ========================================================================== */
 
 .uk-dropbar-top {
-    @if(meta.mixin-exists(hook-dropbar-top)) {@include hook-dropbar-top();}
+    @if(mixin-exists(hook-dropbar-top)) {@include hook-dropbar-top();}
 }
 
 .uk-dropbar-bottom {
-    @if(meta.mixin-exists(hook-dropbar-bottom)) {@include hook-dropbar-bottom();}
+    @if(mixin-exists(hook-dropbar-bottom)) {@include hook-dropbar-bottom();}
 }
 
 .uk-dropbar-left {
-    @if(meta.mixin-exists(hook-dropbar-left)) {@include hook-dropbar-left();}
+    @if(mixin-exists(hook-dropbar-left)) {@include hook-dropbar-left();}
 }
 
 .uk-dropbar-right {
-    @if(meta.mixin-exists(hook-dropbar-right)) {@include hook-dropbar-right();}
+    @if(mixin-exists(hook-dropbar-right)) {@include hook-dropbar-right();}
 }
 
 
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-dropbar-misc)) {@include hook-dropbar-misc();}
+@if(mixin-exists(hook-dropbar-misc)) {@include hook-dropbar-misc();}
 
 // @mixin hook-dropbar(){}
 // @mixin hook-dropbar-top(){}

@@ -1,5 +1,3 @@
-@use "sass:meta";
-@use "sass:string";
 @mixin hook-accordion(){}
 @mixin hook-accordion-item(){}
 @mixin hook-accordion-title(){
@@ -91,12 +89,12 @@
 @mixin hook-inverse-component-article(){
 
     .uk-article-title {
-        @if(meta.mixin-exists(hook-inverse-article-title)) {@include hook-inverse-article-title();}
+        @if(mixin-exists(hook-inverse-article-title)) {@include hook-inverse-article-title();}
     }
 
     .uk-article-meta {
         color: $inverse-article-meta-color;
-        @if(meta.mixin-exists(hook-inverse-article-meta)) {@include hook-inverse-article-meta();}
+        @if(mixin-exists(hook-inverse-article-meta)) {@include hook-inverse-article-meta();}
     }
 
 }
@@ -111,11 +109,11 @@
     .uk-badge {
         background-color: $inverse-badge-background;
         color: $inverse-badge-color !important;
-        @if(meta.mixin-exists(hook-inverse-badge)) {@include hook-inverse-badge();}
+        @if(mixin-exists(hook-inverse-badge)) {@include hook-inverse-badge();}
     }
 
     .uk-badge:hover {
-        @if(meta.mixin-exists(hook-inverse-badge-hover)) {@include hook-inverse-badge-hover();}
+        @if(mixin-exists(hook-inverse-badge-hover)) {@include hook-inverse-badge-hover();}
     }
 
 }
@@ -180,14 +178,14 @@
     a,
     .uk-link {
         color: $inverse-base-link-color;
-        @if(meta.mixin-exists(hook-inverse-base-link)) {@include hook-inverse-base-link();}
+        @if(mixin-exists(hook-inverse-base-link)) {@include hook-inverse-base-link();}
     }
 
     a:hover,
     .uk-link:hover,
     .uk-link-toggle:hover .uk-link {
         color: $inverse-base-link-hover-color;
-        @if(meta.mixin-exists(hook-inverse-base-link-hover)) {@include hook-inverse-base-link-hover();}
+        @if(mixin-exists(hook-inverse-base-link-hover)) {@include hook-inverse-base-link-hover();}
     }
 
     //
@@ -198,7 +196,7 @@
     :not(pre) > kbd,
     :not(pre) > samp {
         color: $inverse-base-code-color;
-        @if(meta.mixin-exists(hook-inverse-base-code)) {@include hook-inverse-base-code();}
+        @if(mixin-exists(hook-inverse-base-code)) {@include hook-inverse-base-code();}
     }
 
     //
@@ -224,31 +222,31 @@
     .uk-heading-2xlarge,
     .uk-heading-3xlarge {
         color: $inverse-base-heading-color;
-        @if(meta.mixin-exists(hook-inverse-base-heading)) {@include hook-inverse-base-heading();}
+        @if(mixin-exists(hook-inverse-base-heading)) {@include hook-inverse-base-heading();}
     }
 
     h1, .uk-h1 {
-        @if(meta.mixin-exists(hook-inverse-base-h1)) {@include hook-inverse-base-h1();}
+        @if(mixin-exists(hook-inverse-base-h1)) {@include hook-inverse-base-h1();}
     }
 
     h2, .uk-h2 {
-        @if(meta.mixin-exists(hook-inverse-base-h2)) {@include hook-inverse-base-h2();}
+        @if(mixin-exists(hook-inverse-base-h2)) {@include hook-inverse-base-h2();}
     }
 
     h3, .uk-h3 {
-        @if(meta.mixin-exists(hook-inverse-base-h3)) {@include hook-inverse-base-h3();}
+        @if(mixin-exists(hook-inverse-base-h3)) {@include hook-inverse-base-h3();}
     }
 
     h4, .uk-h4 {
-        @if(meta.mixin-exists(hook-inverse-base-h4)) {@include hook-inverse-base-h4();}
+        @if(mixin-exists(hook-inverse-base-h4)) {@include hook-inverse-base-h4();}
     }
 
     h5, .uk-h5 {
-        @if(meta.mixin-exists(hook-inverse-base-h5)) {@include hook-inverse-base-h5();}
+        @if(mixin-exists(hook-inverse-base-h5)) {@include hook-inverse-base-h5();}
     }
 
     h6, .uk-h6 {
-        @if(meta.mixin-exists(hook-inverse-base-h6)) {@include hook-inverse-base-h6();}
+        @if(mixin-exists(hook-inverse-base-h6)) {@include hook-inverse-base-h6();}
     }
 
     //
@@ -256,11 +254,11 @@
     //
 
     blockquote {
-        @if(meta.mixin-exists(hook-inverse-base-blockquote)) {@include hook-inverse-base-blockquote();}
+        @if(mixin-exists(hook-inverse-base-blockquote)) {@include hook-inverse-base-blockquote();}
     }
 
     blockquote footer {
-        @if(meta.mixin-exists(hook-inverse-base-blockquote-footer)) {@include hook-inverse-base-blockquote-footer();}
+        @if(mixin-exists(hook-inverse-base-blockquote-footer)) {@include hook-inverse-base-blockquote-footer();}
     }
 
     //
@@ -269,7 +267,7 @@
 
     hr, .uk-hr {
         border-top-color: $inverse-base-hr-border;
-        @if(meta.mixin-exists(hook-inverse-base-hr)) {@include hook-inverse-base-hr();}
+        @if(mixin-exists(hook-inverse-base-hr)) {@include hook-inverse-base-hr();}
     }
 
     //
@@ -295,22 +293,22 @@
 
     .uk-breadcrumb > * > * {
         color: $inverse-breadcrumb-item-color;
-        @if(meta.mixin-exists(hook-inverse-breadcrumb-item)) {@include hook-inverse-breadcrumb-item();}
+        @if(mixin-exists(hook-inverse-breadcrumb-item)) {@include hook-inverse-breadcrumb-item();}
     }
 
     .uk-breadcrumb > * > :hover {
         color: $inverse-breadcrumb-item-hover-color;
-        @if(meta.mixin-exists(hook-inverse-breadcrumb-item-hover)) {@include hook-inverse-breadcrumb-item-hover();}
+        @if(mixin-exists(hook-inverse-breadcrumb-item-hover)) {@include hook-inverse-breadcrumb-item-hover();}
     }
 
 
     .uk-breadcrumb > .uk-disabled > * {
-        @if(meta.mixin-exists(hook-inverse-breadcrumb-item-disabled)) {@include hook-inverse-breadcrumb-item-disabled();}
+        @if(mixin-exists(hook-inverse-breadcrumb-item-disabled)) {@include hook-inverse-breadcrumb-item-disabled();}
     }
 
     .uk-breadcrumb > :last-child > * {
         color: $inverse-breadcrumb-item-active-color;
-        @if(meta.mixin-exists(hook-inverse-breadcrumb-item-active)) {@include hook-inverse-breadcrumb-item-active();}
+        @if(mixin-exists(hook-inverse-breadcrumb-item-active)) {@include hook-inverse-breadcrumb-item-active();}
     }
 
     //
@@ -319,7 +317,7 @@
 
     .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
         color: $inverse-breadcrumb-divider-color;
-        @if(meta.mixin-exists(hook-inverse-breadcrumb-divider)) {@include hook-inverse-breadcrumb-divider();}
+        @if(mixin-exists(hook-inverse-breadcrumb-divider)) {@include hook-inverse-breadcrumb-divider();}
     }
 
 }
@@ -423,20 +421,20 @@
     .uk-button-default {
         background-color: $inverse-button-default-background;
         color: $inverse-button-default-color;
-        @if(meta.mixin-exists(hook-inverse-button-default)) {@include hook-inverse-button-default();}
+        @if(mixin-exists(hook-inverse-button-default)) {@include hook-inverse-button-default();}
     }
 
     .uk-button-default:hover {
         background-color: $inverse-button-default-hover-background;
         color: $inverse-button-default-hover-color;
-        @if(meta.mixin-exists(hook-inverse-button-default-hover)) {@include hook-inverse-button-default-hover();}
+        @if(mixin-exists(hook-inverse-button-default-hover)) {@include hook-inverse-button-default-hover();}
     }
 
     .uk-button-default:active,
     .uk-button-default.uk-active {
         background-color: $inverse-button-default-active-background;
         color: $inverse-button-default-active-color;
-        @if(meta.mixin-exists(hook-inverse-button-default-active)) {@include hook-inverse-button-default-active();}
+        @if(mixin-exists(hook-inverse-button-default-active)) {@include hook-inverse-button-default-active();}
     }
 
     //
@@ -446,20 +444,20 @@
     .uk-button-primary {
         background-color: $inverse-button-primary-background;
         color: $inverse-button-primary-color;
-        @if(meta.mixin-exists(hook-inverse-button-primary)) {@include hook-inverse-button-primary();}
+        @if(mixin-exists(hook-inverse-button-primary)) {@include hook-inverse-button-primary();}
     }
 
     .uk-button-primary:hover {
         background-color: $inverse-button-primary-hover-background;
         color: $inverse-button-primary-hover-color;
-        @if(meta.mixin-exists(hook-inverse-button-primary-hover)) {@include hook-inverse-button-primary-hover();}
+        @if(mixin-exists(hook-inverse-button-primary-hover)) {@include hook-inverse-button-primary-hover();}
     }
 
     .uk-button-primary:active,
     .uk-button-primary.uk-active {
         background-color: $inverse-button-primary-active-background;
         color: $inverse-button-primary-active-color;
-        @if(meta.mixin-exists(hook-inverse-button-primary-active)) {@include hook-inverse-button-primary-active();}
+        @if(mixin-exists(hook-inverse-button-primary-active)) {@include hook-inverse-button-primary-active();}
     }
 
     //
@@ -469,20 +467,20 @@
     .uk-button-secondary {
         background-color: $inverse-button-secondary-background;
         color: $inverse-button-secondary-color;
-        @if(meta.mixin-exists(hook-inverse-button-secondary)) {@include hook-inverse-button-secondary();}
+        @if(mixin-exists(hook-inverse-button-secondary)) {@include hook-inverse-button-secondary();}
     }
 
     .uk-button-secondary:hover {
         background-color: $inverse-button-secondary-hover-background;
         color: $inverse-button-secondary-hover-color;
-        @if(meta.mixin-exists(hook-inverse-button-secondary-hover)) {@include hook-inverse-button-secondary-hover();}
+        @if(mixin-exists(hook-inverse-button-secondary-hover)) {@include hook-inverse-button-secondary-hover();}
     }
 
     .uk-button-secondary:active,
     .uk-button-secondary.uk-active {
         background-color: $inverse-button-secondary-active-background;
         color: $inverse-button-secondary-active-color;
-        @if(meta.mixin-exists(hook-inverse-button-secondary-active)) {@include hook-inverse-button-secondary-active();}
+        @if(mixin-exists(hook-inverse-button-secondary-active)) {@include hook-inverse-button-secondary-active();}
     }
 
     //
@@ -491,17 +489,17 @@
 
     .uk-button-text {
         color: $inverse-button-text-color;
-        @if(meta.mixin-exists(hook-inverse-button-text)) {@include hook-inverse-button-text();}
+        @if(mixin-exists(hook-inverse-button-text)) {@include hook-inverse-button-text();}
     }
 
     .uk-button-text:hover {
         color: $inverse-button-text-hover-color;
-        @if(meta.mixin-exists(hook-inverse-button-text-hover)) {@include hook-inverse-button-text-hover();}
+        @if(mixin-exists(hook-inverse-button-text-hover)) {@include hook-inverse-button-text-hover();}
     }
 
     .uk-button-text:disabled {
         color: $inverse-button-text-disabled-color;
-        @if(meta.mixin-exists(hook-inverse-button-text-disabled)) {@include hook-inverse-button-text-disabled();}
+        @if(mixin-exists(hook-inverse-button-text-disabled)) {@include hook-inverse-button-text-disabled();}
     }
 
     //
@@ -510,7 +508,7 @@
 
     .uk-button-link {
         color: $inverse-button-link-color;
-        @if(meta.mixin-exists(hook-inverse-button-link)) {@include hook-inverse-button-link();}
+        @if(mixin-exists(hook-inverse-button-link)) {@include hook-inverse-button-link();}
     }
 
     .uk-button-link:hover { color: $inverse-button-link-hover-color; }
@@ -640,7 +638,7 @@
     &.uk-card-badge {
         background-color: $inverse-card-badge-background;
         color: $inverse-card-badge-color;
-        @if(meta.mixin-exists(hook-inverse-card-badge)) {@include hook-inverse-card-badge();}
+        @if(mixin-exists(hook-inverse-card-badge)) {@include hook-inverse-card-badge();}
     }
 
 }
@@ -656,12 +654,12 @@
 
     .uk-close {
         color: $inverse-close-color;
-        @if(meta.mixin-exists(hook-inverse-close)) {@include hook-inverse-close();}
+        @if(mixin-exists(hook-inverse-close)) {@include hook-inverse-close();}
     }
 
     .uk-close:hover {
         color: $inverse-close-hover-color;
-        @if(meta.mixin-exists(hook-inverse-close-hover)) {@include hook-inverse-close-hover();}
+        @if(mixin-exists(hook-inverse-close-hover)) {@include hook-inverse-close-hover();}
     }
 
 }
@@ -700,19 +698,19 @@
 
     .uk-countdown-number,
     .uk-countdown-separator {
-        @if(meta.mixin-exists(hook-inverse-countdown-item)) {@include hook-inverse-countdown-item();}
+        @if(mixin-exists(hook-inverse-countdown-item)) {@include hook-inverse-countdown-item();}
     }
 
     .uk-countdown-number {
-        @if(meta.mixin-exists(hook-inverse-countdown-number)) {@include hook-inverse-countdown-number();}
+        @if(mixin-exists(hook-inverse-countdown-number)) {@include hook-inverse-countdown-number();}
     }
 
     .uk-countdown-separator {
-        @if(meta.mixin-exists(hook-inverse-countdown-separator)) {@include hook-inverse-countdown-separator();}
+        @if(mixin-exists(hook-inverse-countdown-separator)) {@include hook-inverse-countdown-separator();}
     }
 
     .uk-countdown-label {
-        @if(meta.mixin-exists(hook-inverse-countdown-label)) {@include hook-inverse-countdown-label();}
+        @if(mixin-exists(hook-inverse-countdown-label)) {@include hook-inverse-countdown-label();}
     }
 
 }
@@ -740,23 +738,23 @@
 
     .uk-divider-icon {
         @include svg-fill($internal-divider-icon-image, "#000", $inverse-divider-icon-color);
-        @if(meta.mixin-exists(hook-inverse-divider-icon)) {@include hook-inverse-divider-icon();}
+        @if(mixin-exists(hook-inverse-divider-icon)) {@include hook-inverse-divider-icon();}
     }
 
     .uk-divider-icon::before,
     .uk-divider-icon::after {
         border-bottom-color: $inverse-divider-icon-line-border;
-        @if(meta.mixin-exists(hook-inverse-divider-icon-line)) {@include hook-inverse-divider-icon-line();}
+        @if(mixin-exists(hook-inverse-divider-icon-line)) {@include hook-inverse-divider-icon-line();}
     }
 
     .uk-divider-small::after {
         border-top-color: $inverse-divider-small-border;
-        @if(meta.mixin-exists(hook-inverse-divider-small)) {@include hook-inverse-divider-small();}
+        @if(mixin-exists(hook-inverse-divider-small)) {@include hook-inverse-divider-small();}
     }
 
     .uk-divider-vertical {
         border-left-color: $inverse-divider-vertical-border;
-        @if(meta.mixin-exists(hook-inverse-divider-vertical)) {@include hook-inverse-divider-vertical();}
+        @if(mixin-exists(hook-inverse-divider-vertical)) {@include hook-inverse-divider-vertical();}
     }
 
 }
@@ -778,22 +776,22 @@
 
     .uk-dotnav > * > * {
         background-color: $inverse-dotnav-item-background;
-        @if(meta.mixin-exists(hook-inverse-dotnav-item)) {@include hook-inverse-dotnav-item();}
+        @if(mixin-exists(hook-inverse-dotnav-item)) {@include hook-inverse-dotnav-item();}
     }
 
     .uk-dotnav > * > :hover {
         background-color: $inverse-dotnav-item-hover-background;
-        @if(meta.mixin-exists(hook-inverse-dotnav-item-hover)) {@include hook-inverse-dotnav-item-hover();}
+        @if(mixin-exists(hook-inverse-dotnav-item-hover)) {@include hook-inverse-dotnav-item-hover();}
     }
 
     .uk-dotnav > * > :active {
         background-color: $inverse-dotnav-item-onclick-background;
-        @if(meta.mixin-exists(hook-inverse-dotnav-item-onclick)) {@include hook-inverse-dotnav-item-onclick();}
+        @if(mixin-exists(hook-inverse-dotnav-item-onclick)) {@include hook-inverse-dotnav-item-onclick();}
     }
 
     .uk-dotnav > .uk-active > * {
         background-color: $inverse-dotnav-item-active-background;
-        @if(meta.mixin-exists(hook-inverse-dotnav-item-active)) {@include hook-inverse-dotnav-item-active();}
+        @if(mixin-exists(hook-inverse-dotnav-item-active)) {@include hook-inverse-dotnav-item-active();}
     }
 
 }
@@ -871,12 +869,12 @@
         background-color: $inverse-form-background;
         color: $inverse-form-color;
         background-clip: padding-box;
-        @if(meta.mixin-exists(hook-inverse-form)) {@include hook-inverse-form();}
+        @if(mixin-exists(hook-inverse-form)) {@include hook-inverse-form();}
 
         &:focus {
             background-color: $inverse-form-focus-background;
             color: $inverse-form-focus-color;
-            @if(meta.mixin-exists(hook-inverse-form-focus)) {@include hook-inverse-form-focus();}
+            @if(mixin-exists(hook-inverse-form-focus)) {@include hook-inverse-form-focus();}
         }
     }
 
@@ -908,14 +906,14 @@
     .uk-radio,
     .uk-checkbox {
         background-color: $inverse-form-radio-background;
-        @if(meta.mixin-exists(hook-inverse-form-radio)) {@include hook-inverse-form-radio();}
+        @if(mixin-exists(hook-inverse-form-radio)) {@include hook-inverse-form-radio();}
     }
 
     // Focus
     .uk-radio:focus,
     .uk-checkbox:focus {
         background-color: $inverse-form-radio-focus-background;
-        @if(meta.mixin-exists(hook-inverse-form-radio-focus)) {@include hook-inverse-form-radio-focus();}
+        @if(mixin-exists(hook-inverse-form-radio-focus)) {@include hook-inverse-form-radio-focus();}
     }
 
     // Checked
@@ -923,7 +921,7 @@
     .uk-checkbox:checked,
     .uk-checkbox:indeterminate {
         background-color: $inverse-form-radio-checked-background;
-        @if(meta.mixin-exists(hook-inverse-form-radio-checked)) {@include hook-inverse-form-radio-checked();}
+        @if(mixin-exists(hook-inverse-form-radio-checked)) {@include hook-inverse-form-radio-checked();}
     }
 
     // Focus
@@ -931,7 +929,7 @@
     .uk-checkbox:checked:focus,
     .uk-checkbox:indeterminate:focus {
         background-color: $inverse-form-radio-checked-focus-background;
-        @if(meta.mixin-exists(hook-inverse-form-radio-checked-focus)) {@include hook-inverse-form-radio-checked-focus();}
+        @if(mixin-exists(hook-inverse-form-radio-checked-focus)) {@include hook-inverse-form-radio-checked-focus();}
     }
 
     // Icon
@@ -941,13 +939,13 @@
 
     // Label
     .uk-form-label {
-        @if(meta.mixin-exists(hook-inverse-form-label)) {@include hook-inverse-form-label();}
+        @if(mixin-exists(hook-inverse-form-label)) {@include hook-inverse-form-label();}
     }
 
     // Icon
     .uk-form-icon {
         color: $inverse-form-icon-color;
-        @if(meta.mixin-exists(hook-inverse-form-icon)) {@include hook-inverse-form-icon();}
+        @if(mixin-exists(hook-inverse-form-icon)) {@include hook-inverse-form-icon();}
     }
     .uk-form-icon:hover { color: $inverse-form-icon-hover-color; }
 
@@ -961,12 +959,12 @@
 
     .uk-grid-divider > :not(.uk-first-column)::before {
         border-left-color: $inverse-grid-divider-border;
-        @if(meta.mixin-exists(hook-inverse-grid-divider-horizontal)) {@include hook-inverse-grid-divider-horizontal();}
+        @if(mixin-exists(hook-inverse-grid-divider-horizontal)) {@include hook-inverse-grid-divider-horizontal();}
     }
 
     .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before {
         border-top-color: $inverse-grid-divider-border;
-        @if(meta.mixin-exists(hook-inverse-grid-divider-vertical)) {@include hook-inverse-grid-divider-vertical();}
+        @if(mixin-exists(hook-inverse-grid-divider-vertical)) {@include hook-inverse-grid-divider-vertical();}
     }
 
 }
@@ -996,47 +994,47 @@
 @mixin hook-inverse-component-heading(){
 
     .uk-heading-small {
-        @if(meta.mixin-exists(hook-inverse-heading-small)) {@include hook-inverse-heading-small();}
+        @if(mixin-exists(hook-inverse-heading-small)) {@include hook-inverse-heading-small();}
     }
 
     .uk-heading-medium {
-        @if(meta.mixin-exists(hook-inverse-heading-medium)) {@include hook-inverse-heading-medium();}
+        @if(mixin-exists(hook-inverse-heading-medium)) {@include hook-inverse-heading-medium();}
     }
 
     .uk-heading-large {
-        @if(meta.mixin-exists(hook-inverse-heading-large)) {@include hook-inverse-heading-large();}
+        @if(mixin-exists(hook-inverse-heading-large)) {@include hook-inverse-heading-large();}
     }
 
     .uk-heading-xlarge {
-        @if(meta.mixin-exists(hook-inverse-heading-xlarge)) {@include hook-inverse-heading-xlarge();}
+        @if(mixin-exists(hook-inverse-heading-xlarge)) {@include hook-inverse-heading-xlarge();}
     }
 
     .uk-heading-2xlarge {
-        @if(meta.mixin-exists(hook-inverse-heading-2xlarge)) {@include hook-inverse-heading-2xlarge();}
+        @if(mixin-exists(hook-inverse-heading-2xlarge)) {@include hook-inverse-heading-2xlarge();}
     }
 
     .uk-heading-3xlarge {
-        @if(meta.mixin-exists(hook-inverse-heading-3xlarge)) {@include hook-inverse-heading-3xlarge();}
+        @if(mixin-exists(hook-inverse-heading-3xlarge)) {@include hook-inverse-heading-3xlarge();}
     }
 
-    @if ($deprecated == true) { .uk-heading-primary { @if (meta.mixin-exists(hook-inverse-heading-primary)) {@include hook-inverse-heading-primary();}}}
+    @if ($deprecated == true) { .uk-heading-primary { @if (mixin-exists(hook-inverse-heading-primary)) {@include hook-inverse-heading-primary();}}}
 
-    @if ($deprecated == true) { .uk-heading-hero { @if (meta.mixin-exists(hook-inverse-heading-hero)) {@include hook-inverse-heading-hero();}}}
+    @if ($deprecated == true) { .uk-heading-hero { @if (mixin-exists(hook-inverse-heading-hero)) {@include hook-inverse-heading-hero();}}}
 
     .uk-heading-divider {
         border-bottom-color: $inverse-heading-divider-border;
-        @if(meta.mixin-exists(hook-inverse-heading-divider)) {@include hook-inverse-heading-divider();}
+        @if(mixin-exists(hook-inverse-heading-divider)) {@include hook-inverse-heading-divider();}
     }
 
     .uk-heading-bullet::before {
         border-left-color: $inverse-heading-bullet-border;
-        @if(meta.mixin-exists(hook-inverse-heading-bullet)) {@include hook-inverse-heading-bullet();}
+        @if(mixin-exists(hook-inverse-heading-bullet)) {@include hook-inverse-heading-bullet();}
     }
 
     .uk-heading-line > ::before,
     .uk-heading-line > ::after {
         border-bottom-color: $inverse-heading-line-border;
-        @if(meta.mixin-exists(hook-inverse-heading-line)) {@include hook-inverse-heading-line();}
+        @if(mixin-exists(hook-inverse-heading-line)) {@include hook-inverse-heading-line();}
     }
 
 }
@@ -1065,18 +1063,18 @@
 
     .uk-icon-link {
         color: $inverse-icon-link-color;
-        @if(meta.mixin-exists(hook-inverse-icon-link)) {@include hook-inverse-icon-link();}
+        @if(mixin-exists(hook-inverse-icon-link)) {@include hook-inverse-icon-link();}
     }
 
     .uk-icon-link:hover {
         color: $inverse-icon-link-hover-color;
-        @if(meta.mixin-exists(hook-inverse-icon-link-hover)) {@include hook-inverse-icon-link-hover();}
+        @if(mixin-exists(hook-inverse-icon-link-hover)) {@include hook-inverse-icon-link-hover();}
     }
 
     .uk-icon-link:active,
     .uk-active > .uk-icon-link {
         color: $inverse-icon-link-active-color;
-        @if(meta.mixin-exists(hook-inverse-icon-link-active)) {@include hook-inverse-icon-link-active();}
+        @if(mixin-exists(hook-inverse-icon-link-active)) {@include hook-inverse-icon-link-active();}
     }
 
     //
@@ -1086,19 +1084,19 @@
     .uk-icon-button {
         background-color: $inverse-icon-button-background;
         color: $inverse-icon-button-color;
-        @if(meta.mixin-exists(hook-inverse-icon-button)) {@include hook-inverse-icon-button();}
+        @if(mixin-exists(hook-inverse-icon-button)) {@include hook-inverse-icon-button();}
     }
 
     .uk-icon-button:hover {
         background-color: $inverse-icon-button-hover-background;
         color: $inverse-icon-button-hover-color;
-        @if(meta.mixin-exists(hook-inverse-icon-button-hover)) {@include hook-inverse-icon-button-hover();}
+        @if(mixin-exists(hook-inverse-icon-button-hover)) {@include hook-inverse-icon-button-hover();}
     }
 
     .uk-icon-button:active {
         background-color: $inverse-icon-button-active-background;
         color: $inverse-icon-button-active-color;
-        @if(meta.mixin-exists(hook-inverse-icon-button-active)) {@include hook-inverse-icon-button-active();}
+        @if(mixin-exists(hook-inverse-icon-button-active)) {@include hook-inverse-icon-button-active();}
     }
 
 }
@@ -1118,17 +1116,17 @@
 
     .uk-iconnav > * > a {
         color: $inverse-iconnav-item-color;
-        @if(meta.mixin-exists(hook-inverse-iconnav-item)) {@include hook-inverse-iconnav-item();}
+        @if(mixin-exists(hook-inverse-iconnav-item)) {@include hook-inverse-iconnav-item();}
     }
 
     .uk-iconnav > * > a:hover {
         color: $inverse-iconnav-item-hover-color;
-        @if(meta.mixin-exists(hook-inverse-iconnav-item-hover)) {@include hook-inverse-iconnav-item-hover();}
+        @if(mixin-exists(hook-inverse-iconnav-item-hover)) {@include hook-inverse-iconnav-item-hover();}
     }
 
     .uk-iconnav > .uk-active > a {
         color: $inverse-iconnav-item-active-color;
-        @if(meta.mixin-exists(hook-inverse-iconnav-item-active)) {@include hook-inverse-iconnav-item-active();}
+        @if(mixin-exists(hook-inverse-iconnav-item-active)) {@include hook-inverse-iconnav-item-active();}
     }
 
 }
@@ -1146,7 +1144,7 @@
     .uk-label {
         background-color: $inverse-label-background;
         color: $inverse-label-color;
-        @if(meta.mixin-exists(hook-inverse-label)) {@include hook-inverse-label();}
+        @if(mixin-exists(hook-inverse-label)) {@include hook-inverse-label();}
     }
 
 }
@@ -1156,7 +1154,7 @@
 @mixin hook-inverse-component-leader(){
 
     .uk-leader-fill::after {
-        @if(meta.mixin-exists(hook-inverse-leader)) {@include hook-inverse-leader();}
+        @if(mixin-exists(hook-inverse-leader)) {@include hook-inverse-leader();}
     }
 
 }
@@ -1186,28 +1184,28 @@
     a.uk-link-muted,
     .uk-link-muted a {
         color: $inverse-link-muted-color;
-        @if(meta.mixin-exists(hook-inverse-link-muted)) {@include hook-inverse-link-muted();}
+        @if(mixin-exists(hook-inverse-link-muted)) {@include hook-inverse-link-muted();}
     }
 
     a.uk-link-muted:hover,
     .uk-link-muted a:hover,
     .uk-link-toggle:hover .uk-link-muted {
         color: $inverse-link-muted-hover-color;
-        @if(meta.mixin-exists(hook-inverse-link-muted-hover)) {@include hook-inverse-link-muted-hover();}
+        @if(mixin-exists(hook-inverse-link-muted-hover)) {@include hook-inverse-link-muted-hover();}
     }
 
     a.uk-link-text:hover,
     .uk-link-text a:hover,
     .uk-link-toggle:hover .uk-link-text {
         color: $inverse-link-text-hover-color;
-        @if(meta.mixin-exists(hook-inverse-link-text-hover)) {@include hook-inverse-link-text-hover();}
+        @if(mixin-exists(hook-inverse-link-text-hover)) {@include hook-inverse-link-text-hover();}
     }
 
     a.uk-link-heading:hover,
     .uk-link-heading a:hover,
     .uk-link-toggle:hover .uk-link-heading {
         color: $inverse-link-heading-hover-color;
-        @if(meta.mixin-exists(hook-inverse-link-heading-hover)) {@include hook-inverse-link-heading-hover();}
+        @if(mixin-exists(hook-inverse-link-heading-hover)) {@include hook-inverse-link-heading-hover();}
     }
 
 }
@@ -1243,11 +1241,11 @@
 
     .uk-list-divider > :nth-child(n+2) {
         border-top-color: $inverse-list-divider-border;
-        @if(meta.mixin-exists(hook-inverse-list-divider)) {@include hook-inverse-list-divider();}
+        @if(mixin-exists(hook-inverse-list-divider)) {@include hook-inverse-list-divider();}
     }
 
     .uk-list-striped > * {
-        @if(meta.mixin-exists(hook-inverse-list-striped)) {@include hook-inverse-list-striped();}
+        @if(mixin-exists(hook-inverse-list-striped)) {@include hook-inverse-list-striped();}
     }
 
     .uk-list-striped > :nth-of-type(odd) { background-color: $inverse-list-striped-background; }
@@ -1266,12 +1264,12 @@
     .uk-marker {
         background: $inverse-marker-background;
         color: $inverse-marker-color;
-        @if(meta.mixin-exists(hook-inverse-marker)) {@include hook-inverse-marker();}
+        @if(mixin-exists(hook-inverse-marker)) {@include hook-inverse-marker();}
     }
 
     .uk-marker:hover {
         color: $inverse-marker-hover-color;
-        @if(meta.mixin-exists(hook-inverse-marker-hover)) {@include hook-inverse-marker-hover();}
+        @if(mixin-exists(hook-inverse-marker-hover)) {@include hook-inverse-marker-hover();}
     }
 
 }
@@ -1367,27 +1365,27 @@
 
     .uk-nav-default > li > a {
         color: $inverse-nav-default-item-color;
-        @if(meta.mixin-exists(hook-inverse-nav-default-item)) {@include hook-inverse-nav-default-item();}
+        @if(mixin-exists(hook-inverse-nav-default-item)) {@include hook-inverse-nav-default-item();}
     }
 
     .uk-nav-default > li > a:hover {
         color: $inverse-nav-default-item-hover-color;
-        @if(meta.mixin-exists(hook-inverse-nav-default-item-hover)) {@include hook-inverse-nav-default-item-hover();}
+        @if(mixin-exists(hook-inverse-nav-default-item-hover)) {@include hook-inverse-nav-default-item-hover();}
     }
 
     .uk-nav-default > li.uk-active > a {
         color: $inverse-nav-default-item-active-color;
-        @if(meta.mixin-exists(hook-inverse-nav-default-item-active)) {@include hook-inverse-nav-default-item-active();}
+        @if(mixin-exists(hook-inverse-nav-default-item-active)) {@include hook-inverse-nav-default-item-active();}
     }
 
     .uk-nav-default .uk-nav-header {
         color: $inverse-nav-default-header-color;
-        @if(meta.mixin-exists(hook-inverse-nav-default-header)) {@include hook-inverse-nav-default-header();}
+        @if(mixin-exists(hook-inverse-nav-default-header)) {@include hook-inverse-nav-default-header();}
     }
 
     .uk-nav-default .uk-nav-divider {
         border-top-color: $inverse-nav-default-divider-border;
-        @if(meta.mixin-exists(hook-inverse-nav-default-divider)) {@include hook-inverse-nav-default-divider();}
+        @if(mixin-exists(hook-inverse-nav-default-divider)) {@include hook-inverse-nav-default-divider();}
     }
 
     .uk-nav-default .uk-nav-sub a { color: $inverse-nav-default-sublist-item-color; }
@@ -1402,27 +1400,27 @@
 
     .uk-nav-primary > li > a {
         color: $inverse-nav-primary-item-color;
-        @if(meta.mixin-exists(hook-inverse-nav-primary-item)) {@include hook-inverse-nav-primary-item();}
+        @if(mixin-exists(hook-inverse-nav-primary-item)) {@include hook-inverse-nav-primary-item();}
     }
 
     .uk-nav-primary > li > a:hover {
         color: $inverse-nav-primary-item-hover-color;
-        @if(meta.mixin-exists(hook-inverse-nav-primary-item-hover)) {@include hook-inverse-nav-primary-item-hover();}
+        @if(mixin-exists(hook-inverse-nav-primary-item-hover)) {@include hook-inverse-nav-primary-item-hover();}
     }
 
     .uk-nav-primary > li.uk-active > a {
         color: $inverse-nav-primary-item-active-color;
-        @if(meta.mixin-exists(hook-inverse-nav-primary-item-active)) {@include hook-inverse-nav-primary-item-active();}
+        @if(mixin-exists(hook-inverse-nav-primary-item-active)) {@include hook-inverse-nav-primary-item-active();}
     }
 
     .uk-nav-primary .uk-nav-header {
         color: $inverse-nav-primary-header-color;
-        @if(meta.mixin-exists(hook-inverse-nav-primary-header)) {@include hook-inverse-nav-primary-header();}
+        @if(mixin-exists(hook-inverse-nav-primary-header)) {@include hook-inverse-nav-primary-header();}
     }
 
     .uk-nav-primary .uk-nav-divider {
         border-top-color: $inverse-nav-primary-divider-border;
-        @if(meta.mixin-exists(hook-inverse-nav-primary-divider)) {@include hook-inverse-nav-primary-divider();}
+        @if(mixin-exists(hook-inverse-nav-primary-divider)) {@include hook-inverse-nav-primary-divider();}
     }
 
     .uk-nav-primary .uk-nav-sub a { color: $inverse-nav-primary-sublist-item-color; }
@@ -1437,42 +1435,42 @@
 
     .uk-nav-secondary > li > a {
         color: $inverse-nav-secondary-item-color;
-        @if(meta.mixin-exists(hook-inverse-nav-secondary-item)) {@include hook-inverse-nav-secondary-item();}
+        @if(mixin-exists(hook-inverse-nav-secondary-item)) {@include hook-inverse-nav-secondary-item();}
     }
 
     .uk-nav-secondary > li > a:hover {
         color: $inverse-nav-secondary-item-hover-color;
-        @if(meta.mixin-exists(hook-inverse-nav-secondary-item-hover)) {@include hook-inverse-nav-secondary-item-hover();}
+        @if(mixin-exists(hook-inverse-nav-secondary-item-hover)) {@include hook-inverse-nav-secondary-item-hover();}
     }
 
     .uk-nav-secondary > li.uk-active > a {
         color: $inverse-nav-secondary-item-active-color;
-        @if(meta.mixin-exists(hook-inverse-nav-secondary-item-active)) {@include hook-inverse-nav-secondary-item-active();}
+        @if(mixin-exists(hook-inverse-nav-secondary-item-active)) {@include hook-inverse-nav-secondary-item-active();}
     }
 
     .uk-nav-secondary .uk-nav-subtitle {
         color: $inverse-nav-secondary-subtitle-color;
-        @if(meta.mixin-exists(hook-inverse-nav-secondary-subtitle)) {@include hook-inverse-nav-secondary-subtitle();}
+        @if(mixin-exists(hook-inverse-nav-secondary-subtitle)) {@include hook-inverse-nav-secondary-subtitle();}
     }
 
     .uk-nav-secondary > li > a:hover .uk-nav-subtitle {
         color: $inverse-nav-secondary-subtitle-hover-color;
-        @if(meta.mixin-exists(hook-inverse-nav-secondary-subtitle-hover)) {@include hook-inverse-nav-secondary-subtitle-hover();}
+        @if(mixin-exists(hook-inverse-nav-secondary-subtitle-hover)) {@include hook-inverse-nav-secondary-subtitle-hover();}
     }
 
     .uk-nav-secondary > li.uk-active > a .uk-nav-subtitle {
         color: $inverse-nav-secondary-subtitle-active-color;
-        @if(meta.mixin-exists(hook-inverse-nav-secondary-subtitle-active)) {@include hook-inverse-nav-secondary-subtitle-active();}
+        @if(mixin-exists(hook-inverse-nav-secondary-subtitle-active)) {@include hook-inverse-nav-secondary-subtitle-active();}
     }
 
     .uk-nav-secondary .uk-nav-header {
         color: $inverse-nav-secondary-header-color;
-        @if(meta.mixin-exists(hook-inverse-nav-secondary-header)) {@include hook-inverse-nav-secondary-header();}
+        @if(mixin-exists(hook-inverse-nav-secondary-header)) {@include hook-inverse-nav-secondary-header();}
     }
 
     .uk-nav-secondary .uk-nav-divider {
         border-top-color: $inverse-nav-secondary-divider-border;
-        @if(meta.mixin-exists(hook-inverse-nav-secondary-divider)) {@include hook-inverse-nav-secondary-divider();}
+        @if(mixin-exists(hook-inverse-nav-secondary-divider)) {@include hook-inverse-nav-secondary-divider();}
     }
 
     .uk-nav-secondary .uk-nav-sub a { color: $inverse-nav-secondary-sublist-item-color; }
@@ -1487,7 +1485,7 @@
 
     .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider) {
         border-top-color: $inverse-nav-dividers-border;
-        @if(meta.mixin-exists(hook-inverse-nav-dividers)) {@include hook-inverse-nav-dividers();}
+        @if(mixin-exists(hook-inverse-nav-dividers)) {@include hook-inverse-nav-dividers();}
     }
 
 }
@@ -1536,8 +1534,8 @@
         .uk-navbar-right,
         [class*="uk-navbar-center"] { gap: $navbar-gap-m; }
 
-        .uk-navbar-center-left { right: string.unquote('calc(100% + #{$navbar-gap-m})'); }
-        .uk-navbar-center-right { left: string.unquote('calc(100% + #{$navbar-gap-m})'); }
+        .uk-navbar-center-left { right: unquote('calc(100% + #{$navbar-gap-m})'); }
+        .uk-navbar-center-right { left: unquote('calc(100% + #{$navbar-gap-m})'); }
 
     }
 
@@ -1564,23 +1562,23 @@
 
     .uk-navbar-nav > li > a {
         color: $inverse-navbar-nav-item-color;
-        @if(meta.mixin-exists(hook-inverse-navbar-nav-item)) {@include hook-inverse-navbar-nav-item();}
+        @if(mixin-exists(hook-inverse-navbar-nav-item)) {@include hook-inverse-navbar-nav-item();}
     }
 
     .uk-navbar-nav > li:hover > a,
     .uk-navbar-nav > li > a[aria-expanded="true"] {
         color: $inverse-navbar-nav-item-hover-color;
-        @if(meta.mixin-exists(hook-inverse-navbar-nav-item-hover)) {@include hook-inverse-navbar-nav-item-hover();}
+        @if(mixin-exists(hook-inverse-navbar-nav-item-hover)) {@include hook-inverse-navbar-nav-item-hover();}
     }
 
     .uk-navbar-nav > li > a:active {
         color: $inverse-navbar-nav-item-onclick-color;
-        @if(meta.mixin-exists(hook-inverse-navbar-nav-item-onclick)) {@include hook-inverse-navbar-nav-item-onclick();}
+        @if(mixin-exists(hook-inverse-navbar-nav-item-onclick)) {@include hook-inverse-navbar-nav-item-onclick();}
     }
 
     .uk-navbar-nav > li.uk-active > a {
         color: $inverse-navbar-nav-item-active-color;
-        @if(meta.mixin-exists(hook-inverse-navbar-nav-item-active)) {@include hook-inverse-navbar-nav-item-active();}
+        @if(mixin-exists(hook-inverse-navbar-nav-item-active)) {@include hook-inverse-navbar-nav-item-active();}
     }
 
     //
@@ -1589,7 +1587,7 @@
 
     .uk-navbar-item {
         color: $inverse-navbar-item-color;
-        @if(meta.mixin-exists(hook-inverse-navbar-item)) {@include hook-inverse-navbar-item();}
+        @if(mixin-exists(hook-inverse-navbar-item)) {@include hook-inverse-navbar-item();}
     }
 
     //
@@ -1598,13 +1596,13 @@
 
     .uk-navbar-toggle {
         color: $inverse-navbar-toggle-color;
-        @if(meta.mixin-exists(hook-inverse-navbar-toggle)) {@include hook-inverse-navbar-toggle();}
+        @if(mixin-exists(hook-inverse-navbar-toggle)) {@include hook-inverse-navbar-toggle();}
     }
 
     .uk-navbar-toggle:hover,
     .uk-navbar-toggle[aria-expanded="true"] {
         color: $inverse-navbar-toggle-hover-color;
-        @if(meta.mixin-exists(hook-inverse-navbar-toggle-hover)) {@include hook-inverse-navbar-toggle-hover();}
+        @if(mixin-exists(hook-inverse-navbar-toggle-hover)) {@include hook-inverse-navbar-toggle-hover();}
     }
 
 }
@@ -1640,22 +1638,22 @@
 
     .uk-pagination > * > * {
         color: $inverse-pagination-item-color;
-        @if(meta.mixin-exists(hook-inverse-pagination-item)) {@include hook-inverse-pagination-item();}
+        @if(mixin-exists(hook-inverse-pagination-item)) {@include hook-inverse-pagination-item();}
     }
 
     .uk-pagination > * > :hover {
         color: $inverse-pagination-item-hover-color;
-        @if(meta.mixin-exists(hook-inverse-pagination-item-hover)) {@include hook-inverse-pagination-item-hover();}
+        @if(mixin-exists(hook-inverse-pagination-item-hover)) {@include hook-inverse-pagination-item-hover();}
     }
 
     .uk-pagination > .uk-active > * {
         color: $inverse-pagination-item-active-color;
-        @if(meta.mixin-exists(hook-inverse-pagination-item-active)) {@include hook-inverse-pagination-item-active();}
+        @if(mixin-exists(hook-inverse-pagination-item-active)) {@include hook-inverse-pagination-item-active();}
     }
 
     .uk-pagination > .uk-disabled > * {
         color: $inverse-pagination-item-disabled-color;
-        @if(meta.mixin-exists(hook-inverse-pagination-item-disabled)) {@include hook-inverse-pagination-item-disabled();}
+        @if(mixin-exists(hook-inverse-pagination-item-disabled)) {@include hook-inverse-pagination-item-disabled();}
     }
 
 }
@@ -1715,40 +1713,40 @@
 
     .uk-search-default .uk-search-input {
         background-color: $inverse-search-default-background;
-        @if(meta.mixin-exists(hook-inverse-search-default-input)) {@include hook-inverse-search-default-input();}
+        @if(mixin-exists(hook-inverse-search-default-input)) {@include hook-inverse-search-default-input();}
     }
 
     .uk-search-default .uk-search-input:focus {
         background-color: $inverse-search-default-focus-background;
-        @if(meta.mixin-exists(hook-inverse-search-default-input-focus)) {@include hook-inverse-search-default-input-focus();}
+        @if(mixin-exists(hook-inverse-search-default-input-focus)) {@include hook-inverse-search-default-input-focus();}
     }
 
     .uk-search-navbar .uk-search-input {
         background-color: $inverse-search-navbar-background;
-        @if(meta.mixin-exists(hook-inverse-search-navbar-input)) {@include hook-inverse-search-navbar-input();}
+        @if(mixin-exists(hook-inverse-search-navbar-input)) {@include hook-inverse-search-navbar-input();}
     }
 
     .uk-search-navbar .uk-search-input:focus {
         background-color: $inverse-search-navbar-focus-background;
-        @if(meta.mixin-exists(hook-inverse-search-navbar-input-focus)) {@include hook-inverse-search-navbar-input-focus();}
+        @if(mixin-exists(hook-inverse-search-navbar-input-focus)) {@include hook-inverse-search-navbar-input-focus();}
     }
 
     .uk-search-medium .uk-search-input {
         background-color: $inverse-search-medium-background;
-        @if(meta.mixin-exists(hook-inverse-search-medium-input)) {@include hook-inverse-search-medium-input();}
+        @if(mixin-exists(hook-inverse-search-medium-input)) {@include hook-inverse-search-medium-input();}
     }
 
     .uk-search-medium .uk-search-input:focus {
-        @if(meta.mixin-exists(hook-inverse-search-medium-input-focus)) {@include hook-inverse-search-medium-input-focus();}
+        @if(mixin-exists(hook-inverse-search-medium-input-focus)) {@include hook-inverse-search-medium-input-focus();}
     }
 
     .uk-search-large .uk-search-input {
         background-color: $inverse-search-large-background;
-        @if(meta.mixin-exists(hook-inverse-search-large-input)) {@include hook-inverse-search-large-input();}
+        @if(mixin-exists(hook-inverse-search-large-input)) {@include hook-inverse-search-large-input();}
     }
 
     .uk-search-large .uk-search-input:focus {
-        @if(meta.mixin-exists(hook-inverse-search-large-input-focus)) {@include hook-inverse-search-large-input-focus();}
+        @if(mixin-exists(hook-inverse-search-large-input-focus)) {@include hook-inverse-search-large-input-focus();}
     }
 
     //
@@ -1757,12 +1755,12 @@
 
     .uk-search-toggle {
         color: $inverse-search-toggle-color;
-        @if(meta.mixin-exists(hook-inverse-search-toggle)) {@include hook-inverse-search-toggle();}
+        @if(mixin-exists(hook-inverse-search-toggle)) {@include hook-inverse-search-toggle();}
     }
 
     .uk-search-toggle:hover {
         color: $inverse-search-toggle-hover-color;
-        @if(meta.mixin-exists(hook-inverse-search-toggle-hover)) {@include hook-inverse-search-toggle-hover();}
+        @if(mixin-exists(hook-inverse-search-toggle-hover)) {@include hook-inverse-search-toggle-hover();}
     }
 
 }
@@ -1788,17 +1786,17 @@
 
     .uk-slidenav {
         color: $inverse-slidenav-color;
-        @if(meta.mixin-exists(hook-inverse-slidenav)) {@include hook-inverse-slidenav();}
+        @if(mixin-exists(hook-inverse-slidenav)) {@include hook-inverse-slidenav();}
     }
 
     .uk-slidenav:hover {
         color: $inverse-slidenav-hover-color;
-        @if(meta.mixin-exists(hook-inverse-slidenav-hover)) {@include hook-inverse-slidenav-hover();}
+        @if(mixin-exists(hook-inverse-slidenav-hover)) {@include hook-inverse-slidenav-hover();}
     }
 
     .uk-slidenav:active {
         color: $inverse-slidenav-active-color;
-        @if(meta.mixin-exists(hook-inverse-slidenav-active)) {@include hook-inverse-slidenav-active();}
+        @if(mixin-exists(hook-inverse-slidenav-active)) {@include hook-inverse-slidenav-active();}
     }
 
 }
@@ -1843,17 +1841,17 @@
 
     .uk-subnav > * > :first-child {
         color: $inverse-subnav-item-color;
-        @if(meta.mixin-exists(hook-inverse-subnav-item)) {@include hook-inverse-subnav-item();}
+        @if(mixin-exists(hook-inverse-subnav-item)) {@include hook-inverse-subnav-item();}
     }
 
     .uk-subnav > * > a:hover {
         color: $inverse-subnav-item-hover-color;
-        @if(meta.mixin-exists(hook-inverse-subnav-item-hover)) {@include hook-inverse-subnav-item-hover();}
+        @if(mixin-exists(hook-inverse-subnav-item-hover)) {@include hook-inverse-subnav-item-hover();}
     }
 
     .uk-subnav > .uk-active > a {
         color: $inverse-subnav-item-active-color;
-        @if(meta.mixin-exists(hook-inverse-subnav-item-active)) {@include hook-inverse-subnav-item-active();}
+        @if(mixin-exists(hook-inverse-subnav-item-active)) {@include hook-inverse-subnav-item-active();}
     }
 
     //
@@ -1862,7 +1860,7 @@
 
     .uk-subnav-divider > :nth-child(n+2):not(.uk-first-column)::before {
         border-left-color: $inverse-subnav-divider-border;
-        @if(meta.mixin-exists(hook-inverse-subnav-divider)) {@include hook-inverse-subnav-divider();}
+        @if(mixin-exists(hook-inverse-subnav-divider)) {@include hook-inverse-subnav-divider();}
     }
 
     //
@@ -1872,25 +1870,25 @@
     .uk-subnav-pill > * > :first-child {
         background-color: $inverse-subnav-pill-item-background;
         color: $inverse-subnav-pill-item-color;
-        @if(meta.mixin-exists(hook-inverse-subnav-pill-item)) {@include hook-inverse-subnav-pill-item();}
+        @if(mixin-exists(hook-inverse-subnav-pill-item)) {@include hook-inverse-subnav-pill-item();}
     }
 
     .uk-subnav-pill > * > a:hover {
         background-color: $inverse-subnav-pill-item-hover-background;
         color: $inverse-subnav-pill-item-hover-color;
-        @if(meta.mixin-exists(hook-inverse-subnav-pill-item-hover)) {@include hook-inverse-subnav-pill-item-hover();}
+        @if(mixin-exists(hook-inverse-subnav-pill-item-hover)) {@include hook-inverse-subnav-pill-item-hover();}
     }
 
     .uk-subnav-pill > * > a:active {
         background-color: $inverse-subnav-pill-item-onclick-background;
         color: $inverse-subnav-pill-item-onclick-color;
-        @if(meta.mixin-exists(hook-inverse-subnav-pill-item-onclick)) {@include hook-inverse-subnav-pill-item-onclick();}
+        @if(mixin-exists(hook-inverse-subnav-pill-item-onclick)) {@include hook-inverse-subnav-pill-item-onclick();}
     }
 
     .uk-subnav-pill > .uk-active > a {
         background-color: $inverse-subnav-pill-item-active-background;
         color: $inverse-subnav-pill-item-active-color;
-        @if(meta.mixin-exists(hook-inverse-subnav-pill-item-active)) {@include hook-inverse-subnav-pill-item-active();}
+        @if(mixin-exists(hook-inverse-subnav-pill-item-active)) {@include hook-inverse-subnav-pill-item-active();}
     }
 
     //
@@ -1899,7 +1897,7 @@
 
     .uk-subnav > .uk-disabled > a {
         color: $inverse-subnav-item-disabled-color;
-        @if(meta.mixin-exists(hook-inverse-subnav-item-disabled)) {@include hook-inverse-subnav-item-disabled();}
+        @if(mixin-exists(hook-inverse-subnav-item-disabled)) {@include hook-inverse-subnav-item-disabled();}
     }
 
 }
@@ -1989,27 +1987,27 @@
 @mixin hook-inverse-component-tab(){
 
     .uk-tab {
-        @if(meta.mixin-exists(hook-inverse-tab)) {@include hook-inverse-tab();}
+        @if(mixin-exists(hook-inverse-tab)) {@include hook-inverse-tab();}
     }
 
     .uk-tab > * > a {
         color: $inverse-tab-item-color;
-        @if(meta.mixin-exists(hook-inverse-tab-item)) {@include hook-inverse-tab-item();}
+        @if(mixin-exists(hook-inverse-tab-item)) {@include hook-inverse-tab-item();}
     }
 
     .uk-tab > * > a:hover {
         color: $inverse-tab-item-hover-color;
-        @if(meta.mixin-exists(hook-inverse-tab-item-hover)) {@include hook-inverse-tab-item-hover();}
+        @if(mixin-exists(hook-inverse-tab-item-hover)) {@include hook-inverse-tab-item-hover();}
     }
 
     .uk-tab > .uk-active > a {
         color: $inverse-tab-item-active-color;
-        @if(meta.mixin-exists(hook-inverse-tab-item-active)) {@include hook-inverse-tab-item-active();}
+        @if(mixin-exists(hook-inverse-tab-item-active)) {@include hook-inverse-tab-item-active();}
     }
 
     .uk-tab > .uk-disabled > a {
         color: $inverse-tab-item-disabled-color;
-        @if(meta.mixin-exists(hook-inverse-tab-item-disabled)) {@include hook-inverse-tab-item-disabled();}
+        @if(mixin-exists(hook-inverse-tab-item-disabled)) {@include hook-inverse-tab-item-disabled();}
     }
 
 }
@@ -2069,12 +2067,12 @@
 
     .uk-text-lead {
         color: $inverse-text-lead-color;
-        @if(meta.mixin-exists(hook-inverse-text-lead)) {@include hook-inverse-text-lead();}
+        @if(mixin-exists(hook-inverse-text-lead)) {@include hook-inverse-text-lead();}
     }
 
     .uk-text-meta {
         color: $inverse-text-meta-color;
-        @if(meta.mixin-exists(hook-inverse-text-meta)) {@include hook-inverse-text-meta();}
+        @if(mixin-exists(hook-inverse-text-meta)) {@include hook-inverse-text-meta();}
     }
 
     .uk-text-muted { color: $inverse-text-muted-color !important; }
@@ -2115,15 +2113,15 @@
 @mixin hook-inverse-component-thumbnav(){
 
     .uk-thumbnav > * > * {
-        @if(meta.mixin-exists(hook-inverse-thumbnav-item)) {@include hook-inverse-thumbnav-item();}
+        @if(mixin-exists(hook-inverse-thumbnav-item)) {@include hook-inverse-thumbnav-item();}
     }
 
     .uk-thumbnav > * > :hover {
-        @if(meta.mixin-exists(hook-inverse-thumbnav-item-hover)) {@include hook-inverse-thumbnav-item-hover();}
+        @if(mixin-exists(hook-inverse-thumbnav-item-hover)) {@include hook-inverse-thumbnav-item-hover();}
     }
 
     .uk-thumbnav > .uk-active > * {
-        @if(meta.mixin-exists(hook-inverse-thumbnav-item-active)) {@include hook-inverse-thumbnav-item-active();}
+        @if(mixin-exists(hook-inverse-thumbnav-item-active)) {@include hook-inverse-thumbnav-item-active();}
     }
 
 }
@@ -2150,17 +2148,17 @@
 
     .uk-totop {
         color: $inverse-totop-color;
-        @if(meta.mixin-exists(hook-inverse-totop)) {@include hook-inverse-totop();}
+        @if(mixin-exists(hook-inverse-totop)) {@include hook-inverse-totop();}
     }
 
     .uk-totop:hover {
         color: $inverse-totop-hover-color;
-        @if(meta.mixin-exists(hook-inverse-totop-hover)) {@include hook-inverse-totop-hover();}
+        @if(mixin-exists(hook-inverse-totop-hover)) {@include hook-inverse-totop-hover();}
     }
 
     .uk-totop:active {
         color: $inverse-totop-active-color;
-        @if(meta.mixin-exists(hook-inverse-totop-active)) {@include hook-inverse-totop-active();}
+        @if(mixin-exists(hook-inverse-totop-active)) {@include hook-inverse-totop-active();}
     }
 
 }
@@ -2181,17 +2179,17 @@
 
     .uk-dropcap::first-letter,
     .uk-dropcap p:first-of-type::first-letter {
-        @if(meta.mixin-exists(hook-inverse-dropcap)) {@include hook-inverse-dropcap();}
+        @if(mixin-exists(hook-inverse-dropcap)) {@include hook-inverse-dropcap();}
     }
 
     .uk-logo {
         color: $inverse-logo-color;
-        @if(meta.mixin-exists(hook-inverse-logo)) {@include hook-inverse-logo();}
+        @if(mixin-exists(hook-inverse-logo)) {@include hook-inverse-logo();}
     }
 
     .uk-logo:hover {
         color: $inverse-logo-hover-color;
-        @if(meta.mixin-exists(hook-inverse-logo-hover)) {@include hook-inverse-logo-hover();}
+        @if(mixin-exists(hook-inverse-logo-hover)) {@include hook-inverse-logo-hover();}
     }
 
     .uk-logo:has(.uk-logo-inverse) > :not(picture:has(.uk-logo-inverse)):not(.uk-logo-inverse) { display: none; }

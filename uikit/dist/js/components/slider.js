@@ -1,4 +1,4 @@
-/*! UIkit 3.21.0 | https://www.getuikit.com | (c) 2014 - 2024 YOOtheme | MIT License */
+/*! UIkit 3.21.5 | https://www.getuikit.com | (c) 2014 - 2024 YOOtheme | MIT License */
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('uikit-util')) :
@@ -19,7 +19,7 @@
           if (instance._connected) {
             runUpdates(instance, instance._queued);
           }
-          delete instance._queued;
+          instance._queued = null;
         });
       }
       instance._queued.add(e.type || e);
@@ -370,6 +370,7 @@
       watch: {
         nav(nav, prev) {
           util.attr(nav, "role", "tablist");
+          this.padNavitems();
           if (prev) {
             this.$emit();
           }
@@ -381,6 +382,8 @@
         },
         navChildren(children2) {
           util.attr(children2, "role", "presentation");
+          this.padNavitems();
+          this.updateNav();
         },
         navItems(items) {
           for (const el of items) {
@@ -422,15 +425,7 @@
               "aria-roledescription": this.nav ? null : "slide"
             })
           );
-        },
-        length(length) {
-          const navLength = this.navChildren.length;
-          if (this.nav && length !== navLength) {
-            util.empty(this.nav);
-            for (let i = 0; i < length; i++) {
-              util.append(this.nav, `<li ${this.attrItem}="${i}"><a href></a></li>`);
-            }
-          }
+          this.padNavitems();
         }
       },
       connected() {
@@ -508,10 +503,25 @@
               );
             }
           }
+        },
+        padNavitems() {
+          if (!this.nav) {
+            return;
+          }
+          const children2 = [];
+          for (let i = 0; i < this.length; i++) {
+            const attr2 = `${this.attrItem}="${i}"`;
+            children2[i] = this.navChildren.findLast((el) => el.matches(`[${attr2}]`)) || util.$(`<li ${attr2}><a href></a></li>`);
+          }
+          if (!util.isEqual(children2, this.navChildren)) {
+            util.html(this.nav, children2);
+          }
         }
       }
     };
 
+    const easeOutQuad = "cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+    const easeOutQuart = "cubic-bezier(0.165, 0.84, 0.44, 1)";
     var Slider = {
       mixins: [SliderAutoplay, SliderDrag, SliderNav, I18n],
       props: {
@@ -641,7 +651,7 @@
         },
         async _show(prev, next, force) {
           this._transitioner = this._getTransitioner(prev, next, this.dir, {
-            easing: force ? next.offsetWidth < 600 ? "cubic-bezier(0.25, 0.46, 0.45, 0.94)" : "cubic-bezier(0.165, 0.84, 0.44, 1)" : this.easing,
+            easing: force ? next.offsetWidth < 600 ? easeOutQuad : easeOutQuart : this.easing,
             ...this.transitionOptions
           });
           if (!force && !prev) {
@@ -1363,7 +1373,7 @@
           if (!~this.prevIndex || this.index !== index) {
             this.show(index);
           } else {
-            this._translate(1, this.prevIndex, this.index);
+            this._translate(1);
           }
         },
         events: ["resize"]
@@ -1387,10 +1397,18 @@
       return `translate3d(${value}, 0, 0)`;
     }
 
+    function triggerUpdate(el, type, data) {
+      util.trigger(el, util.createEvent(type, false, false, data));
+    }
+    function withResolvers() {
+      let resolve;
+      return { promise: new Promise((res) => resolve = res), resolve };
+    }
+
     function Transitioner(prev, next, dir, { center, easing, list }) {
       const from = prev ? getLeft(prev, list, center) : getLeft(next, list, center) + util.dimensions(next).width * dir;
       const to = next ? getLeft(next, list, center) : from + util.dimensions(prev).width * dir * (util.isRtl ? -1 : 1);
-      let resolve;
+      const { promise, resolve } = withResolvers();
       return {
         dir,
         show(duration, percent = 0, linear) {
@@ -1407,15 +1425,13 @@
             timing,
             dir
           });
-          return new Promise((res) => {
-            resolve || (resolve = res);
-            util.Transition.start(
-              list,
-              { transform: translate(-to * (util.isRtl ? -1 : 1), "px") },
-              duration,
-              timing
-            ).then(resolve, util.noop);
-          });
+          util.Transition.start(
+            list,
+            { transform: translate(-to * (util.isRtl ? -1 : 1), "px") },
+            duration,
+            timing
+          ).then(resolve, util.noop);
+          return promise;
         },
         cancel() {
           return util.Transition.cancel(list);
@@ -1461,7 +1477,7 @@
         },
         percent() {
           return Math.abs(
-            (util.css(list, "transform").split(",")[4] * (util.isRtl ? -1 : 1) + from) / (to - from)
+            (new DOMMatrix(util.css(list, "transform")).m41 * (util.isRtl ? -1 : 1) + from) / (to - from)
           );
         },
         getDistance() {
@@ -1507,9 +1523,6 @@
         const slideRight = slideLeft + Math.min(util.dimensions(slide).width, listWidth);
         return slideLeft >= listLeft && slideRight <= listRight;
       });
-    }
-    function triggerUpdate(el, type, data) {
-      util.trigger(el, util.createEvent(type, false, false, data));
     }
 
     var Component = {
@@ -1563,12 +1576,12 @@
               left = 0;
             }
             if (this.center) {
-              if (left < width / 2 && left + slideWidth + util.dimensions(this.slides[util.getIndex(+i + 1, this.slides)]).width / 2 > width / 2) {
-                sets.push(+i);
+              if (left < width / 2 && left + slideWidth + util.dimensions(this.slides[util.getIndex(i + 1, this.slides)]).width / 2 > width / 2) {
+                sets.push(i);
                 left = width / 2 - slideWidth / 2;
               }
             } else if (left === 0) {
-              sets.push(Math.min(+i, this.maxIndex));
+              sets.push(Math.min(i, this.maxIndex));
             }
             left += slideWidth;
           }
@@ -1601,6 +1614,9 @@
             }
           }
           this.reorder();
+          if (!this.parallax) {
+            this._translate(1);
+          }
           this.updateActiveClasses();
         },
         events: ["resize"]

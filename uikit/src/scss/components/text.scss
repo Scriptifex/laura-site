@@ -1,6 +1,3 @@
-@use "sass:meta";
-@use "variables";
-
 // Name:            Text
 // Description:     Utilities for text
 //
@@ -31,14 +28,14 @@
     font-size: $text-lead-font-size;
     line-height: $text-lead-line-height;
     color: $text-lead-color;
-    @if(meta.mixin-exists(hook-text-lead)) {@include hook-text-lead();}
+    @if(mixin-exists(hook-text-lead)) {@include hook-text-lead();}
 }
 
 .uk-text-meta {
     font-size: $text-meta-font-size;
     line-height: $text-meta-line-height;
     color: $text-meta-color;
-    @if(meta.mixin-exists(hook-text-meta)) {@include hook-text-meta();}
+    @if(mixin-exists(hook-text-meta)) {@include hook-text-meta();}
 }
 
 
@@ -48,18 +45,18 @@
 .uk-text-small {
     font-size: $text-small-font-size;
     line-height: $text-small-line-height;
-    @if(meta.mixin-exists(hook-text-small)) {@include hook-text-small();}
+    @if(mixin-exists(hook-text-small)) {@include hook-text-small();}
 }
 
 .uk-text-large {
     font-size: $text-large-font-size;
     line-height: $text-large-line-height;
-    @if(meta.mixin-exists(hook-text-large)) {@include hook-text-large();}
+    @if(mixin-exists(hook-text-large)) {@include hook-text-large();}
 }
 
 .uk-text-default {
     font-size: $global-font-size;
-    line-height: variables.$global-line-height;
+    line-height: $global-line-height;
 }
 
 
@@ -125,7 +122,7 @@
     display: inline-block;
     /* 4 */
     background-color: $text-background-color;
-    @if(meta.mixin-exists(hook-text-background)) {@include hook-text-background();}
+    @if(mixin-exists(hook-text-background)) {@include hook-text-background();}
 }
 
 
@@ -138,7 +135,7 @@
 .uk-text-justify { text-align: justify !important; }
 
 /* Phone landscape and bigger */
-@media (min-width: variables.$breakpoint-small) {
+@media (min-width: $breakpoint-small) {
 
     .uk-text-left\@s { text-align: left !important; }
     .uk-text-right\@s { text-align: right !important; }
@@ -147,7 +144,7 @@
 }
 
 /* Tablet landscape and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-text-left\@m { text-align: left !important; }
     .uk-text-right\@m { text-align: right !important; }
@@ -156,7 +153,7 @@
 }
 
 /* Desktop and bigger */
-@media (min-width: variables.$breakpoint-large) {
+@media (min-width: $breakpoint-large) {
 
     .uk-text-left\@l { text-align: left !important; }
     .uk-text-right\@l { text-align: right !important; }
@@ -165,7 +162,7 @@
 }
 
 /* Large screen and bigger */
-@media (min-width: variables.$breakpoint-xlarge) {
+@media (min-width: $breakpoint-xlarge) {
 
     .uk-text-left\@xl { text-align: left !important; }
     .uk-text-right\@xl { text-align: right !important; }
@@ -227,7 +224,7 @@ td.uk-text-truncate { max-width: 0; }
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-text-misc)) {@include hook-text-misc();}
+@if(mixin-exists(hook-text-misc)) {@include hook-text-misc();}
 
 // @mixin hook-text-lead(){}
 // @mixin hook-text-meta(){}

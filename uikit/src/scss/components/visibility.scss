@@ -1,6 +1,3 @@
-@use "sass:meta";
-@use "variables";
-
 // Name:            Visibility
 // Description:     Utilities to show or hide content on breakpoints, hover or touch
 //
@@ -30,28 +27,28 @@
 .uk-hidden { display: none !important; }
 
 /* Phone landscape and bigger */
-@media (min-width: variables.$breakpoint-small) {
+@media (min-width: $breakpoint-small) {
 
     .uk-hidden\@s { display: none !important; }
 
 }
 
 /* Tablet landscape and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-hidden\@m { display: none !important; }
 
 }
 
 /* Desktop and bigger */
-@media (min-width: variables.$breakpoint-large) {
+@media (min-width: $breakpoint-large) {
 
     .uk-hidden\@l { display: none !important; }
 
 }
 
 /* Large screen and bigger */
-@media (min-width: variables.$breakpoint-xlarge) {
+@media (min-width: $breakpoint-xlarge) {
 
     .uk-hidden\@xl { display: none !important; }
 
@@ -165,6 +162,6 @@
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-visibility-misc)) {@include hook-visibility-misc();}
+@if(mixin-exists(hook-visibility-misc)) {@include hook-visibility-misc();}
 
 // @mixin hook-visibility-misc(){}

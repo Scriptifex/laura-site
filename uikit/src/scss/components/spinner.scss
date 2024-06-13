@@ -1,5 +1,3 @@
-@use "sass:math";
-@use "sass:meta";
 // Name:            Spinner
 // Description:     Component to create a loading spinner
 //
@@ -11,7 +9,7 @@
 // Variables
 // ========================================================================
 
-$spinner-radius:                                 math.floor((($spinner-size - $spinner-stroke-width) * 0.5)) !default; // Minus stroke width to prevent overflow clipping
+$spinner-radius:                                 floor((($spinner-size - $spinner-stroke-width) * 0.5)) !default; // Minus stroke width to prevent overflow clipping
 
 
 /* ========================================================================
@@ -23,7 +21,7 @@ $spinner-radius:                                 math.floor((($spinner-size - $s
  */
 
 .uk-spinner {
-    @if(meta.mixin-exists(hook-spinner)) {@include hook-spinner();}
+    @if(mixin-exists(hook-spinner)) {@include hook-spinner();}
 }
 
 
@@ -66,7 +64,7 @@ $spinner-radius:                                 math.floor((($spinner-size - $s
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-spinner-misc)) {@include hook-spinner-misc();}
+@if(mixin-exists(hook-spinner-misc)) {@include hook-spinner-misc();}
 
 // @mixin hook-spinner(){}
 // @mixin hook-spinner-misc(){}

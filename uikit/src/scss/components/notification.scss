@@ -1,4 +1,3 @@
-@use "sass:meta";
 // Name:            Notification
 // Description:     Component to create notification messages
 //
@@ -47,7 +46,7 @@
     /* 2 */
     box-sizing: border-box;
     width: $notification-width;
-    @if(meta.mixin-exists(hook-notification)) {@include hook-notification();}
+    @if(mixin-exists(hook-notification)) {@include hook-notification();}
 }
 
 
@@ -101,7 +100,7 @@
     font-size: $notification-message-font-size;
     line-height: $notification-message-line-height;
     cursor: pointer;
-    @if(meta.mixin-exists(hook-notification-message)) {@include hook-notification-message();}
+    @if(mixin-exists(hook-notification-message)) {@include hook-notification-message();}
 }
 
 * + .uk-notification-message { margin-top: $notification-message-margin-top; }
@@ -116,7 +115,7 @@
     position: absolute;
     top: $notification-close-top;
     right: $notification-close-right;
-    @if(meta.mixin-exists(hook-notification-close)) {@include hook-notification-close();}
+    @if(mixin-exists(hook-notification-close)) {@include hook-notification-close();}
 }
 
 .uk-notification-message:hover .uk-notification-close { display: block; }
@@ -131,7 +130,7 @@
 
 .uk-notification-message-primary {
     color: $notification-message-primary-color;
-    @if(meta.mixin-exists(hook-notification-message-primary)) {@include hook-notification-message-primary();}
+    @if(mixin-exists(hook-notification-message-primary)) {@include hook-notification-message-primary();}
 }
 
 /*
@@ -140,7 +139,7 @@
 
 .uk-notification-message-success {
     color: $notification-message-success-color;
-    @if(meta.mixin-exists(hook-notification-message-success)) {@include hook-notification-message-success();}
+    @if(mixin-exists(hook-notification-message-success)) {@include hook-notification-message-success();}
 }
 
 /*
@@ -149,7 +148,7 @@
 
 .uk-notification-message-warning {
     color: $notification-message-warning-color;
-    @if(meta.mixin-exists(hook-notification-message-warning)) {@include hook-notification-message-warning();}
+    @if(mixin-exists(hook-notification-message-warning)) {@include hook-notification-message-warning();}
 }
 
 /*
@@ -158,14 +157,14 @@
 
 .uk-notification-message-danger {
     color: $notification-message-danger-color;
-    @if(meta.mixin-exists(hook-notification-message-danger)) {@include hook-notification-message-danger();}
+    @if(mixin-exists(hook-notification-message-danger)) {@include hook-notification-message-danger();}
 }
 
 
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-notification-misc)) {@include hook-notification-misc();}
+@if(mixin-exists(hook-notification-misc)) {@include hook-notification-misc();}
 
 // @mixin hook-notification(){}
 // @mixin hook-notification-message(){}

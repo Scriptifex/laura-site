@@ -1,4 +1,3 @@
-@use "sass:string";
 //
 // Component:       Mixin
 // Description:     Defines mixins which are used across all components
@@ -15,11 +14,11 @@
 /// @param {String} $replace ('') - New value
 /// @return {String} - Updated string
 @function str-replace($string, $search, $replace: '') {
-    $index: string.index($string, $search);
+    $index: str-index($string, $search);
 
     @if $index {
-        @return string.slice($string, 1, $index - 1) + $replace +
-            str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
+        @return str-slice($string, 1, $index - 1) + $replace +
+            str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
     }
 
     @return $string;
@@ -28,6 +27,6 @@
 @mixin svg-fill($src, $color-default, $color-new) {
     $replace-src: str-replace($src, $color-default, $color-new) !default;
     $replace-src: str-replace($replace-src, '#', '%23');
-    $replace-src: string.quote($replace-src);
+    $replace-src: quote($replace-src);
     background-image: url($replace-src);
 }

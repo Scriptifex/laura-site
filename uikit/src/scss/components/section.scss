@@ -1,6 +1,3 @@
-@use "sass:meta";
-@use "variables";
-
 // Name:            Section
 // Description:     Component to create horizontal layout section
 //
@@ -47,11 +44,11 @@
     box-sizing: border-box; /* 1 */
     padding-top: $section-padding-vertical;
     padding-bottom: $section-padding-vertical;
-    @if(meta.mixin-exists(hook-section)) {@include hook-section();}
+    @if(mixin-exists(hook-section)) {@include hook-section();}
 }
 
 /* Desktop and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-section {
         padding-top: $section-padding-vertical-m;
@@ -98,7 +95,7 @@
 }
 
 /* Tablet landscape and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-section-large {
         padding-top: $section-large-padding-vertical-m;
@@ -117,7 +114,7 @@
 }
 
 /* Tablet landscape and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-section-xlarge {
         padding-top: $section-xlarge-padding-vertical-m;
@@ -137,7 +134,7 @@
 .uk-section-default {
     --uk-inverse: #{$section-default-color-mode};
     background: $section-default-background;
-    @if(meta.mixin-exists(hook-section-default)) {@include hook-section-default();}
+    @if(mixin-exists(hook-section-default)) {@include hook-section-default();}
 }
 
 @if ( $section-default-color-mode == light ) { .uk-section-default:not(.uk-preserve-color) { @extend .uk-light !optional;} }
@@ -150,7 +147,7 @@
 .uk-section-muted {
     --uk-inverse: #{$section-muted-color-mode};
     background: $section-muted-background;
-    @if(meta.mixin-exists(hook-section-muted)) {@include hook-section-muted();}
+    @if(mixin-exists(hook-section-muted)) {@include hook-section-muted();}
 }
 
 @if ( $section-muted-color-mode == light ) { .uk-section-muted:not(.uk-preserve-color) { @extend .uk-light !optional;} }
@@ -164,7 +161,7 @@
 .uk-section-primary {
     --uk-inverse: #{$section-primary-color-mode};
     background: $section-primary-background;
-    @if(meta.mixin-exists(hook-section-primary)) {@include hook-section-primary();}
+    @if(mixin-exists(hook-section-primary)) {@include hook-section-primary();}
 }
 
 @if ( $section-primary-color-mode == light ) { .uk-section-primary:not(.uk-preserve-color) { @extend .uk-light !optional;} }
@@ -177,7 +174,7 @@
 .uk-section-secondary {
     --uk-inverse: #{$section-secondary-color-mode};
     background: $section-secondary-background;
-    @if(meta.mixin-exists(hook-section-secondary)) {@include hook-section-secondary();}
+    @if(mixin-exists(hook-section-secondary)) {@include hook-section-secondary();}
 }
 
 @if ( $section-secondary-color-mode == light ) { .uk-section-secondary:not(.uk-preserve-color) { @extend .uk-light !optional;} }
@@ -193,14 +190,14 @@
  */
 
 .uk-section-overlap {
-    @if(meta.mixin-exists(hook-section-overlap)) {@include hook-section-overlap();}
+    @if(mixin-exists(hook-section-overlap)) {@include hook-section-overlap();}
 }
 
 
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-section-misc)) {@include hook-section-misc();}
+@if(mixin-exists(hook-section-misc)) {@include hook-section-misc();}
 
 // @mixin hook-section(){}
 // @mixin hook-section-default(){}

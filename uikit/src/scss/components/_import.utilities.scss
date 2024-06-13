@@ -1,19 +1,19 @@
 // Utilities
-@use "animation.scss";
-@use "width.scss";
-@use "text.scss";
-@use "column.scss";
-@use "cover.scss";
-@use "background.scss";
-@use "align.scss";
-@use "utility.scss";
-@use "flex.scss"; // After: Utility
-@use "margin.scss";
-@use "padding.scss";
-@use "position.scss";
-@use "transition.scss";
-@use "visibility.scss";
-@use "inverse.scss";
+@import "animation.scss";
+@import "width.scss";
+@import "text.scss";
+@import "column.scss";
+@import "cover.scss";
+@import "background.scss";
+@import "align.scss";
+@import "utility.scss";
+@import "flex.scss"; // After: Utility
+@import "margin.scss";
+@import "padding.scss";
+@import "position.scss";
+@import "transition.scss";
+@import "visibility.scss";
+@import "inverse.scss";
 
 // Need to be loaded last
-@use "print.scss";
+@import "print.scss";

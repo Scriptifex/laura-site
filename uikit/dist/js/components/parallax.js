@@ -1,4 +1,4 @@
-/*! UIkit 3.21.0 | https://www.getuikit.com | (c) 2014 - 2024 YOOtheme | MIT License */
+/*! UIkit 3.21.5 | https://www.getuikit.com | (c) 2014 - 2024 YOOtheme | MIT License */
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('uikit-util')) :
@@ -19,7 +19,7 @@
           if (instance._connected) {
             runUpdates(instance, instance._queued);
           }
-          delete instance._queued;
+          instance._queued = null;
         });
       }
       instance._queued.add(e.type || e);

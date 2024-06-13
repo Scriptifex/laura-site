@@ -1,4 +1,3 @@
-@use "sass:meta";
 // Name:            Drop
 // Description:     Component to position any element next to any other element.
 //
@@ -69,6 +68,6 @@
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-drop-misc)) {@include hook-drop-misc();}
+@if(mixin-exists(hook-drop-misc)) {@include hook-drop-misc();}
 
 // @mixin hook-drop-misc(){}

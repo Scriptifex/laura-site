@@ -1,4 +1,4 @@
-/*! UIkit 3.21.0 | https://www.getuikit.com | (c) 2014 - 2024 YOOtheme | MIT License */
+/*! UIkit 3.21.5 | https://www.getuikit.com | (c) 2014 - 2024 YOOtheme | MIT License */
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('uikit-util')) :
@@ -22,34 +22,39 @@
 
     let prevented;
     function preventBackgroundScroll(el) {
-      const off = util.on(el, "touchstart", (e) => {
-        if (e.targetTouches.length !== 1 || util.matches(e.target, 'input[type="range"')) {
-          return;
-        }
-        let prev = util.getEventPos(e).y;
-        const offMove = util.on(
-          el,
-          "touchmove",
-          (e2) => {
-            const pos = util.getEventPos(e2).y;
-            if (pos === prev) {
-              return;
-            }
-            prev = pos;
-            if (!util.scrollParents(e2.target).some((scrollParent) => {
-              if (!el.contains(scrollParent)) {
-                return false;
+      const off = util.on(
+        el,
+        "touchstart",
+        (e) => {
+          if (e.targetTouches.length !== 1 || util.matches(e.target, 'input[type="range"')) {
+            return;
+          }
+          let prev = util.getEventPos(e).y;
+          const offMove = util.on(
+            el,
+            "touchmove",
+            (e2) => {
+              const pos = util.getEventPos(e2).y;
+              if (pos === prev) {
+                return;
               }
-              let { scrollHeight, clientHeight } = scrollParent;
-              return clientHeight < scrollHeight;
-            })) {
-              e2.preventDefault();
-            }
-          },
-          { passive: false }
-        );
-        util.once(el, "scroll touchend touchcanel", offMove, { capture: true });
-      });
+              prev = pos;
+              if (!util.scrollParents(e2.target).some((scrollParent) => {
+                if (!el.contains(scrollParent)) {
+                  return false;
+                }
+                let { scrollHeight, clientHeight } = scrollParent;
+                return clientHeight < scrollHeight;
+              })) {
+                e2.preventDefault();
+              }
+            },
+            { passive: false }
+          );
+          util.once(el, "scroll touchend touchcanel", offMove, { capture: true });
+        },
+        { passive: true }
+      );
       if (prevented) {
         return off;
       }
@@ -490,7 +495,7 @@
           if (instance._connected) {
             runUpdates(instance, instance._queued);
           }
-          delete instance._queued;
+          instance._queued = null;
         });
       }
       instance._queued.add(e.type || e);
@@ -547,7 +552,7 @@
       }
     };
     function translated(el) {
-      return Math.abs(util.css(el, "transform").split(",")[4] / el.offsetWidth);
+      return Math.abs(new DOMMatrix(util.css(el, "transform")).m41 / el.offsetWidth);
     }
     function translate(value = 0, unit = "%") {
       value += value ? unit : "";
@@ -560,7 +565,7 @@
     function Transitioner(prev, next, dir, { animation, easing }) {
       const { percent, translate, show = util.noop } = animation;
       const props = show(dir);
-      let resolve;
+      const { promise, resolve } = withResolvers();
       return {
         dir,
         show(duration, percent2 = 0, linear) {
@@ -569,16 +574,14 @@
           this.translate(percent2);
           triggerUpdate(next, "itemin", { percent: percent2, duration, timing, dir });
           triggerUpdate(prev, "itemout", { percent: 1 - percent2, duration, timing, dir });
-          return new Promise((res) => {
-            resolve || (resolve = res);
-            Promise.all([
-              util.Transition.start(next, props[1], duration, timing),
-              util.Transition.start(prev, props[0], duration, timing)
-            ]).then(() => {
-              this.reset();
-              resolve();
-            }, util.noop);
-          });
+          Promise.all([
+            util.Transition.start(next, props[1], duration, timing),
+            util.Transition.start(prev, props[0], duration, timing)
+          ]).then(() => {
+            this.reset();
+            resolve();
+          }, util.noop);
+          return promise;
         },
         cancel() {
           return util.Transition.cancel([next, prev]);
@@ -593,9 +596,6 @@
           return this.show(duration, percent2, true);
         },
         translate(percent2) {
-          if (percent2 === this.percent()) {
-            return;
-          }
           this.reset();
           const props2 = translate(percent2, dir);
           util.css(next, props2[1]);
@@ -613,6 +613,10 @@
     }
     function triggerUpdate(el, type, data) {
       util.trigger(el, util.createEvent(type, false, false, data));
+    }
+    function withResolvers() {
+      let resolve;
+      return { promise: new Promise((res) => resolve = res), resolve };
     }
 
     var I18n = {
@@ -887,6 +891,7 @@
       watch: {
         nav(nav, prev) {
           util.attr(nav, "role", "tablist");
+          this.padNavitems();
           if (prev) {
             this.$emit();
           }
@@ -898,6 +903,8 @@
         },
         navChildren(children2) {
           util.attr(children2, "role", "presentation");
+          this.padNavitems();
+          this.updateNav();
         },
         navItems(items) {
           for (const el of items) {
@@ -939,15 +946,7 @@
               "aria-roledescription": this.nav ? null : "slide"
             })
           );
-        },
-        length(length) {
-          const navLength = this.navChildren.length;
-          if (this.nav && length !== navLength) {
-            util.empty(this.nav);
-            for (let i = 0; i < length; i++) {
-              util.append(this.nav, `<li ${this.attrItem}="${i}"><a href></a></li>`);
-            }
-          }
+          this.padNavitems();
         }
       },
       connected() {
@@ -1025,10 +1024,25 @@
               );
             }
           }
+        },
+        padNavitems() {
+          if (!this.nav) {
+            return;
+          }
+          const children2 = [];
+          for (let i = 0; i < this.length; i++) {
+            const attr2 = `${this.attrItem}="${i}"`;
+            children2[i] = this.navChildren.findLast((el) => el.matches(`[${attr2}]`)) || util.$(`<li ${attr2}><a href></a></li>`);
+          }
+          if (!util.isEqual(children2, this.navChildren)) {
+            util.html(this.nav, children2);
+          }
         }
       }
     };
 
+    const easeOutQuad = "cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+    const easeOutQuart = "cubic-bezier(0.165, 0.84, 0.44, 1)";
     var Slider = {
       mixins: [SliderAutoplay, SliderDrag, SliderNav, I18n],
       props: {
@@ -1158,7 +1172,7 @@
         },
         async _show(prev, next, force) {
           this._transitioner = this._getTransitioner(prev, next, this.dir, {
-            easing: force ? next.offsetWidth < 600 ? "cubic-bezier(0.25, 0.46, 0.45, 0.94)" : "cubic-bezier(0.165, 0.84, 0.44, 1)" : this.easing,
+            easing: force ? next.offsetWidth < 600 ? easeOutQuad : easeOutQuart : this.easing,
             ...this.transitionOptions
           });
           if (!force && !prev) {
@@ -1281,21 +1295,18 @@
         pauseOnHover: false,
         velocity: 2,
         Animations,
-        template: `<div class="uk-lightbox uk-overflow-hidden"> <ul class="uk-lightbox-items"></ul> <div class="uk-lightbox-toolbar uk-position-top uk-text-right uk-transition-slide-top uk-transition-opaque"> <button class="uk-lightbox-toolbar-icon uk-close-large" type="button" uk-close></button> </div> <a class="uk-lightbox-button uk-position-center-left uk-position-medium uk-transition-fade" href uk-slidenav-previous uk-lightbox-item="previous"></a> <a class="uk-lightbox-button uk-position-center-right uk-position-medium uk-transition-fade" href uk-slidenav-next uk-lightbox-item="next"></a> <div class="uk-lightbox-toolbar uk-lightbox-caption uk-position-bottom uk-text-center uk-transition-slide-bottom uk-transition-opaque"></div> </div>`
+        template: `<div class="uk-lightbox uk-overflow-hidden"> <div class="uk-lightbox-items"></div> <div class="uk-lightbox-toolbar uk-position-top uk-text-right uk-transition-slide-top uk-transition-opaque"> <button class="uk-lightbox-toolbar-icon uk-close-large" type="button" uk-close></button> </div> <a class="uk-lightbox-button uk-position-center-left uk-position-medium uk-transition-fade" href uk-slidenav-previous uk-lightbox-item="previous"></a> <a class="uk-lightbox-button uk-position-center-right uk-position-medium uk-transition-fade" href uk-slidenav-next uk-lightbox-item="next"></a> <div class="uk-lightbox-toolbar uk-lightbox-caption uk-position-bottom uk-text-center uk-transition-slide-bottom uk-transition-opaque"></div> </div>`
       }),
       created() {
         const $el = util.$(this.template);
         const list = util.$(this.selList, $el);
-        this.items.forEach(() => util.append(list, "<li>"));
+        this.items.forEach(() => util.append(list, "<div>"));
         const close = util.$("[uk-close]", $el);
         const closeLabel = this.t("close");
         if (close && closeLabel) {
           close.dataset.i18n = JSON.stringify({ label: closeLabel });
         }
         this.$mount(util.append(this.container, $el));
-      },
-      computed: {
-        caption: ({ selCaption }, $el) => util.$(selCaption, $el)
       },
       events: [
         {
@@ -1372,7 +1383,7 @@
         {
           name: "itemshow",
           handler() {
-            util.html(this.caption, this.getItem().caption || "");
+            util.html(util.$(this.selCaption, this.$el), this.getItem().caption || "");
             for (let j = -this.preload; j <= this.preload; j++) {
               this.loadItem(this.index + j);
             }

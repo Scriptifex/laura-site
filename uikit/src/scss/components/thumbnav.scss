@@ -1,4 +1,3 @@
-@use "sass:meta";
 // Name:            Thumbnav
 // Description:     Component to create thumbnail navigations
 //
@@ -36,7 +35,7 @@
     list-style: none;
     /* 3 */
     margin-left: (-$thumbnav-margin-horizontal);
-    @if(meta.mixin-exists(hook-thumbnav)) {@include hook-thumbnav();}
+    @if(mixin-exists(hook-thumbnav)) {@include hook-thumbnav();}
 }
 
 /*
@@ -59,17 +58,17 @@
 
 .uk-thumbnav > * > * {
     display: inline-block;
-    @if(meta.mixin-exists(hook-thumbnav-item)) {@include hook-thumbnav-item();}
+    @if(mixin-exists(hook-thumbnav-item)) {@include hook-thumbnav-item();}
 }
 
 /* Hover */
 .uk-thumbnav > * > :hover {
-    @if(meta.mixin-exists(hook-thumbnav-item-hover)) {@include hook-thumbnav-item-hover();}
+    @if(mixin-exists(hook-thumbnav-item-hover)) {@include hook-thumbnav-item-hover();}
 }
 
 /* Active */
 .uk-thumbnav > .uk-active > * {
-    @if(meta.mixin-exists(hook-thumbnav-item-active)) {@include hook-thumbnav-item-active();}
+    @if(mixin-exists(hook-thumbnav-item-active)) {@include hook-thumbnav-item-active();}
 }
 
 
@@ -99,7 +98,7 @@
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-thumbnav-misc)) {@include hook-thumbnav-misc();}
+@if(mixin-exists(hook-thumbnav-misc)) {@include hook-thumbnav-misc();}
 
 // @mixin hook-thumbnav(){}
 // @mixin hook-thumbnav-item(){}

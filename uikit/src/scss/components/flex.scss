@@ -1,6 +1,3 @@
-@use "sass:meta";
-@use "variables";
-
 // Name:            Flex
 // Description:     Utilities for layouts based on flexbox
 //
@@ -33,7 +30,7 @@
 .uk-flex-around { justify-content: space-around; }
 
 /* Phone landscape and bigger */
-@media (min-width: variables.$breakpoint-small) {
+@media (min-width: $breakpoint-small) {
 
     .uk-flex-left\@s { justify-content: flex-start; }
     .uk-flex-center\@s { justify-content: center; }
@@ -44,7 +41,7 @@
 }
 
 /* Tablet landscape and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-flex-left\@m { justify-content: flex-start; }
     .uk-flex-center\@m { justify-content: center; }
@@ -55,7 +52,7 @@
 }
 
 /* Desktop and bigger */
-@media (min-width: variables.$breakpoint-large) {
+@media (min-width: $breakpoint-large) {
 
     .uk-flex-left\@l { justify-content: flex-start; }
     .uk-flex-center\@l { justify-content: center; }
@@ -66,7 +63,7 @@
 }
 
 /* Large screen and bigger */
-@media (min-width: variables.$breakpoint-xlarge) {
+@media (min-width: $breakpoint-xlarge) {
 
     .uk-flex-left\@xl { justify-content: flex-start; }
     .uk-flex-center\@xl { justify-content: center; }
@@ -88,7 +85,7 @@
 .uk-flex-bottom { align-items: flex-end; }
 
 /* Phone landscape and bigger */
-@media (min-width: variables.$breakpoint-small) {
+@media (min-width: $breakpoint-small) {
 
     .uk-flex-stretch\@s { align-items: stretch; }
     .uk-flex-top\@s { align-items: flex-start; }
@@ -98,7 +95,7 @@
 }
 
 /* Tablet landscape and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-flex-stretch\@m { align-items: stretch; }
     .uk-flex-top\@m { align-items: flex-start; }
@@ -108,7 +105,7 @@
 }
 
 /* Desktop and bigger */
-@media (min-width: variables.$breakpoint-large) {
+@media (min-width: $breakpoint-large) {
 
     .uk-flex-stretch\@l { align-items: stretch; }
     .uk-flex-top\@l { align-items: flex-start; }
@@ -118,7 +115,7 @@
 }
 
 /* Large screen and bigger */
-@media (min-width: variables.$breakpoint-xlarge) {
+@media (min-width: $breakpoint-xlarge) {
 
     .uk-flex-stretch\@xl { align-items: stretch; }
     .uk-flex-top\@xl { align-items: flex-start; }
@@ -138,7 +135,7 @@
 .uk-flex-column-reverse { flex-direction: column-reverse; }
 
 /* Phone landscape and bigger */
-@media (min-width: variables.$breakpoint-small) {
+@media (min-width: $breakpoint-small) {
 
     .uk-flex-row\@s { flex-direction: row; }
     .uk-flex-column\@s { flex-direction: column; }
@@ -146,7 +143,7 @@
 }
 
 /* Tablet landscape and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-flex-row\@m { flex-direction: row; }
     .uk-flex-column\@m { flex-direction: column; }
@@ -154,7 +151,7 @@
 }
 
 /* Desktop and bigger */
-@media (min-width: variables.$breakpoint-large) {
+@media (min-width: $breakpoint-large) {
 
     .uk-flex-row\@l { flex-direction: row; }
     .uk-flex-column\@l { flex-direction: column; }
@@ -162,7 +159,7 @@
 }
 
 /* Large screen and bigger */
-@media (min-width: variables.$breakpoint-xlarge) {
+@media (min-width: $breakpoint-xlarge) {
 
     .uk-flex-row\@xl { flex-direction: row; }
     .uk-flex-column\@xl { flex-direction: column; }
@@ -203,7 +200,7 @@
 .uk-flex-last { order: 99;}
 
 /* Phone landscape and bigger */
-@media (min-width: variables.$breakpoint-small) {
+@media (min-width: $breakpoint-small) {
 
     .uk-flex-first\@s { order: -1; }
     .uk-flex-last\@s { order: 99; }
@@ -211,7 +208,7 @@
 }
 
 /* Tablet landscape and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-flex-first\@m { order: -1; }
     .uk-flex-last\@m { order: 99; }
@@ -219,7 +216,7 @@
 }
 
 /* Desktop and bigger */
-@media (min-width: variables.$breakpoint-large) {
+@media (min-width: $breakpoint-large) {
 
     .uk-flex-first\@l { order: -1; }
     .uk-flex-last\@l { order: 99; }
@@ -227,7 +224,7 @@
 }
 
 /* Large screen and bigger */
-@media (min-width: variables.$breakpoint-xlarge) {
+@media (min-width: $breakpoint-xlarge) {
 
     .uk-flex-first\@xl { order: -1; }
     .uk-flex-last\@xl { order: 99; }
@@ -267,7 +264,7 @@
 .uk-flex-1 { flex: 1; }
 
 /* Phone landscape and bigger */
-@media (min-width: variables.$breakpoint-small) {
+@media (min-width: $breakpoint-small) {
 
     .uk-flex-initial\@s { flex: initial; }
     .uk-flex-none\@s { flex: none; }
@@ -276,7 +273,7 @@
 }
 
 /* Tablet landscape and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-flex-initial\@m { flex: initial; }
     .uk-flex-none\@m { flex: none; }
@@ -285,7 +282,7 @@
 }
 
 /* Desktop and bigger */
-@media (min-width: variables.$breakpoint-large) {
+@media (min-width: $breakpoint-large) {
 
     .uk-flex-initial\@l { flex: initial; }
     .uk-flex-none\@l { flex: none; }
@@ -294,7 +291,7 @@
 }
 
 /* Large screen and bigger */
-@media (min-width: variables.$breakpoint-xlarge) {
+@media (min-width: $breakpoint-xlarge) {
 
     .uk-flex-initial\@xl { flex: initial; }
     .uk-flex-none\@xl { flex: none; }
@@ -306,6 +303,6 @@
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-flex-misc)) {@include hook-flex-misc();}
+@if(mixin-exists(hook-flex-misc)) {@include hook-flex-misc();}
 
 // @mixin hook-flex-misc(){}

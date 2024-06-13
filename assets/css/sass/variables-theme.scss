@@ -1,3 +1,12 @@
+@forward "sass:color";
+@forward "sass:math";
+@forward "sass:string";
+@use "sass:color";
+@use "sass:math";
+@use "sass:string";
+
+
+
 $global-margin: 20px !default;
 $accordion-item-margin-top: $global-margin !default;
 $global-medium-font-size: 1.25rem !default;

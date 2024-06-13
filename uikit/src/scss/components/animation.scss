@@ -1,4 +1,3 @@
-@use "sass:meta";
 // Name:            Animation
 // Description:     Utilities for keyframe animations
 //
@@ -272,6 +271,6 @@
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-animation-misc)) {@include hook-animation-misc();}
+@if(mixin-exists(hook-animation-misc)) {@include hook-animation-misc();}
 
 // @mixin hook-animation-misc(){}

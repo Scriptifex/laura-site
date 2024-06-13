@@ -9,6 +9,7 @@ import {
     hasClass,
     height,
     includes,
+    isInput,
     isRtl,
     matches,
     noop,
@@ -137,7 +138,7 @@ export default {
                     includes(active.mode, 'hover') &&
                     active.targetEl &&
                     !current.contains(active.targetEl) &&
-                    !active.isDelaying
+                    !active.isDelaying()
                 ) {
                     active.hide(false);
                 }
@@ -172,9 +173,9 @@ export default {
             delegate: ({ clsDrop }) => `.${clsDrop}`,
 
             handler(e) {
-                const { current, keyCode } = e;
+                const { current, keyCode, target } = e;
 
-                if (!includes(this.dropdowns, current)) {
+                if (isInput(target) || !includes(this.dropdowns, current)) {
                     return;
                 }
 

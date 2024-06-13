@@ -1,4 +1,3 @@
-@use "sass:meta";
 // Name:            Cover
 // Description:     Utilities to let embedded content cover their container in a centered position
 //
@@ -72,6 +71,6 @@ iframe[data-uk-cover] { pointer-events: none; }
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-cover-misc)) {@include hook-cover-misc();}
+@if(mixin-exists(hook-cover-misc)) {@include hook-cover-misc();}
 
 // @mixin hook-cover-misc(){}

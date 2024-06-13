@@ -1,4 +1,3 @@
-@use "sass:meta";
 // Name:            Tooltip
 // Description:     Component to create tooltips
 //
@@ -55,7 +54,7 @@
     border-radius: $tooltip-border-radius;
     color: $tooltip-color;
     font-size: $tooltip-font-size;
-    @if(meta.mixin-exists(hook-tooltip)) {@include hook-tooltip();}
+    @if(mixin-exists(hook-tooltip)) {@include hook-tooltip();}
 }
 
 /* Show */
@@ -65,7 +64,7 @@
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-tooltip-misc)) {@include hook-tooltip-misc();}
+@if(mixin-exists(hook-tooltip-misc)) {@include hook-tooltip-misc();}
 
 // @mixin hook-tooltip(){}
 // @mixin hook-tooltip-misc(){}

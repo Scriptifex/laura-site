@@ -1,6 +1,3 @@
-@use "sass:meta";
-@use "variables";
-
 // Name:            Dropdown
 // Description:     Component to create a dropdown based on Drop component
 //
@@ -47,7 +44,7 @@
     padding: $dropdown-padding;
     background: $dropdown-background;
     color: $dropdown-color;
-    @if(meta.mixin-exists(hook-dropdown)) {@include hook-dropdown();}
+    @if(mixin-exists(hook-dropdown)) {@include hook-dropdown();}
 }
 
 /*
@@ -90,18 +87,18 @@
     /* 3 */
     padding: $dropdown-dropbar-padding-top 0 $dropdown-dropbar-padding-bottom 0;
     --uk-position-viewport-offset: #{$dropdown-dropbar-viewport-margin};
-    @if(meta.mixin-exists(hook-dropdown-dropbar)) {@include hook-dropdown-dropbar();}
+    @if(mixin-exists(hook-dropdown-dropbar)) {@include hook-dropdown-dropbar();}
 }
 
 /* Phone landscape and bigger */
-@media (min-width: variables.$breakpoint-small) {
+@media (min-width: $breakpoint-small) {
 
     .uk-dropdown-dropbar { --uk-position-viewport-offset: #{$dropdown-dropbar-viewport-margin-s}; }
 
 }
 
 /* Tablet landscape and bigger */
-@media (min-width: variables.$breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
 
     .uk-dropdown-dropbar { --uk-position-viewport-offset: #{$dropdown-dropbar-viewport-margin-m}; }
 
@@ -110,7 +107,7 @@
 .uk-dropdown-dropbar-large {
     padding-top: $dropdown-dropbar-large-padding-top;
     padding-bottom: $dropdown-dropbar-large-padding-bottom;
-    @if(meta.mixin-exists(hook-dropdown-dropbar-large)) {@include hook-dropdown-dropbar-large();}
+    @if(mixin-exists(hook-dropdown-dropbar-large)) {@include hook-dropdown-dropbar-large();}
 }
 
 
@@ -119,7 +116,7 @@
  ========================================================================== */
 
 .uk-dropdown-nav {
-    @if(meta.mixin-exists(hook-dropdown-nav)) {@include hook-dropdown-nav();}
+    @if(mixin-exists(hook-dropdown-nav)) {@include hook-dropdown-nav();}
 }
 
 /*
@@ -128,14 +125,14 @@
 
 .uk-dropdown-nav > li > a {
     color: $dropdown-nav-item-color;
-    @if(meta.mixin-exists(hook-dropdown-nav-item)) {@include hook-dropdown-nav-item();}
+    @if(mixin-exists(hook-dropdown-nav-item)) {@include hook-dropdown-nav-item();}
 }
 
 /* Hover + Active */
 .uk-dropdown-nav > li > a:hover,
 .uk-dropdown-nav > li.uk-active > a {
     color: $dropdown-nav-item-hover-color;
-    @if(meta.mixin-exists(hook-dropdown-nav-item-hover)) {@include hook-dropdown-nav-item-hover();}
+    @if(mixin-exists(hook-dropdown-nav-item-hover)) {@include hook-dropdown-nav-item-hover();}
 }
 
 /*
@@ -144,7 +141,7 @@
 
 .uk-dropdown-nav .uk-nav-subtitle {
     font-size: $dropdown-nav-subtitle-font-size;
-    @if(meta.mixin-exists(hook-dropdown-nav-subtitle)) {@include hook-dropdown-nav-subtitle();}
+    @if(mixin-exists(hook-dropdown-nav-subtitle)) {@include hook-dropdown-nav-subtitle();}
 }
 
 /*
@@ -153,7 +150,7 @@
 
 .uk-dropdown-nav .uk-nav-header {
     color: $dropdown-nav-header-color;
-    @if(meta.mixin-exists(hook-dropdown-nav-header)) {@include hook-dropdown-nav-header();}
+    @if(mixin-exists(hook-dropdown-nav-header)) {@include hook-dropdown-nav-header();}
 }
 
 /*
@@ -162,7 +159,7 @@
 
 .uk-dropdown-nav .uk-nav-divider {
     border-top: $dropdown-nav-divider-border-width solid $dropdown-nav-divider-border;
-    @if(meta.mixin-exists(hook-dropdown-nav-divider)) {@include hook-dropdown-nav-divider();}
+    @if(mixin-exists(hook-dropdown-nav-divider)) {@include hook-dropdown-nav-divider();}
 }
 
 /*
@@ -178,7 +175,7 @@
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-dropdown-misc)) {@include hook-dropdown-misc();}
+@if(mixin-exists(hook-dropdown-misc)) {@include hook-dropdown-misc();}
 
 // @mixin hook-dropdown(){}
 // @mixin hook-dropdown-dropbar(){}

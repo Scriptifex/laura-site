@@ -1,4 +1,3 @@
-@use "sass:meta";
 // Name:            Close
 // Description:     Component to create a close button
 //
@@ -22,20 +21,20 @@
 
 .uk-close {
     color: $close-color;
-    @if(meta.mixin-exists(hook-close)) {@include hook-close();}
+    @if(mixin-exists(hook-close)) {@include hook-close();}
 }
 
 /* Hover */
 .uk-close:hover {
     color: $close-hover-color;
-    @if(meta.mixin-exists(hook-close-hover)) {@include hook-close-hover();}
+    @if(mixin-exists(hook-close-hover)) {@include hook-close-hover();}
 }
 
 
 // Hooks
 // ========================================================================
 
-@if(meta.mixin-exists(hook-close-misc)) {@include hook-close-misc();}
+@if(mixin-exists(hook-close-misc)) {@include hook-close-misc();}
 
 // @mixin hook-close(){}
 // @mixin hook-close-hover(){}
