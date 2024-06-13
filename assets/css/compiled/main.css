@@ -1,5 +1,434 @@
 @charset "UTF-8";
 /* stylelint-disable no-irregular-whitespace */
+/*$base-blockquote-color: $muted-text-color !default;
+$base-blockquote-footer-color: $fade-text-color !default;
+$base-body-color: $page-text-color !default;
+$base-code-color: $muted-text-color !default;
+$base-em-color: $emphasis-element-color !default;
+$base-focus-outline: $bold-element-color !default;
+$base-heading-color: $bold-text-color !default;
+$base-hr-border: $global-border !default;
+$base-ins-color: $page-text-color !default;
+$base-link-color: $page-element-color !default;
+$base-link-hover-color: $page-element-color-hover !default;
+$base-mark-color: $page-text-color !default;
+$base-pre-border: $global-border !default;
+$base-pre-color: $page-text-color !default;
+$base-selection-color: $page-text-color-active !default;
+$inverse-base-blockquote-color: $inverse-muted-text-color !default;
+$inverse-base-blockquote-footer-color: $inverse-fade-text-color !default;
+$inverse-base-code-color: $inverse-muted-text-color !default;
+$inverse-base-color: $inverse-page-text-color !default;
+$inverse-base-em-color: $inverse-emphasis-element-color !default;
+$inverse-base-focus-outline: $inverse-bold-element-color !default;
+$inverse-base-heading-color: $inverse-bold-text-color !default;
+$inverse-base-hr-border: $inverse-global-border !default;
+$inverse-base-link-color: $inverse-page-element-color !default;
+$inverse-base-link-hover-color: $inverse-page-element-color-hover !default;
+// Background
+$base-body-background: $page-background-color !default;
+$base-code-background: $muted-background-color !default;
+$base-ins-background: $muted-background-color !default;
+$base-mark-background: $muted-background-color !default;
+$base-pre-background: $page-background-color !default;
+$base-selection-background: $page-background-color-active !default;*/
+/*$breadcrumb-item-color: $small-element-color !default;
+$breadcrumb-item-hover-color: $small-element-color-hover !default;
+$breadcrumb-item-active-color: $small-element-color-active !default;
+$breadcrumb-divider-color: $small-element-color !default;
+$inverse-breadcrumb-item-color: $inverse-small-element-color !default;
+$inverse-breadcrumb-item-hover-color: $inverse-small-element-color-hover !default;
+$inverse-breadcrumb-item-active-color: $inverse-small-element-color-active !default;
+$inverse-breadcrumb-divider-color: $inverse-small-element-color !default;*/
+/*$button-default-color: $small-element-color/*rgba($global-emphasis-color, 0.8)* !default;
+$button-default-active-color: $small-element-color-active !default;
+$button-default-hover-color: $small-element-color-hover/*rgba($global-emphasis-color, 0.9)* !default;
+$button-disabled-color: $fade-element-color !default;
+$button-primary-color: $small-element-color !default;
+$button-primary-active-color: $small-element-color-active !default;
+$button-primary-hover-color: $small-element-color-hover !default;
+$button-secondary-color: $bold-element-color !default;
+$button-secondary-active-color: $bold-element-color-active !default;
+$button-secondary-hover-color: $bold-element-color-hover !default;
+$button-danger-color: $global-danger-color !default;
+$button-danger-active-color: $global-danger-color !default;
+$button-danger-hover-color: $global-danger-color !default;
+$button-link-color: $small-element-color !default;
+$button-link-disabled-color: $fade-element-color !default;
+$button-link-hover-color: $small-element-color-hover !default;
+$button-text-color: $small-text-color !default;
+$button-text-disabled-color: $fade-text-color !default;
+$button-text-hover-color: $small-text-color-hover !default;
+$inverse-button-default-color: $inverse-small-element--color !default;
+$inverse-button-default-active-color: $inverse-small-element-color-active !default;
+$inverse-button-default-hover-color: $inverse-small-element-color-hover !default;
+$inverse-button-primary-color: $inverse-small-element-color !default;
+$inverse-button-primary-active-color: $inverse-small-element-color-active !default;
+$inverse-button-primary-hover-color: $inverse-small-element-color-hover !default;
+$inverse-button-secondary-color: $inverse-bold-element-color !default;
+$inverse-button-secondary-active-color: $inverse-bold-element-color-active !default;
+$inverse-button-secondary-hover-color: $inverse-bold-element-color-hover !default;
+$inverse-button-text-color: $inverse-small-text-color !default;
+$inverse-button-text-hover-color: $inverse-small-text-color-hover !default;
+$inverse-button-text-disabled-color: $inverse-fade-text-color !default;
+$inverse-button-link-color: $inverse-small-element-color !default;
+$inverse-button-link-hover-color: $inverse-small-element-color-hover !default;
+// Background
+$button-default-background: transparent !default;
+$button-default-active-background: transparent !default;
+$button-default-hover-background: transparent !default;
+$button-disabled-background: transparent !default;
+$button-primary-background: $small-background-color !default;
+$button-primary-active-background: /*color.adjust($button-primary-background, $lightness: -10%)* $small-background-color-active !default;
+$button-primary-hover-background: /*color.adjust($button-primary-background, $lightness: -5%)* $small-background-color-hover !default;
+$button-secondary-background: $bold-background-color !default;
+$button-secondary-active-background: /*color.adjust($button-secondary-background, $lightness: -10%)* $bold-background-color-active !default;
+$button-secondary-hover-background: /*color.adjust($button-secondary-background, $lightness: -5%)* $bold-background-color-hover !default;
+$button-danger-background: $global-danger-background !default;
+$button-danger-active-background: color.adjust($button-danger-background, $lightness: -10%) !default;
+$button-danger-hover-background: color.adjust($button-danger-background, $lightness: -5%) !default;
+$inverse-button-default-background: transparent !default;
+$inverse-button-default-active-background: /*color.adjust($inverse-button-default-background, $lightness: -10%)* transparent !default;
+$inverse-button-default-hover-background: /*color.adjust($inverse-button-default-background, $lightness: -5%)* transparent !default;
+$inverse-button-primary-background: $inverse-small-background-color !default;
+$inverse-button-primary-active-background: /*color.adjust($inverse-button-primary-background, $lightness: -10%)* $inverse-small-background-color-active !default;
+$inverse-button-primary-hover-background: /*color.adjust($inverse-button-primary-background, $lightness: -5%)* $inverse-small-background-color-hover !default;
+$inverse-button-secondary-background: $inverse-bold-background-color !default;
+$inverse-button-secondary-active-background: /*color.adjust($inverse-button-secondary-background, $lightness: -10%)* $inverse-bold-background-color-active !default;
+$inverse-button-secondary-hover-background: /*color.adjust($inverse-button-secondary-background, $lightness: -5%)* $inverse-bold-background-color-hover !default;*/
+/*$card-badge-color: $small-element-color !default;
+$card-badge-background: $small-background-color !default;
+$card-hover-background: $medium-background-color-hover !default;
+$card-default-background: $medium-background-color !default;
+$card-default-color: $medium-text-color !default;
+$card-default-title-color: $medium-element-color !default;
+$card-default-hover-background: /*color.adjust($card-default-background, $lightness: -5%)* $medium-background-color-hover !default;
+$card-default-color-mode: light !default;
+$card-primary-background: $bright-background-color !default;
+$card-primary-color: $bright-text-color !default;
+$card-primary-title-color: $bright-element-color !default;
+$card-primary-hover-background: /*color.adjust($card-primary-background, $lightness: -5%)* $bright-background-color-hover !default;
+$card-primary-color-mode: light !default;
+$card-secondary-background: $bold-background-color !default;
+$card-secondary-color: $bold-text-color !default;
+$card-secondary-title-color: $bold-element-color !default;
+$card-secondary-hover-background: /*color.adjust($card-secondary-background, $lightness: -5%)* $bold-background-color-hover !default;
+$card-secondary-color-mode: light !default;
+$inverse-card-badge-background: $inverse-small-background-color !default;
+$inverse-card-badge-color: $inverse-small-element-color !default;*/
+/*$dotnav-item-background: rgba($page-element-color, 0.2) !default;
+$dotnav-item-hover-background: rgba($page-element-color, 0.6) !default;
+$dotnav-item-onclick-background: rgba($page-element-color, 0.2) !default;
+$dotnav-item-active-background: rgba($page-element-color, 0.6) !default;
+$inverse-dotnav-item-background: rgba($inverse-page-element-color, 0.5) !default;
+$inverse-dotnav-item-hover-background: rgba($inverse-page-element-color, 0.9) !default;
+$inverse-dotnav-item-onclick-background: rgba($inverse-page-element-color, 0.5) !default;
+$inverse-dotnav-item-active-background: rgba($inverse-page-element-color, 0.9) !default;*/
+/*$dropdown-nav-item-color: $medium-element-color !default;
+$dropdown-nav-item-hover-color: $medium-element-color-hover !default;
+$dropdown-nav-header-color: $medium-element-color-active !default;
+$dropdown-nav-divider-border: $global-border !default;
+$dropdown-nav-sublist-item-color: $medium-text-color !default;
+$dropdown-nav-sublist-item-hover-color: $medium-text-color-hover !default;*/
+/*$form-range-track-background: color.adjust($large-background-color, $lightness: -5%) !default;
+$form-range-track-focus-background: color.adjust($form-range-track-background, $lightness: -5%) !default;
+$form-range-thumb-background: $small-background-color !default;
+$form-background: $large-background-color !default;
+$form-color: $large-element-color !default;
+$form-focus-background: color.adjust($form-background, $saturation: +5%) !default;
+$form-focus-color: color.adjust($form-color, $saturation: +5%) !default;
+$form-disabled-background: $fade-background-color !default;
+$form-disabled-color: $fade-element-color !default;
+$form-placeholder-color: $muted-element-color !default;
+$form-danger-color: $global-danger-background !default;
+$form-success-color: $global-success-background !default;
+$form-select-icon-color: $small-element-color-active !default;
+$form-select-option-color: $small-element-color-active !default;
+$form-select-disabled-icon-color: $fade-element-color-active !default;
+$form-datalist-icon-color: $small-element-color !default;
+$form-radio-background: $muted-background-color !default;
+$form-radio-focus-background: color.adjust($form-radio-background, $saturation: +5%) !default;
+$form-radio-checked-background: $muted-background-color-active !default;
+$form-radio-checked-icon-color: $muted-element-color !default;
+$form-radio-checked-focus-background: color.adjust($form-radio-checked-background, $saturation: +5%) !default;
+$form-radio-disabled-background: $fade-background-color !default;
+$form-radio-disabled-icon-color: $fade-element-color !default;
+$form-icon-color: $small-element-color !default;
+$form-icon-hover-color: $small-element-color-hover !default;
+$inverse-global-muted-background: rgba($global-inverse-color, 0.1) !default;
+$inverse-form-background: $inverse-large-background-color !default;
+$inverse-form-color: $inverse-large-element-color !default;
+$inverse-form-focus-background: $form-focus-color !default;
+$inverse-form-focus-color: $form-focus-background !default;
+$inverse-form-placeholder-color: $inverse-fade-element-color !default;
+$inverse-form-select-icon-color: $inverse-small-element-color-active !default;
+$inverse-form-datalist-icon-color: $inverse-small-element-color !default;
+$inverse-form-radio-background: $inverse-muted-background-color !default;
+$inverse-form-radio-focus-background: color.adjust($inverse-form-radio-background, $saturation: +5%) !default;
+$inverse-form-radio-checked-background: $inverse-muted-background-color-active !default;
+$inverse-form-radio-checked-icon-color: $inverse-muted-element-color !default;
+$inverse-form-radio-checked-focus-background: color.adjust($inverse-form-radio-checked-background, $saturation: +5%) !default;
+$inverse-form-icon-color: $inverse-small-element-color !default;
+$inverse-form-icon-hover-color: $inverse-small-element-color-hover !default;*/
+/*$icon-link-color: $emphasis-element-color !default;
+$icon-link-hover-color: $emphasis-element-color-hover !default;
+$icon-link-active-color: $emphasis-element-color-active !default;
+$icon-button-background: $small-background-color !default;
+$icon-button-color: $small-element-color !default;
+$icon-button-hover-background: $small-background-color-hover !default;
+$icon-button-hover-color: $small-element-color-hover !default;
+$icon-button-active-background: $small-background-color-active !default;
+$icon-button-active-color: $small-element-color-active !default;
+$inverse-icon-link-color: $inverse-emphasis-element-color !default;
+$inverse-icon-link-hover-color: $inverse-emphasis-element-color-hover !default;
+$inverse-icon-link-active-color: $inverse-emphasis-element-color-active !default;
+$inverse-icon-button-background: $inverse-small-background-color !default;
+$inverse-icon-button-color: $inverse-small-element-color !default;
+$inverse-icon-button-hover-background: $inverse-small-background-color-hover !default;
+$inverse-icon-button-hover-color: $inverse-small-element-color-hover !default;
+$inverse-icon-button-active-background: $inverse-small-background-color-active !default;
+$inverse-icon-button-active-color: $inverse-small-element-color-active !default;*/
+/*$iconnav-item-color: $bold-element-color !default;
+$iconnav-item-hover-color: $bold-element-color-hover !default;
+$iconnav-item-active-color: $bold-element-color-active !default;
+$inverse-iconnav-item-color: $inverse-bold-element-color !default;
+$inverse-iconnav-item-hover-color: $inverse-bold-element-color-hover !default;
+$inverse-iconnav-item-active-color: $inverse-bold-element-color-active !default;*/
+/*$label-background: $bright-background-color !default;
+$label-color: $bright-element-color !default;
+$label-success-background: $global-success-background !default;
+$label-success-color: $global-inverse-color !default;
+$label-warning-background: $global-warning-background !default;
+$label-warning-color: $global-inverse-color !default;
+$label-danger-background: $global-danger-background !default;
+$label-danger-color: $global-inverse-color !default;
+$inverse-label-background: $inverse-bright-background-color !default;
+$inverse-label-color: $inverse-bright-element-color !default;*/
+/*$lightbox-background: $global-dark-color !default;
+$lightbox-focus-outline: $inverse-global-color !default;
+$lightbox-item-color: $inverse-global-color !default;
+$lightbox-toolbar-background: rgba($global-dark-color, 0.3) !default;
+$lightbox-toolbar-color: $inverse-global-color !default;
+$lightbox-toolbar-icon-color: $inverse-global-color !default;
+$lightbox-toolbar-icon-hover-color: $global-inverse-color !default;
+$lightbox-button-background: $lightbox-toolbar-background !default;
+$lightbox-button-color: $inverse-global-color !default;
+$lightbox-button-hover-color: $global-inverse-color !default;*/
+/*$link-muted-color: $muted-element-color !default;
+$link-muted-hover-color: $muted-element-color-hover !default;
+$link-text-hover-color: $page-element-color-hover !default;
+$link-heading-hover-color: $emphasis-element-color-hover !default;
+$link-heading-hover-text-decoration: none !default;
+$inverse-link-muted-color: $inverse-muted-element-color !default;
+$inverse-link-muted-hover-color: $inverse-muted-element-color-hover !default;
+$inverse-link-text-hover-color: $inverse-page-element-color-hover !default;
+$inverse-link-heading-hover-color: $inverse-emphasis-element-color-hover !default;*/
+/*$list-muted-color: $muted-element-color !default;
+$list-emphasis-color: $emphasis-element-color !default;
+$list-primary-color: $bright-element-color !default;
+$list-secondary-color: $bold-element-color !default;
+$list-bullet-icon-color: $small-element-color !default;
+$list-divider-border: $global-border !default;
+$list-striped-background: $muted-background-color !default;
+$inverse-list-muted-color: $inverse-muted-element-color !default;
+$inverse-list-emphasis-color: $inverse-emphasis-element-color !default;
+$inverse-list-primary-color: $inverse-bright-element-color !default;
+$inverse-list-secondary-color: $inverse-bold-element-color !default;
+$inverse-list-divider-border: $inverse-global-border !default;
+$inverse-list-striped-background: $inverse-muted-background-color !default;
+$inverse-list-bullet-icon-color: $inverse-small-element-color !default;*/
+/*$marker-background: $bright-background-color !default;
+$marker-color: $bright-element-color !default;
+$marker-hover-color: $bright-element-color-hover !default;
+$inverse-marker-background: $inverse-bright-background-color !default;
+$inverse-marker-color: $inverse-bright-element-color !default;
+$inverse-marker-hover-color: $inverse-bright-element-color-hover !default;*/
+/*$modal-background: $muted-element-color !default;
+$modal-dialog-background: $muted-background-color !default;
+$modal-header-background: $muted-background-color-hover !default;
+$modal-footer-background: $muted-background-color-hover !default;
+$modal-close-outside-color: $muted-background-color !default;
+$modal-close-outside-hover-color: $muted-background-color-hover !default;*/
+/*$nav-default-item-color: $muted-element-color !default;
+$nav-default-item-hover-color: $muted-element-color-hover !default;
+$nav-default-item-active-color: $muted-element-color-active !default;
+$nav-default-header-color: $emphasis-element-color !default;
+$nav-default-divider-border: $global-border !default;
+$nav-default-sublist-item-color: $muted-text-color !default;
+$nav-default-sublist-item-hover-color: $muted-text-color-hover !default;
+$nav-default-sublist-item-active-color: $muted-text-color-active !default;
+$nav-primary-item-color: $bright-element-color !default;
+$nav-primary-item-hover-color: $bright-element-color-hover !default;
+$nav-primary-item-active-color: $bright-element-color-active !default;
+$nav-primary-header-color: $bright-element-color !default;
+$nav-primary-divider-border: $global-border !default;
+$nav-primary-sublist-item-color: $bright-text-color !default;
+$nav-primary-sublist-item-hover-color: $bright-text-color-hover !default;
+$nav-primary-sublist-item-active-color: $bright-text-color-active !default;
+$nav-secondary-item-color: $bold-element-color !default;
+$nav-secondary-item-hover-color: $bold-element-color-hover !default;
+$nav-secondary-item-active-color: $bold-element-color-active !default;
+$nav-secondary-subtitle-color: $bold-text-color !default;
+$nav-secondary-subtitle-hover-color: $bold-text-color-hover !default;
+$nav-secondary-subtitle-active-color: $bold-text-color-active !default;
+$nav-secondary-header-color: $bold-element-color !default;
+$nav-secondary-divider-border: $global-border !default;
+$nav-secondary-sublist-item-color: $bold-text-color !default;
+$nav-secondary-sublist-item-hover-color: $bold-text-color-hover !default;
+$nav-secondary-sublist-item-active-color: $bold-text-color-active !default;
+$nav-dividers-border: $global-border !default;
+$inverse-nav-default-item-color: $inverse-muted-element-color !default;
+$inverse-nav-default-item-hover-color: $inverse-muted-element-color-hover !default;
+$inverse-nav-default-item-active-color: $inverse-muted-element-color-active !default;
+$inverse-nav-default-header-color: $inverse-emphasis-element-color !default;
+$inverse-nav-default-divider-border: $inverse-global-border !default;
+$inverse-nav-default-sublist-item-color: $inverse-muted-text-color !default;
+$inverse-nav-default-sublist-item-hover-color: $inverse-muted-text-color-hover !default;
+$inverse-nav-default-sublist-item-active-color: $inverse-muted-text-color-active !default;
+$inverse-nav-primary-item-color: $inverse-bright-element-color !default;
+$inverse-nav-primary-item-hover-color: $inverse-bright-element-color-hover !default;
+$inverse-nav-primary-item-active-color: $inverse-bright-element-color-active !default;
+$inverse-nav-primary-header-color: $inverse-bright-element-color !default;
+$inverse-nav-primary-divider-border: $inverse-global-border !default;
+$inverse-nav-primary-sublist-item-color: $inverse-bright-text-color !default;
+$inverse-nav-primary-sublist-item-hover-color: $inverse-bright-text-color-hover !default;
+$inverse-nav-primary-sublist-item-active-color: $inverse-bright-text-color-active !default;
+$inverse-nav-secondary-item-color: $inverse-bold-element-color !default;
+$inverse-nav-secondary-item-hover-color: $inverse-bold-element-color-hover !default;
+$inverse-nav-secondary-item-active-color: $inverse-bold-element-color-active !default;
+$inverse-nav-secondary-subtitle-color: $inverse-bold-text-color !default;
+$inverse-nav-secondary-subtitle-hover-color: $inverse-bold-text-color-hover !default;
+$inverse-nav-secondary-subtitle-active-color: $inverse-bold-text-color-active !default;
+$inverse-nav-secondary-header-color: $inverse-bold-element-color !default;
+$inverse-nav-secondary-divider-border: $inverse-global-border !default;
+$inverse-nav-secondary-sublist-item-color: $inverse-bold-element-color !default;
+$inverse-nav-secondary-sublist-item-hover-color: $inverse-bold-text-color-hover !default;
+$inverse-nav-secondary-sublist-item-active-color: $inverse-bold-text-color-active !default;
+$inverse-nav-dividers-border: $inverse-global-border !default;*/
+/*$navbar-background: $muted-background-color !default;
+$navbar-color-mode: light !default;
+$navbar-nav-item-color: $muted-element-color !default;
+$navbar-nav-item-hover-color: $muted-element-color-hover !default;
+$navbar-nav-item-onclick-color: $muted-element-color-active !default;
+$navbar-nav-item-active-color: $emphasis-element-color !default;
+$navbar-item-color: $muted-element-color !default;
+$navbar-toggle-color: $muted-element-color !default;
+$navbar-toggle-hover-color: $muted-element-color-hover !default;
+$navbar-dropdown-background: $medium-background-color !default;
+$navbar-dropdown-color: $medium-element-color !default;
+$navbar-dropdown-color-mode: light !default;
+$navbar-dropdown-nav-item-color: $medium-element-color !default;
+$navbar-dropdown-nav-item-hover-color: $medium-element-color-hover !default;
+$navbar-dropdown-nav-item-active-color: $medium-element-color-active !default;
+$navbar-dropdown-nav-header-color: $emphasis-element-color !default;
+$navbar-dropdown-nav-divider-border: $global-border !default;
+$navbar-dropdown-nav-sublist-item-color: $medium-text-color !default;
+$navbar-dropdown-nav-sublist-item-hover-color: $medium-text-color-hover !default;
+$navbar-dropdown-nav-sublist-item-active-color: $medium-text-color-active !default;
+$inverse-navbar-nav-item-color: $inverse-muted-element-color !default;
+$inverse-navbar-nav-item-hover-color: $inverse-muted-element-color-hover !default;
+$inverse-navbar-nav-item-onclick-color: $inverse-muted-element-color-active !default;
+$inverse-navbar-nav-item-active-color: $inverse-emphasis-element-color !default;
+$inverse-navbar-item-color: $inverse-muted-element-color !default;
+$inverse-navbar-toggle-color: $inverse-muted-element-color !default;
+$inverse-navbar-toggle-hover-color: $inverse-muted-element-color-hover !default;*/
+/*$notification-message-background: $muted-background-color !default;
+$notification-message-color: $muted-element-color !default;
+$notification-message-primary-color: $bright-element-color !default;
+$notification-message-success-color: $global-success-background !default;
+$notification-message-warning-color: $global-warning-background !default;
+$notification-message-danger-color: $global-danger-background !default;*/
+/*$offcanvas-bar-background: $bold-background-color !default;
+$offcanvas-bar-color-mode: light !default;
+$offcanvas-overlay-background: rgba($global-dark-color, 0.1) !default;*/
+/*$overlay-default-background: rgba($page-background-color, 0.8) !default;
+$overlay-default-color-mode: light !default;
+$overlay-primary-background: rgba($bright-background-color, 0.8) !default;
+$overlay-primary-color-mode: light !default;*/
+/*$pagination-item-color: $small-element-color !default;
+$pagination-item-hover-color: $small-element-color-hover !default;
+$pagination-item-active-color: $small-element-color-active !default;
+$pagination-item-disabled-color: $fade-element-color !default;
+$inverse-pagination-item-color: $inverse-small-element-color !default;
+$inverse-pagination-item-hover-color: $inverse-small-element-color-hover !default;
+$inverse-pagination-item-active-color: $inverse-small-element-color-active !default;
+$inverse-pagination-item-disabled-color: $inverse-fade-element-color !default;*/
+/*$search-color: $muted-element-color !default;
+$search-placeholder-color: $muted-element-color !default;
+$search-icon-color: $muted-element-color !default;
+$search-default-background: $muted-background-color !default;
+$search-default-focus-background: darken($search-default-background, 2%) !default;
+$search-navbar-background: $page-background-color !default;
+$search-navbar-focus-background: $search-navbar-background !default;
+$search-navbar-border: $global-border !default;
+$search-navbar-focus-border: $emphasis-element-color !default;
+$search-medium-background: transparent !default;
+$search-large-background: transparent !default;
+$search-toggle-color: $muted-element-color !default;
+$search-toggle-hover-color: $muted-element-color-hover !default;
+$inverse-search-color: $inverse-muted-element-color !default;
+$inverse-search-placeholder-color: $inverse-muted-element-color !default;
+$inverse-search-icon-color: $inverse-muted-element-color !default;
+$inverse-search-default-background: $inverse-muted-background-color !default;
+$inverse-search-default-focus-background: color.adjust($inverse-search-default-background, $alpha: 0.05) !default;
+$inverse-search-navbar-background: $inverse-muted-background-color !default;
+$inverse-search-navbar-focus-background: color.adjust($inverse-search-navbar-background, $alpha: 0.05) !default;
+$inverse-search-medium-background: transparent !default;
+$inverse-search-large-background: transparent !default;
+$inverse-search-toggle-color: $inverse-muted-element-color !default;
+$inverse-search-toggle-hover-color: $inverse-muted-element-color-hover !default;*/
+/*$section-default-background: $page-background-color !default;
+$section-default-color-mode: light !default;
+$section-muted-background: $muted-background-color !default;
+$section-muted-color-mode: light !default;
+$section-primary-background: $bright-background-color !default;
+$section-primary-color-mode: light !default;
+$section-secondary-background: $bold-background-color !default;
+$section-secondary-color-mode: light !default;*/
+/*$slidenav-color: rgba($page-element-color, 0.5) !default;
+$slidenav-hover-color: rgba($page-element-color, 0.9) !default;
+$slidenav-active-color: rgba($page-element-color, 0.5) !default;
+$inverse-slidenav-color: rgba($inverse-page-element-color, 0.7) !default;
+$inverse-slidenav-hover-color: rgba($inverse-page-element-color, 0.95) !default;
+$inverse-slidenav-active-color: rgba($inverse-page-element-color, 0.7) !default;*/
+/*$subnav-item-color: $medium-element-color !default;
+$subnav-item-hover-color: $medium-element-color-hover !default;
+$subnav-item-active-color: $medium-element-color-active !default;
+$subnav-divider-border: $global-border !default;
+$subnav-pill-item-background: transparent !default;
+$subnav-pill-item-color: $subnav-item-color !default;
+$subnav-pill-item-hover-background: $medium-background-color !default;
+$subnav-pill-item-hover-color: $medium-element-color-hover !default;
+$subnav-pill-item-onclick-background: $medium-background-color-hover !default;
+$subnav-pill-item-onclick-color: $subnav-pill-item-hover-color !default;
+$subnav-pill-item-active-background: $medium-background-color-active !default;
+$subnav-pill-item-active-color: $medium-element-color-active !default;
+$subnav-item-disabled-color: $fade-element-color !default;
+$inverse-subnav-item-color: $inverse-medium-element-color !default;
+$inverse-subnav-item-hover-color: $inverse-medium-element-color-hover !default;
+$inverse-subnav-item-active-color: $inverse-medium-element-color-active !default;
+$inverse-subnav-divider-border: $inverse-global-border !default;
+$inverse-subnav-pill-item-background: transparent !default;
+$inverse-subnav-pill-item-color: $inverse-subnav-item-color !default;
+$inverse-subnav-pill-item-hover-background: $inverse-medium-background-color !default;
+$inverse-subnav-pill-item-hover-color: $inverse-medium-element-color-hover !default;
+$inverse-subnav-pill-item-onclick-background: $inverse-medium-background-color-hover !default;
+$inverse-subnav-pill-item-onclick-color: $inverse-subnav-pill-item-hover-color !default;
+$inverse-subnav-pill-item-active-background: $inverse-medium-background-color-active !default;
+$inverse-subnav-pill-item-active-color: $inverse-medium-element-color-active !default;
+$inverse-subnav-item-disabled-color: $inverse-fade-element-color !default;*/
+/*$tab-item-color: $medium-element-color !default;
+$tab-item-hover-color: $medium-element-color-hover !default;
+$tab-item-active-color: $medium-element-color-active !default;
+$tab-item-disabled-color: $fade-element-color !default;
+$inverse-tab-item-color: $inverse-medium-element-color !default;
+$inverse-tab-item-hover-color: $inverse-medium-element-color-hover !default;
+$inverse-tab-item-active-color: $inverse-medium-element-color-active !default;
+$inverse-tab-item-disabled-color: $inverse-fade-element-color !default;*/
+/* stylelint-disable no-irregular-whitespace */
+/* stylelint-disable no-irregular-whitespace */
+/* stylelint-disable no-irregular-whitespace */
+/* stylelint-disable no-irregular-whitespace */
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -18,7 +447,7 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 3 */
   background: #fff;
-  color: #4d3a3c;
+  color: #666;
 }
 
 /*
@@ -35,7 +464,7 @@ body {
  */
 a,
 .uk-link {
-  color: #f87171;
+  color: #1e87f0;
   text-decoration: none;
   cursor: pointer;
 }
@@ -43,7 +472,7 @@ a,
 a:hover,
 .uk-link:hover,
 .uk-link-toggle:hover .uk-link {
-  color: #ff714e;
+  color: #0f6ecd;
   text-decoration: underline;
 }
 
@@ -96,8 +525,8 @@ em {
  * Insert
  */
 ins {
-  background: #ffddf1;
-  color: #4d3a3c;
+  background: #ffd;
+  color: #666;
   text-decoration: none;
 }
 
@@ -105,8 +534,8 @@ ins {
  * Mark
  */
 mark {
-  background: #ffddf1;
-  color: #4d3a3c;
+  background: #ffd;
+  color: #666;
 }
 
 /*
@@ -238,7 +667,7 @@ h6, .uk-h6,
   margin: 0 0 20px 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: normal;
-  color: #bb3c4b;
+  color: #333;
   text-transform: none;
 }
 
@@ -391,7 +820,7 @@ blockquote footer {
  */
 pre {
   font: 0.875rem / 1.5 Consolas, monaco, monospace;
-  color: #4d3a3c;
+  color: #666;
   -moz-tab-size: 4;
   tab-size: 4;
   /* 1 */
@@ -409,14 +838,14 @@ pre code {
 }
 
 :focus-visible {
-  outline: 2px dotted #bb3c4b;
+  outline: 2px dotted #333;
 }
 
 /* Selection pseudo-element
  ========================================================================== */
 ::selection {
-  background: #f8714e;
-  color: #fecdd3;
+  background: #39f;
+  color: #ffffff;
   text-shadow: none;
 }
 
@@ -465,13 +894,13 @@ template {
 a.uk-link-muted,
 .uk-link-muted a,
 .uk-link-toggle .uk-link-muted {
-  color: #d08a92;
+  color: #999;
 }
 
 a.uk-link-muted:hover,
 .uk-link-muted a:hover,
 .uk-link-toggle:hover .uk-link-muted {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* Text
@@ -485,7 +914,7 @@ a.uk-link-text,
 a.uk-link-text:hover,
 .uk-link-text a:hover,
 .uk-link-toggle:hover .uk-link-text {
-  color: #d08a92;
+  color: #999;
 }
 
 /* Heading
@@ -499,7 +928,7 @@ a.uk-link-heading,
 a.uk-link-heading:hover,
 .uk-link-heading a:hover,
 .uk-link-toggle:hover .uk-link-heading {
-  color: rgba(248, 113, 113, 0.7);
+  color: #1e87f0;
   text-decoration: none;
 }
 
@@ -886,19 +1315,19 @@ $heading-hero-font-size:                         $heading-hero-font-size-l * 0.5
  * Color modifiers
  */
 .uk-list-muted > ::before {
-  color: #d08a92 !important;
+  color: #999 !important;
 }
 
 .uk-list-emphasis > ::before {
-  color: #bb3c4b !important;
+  color: #333 !important;
 }
 
 .uk-list-primary > ::before {
-  color: rgba(248, 113, 113, 0.7) !important;
+  color: #1e87f0 !important;
 }
 
 .uk-list-secondary > ::before {
-  color: rgba(253, 164, 175, 0.4) !important;
+  color: #222 !important;
 }
 
 /* Image bullet modifier
@@ -915,7 +1344,7 @@ $heading-hero-font-size:                         $heading-hero-font-size-l * 0.5
   width: 30px;
   height: 1.5em;
   margin-bottom: 1.5em;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%234d3a3c%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23666%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20%2F%3E%0A%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -939,7 +1368,7 @@ $heading-hero-font-size:                         $heading-hero-font-size-l * 0.5
 }
 
 .uk-list-striped > :nth-of-type(odd) {
-  background: #ffefec;
+  background: #f8f8f8;
 }
 
 .uk-list-striped > :nth-child(n+2) {
@@ -995,7 +1424,7 @@ $heading-hero-font-size:                         $heading-hero-font-size-l * 0.5
  * Term
  */
 .uk-description-list > dt {
-  color: #bb3c4b;
+  color: #333;
 }
 
 .uk-description-list > dt:nth-child(n+2) {
@@ -1051,7 +1480,7 @@ $heading-hero-font-size:                         $heading-hero-font-size-l * 0.5
   /* 1 */
   font-size: 16px;
   font-weight: bold;
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* Cell
@@ -1079,7 +1508,7 @@ $heading-hero-font-size:                         $heading-hero-font-size-l * 0.5
 .uk-table caption {
   font-size: 0.875rem;
   text-align: left;
-  color: #d08a92;
+  color: #999;
 }
 
 /* Alignment modifier
@@ -1105,7 +1534,7 @@ $heading-hero-font-size:                         $heading-hero-font-size-l * 0.5
  */
 .uk-table-striped > tr:nth-of-type(odd),
 .uk-table-striped tbody tr:nth-of-type(odd) {
-  background: #ffefec;
+  background: #f8f8f8;
 }
 
 /*
@@ -1113,14 +1542,14 @@ $heading-hero-font-size:                         $heading-hero-font-size-l * 0.5
  */
 .uk-table-hover > tr:hover,
 .uk-table-hover tbody tr:hover {
-  background: #ffddf1;
+  background: #ffd;
 }
 
 /* Active state
  ========================================================================== */
 .uk-table > tr.uk-active,
 .uk-table tbody tr.uk-active {
-  background: #ffddf1;
+  background: #ffd;
 }
 
 /* Size modifier
@@ -1312,19 +1741,19 @@ button.uk-icon:not(:disabled) {
  * 1. Allow text within link
  */
 .uk-icon-link {
-  color: #d08a92;
+  color: #999;
   /* 1 */
   text-decoration: none !important;
 }
 
 .uk-icon-link:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* OnClick + Active */
 .uk-icon-link:active,
 .uk-active > .uk-icon-link {
-  color: #3e2f31;
+  color: #595959;
 }
 
 /*
@@ -1336,8 +1765,8 @@ button.uk-icon:not(:disabled) {
   width: 36px;
   height: 36px;
   border-radius: 500px;
-  background: #ffefec;
-  color: #d08a92;
+  background: #f8f8f8;
+  color: #999;
   vertical-align: middle;
   /* 1 */
   display: inline-flex;
@@ -1347,15 +1776,15 @@ button.uk-icon:not(:disabled) {
 
 /* Hover */
 .uk-icon-button:hover {
-  background-color: #ffdad3;
-  color: #4d3a3c;
+  background-color: #ebebeb;
+  color: #666;
 }
 
 /* OnClick + Active */
 .uk-icon-button:active,
 .uk-active > .uk-icon-button {
-  background-color: #ffc4b9;
-  color: #4d3a3c;
+  background-color: #dfdfdf;
+  color: #666;
 }
 
 /* ========================================================================
@@ -1414,22 +1843,22 @@ button.uk-icon:not(:disabled) {
 /* Webkit */
 .uk-range::-webkit-slider-runnable-track {
   height: 3px;
-  background: #ffdad3;
+  background: #ebebeb;
 }
 
 .uk-range:focus::-webkit-slider-runnable-track,
 .uk-range:active::-webkit-slider-runnable-track {
-  background: #ffc4b9;
+  background: #dfdfdf;
 }
 
 /* Firefox */
 .uk-range::-moz-range-track {
   height: 3px;
-  background: #ffdad3;
+  background: #ebebeb;
 }
 
 .uk-range:focus::-moz-range-track {
-  background: #ffc4b9;
+  background: #dfdfdf;
 }
 
 /*
@@ -1446,7 +1875,7 @@ button.uk-icon:not(:disabled) {
   height: 15px;
   width: 15px;
   border-radius: 500px;
-  background: #4d3a3c;
+  background: #fff;
 }
 
 /* Firefox */
@@ -1458,7 +1887,7 @@ button.uk-icon:not(:disabled) {
   width: 15px;
   margin-top: -7px;
   border-radius: 500px;
-  background: #4d3a3c;
+  background: #fff;
 }
 
 /* ========================================================================
@@ -1596,8 +2025,8 @@ button.uk-icon:not(:disabled) {
   border: 0 none;
   /* 4 */
   padding: 0 10px;
-  background: #ffefec;
-  color: #4d3a3c;
+  background: #fff;
+  color: #666;
 }
 
 /*
@@ -1641,27 +2070,27 @@ button.uk-icon:not(:disabled) {
 .uk-select:focus,
 .uk-textarea:focus {
   outline: none;
-  background-color: #ffdad3;
-  color: #4d3a3c;
+  background-color: #fff;
+  color: #666;
 }
 
 /* Disabled */
 .uk-input:disabled,
 .uk-select:disabled,
 .uk-textarea:disabled {
-  background-color: #ffefec;
-  color: #d08a92;
+  background-color: #f8f8f8;
+  color: #999;
 }
 
 /*
  * Placeholder
  */
 .uk-input::placeholder {
-  color: #d08a92;
+  color: #999;
 }
 
 .uk-textarea::placeholder {
-  color: #d08a92;
+  color: #999;
 }
 
 /* Style modifier (`uk-input`, `uk-select` and `uk-textarea`)
@@ -1780,21 +2209,21 @@ select.uk-form-width-xsmall {
   -moz-appearance: none;
   /* 2 */
   padding-right: 20px;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%234d3a3c%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%234d3a3c%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
   background-repeat: no-repeat;
   background-position: 100% 50%;
 }
 
 /* 3 */
 .uk-select:not([multiple]):not([size]) option {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /*
  * Disabled
  */
 .uk-select:not([multiple]):not([size]):disabled {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23d08a92%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23d08a92%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
 /* Datalist
@@ -1810,7 +2239,7 @@ select.uk-form-width-xsmall {
 
 .uk-input[list]:hover,
 .uk-input[list]:focus {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%234d3a3c%22%20points%3D%2212%2012%208%206%2016%206%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2012%208%206%2016%206%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
 /* 1 */
@@ -1843,7 +2272,7 @@ select.uk-form-width-xsmall {
   -webkit-appearance: none;
   -moz-appearance: none;
   /* 5 */
-  background-color: #ffdad3;
+  background-color: transparent;
   /* 6 */
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -1856,7 +2285,7 @@ select.uk-form-width-xsmall {
 /* Focus */
 .uk-radio:focus,
 .uk-checkbox:focus {
-  background-color: #ffc4b9;
+  background-color: rgba(0, 0, 0, 0);
   outline: none;
 }
 
@@ -1866,29 +2295,29 @@ select.uk-form-width-xsmall {
 .uk-radio:checked,
 .uk-checkbox:checked,
 .uk-checkbox:indeterminate {
-  background-color: rgba(248, 113, 113, 0.7);
+  background-color: #1e87f0;
 }
 
 /* Focus */
 .uk-radio:checked:focus,
 .uk-checkbox:checked:focus,
 .uk-checkbox:indeterminate:focus {
-  background-color: rgba(246, 64, 64, 0.7);
+  background-color: #0e6ecd;
 }
 
 /*
  * Icons
  */
 .uk-radio:checked {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23fecdd3%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23ffffff%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 .uk-checkbox:checked {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fecdd3%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23ffffff%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
 .uk-checkbox:indeterminate {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23fecdd3%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23ffffff%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 /*
@@ -1896,19 +2325,19 @@ select.uk-form-width-xsmall {
  */
 .uk-radio:disabled,
 .uk-checkbox:disabled {
-  background-color: #ffefec;
+  background-color: #f8f8f8;
 }
 
 .uk-radio:disabled:checked {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23d08a92%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23999%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 .uk-checkbox:disabled:checked {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23d08a92%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
 .uk-checkbox:disabled:indeterminate {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23d08a92%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23999%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 /* Legend
@@ -2042,14 +2471,14 @@ select.uk-form-width-xsmall {
   justify-content: center;
   align-items: center;
   /* 4 */
-  color: #d08a92;
+  color: #999;
 }
 
 /*
  * Required for `a`.
  */
 .uk-form-icon:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /*
@@ -2149,62 +2578,62 @@ select.uk-form-width-xsmall {
  */
 .uk-button-default {
   background-color: transparent;
-  color: rgba(187, 60, 75, 0.8);
+  color: #333;
 }
 
 /* Hover */
 .uk-button-default:hover {
   background-color: transparent;
-  color: rgba(187, 60, 75, 0.9);
+  color: #333;
 }
 
 /* OnClick + Active */
 .uk-button-default:active,
 .uk-button-default.uk-active {
   background-color: transparent;
-  color: #bb3c4b;
+  color: #333;
 }
 
 /*
  * Primary
  */
 .uk-button-primary {
-  background-color: rgba(248, 113, 113, 0.7);
-  color: #fecdd3;
+  background-color: #1e87f0;
+  color: #ffffff;
 }
 
 /* Hover */
 .uk-button-primary:hover {
-  background-color: rgba(247, 89, 89, 0.7);
-  color: #fecdd3;
+  background-color: #0f7ae5;
+  color: #ffffff;
 }
 
 /* OnClick + Active */
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
-  background-color: rgba(246, 64, 64, 0.7);
-  color: #fecdd3;
+  background-color: #0e6ecd;
+  color: #ffffff;
 }
 
 /*
  * Secondary
  */
 .uk-button-secondary {
-  background-color: rgba(253, 164, 175, 0.4);
-  color: #fecdd3;
+  background-color: #222;
+  color: #ffffff;
 }
 
 /* Hover */
 .uk-button-secondary:hover {
-  background-color: rgba(252, 139, 153, 0.4);
-  color: #fecdd3;
+  background-color: #151515;
+  color: #ffffff;
 }
 
 /* OnClick + Active */
 .uk-button-secondary:active,
 .uk-button-secondary.uk-active {
-  background-color: rgba(252, 114, 131, 0.4);
-  color: #fecdd3;
+  background-color: #090909;
+  color: #ffffff;
 }
 
 /*
@@ -2212,20 +2641,20 @@ select.uk-form-width-xsmall {
  */
 .uk-button-danger {
   background-color: #f0506e;
-  color: #fecdd3;
+  color: #ffffff;
 }
 
 /* Hover */
 .uk-button-danger:hover {
   background-color: #ee395b;
-  color: #fecdd3;
+  color: #ffffff;
 }
 
 /* OnClick + Active */
 .uk-button-danger:active,
 .uk-button-danger.uk-active {
   background-color: #ec2147;
-  color: #fecdd3;
+  color: #ffffff;
 }
 
 /*
@@ -2237,7 +2666,7 @@ select.uk-form-width-xsmall {
 .uk-button-secondary:disabled,
 .uk-button-danger:disabled {
   background-color: transparent;
-  color: #d08a92;
+  color: #999;
 }
 
 /* Size modifiers
@@ -2267,17 +2696,17 @@ select.uk-form-width-xsmall {
   line-height: 1.5;
   background: none;
   /* 2 */
-  color: #ffddf1;
+  color: #333;
 }
 
 /* Hover */
 .uk-button-text:hover {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Disabled */
 .uk-button-text:disabled {
-  color: #d08a92;
+  color: #999;
 }
 
 /*
@@ -2291,18 +2720,18 @@ select.uk-form-width-xsmall {
   line-height: 1.5;
   background: none;
   /* 2 */
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Hover */
 .uk-button-link:hover {
-  color: #d08a92;
+  color: #999;
   text-decoration: none;
 }
 
 /* Disabled */
 .uk-button-link:disabled {
-  color: #d08a92;
+  color: #999;
   text-decoration: none;
 }
 
@@ -2340,7 +2769,7 @@ select.uk-form-width-xsmall {
   /* 3 */
   border: 0;
   /* 4 */
-  background-color: #ffefec;
+  background-color: #f8f8f8;
   /* 5 */
   margin-bottom: 20px;
   height: 15px;
@@ -2364,12 +2793,12 @@ select.uk-form-width-xsmall {
  *    https://bugzilla.mozilla.org/show_bug.cgi?id=662351
  */
 .uk-progress::-webkit-progress-value {
-  background-color: rgba(248, 113, 113, 0.7);
+  background-color: #1e87f0;
   transition: width 0.6s ease;
 }
 
 .uk-progress::-moz-progress-bar {
-  background-color: rgba(248, 113, 113, 0.7);
+  background-color: #1e87f0;
   /* 1 */
   transition: width 0.6s ease;
 }
@@ -2464,7 +2893,7 @@ select.uk-form-width-xsmall {
  */
 .uk-section-muted {
   --uk-inverse: dark;
-  background: #ffefec;
+  background: #f8f8f8;
 }
 
 /*
@@ -2472,7 +2901,7 @@ select.uk-form-width-xsmall {
  */
 .uk-section-primary {
   --uk-inverse: light;
-  background: rgba(248, 113, 113, 0.7);
+  background: #1e87f0;
 }
 
 /*
@@ -2480,7 +2909,7 @@ select.uk-form-width-xsmall {
  */
 .uk-section-secondary {
   --uk-inverse: light;
-  background: rgba(253, 164, 175, 0.4);
+  background: #222;
 }
 
 /* Overlap modifier
@@ -2749,7 +3178,7 @@ select.uk-form-width-xsmall {
  */
 .uk-tile-muted {
   --uk-inverse: dark;
-  background-color: #ffefec;
+  background-color: #f8f8f8;
 }
 
 /*
@@ -2757,7 +3186,7 @@ select.uk-form-width-xsmall {
  */
 .uk-tile-primary {
   --uk-inverse: light;
-  background-color: rgba(248, 113, 113, 0.7);
+  background-color: #1e87f0;
 }
 
 /*
@@ -2765,7 +3194,7 @@ select.uk-form-width-xsmall {
  */
 .uk-tile-secondary {
   --uk-inverse: light;
-  background-color: rgba(253, 164, 175, 0.4);
+  background-color: #222;
 }
 
 /* ========================================================================
@@ -2845,8 +3274,8 @@ select.uk-form-width-xsmall {
   height: 22px;
   padding: 0 10px;
   /* 3 */
-  background: rgba(248, 113, 113, 0.7);
-  color: #fecdd3;
+  background: #1e87f0;
+  color: #ffffff;
   font-size: 0.875rem;
   /* 4 */
   display: flex;
@@ -2865,7 +3294,7 @@ select.uk-form-width-xsmall {
 /* Hover modifier
  ========================================================================== */
 .uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
-  background-color: #ffefec;
+  background-color: #fff;
 }
 
 /* Style modifiers
@@ -2876,16 +3305,16 @@ select.uk-form-width-xsmall {
  */
 .uk-card-default {
   --uk-inverse: dark;
-  background-color: #ffefec;
-  color: #4d3a3c;
+  background-color: #fff;
+  color: #666;
 }
 
 .uk-card-default .uk-card-title {
-  color: #bb3c4b;
+  color: #333;
 }
 
 .uk-card-default.uk-card-hover:hover {
-  background-color: #ffdad3;
+  background-color: #fff;
 }
 
 /*
@@ -2893,16 +3322,16 @@ select.uk-form-width-xsmall {
  */
 .uk-card-primary {
   --uk-inverse: light;
-  background-color: rgba(248, 113, 113, 0.7);
-  color: #fecdd3;
+  background-color: #1e87f0;
+  color: #ffffff;
 }
 
 .uk-card-primary .uk-card-title {
-  color: #fecdd3;
+  color: #ffffff;
 }
 
 .uk-card-primary.uk-card-hover:hover {
-  background-color: rgba(247, 89, 89, 0.7);
+  background-color: #1e87f0;
 }
 
 /*
@@ -2910,16 +3339,16 @@ select.uk-form-width-xsmall {
  */
 .uk-card-secondary {
   --uk-inverse: light;
-  background-color: rgba(253, 164, 175, 0.4);
-  color: #fecdd3;
+  background-color: #222;
+  color: #ffffff;
 }
 
 .uk-card-secondary .uk-card-title {
-  color: #fecdd3;
+  color: #ffffff;
 }
 
 .uk-card-secondary.uk-card-hover:hover {
-  background-color: rgba(252, 139, 153, 0.4);
+  background-color: #222;
 }
 
 /* Size modifier
@@ -2963,12 +3392,12 @@ select.uk-form-width-xsmall {
  * Adopts `uk-icon`
  */
 .uk-close {
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-close:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /*
@@ -3027,17 +3456,17 @@ $spinner-radius:                                 math.floor(((variables.$spinner
  */
 .uk-totop {
   padding: 5px;
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-totop:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* OnClick */
 .uk-totop:active {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* ========================================================================
@@ -3048,15 +3477,16 @@ $spinner-radius:                                 math.floor(((variables.$spinner
  */
 .uk-marker {
   padding: 5px;
-  background: rgba(253, 164, 175, 0.4);
-  color: #fecdd3;
+  background: #222;
+  color: #ffffff;
 }
 
 /* Hover */
 .uk-marker:hover {
-  color: #fecdd3;
+  color: #ffffff;
 }
 
+/* stylelint-disable no-irregular-whitespace */
 /* ========================================================================
    Component: Alert
  ========================================================================== */
@@ -3064,8 +3494,8 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   position: relative;
   margin-bottom: 20px;
   padding: 15px 29px 15px 15px;
-  background: #ffefec;
-  color: #4d3a3c;
+  background: #f8f8f8;
+  color: #666;
 }
 
 /* Add margin if adjacent element */
@@ -3105,8 +3535,8 @@ $spinner-radius:                                 math.floor(((variables.$spinner
  * Primary
  */
 .uk-alert-primary {
-  background: rgba(255, 255, 255, 0.82);
-  color: rgba(248, 113, 113, 0.7);
+  background: #d8eafc;
+  color: #1e87f0;
 }
 
 /*
@@ -3139,7 +3569,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
 .uk-placeholder {
   margin-bottom: 20px;
   padding: 30px 30px;
-  background: #ffefec;
+  background: transparent;
 }
 
 /* Add margin if adjacent element */
@@ -3169,8 +3599,8 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   border-radius: 500px;
   vertical-align: middle;
   /* 1 */
-  background: rgba(248, 113, 113, 0.7);
-  color: #fecdd3 !important;
+  background: #1e87f0;
+  color: #ffffff !important;
   font-size: 11px;
   /* 2 */
   display: inline-flex;
@@ -3192,10 +3622,10 @@ $spinner-radius:                                 math.floor(((variables.$spinner
 .uk-label {
   display: inline-block;
   padding: 0 10px;
-  background: rgba(248, 113, 113, 0.7);
+  background: #1e87f0;
   line-height: 1.5;
   font-size: 0.875rem;
-  color: #fecdd3;
+  color: #ffffff;
   vertical-align: middle;
   white-space: nowrap;
 }
@@ -3207,7 +3637,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
  */
 .uk-label-success {
   background-color: #32d296;
-  color: #fecdd3;
+  color: #ffffff;
 }
 
 /*
@@ -3215,7 +3645,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
  */
 .uk-label-warning {
   background-color: #faa05a;
-  color: #fecdd3;
+  color: #ffffff;
 }
 
 /*
@@ -3223,7 +3653,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
  */
 .uk-label-danger {
   background-color: #f0506e;
-  color: #fecdd3;
+  color: #ffffff;
 }
 
 /* ========================================================================
@@ -3257,7 +3687,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
  */
 .uk-overlay-primary {
   --uk-inverse: light;
-  background: rgba(253, 164, 175, 0.8);
+  background: rgba(34, 34, 34, 0.8);
 }
 
 /* ========================================================================
@@ -3298,7 +3728,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
 .uk-article-meta {
   font-size: 0.875rem;
   line-height: 1.4;
-  color: #d08a92;
+  color: #999;
 }
 
 /* ========================================================================
@@ -3337,7 +3767,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
 .uk-comment-meta {
   font-size: 0.875rem;
   line-height: 1.4;
-  color: #d08a92;
+  color: #999;
 }
 
 /* Avatar
@@ -3444,7 +3874,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   width: 100%;
   /* 9 */
   border: none;
-  color: #4d3a3c;
+  color: #666;
 }
 
 .uk-search-input:focus {
@@ -3453,7 +3883,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
 
 /* Placeholder */
 .uk-search-input::placeholder {
-  color: #d08a92;
+  color: #999;
 }
 
 /* Icon (Adopts `uk-icon`)
@@ -3475,14 +3905,14 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   justify-content: center;
   align-items: center;
   /* 3 */
-  color: #d08a92;
+  color: #999;
 }
 
 /*
  * Required for `a`.
  */
 .uk-search .uk-search-icon:hover {
-  color: #d08a92;
+  color: #999;
 }
 
 /*
@@ -3513,12 +3943,12 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   height: 40px;
   padding-left: 10px;
   padding-right: 10px;
-  background: #ffefec;
+  background: transparent;
 }
 
 /* Focus */
 .uk-search-default .uk-search-input:focus {
-  background-color: #ffe6e2;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 /*
@@ -3554,7 +3984,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
 
 /* Focus */
 .uk-search-navbar .uk-search-input:focus {
-  background-color: #fcfcfc;
+  background-color: #fff;
 }
 
 /*
@@ -3592,15 +4022,15 @@ $spinner-radius:                                 math.floor(((variables.$spinner
  * Icon
  */
 .uk-search-medium .uk-search-icon {
-  width: 40px;
+  width: 24px;
 }
 
 .uk-search-medium:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input {
-  padding-left: 40px;
+  padding-left: 34px;
 }
 
 .uk-search-medium:has(.uk-search-icon-flip) .uk-search-input {
-  padding-right: 40px;
+  padding-right: 34px;
 }
 
 /* Large modifier
@@ -3637,14 +4067,15 @@ $spinner-radius:                                 math.floor(((variables.$spinner
 /* Toggle
  ========================================================================== */
 .uk-search-toggle {
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-search-toggle:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
+/* stylelint-disable no-irregular-whitespace */
 /* ========================================================================
    Component: Accordion
  ========================================================================== */
@@ -3665,12 +4096,12 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   display: block;
   font-size: 1.25rem;
   line-height: 1.4;
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Hover */
 .uk-accordion-title:hover {
-  color: #4d3a3c;
+  color: #666;
   text-decoration: none;
 }
 
@@ -3748,8 +4179,8 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   width: auto;
   /* 2 */
   padding: 15px 15px 15px 15px;
-  background: #ffefec;
-  color: #4d3a3c;
+  background: #fff;
+  color: #666;
 }
 
 /*
@@ -3774,7 +4205,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   }
 }
 .uk-dropbar :focus-visible {
-  outline-color: #bb3c4b !important;
+  outline-color: #333 !important;
 }
 
 /* Size modifier
@@ -3831,7 +4262,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   /* 4 */
   padding: 15px 15px;
   /* 5 */
-  background: rgba(107, 27, 50, 0.6);
+  background: rgba(0, 0, 0, 0.6);
   /* 6 */
   opacity: 0;
   transition: opacity 0.15s linear;
@@ -3940,13 +4371,13 @@ $spinner-radius:                                 math.floor(((variables.$spinner
 .uk-modal-header {
   display: flow-root;
   padding: 10px 20px;
-  background: #ffefec;
+  background: #fff;
 }
 
 .uk-modal-footer {
   display: flow-root;
   padding: 10px 20px;
-  background: #ffefec;
+  background: #fff;
 }
 
 /* Phone landscape and bigger */
@@ -4014,7 +4445,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
 }
 
 .uk-modal-close-outside:hover {
-  color: #fecdd3;
+  color: #ffffff;
 }
 
 /* Tablet landscape and bigger */
@@ -4266,7 +4697,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   box-sizing: border-box;
   width: 270px;
   padding: 20px 20px;
-  background: rgba(253, 164, 175, 0.4);
+  background: #222;
   /* 3 */
   overflow-y: auto;
 }
@@ -4414,7 +4845,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(107, 27, 50, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   /* 2 */
   opacity: 0;
   transition: opacity 0.15s linear;
@@ -4597,8 +5028,8 @@ $spinner-radius:                                 math.floor(((variables.$spinner
 .uk-notification-message {
   position: relative;
   padding: 15px;
-  background: #ffefec;
-  color: #4d3a3c;
+  background: #f8f8f8;
+  color: #666;
   font-size: 1.25rem;
   line-height: 1.4;
   cursor: pointer;
@@ -4628,7 +5059,7 @@ $spinner-radius:                                 math.floor(((variables.$spinner
  * Primary
  */
 .uk-notification-message-primary {
-  color: rgba(248, 113, 113, 0.7);
+  color: #1e87f0;
 }
 
 /*
@@ -4677,9 +5108,9 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   max-width: 200px;
   padding: 3px 6px;
   /* 5 */
-  background: #4d3a3c;
+  background: #666;
   border-radius: 2px;
-  color: #fecdd3;
+  color: #ffffff;
   font-size: 12px;
 }
 
@@ -4899,19 +5330,19 @@ $countdown-separator-font-size-m:                3rem !default; // 48px
   /* 3 */
   line-height: 0;
   /* 4 */
-  color: #d08a92;
+  color: #999;
   /* 5 */
   text-decoration: none;
 }
 
 /* Hover */
 .uk-iconnav > * > a:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* Active */
 .uk-iconnav > .uk-active > a {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* Modifier: 'uk-iconnav-vertical'
@@ -5467,17 +5898,17 @@ ul.uk-nav-sub {
  * Items
  */
 .uk-nav-default > li > a {
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-nav-default > li > a:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* Active */
 .uk-nav-default > li.uk-active > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /*
@@ -5491,7 +5922,7 @@ ul.uk-nav-sub {
  * Header
  */
 .uk-nav-default .uk-nav-header {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /*
@@ -5510,15 +5941,15 @@ ul.uk-nav-sub {
 }
 
 .uk-nav-default .uk-nav-sub a {
-  color: #d08a92;
+  color: #999;
 }
 
 .uk-nav-default .uk-nav-sub a:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 .uk-nav-default .uk-nav-sub li.uk-active > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Primary modifier
@@ -5532,17 +5963,17 @@ ul.uk-nav-sub {
  * Items
  */
 .uk-nav-primary > li > a {
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-nav-primary > li > a:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* Active */
 .uk-nav-primary > li.uk-active > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /*
@@ -5556,7 +5987,7 @@ ul.uk-nav-sub {
  * Header
  */
 .uk-nav-primary .uk-nav-header {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /*
@@ -5575,15 +6006,15 @@ ul.uk-nav-sub {
 }
 
 .uk-nav-primary .uk-nav-sub a {
-  color: #d08a92;
+  color: #999;
 }
 
 .uk-nav-primary .uk-nav-sub a:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 .uk-nav-primary .uk-nav-sub li.uk-active > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Secondary modifier
@@ -5597,17 +6028,17 @@ ul.uk-nav-sub {
  * Items
  */
 .uk-nav-secondary > li > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Hover */
 .uk-nav-secondary > li > a:hover {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Active */
 .uk-nav-secondary > li.uk-active > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /*
@@ -5615,24 +6046,24 @@ ul.uk-nav-sub {
  */
 .uk-nav-secondary .uk-nav-subtitle {
   font-size: 0.875rem;
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-nav-secondary > li > a:hover .uk-nav-subtitle {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* Active */
 .uk-nav-secondary > li.uk-active > a .uk-nav-subtitle {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /*
  * Header
  */
 .uk-nav-secondary .uk-nav-header {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /*
@@ -5651,15 +6082,15 @@ ul.uk-nav-sub {
 }
 
 .uk-nav-secondary .uk-nav-sub a {
-  color: #d08a92;
+  color: #999;
 }
 
 .uk-nav-secondary .uk-nav-sub a:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 .uk-nav-secondary .uk-nav-sub li.uk-active > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Size modifier
@@ -5765,7 +6196,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
 /* Container
  ========================================================================== */
 .uk-navbar-container:not(.uk-navbar-transparent) {
-  background: #ffefec;
+  background: #f8f8f8;
 }
 
 /* Groups
@@ -5889,7 +6320,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  */
 .uk-navbar-nav > li > a {
   padding: 0 15px;
-  color: #d08a92;
+  color: #999;
 }
 
 /*
@@ -5898,17 +6329,17 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  */
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a[aria-expanded=true] {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* OnClick */
 .uk-navbar-nav > li > a:active {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Parent icon modifier
@@ -5926,7 +6357,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  ========================================================================== */
 .uk-navbar-item {
   padding: 0 15px;
-  color: #4d3a3c;
+  color: #666;
 }
 
 /*
@@ -5940,12 +6371,12 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  ========================================================================== */
 .uk-navbar-toggle {
   padding: 0 15px;
-  color: #d08a92;
+  color: #999;
 }
 
 .uk-navbar-toggle:hover,
 .uk-navbar-toggle[aria-expanded=true] {
-  color: #4d3a3c;
+  color: #666;
   text-decoration: none;
 }
 
@@ -5989,8 +6420,8 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
   width: 200px;
   /* 2 */
   padding: 15px;
-  background: #ffefec;
-  color: #4d3a3c;
+  background: #fff;
+  color: #666;
 }
 
 /*
@@ -6001,7 +6432,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
 }
 
 .uk-navbar-dropdown :focus-visible {
-  outline-color: #bb3c4b !important;
+  outline-color: #333 !important;
 }
 
 /*
@@ -6092,17 +6523,17 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  * Items
  */
 .uk-navbar-dropdown-nav > li > a {
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-navbar-dropdown-nav > li > a:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* Active */
 .uk-navbar-dropdown-nav > li.uk-active > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /*
@@ -6116,7 +6547,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  * Header
  */
 .uk-navbar-dropdown-nav .uk-nav-header {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /*
@@ -6130,15 +6561,15 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  * Sublists
  */
 .uk-navbar-dropdown-nav .uk-nav-sub a {
-  color: #d08a92;
+  color: #999;
 }
 
 .uk-navbar-dropdown-nav .uk-nav-sub a:hover {
-  color: #4d3a3c;
+  color: #666;
 }
 
 .uk-navbar-dropdown-nav .uk-nav-sub li.uk-active > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Dropbar
@@ -6198,18 +6629,18 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
   /* 2 */
   column-gap: 0.25em;
   /* 3 */
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-subnav > * > a:hover {
-  color: #4d3a3c;
+  color: #666;
   text-decoration: none;
 }
 
 /* Active */
 .uk-subnav > .uk-active > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Divider modifier
@@ -6251,32 +6682,32 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
 .uk-subnav-pill > * > :first-child {
   padding: 5px 10px;
   background: transparent;
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-subnav-pill > * > a:hover {
-  background-color: #ffefec;
-  color: #4d3a3c;
+  background-color: #f8f8f8;
+  color: #666;
 }
 
 /* OnClick */
 .uk-subnav-pill > * > a:active {
-  background-color: #ffefec;
-  color: #4d3a3c;
+  background-color: #f8f8f8;
+  color: #666;
 }
 
 /* Active */
 .uk-subnav-pill > .uk-active > a {
-  background-color: rgba(248, 113, 113, 0.7);
-  color: #fecdd3;
+  background-color: #1e87f0;
+  color: #ffffff;
 }
 
 /* Disabled
  * The same for all style modifiers
  ========================================================================== */
 .uk-subnav > .uk-disabled > a {
-  color: #d08a92;
+  color: #999;
 }
 
 /* ========================================================================
@@ -6301,12 +6732,12 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  ========================================================================== */
 .uk-breadcrumb > * > * {
   font-size: 0.875rem;
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-breadcrumb > * > :hover {
-  color: #4d3a3c;
+  color: #666;
   text-decoration: none;
 }
 
@@ -6314,7 +6745,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
 /* Active */
 .uk-breadcrumb > :last-child > span,
 .uk-breadcrumb > :last-child > a:not([href]) {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /*
@@ -6330,7 +6761,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
   margin: 0 20px 0 calc(20px - 4px);
   /* 2 */
   font-size: 0.875rem;
-  color: #d08a92;
+  color: #999;
 }
 
 /* ========================================================================
@@ -6384,23 +6815,23 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
   column-gap: 0.25em;
   /* 3 */
   padding: 5px 10px;
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-pagination > * > :hover {
-  color: #4d3a3c;
+  color: #666;
   text-decoration: none;
 }
 
 /* Active */
 .uk-pagination > .uk-active > * {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* Disabled */
 .uk-pagination > .uk-disabled > * {
-  color: #d08a92;
+  color: #999;
 }
 
 /* ========================================================================
@@ -6455,23 +6886,23 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
   justify-content: center;
   /* 4 */
   padding: 5px 10px;
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover */
 .uk-tab > * > a:hover {
-  color: #4d3a3c;
+  color: #666;
   text-decoration: none;
 }
 
 /* Active */
 .uk-tab > .uk-active > a {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /* Disabled */
 .uk-tab > .uk-disabled > a {
-  color: #d08a92;
+  color: #999;
 }
 
 /* Position modifier
@@ -6512,17 +6943,17 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  */
 .uk-slidenav {
   padding: 5px 10px;
-  color: rgba(77, 58, 60, 0.5);
+  color: rgba(102, 102, 102, 0.5);
 }
 
 /* Hover */
 .uk-slidenav:hover {
-  color: rgba(77, 58, 60, 0.9);
+  color: rgba(102, 102, 102, 0.9);
 }
 
 /* OnClick */
 .uk-slidenav:active {
-  color: rgba(77, 58, 60, 0.5);
+  color: rgba(102, 102, 102, 0.5);
 }
 
 /* Icon modifier
@@ -6588,7 +7019,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(77, 58, 60, 0.2);
+  background: transparent;
   /* 1 */
   text-indent: 100%;
   overflow: hidden;
@@ -6597,17 +7028,17 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
 
 /* Hover */
 .uk-dotnav > * > :hover {
-  background-color: rgba(77, 58, 60, 0.6);
+  background-color: rgba(102, 102, 102, 0.6);
 }
 
 /* OnClick */
 .uk-dotnav > * > :active {
-  background-color: rgba(77, 58, 60, 0.2);
+  background-color: rgba(102, 102, 102, 0.2);
 }
 
 /* Active */
 .uk-dotnav > .uk-active > * {
-  background-color: rgba(77, 58, 60, 0.6);
+  background-color: rgba(102, 102, 102, 0.6);
 }
 
 /* Modifier: 'uk-dotnav-vertical'
@@ -6649,8 +7080,8 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
   min-width: 200px;
   /* 3 */
   padding: 15px;
-  background: #ffefec;
-  color: #4d3a3c;
+  background: #fff;
+  color: #666;
 }
 
 /*
@@ -6661,7 +7092,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
 }
 
 .uk-dropdown :focus-visible {
-  outline-color: #bb3c4b !important;
+  outline-color: #333 !important;
 }
 
 /* Size modifier
@@ -6711,13 +7142,13 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  * Items
  */
 .uk-dropdown-nav > li > a {
-  color: #d08a92;
+  color: #999;
 }
 
 /* Hover + Active */
 .uk-dropdown-nav > li > a:hover,
 .uk-dropdown-nav > li.uk-active > a {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /*
@@ -6731,7 +7162,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  * Header
  */
 .uk-dropdown-nav .uk-nav-header {
-  color: #bb3c4b;
+  color: #333;
 }
 
 /*
@@ -6745,12 +7176,12 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  * Sublists
  */
 .uk-dropdown-nav .uk-nav-sub a {
-  color: #d08a92;
+  color: #999;
 }
 
 .uk-dropdown-nav .uk-nav-sub a:hover,
 .uk-dropdown-nav .uk-nav-sub li.uk-active > a {
-  color: #4d3a3c;
+  color: #666;
 }
 
 /* ========================================================================
@@ -6776,7 +7207,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
   left: 0;
   z-index: 1010;
   /* 5 */
-  background: #6b1b32;
+  background: #000;
   /* 6 */
   opacity: 0;
   transition: opacity 0.15s linear;
@@ -6799,7 +7230,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  * Focus
  */
 .uk-lightbox :focus-visible {
-  outline-color: rgba(254, 205, 211, 0.7);
+  outline-color: rgba(255, 255, 255, 0.7);
 }
 
 /* Page
@@ -6833,7 +7264,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
   justify-content: center;
   align-items: center;
   /* 3 */
-  color: rgba(254, 205, 211, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   /* 4 */
   will-change: transform, opacity;
 }
@@ -6857,26 +7288,26 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
  ========================================================================== */
 .uk-lightbox-toolbar {
   padding: 10px 10px;
-  background: rgba(107, 27, 50, 0.3);
-  color: rgba(254, 205, 211, 0.7);
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .uk-lightbox-toolbar > * {
-  color: rgba(254, 205, 211, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Toolbar Icon (Close)
  ========================================================================== */
 .uk-lightbox-toolbar-icon {
   padding: 5px;
-  color: rgba(254, 205, 211, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /*
  * Hover
  */
 .uk-lightbox-toolbar-icon:hover {
-  color: #fecdd3;
+  color: #fff;
 }
 
 /* Button (Slidenav)
@@ -6888,8 +7319,8 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
   box-sizing: border-box;
   width: 50px;
   height: 50px;
-  background: rgba(107, 27, 50, 0.3);
-  color: rgba(254, 205, 211, 0.7);
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.7);
   /* 1 */
   display: inline-flex;
   justify-content: center;
@@ -6898,7 +7329,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
 
 /* Hover */
 .uk-lightbox-button:hover {
-  color: #fecdd3;
+  color: #fff;
 }
 
 /* OnClick */
@@ -7976,13 +8407,13 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
 .uk-text-lead {
   font-size: 1.5rem;
   line-height: 1.5;
-  color: #bb3c4b;
+  color: #333;
 }
 
 .uk-text-meta {
   font-size: 0.875rem;
   line-height: 1.4;
-  color: #d08a92;
+  color: #999;
 }
 
 /* Size modifiers
@@ -8053,19 +8484,19 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
 /* Color modifiers
  ========================================================================== */
 .uk-text-muted {
-  color: #d08a92 !important;
+  color: #999 !important;
 }
 
 .uk-text-emphasis {
-  color: #bb3c4b !important;
+  color: #333 !important;
 }
 
 .uk-text-primary {
-  color: rgba(248, 113, 113, 0.7) !important;
+  color: #1e87f0 !important;
 }
 
 .uk-text-secondary {
-  color: rgba(253, 164, 175, 0.4) !important;
+  color: #222 !important;
 }
 
 .uk-text-success {
@@ -8096,7 +8527,7 @@ $navbar-nav-gap:                                 0px !default; // Must have a un
   /* 3 */
   display: inline-block;
   /* 4 */
-  background-color: rgba(248, 113, 113, 0.7);
+  background-color: #1e87f0;
 }
 
 /* Alignment modifiers
@@ -8432,15 +8863,15 @@ iframe[data-uk-cover] {
 }
 
 .uk-background-muted {
-  background-color: #ffefec;
+  background-color: #f8f8f8;
 }
 
 .uk-background-primary {
-  background-color: rgba(248, 113, 113, 0.7);
+  background-color: #1e87f0;
 }
 
 .uk-background-secondary {
-  background-color: rgba(253, 164, 175, 0.4);
+  background-color: #222;
 }
 
 /* Size
@@ -9141,7 +9572,7 @@ iframe[data-uk-cover] {
   /* 1 */
   font-size: 1.5rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: #bb3c4b;
+  color: #333;
   /* 2 */
   text-decoration: none;
 }
@@ -9154,7 +9585,7 @@ iframe[data-uk-cover] {
 
 /* Hover */
 .uk-logo:hover {
-  color: #bb3c4b;
+  color: #333;
   /* 1 */
   text-decoration: none;
 }
