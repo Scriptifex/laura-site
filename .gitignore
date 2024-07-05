@@ -4,7 +4,8 @@
 Gemfile.lock
 
 # Node.js and NPM
-node_modules
+node_modules/*
+!node_modules/uikit
 npm-debug.log*
 package-lock.json
 codekit-config.json
