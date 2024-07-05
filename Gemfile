@@ -19,6 +19,7 @@ gem 'webrick', '~> 1.7'
 gem 'rdoc'
 
 group :dependabot do
+  gem 'dependabot-common'
   gem 'dependabot-bundler'
   gem 'dependabot-github_actions'
   gem 'dependabot-git_submodules'

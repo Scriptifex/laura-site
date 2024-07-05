@@ -8,7 +8,8 @@ node_modules
 npm-debug.log*
 package-lock.json
 codekit-config.json
-uikit
+uikit/build
+uikit/dist
 
 # macOS
 .DS_Store

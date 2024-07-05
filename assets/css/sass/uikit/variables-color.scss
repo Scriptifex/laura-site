@@ -1,0 +1,842 @@
+$page-background-color: #fce4e3ff !default;
+$large-background-color: #facac8ff !default;
+$medium-background-color: #f5a9a6ff !default;
+$small-background-color: #f28985ff !default;
+$emphasis-background-color: #f5a9a6ff !default;
+$muted-background-color: #facac8ff !default;
+$bright-background-color: #d46366ff !default;
+$bold-background-color: #823133ff !default;
+$fade-background-color: #facac8ff !default;
+$page-element-color: #874356 !default;
+$large-element-color: #da627d !default;
+$medium-element-color: #a53860 !default;
+$small-element-color: #a53860 !default;
+$emphasis-element-color: #452c2aff !default;
+$muted-element-color: #4f3232ff !default;
+$bright-element-color: #d46366ff !default;
+$bold-element-color: #823133ff !default;
+$fade-element-color: #f5a9a6ff !default;
+$page-text-color: color.adjust($page-element-color, $saturation: -10%) !default;
+$large-text-color: color.adjust($large-element-color, $saturation: -10%) !default;
+$medium-text-color: color.adjust($medium-element-color, $saturation: -10%) !default;
+$small-text-color: color.adjust($small-element-color, $saturation: -10%) !default;
+$emphasis-text-color: color.adjust($emphasis-element-color, $saturation: -10%) !default;
+$muted-text-color: color.adjust($muted-element-color, $saturation: -10%) !default;
+$bright-text-color: color.adjust($bright-element-color, $saturation: -10%) !default;
+$bold-text-color: color.adjust($bold-element-color, $saturation: -10%) !default;
+$fade-text-color: color.adjust($fade-element-color, $saturation: -10%) !default;
+
+$page-background-color-hover: color.adjust($page-background-color, $lightness: -5%) !default;
+$large-background-color-hover: color.adjust($large-background-color, $lightness: -5%) !default;
+$medium-background-color-hover: color.adjust($medium-background-color, $lightness: -5%) !default;
+$small-background-color-hover: color.adjust($small-background-color, $lightness: -5%) !default;
+$emphasis-background-color-hover: color.adjust($emphasis-background-color, $lightness: -5%) !default;
+$muted-background-color-hover: color.adjust($muted-background-color, $lightness: -5%) !default;
+$bright-background-color-hover: color.adjust($bright-background-color, $lightness: -5%) !default;
+$bold-background-color-hover: color.adjust($bold-background-color, $lightness: -5%) !default;
+$fade-background-color-hover: color.adjust($fade-background-color, $lightness: -5%) !default;
+$page-element-color-hover: color.adjust($page-element-color, $lightness: -5%) !default;
+$large-element-color-hover: color.adjust($large-element-color, $lightness: -5%) !default;
+$medium-element-color-hover: color.adjust($medium-element-color, $lightness: -5%) !default;
+$small-element-color-hover: color.adjust($small-element-color, $lightness: -5%) !default;
+$emphasis-element-color-hover: color.adjust($emphasis-element-color, $lightness: -5%) !default;
+$muted-element-color-hover: color.adjust($muted-element-color, $lightness: -5%) !default;
+$bright-element-color-hover: color.adjust($bright-element-color, $lightness: -5%) !default;
+$bold-element-color-hover: color.adjust($bold-element-color, $lightness: -5%) !default;
+$fade-element-color-hover: color.adjust($fade-element-color, $lightness: -5%) !default;
+$page-text-color-hover: color.adjust($page-element-color-hover, $saturation: -10%) !default;
+$large-text-color-hover: color.adjust($large-element-color-hover, $saturation: -10%) !default;
+$medium-text-color-hover: color.adjust($medium-element-color-hover, $saturation: -10%) !default;
+$small-text-color-hover: color.adjust($small-element-color-hover, $saturation: -10%) !default;
+$emphasis-text-color-hover: color.adjust($emphasis-element-color-hover, $saturation: -10%) !default;
+$muted-text-color-hover: color.adjust($muted-element-color-hover, $saturation: -10%) !default;
+$bright-text-color-hover: color.adjust($bright-element-color-hover, $saturation: -10%) !default;
+$bold-text-color-hover: color.adjust($bold-element-color-hover, $saturation: -10%) !default;
+$fade-text-color-hover: color.adjust($fade-element-color-hover, $saturation: -10%) !default;
+
+$page-background-color-active: color.adjust($page-background-color, $lightness: -10%) !default;
+$large-background-color-active: color.adjust($large-background-color, $lightness: -10%) !default;
+$medium-background-color-active: color.adjust($medium-background-color, $lightness: -10%) !default;
+$small-background-color-active: color.adjust($small-background-color, $lightness: -10%) !default;
+$emphasis-background-color-active: color.adjust($emphasis-background-color, $lightness: -10%) !default;
+$muted-background-color-active: color.adjust($muted-background-color, $lightness: -10%) !default;
+$bright-background-color-active: color.adjust($bright-background-color, $lightness: -10%) !default;
+$bold-background-color-active: color.adjust($bold-background-color, $lightness: -10%) !default;
+$fade-background-color-active: color.adjust($fade-background-color, $lightness: -10%) !default;
+$page-element-color-active: color.adjust($page-element-color, $lightness: -10%) !default;
+$large-element-color-active: color.adjust($large-element-color, $lightness: -10%) !default;
+$medium-element-color-active: color.adjust($medium-element-color, $lightness: -10%) !default;
+$small-element-color-active: color.adjust($small-element-color, $lightness: -10%) !default;
+$emphasis-element-color-active: color.adjust($emphasis-element-color, $lightness: -10%) !default;
+$muted-element-color-active: color.adjust($muted-element-color, $lightness: -10%) !default;
+$bright-element-color-active: color.adjust($bright-element-color, $lightness: -10%) !default;
+$bold-element-color-active: color.adjust($bold-element-color, $lightness: -10%) !default;
+$fade-element-color-active: color.adjust($fade-element-color, $lightness: -10%) !default;
+$page-text-color-active: color.adjust($page-element-color-active, $saturation: -10%) !default;
+$large-text-color-active: color.adjust($large-element-color-active, $saturation: -10%) !default;
+$medium-text-color-active: color.adjust($medium-element-color-active, $saturation: -10%) !default;
+$small-text-color-active: color.adjust($small-element-color-active, $saturation: -10%) !default;
+$emphasis-text-color-active: color.adjust($emphasis-element-color-active, $saturation: -10%) !default;
+$muted-text-color-active: color.adjust($muted-element-color-active, $saturation: -10%) !default;
+$bright-text-color-active: color.adjust($bright-element-color-active, $saturation: -10%) !default;
+$bold-text-color-active: color.adjust($bold-element-color-active, $saturation: -10%) !default;
+$fade-text-color-active: color.adjust($fade-element-color-active, $saturation: -10%) !default;
+
+$inverse-page-background-color: $page-element-color !default;
+$inverse-large-background-color: $large-element-color !default;
+$inverse-medium-background-color: $medium-element-color !default;
+$inverse-small-background-color: $small-element-color !default;
+$inverse-emphasis-background-color: $emphasis-element-color !default;
+$inverse-muted-background-color: $muted-element-color !default;
+$inverse-bright-background-color: $bright-element-color !default;
+$inverse-bold-background-color: $bold-element-color !default;
+$inverse-fade-background-color: $fade-element-color !default;
+$inverse-page-element-color: $page-background-color !default;
+$inverse-large-element-color: $large-background-color !default;
+$inverse-medium-element-color: $medium-background-color !default;
+$inverse-small-element-color: $small-background-color !default;
+$inverse-emphasis-element-color: $emphasis-background-color !default;
+$inverse-muted-element-color: $muted-background-color !default;
+$inverse-bright-element-color: $bright-background-color !default;
+$inverse-bold-element-color: $bold-background-color !default;
+$inverse-fade-element-color: $fade-background-color !default;
+$inverse-page-text-color: color.adjust($inverse-page-element-color, $saturation: -10%) !default;
+$inverse-large-text-color: color.adjust($inverse-large-element-color, $saturation: -10%) !default;
+$inverse-medium-text-color: color.adjust($inverse-medium-element-color, $saturation: -10%) !default;
+$inverse-small-text-color: color.adjust($inverse-small-element-color, $saturation: -10%) !default;
+$inverse-emphasis-text-color: color.adjust($inverse-emphasis-element-color, $saturation: -10%) !default;
+$inverse-muted-text-color: color.adjust($inverse-muted-element-color, $saturation: -10%) !default;
+$inverse-bright-text-color: color.adjust($inverse-bright-element-color, $saturation: -10%) !default;
+$inverse-bold-text-color: color.adjust($inverse-bold-element-color, $saturation: -10%) !default;
+$inverse-fade-text-color: color.adjust($inverse-fade-element-color, $saturation: -10%) !default;
+
+$inverse-page-background-color-hover: $page-element-color-hover !default;
+$inverse-large-background-color-hover: $large-element-color-hover !default;
+$inverse-medium-background-color-hover: $medium-element-color-hover !default;
+$inverse-small-background-color-hover: $small-element-color-hover !default;
+$inverse-emphasis-background-color-hover: $emphasis-element-color-hover !default;
+$inverse-muted-background-color-hover: $muted-element-color-hover !default;
+$inverse-bright-background-color-hover: $bright-element-color-hover !default;
+$inverse-bold-background-color-hover: $bold-element-color-hover !default;
+$inverse-fade-background-color-hover: $fade-element-color-hover !default;
+$inverse-page-element-color-hover: $page-background-color-hover !default;
+$inverse-large-element-color-hover: $large-background-color-hover !default;
+$inverse-medium-element-color-hover: $medium-background-color-hover !default;
+$inverse-small-element-color-hover: $small-background-color-hover !default;
+$inverse-emphasis-element-color-hover: $emphasis-background-color-hover !default;
+$inverse-muted-element-color-hover: $muted-background-color-hover !default;
+$inverse-bright-element-color-hover: $bright-background-color-hover !default;
+$inverse-bold-element-color-hover: $bold-background-color-hover !default;
+$inverse-fade-element-color-hover: $fade-background-color-hover !default;
+$inverse-page-text-color-hover: color.adjust($inverse-page-element-color-hover, $saturation: -10%) !default;
+$inverse-large-text-color-hover: color.adjust($inverse-large-element-color-hover, $saturation: -10%) !default;
+$inverse-medium-text-color-hover: color.adjust($inverse-medium-element-color-hover, $saturation: -10%) !default;
+$inverse-small-text-color-hover: color.adjust($inverse-small-element-color-hover, $saturation: -10%) !default;
+$inverse-emphasis-text-color-hover: color.adjust($inverse-emphasis-element-color-hover, $saturation: -10%) !default;
+$inverse-muted-text-color-hover: color.adjust($inverse-muted-element-color-hover, $saturation: -10%) !default;
+$inverse-bright-text-color-hover: color.adjust($inverse-bright-element-color-hover, $saturation: -10%) !default;
+$inverse-bold-text-color-hover: color.adjust($inverse-bold-element-color-hover, $saturation: -10%) !default;
+$inverse-fade-text-color-hover: color.adjust($inverse-fade-element-color-hover, $saturation: -10%) !default;
+
+$inverse-page-background-color-active: $page-element-color-active !default;
+$inverse-large-background-color-active: $large-element-color-active !default;
+$inverse-medium-background-color-active: $medium-element-color-active !default;
+$inverse-small-background-color-active: $small-element-color-active !default;
+$inverse-emphasis-background-color-active: $emphasis-element-color-active !default;
+$inverse-muted-background-color-active: $muted-element-color-active !default;
+$inverse-bright-background-color-active: $bright-element-color-active !default;
+$inverse-bold-background-color-active: $bold-element-color-active !default;
+$inverse-fade-background-color-active: $fade-element-color-active !default;
+$inverse-page-element-color-active: $page-background-color-active !default;
+$inverse-large-element-color-active: $large-background-color-active !default;
+$inverse-medium-element-color-active: $medium-background-color-active !default;
+$inverse-small-element-color-active: $small-background-color-active !default;
+$inverse-emphasis-element-color-active: $emphasis-background-color-active !default;
+$inverse-muted-element-color-active: $muted-background-color-active !default;
+$inverse-bright-element-color-active: $bright-background-color-active !default;
+$inverse-bold-element-color-active: $bold-background-color-active !default;
+$inverse-fade-element-color-active: $fade-background-color-active !default;
+$inverse-page-text-color-active: color.adjust($inverse-page-element-color-active, $saturation: -10%) !default;
+$inverse-large-text-color-active: color.adjust($inverse-large-element-color-active, $saturation: -10%) !default;
+$inverse-medium-text-color-active: color.adjust($inverse-medium-element-color-active, $saturation: -10%) !default;
+$inverse-small-text-color-active: color.adjust($inverse-small-element-color-active, $saturation: -10%) !default;
+$inverse-emphasis-text-color-active: color.adjust($inverse-emphasis-element-color-active, $saturation: -10%) !default;
+$inverse-muted-text-color-active: color.adjust($inverse-muted-element-color-active, $saturation: -10%) !default;
+$inverse-bright-text-color-active: color.adjust($inverse-bright-element-color-active, $saturation: -10%) !default;
+$inverse-bold-text-color-active: color.adjust($inverse-bold-element-color-active, $saturation: -10%) !default;
+$inverse-fade-text-color-active: color.adjust($inverse-fade-element-color-active, $saturation: -10%) !default;
+
+// Colors
+$global-color: #666 !default;
+$global-primary-color: #1e87f0 !default;
+$global-secondary-color: #222 !default;
+$global-emphasis-color: #333 !default;
+$global-accent-color-1: #ffd !default;
+$global-dark-color: black !default;
+$global-inverse-color: #fff !default;
+$global-link-color: $global-primary-color !default;
+$global-link-hover-color: #0f6ecd !default;
+$global-muted-color: #999 !default;
+$global-success-color: #32d296 !default;
+$global-warning-color: #faa05a !default;
+$global-danger-color: #f0506e !default;
+$inverse-global-color-mode: light !default;
+$inverse-global-color: rgba($global-inverse-color, 0.7) !default;
+$inverse-global-inverse-color: $global-color !default;
+$inverse-global-emphasis-color: $global-inverse-color !default;
+$inverse-global-muted-color: rgba($global-inverse-color, 0.5) !default;
+$close-color: $global-muted-color !default;
+$close-hover-color: $global-color !default;
+$inverse-close-color: $inverse-global-muted-color !default;
+$inverse-close-hover-color: $inverse-global-color !default;
+$global-shadow-color: #000 !default;
+$global-select-color: #39f !default;
+// Backgrounds
+$global-background: #fff !default;
+$global-muted-background: #f8f8f8 !default;
+$global-primary-background: $global-primary-color !default;
+$global-secondary-background: $global-secondary-color !default;
+$global-success-background: $global-success-color !default;
+$global-warning-background: $global-warning-color !default;
+$global-danger-background: $global-danger-color !default;
+$inverse-global-muted-background: rgba($global-inverse-color, 0.1) !default;
+$inverse-global-primary-background: $global-inverse-color !default;
+// Borders
+$global-border: #e5e5e5 !default;
+$inverse-global-border: rgba($global-background, 0.2) !default;
+// Box-Shadows
+$global-small-box-shadow: 0 2px 8px rgba($global-shadow-color,0.08) !default;
+$global-medium-box-shadow: 0 5px 15px rgba($global-shadow-color,0.08) !default;
+$global-large-box-shadow: 0 14px 25px rgba($global-shadow-color,0.16) !default;
+$global-xlarge-box-shadow: 0 28px 50px rgba($global-shadow-color,0.16) !default;
+
+$base-blockquote-color: $global-emphasis-color !default;
+$base-blockquote-footer-color: $global-color !default;
+$base-body-color: $global-color !default;
+$base-code-color: $global-danger-background !default;
+$base-em-color: $global-danger-background !default;
+$base-focus-outline: $global-emphasis-color !default;
+$base-heading-color: $global-emphasis-color !default;
+$base-hr-border: $global-border !default;
+$base-ins-color: $global-color !default;
+$base-link-color: $global-link-color !default;
+$base-link-hover-color: $global-link-hover-color !default;
+$base-mark-color: $global-color !default;
+$base-pre-border: $global-border !default;
+$base-pre-color: $global-color !default;
+$base-selection-color: $global-inverse-color !default;
+$inverse-base-blockquote-color: $inverse-global-emphasis-color !default;
+$inverse-base-blockquote-footer-color: $inverse-global-color !default;
+$inverse-base-code-color: $inverse-global-color !default;
+$inverse-base-color: $inverse-global-color !default;
+$inverse-base-em-color: $inverse-global-emphasis-color !default;
+$inverse-base-focus-outline: $inverse-global-emphasis-color !default;
+$inverse-base-heading-color: $inverse-global-emphasis-color !default;
+$inverse-base-hr-border: $inverse-global-border !default;
+$inverse-base-link-color: $inverse-global-emphasis-color !default;
+$inverse-base-link-hover-color: $inverse-global-emphasis-color !default;
+// Background
+$base-body-background: $global-background !default;
+$base-code-background: $global-muted-background !default;
+$base-ins-background: $global-accent-color-1 !default;
+$base-mark-background: $global-accent-color-1 !default;
+$base-pre-background: $global-background !default;
+$base-selection-background: $global-select-color !default;
+
+// Accordion
+$accordion-icon-color: $global-color !default;
+$accordion-title-color: $global-emphasis-color !default;
+$accordion-title-hover-color: $global-color !default;
+$inverse-accordion-title-color: $inverse-global-emphasis-color !default;
+$inverse-accordion-title-hover-color: $inverse-global-color !default;
+
+// Color
+$alert-color: $global-color !default;
+$alert-danger-color: $global-danger-background !default;
+$alert-primary-color: $global-primary-background !default;
+$alert-success-color: $global-success-background !default;
+$alert-warning-color: $global-warning-background !default;
+// Background
+$alert-background: $global-muted-background !default;
+$alert-danger-background: color.adjust(color.mix(white, $global-danger-background, 40%), $lightness: 20%) !default;
+$alert-primary-background: color.adjust(color.mix(white, $global-primary-background, 40%), $lightness: 20%) !default;
+$alert-success-background: color.adjust(color.mix(white, $global-success-background, 40%), $lightness: 25%) !default;
+$alert-warning-background: color.adjust(color.mix(white, $global-warning-background, 45%), $lightness: 15%) !default;
+
+// Color
+$article-meta-color: $global-muted-color !default;
+$article-meta-link-color: $article-meta-color !default;
+$article-meta-link-hover-color: $global-color !default;
+$inverse-article-meta-color: $inverse-global-muted-color !default;
+
+$background-default-background: $global-background !default;
+$background-muted-background: $global-muted-background !default;
+$background-primary-background: $global-primary-background !default;
+$background-secondary-background: $global-secondary-background !default;
+
+// Color
+$badge-color: $global-inverse-color !default;
+$inverse-badge-color: $inverse-global-inverse-color !default;
+// Background
+$badge-background: $global-primary-background !default;
+$inverse-badge-background: $inverse-global-primary-background !default;
+
+// Color
+$breadcrumb-item-color: $global-muted-color !default;
+$breadcrumb-item-hover-color: $global-color !default;
+$breadcrumb-item-active-color: $global-color !default;
+$breadcrumb-divider-color: $global-muted-color !default;
+$inverse-breadcrumb-item-color: $inverse-global-muted-color !default;
+$inverse-breadcrumb-item-hover-color: $inverse-global-color !default;
+$inverse-breadcrumb-item-active-color: $inverse-global-color !default;
+$inverse-breadcrumb-divider-color: $inverse-global-muted-color !default;
+
+// Color
+$button-default-color: $global-emphasis-color !default;
+$button-default-active-color: $global-emphasis-color !default;
+$button-default-hover-color: $global-emphasis-color !default;
+$button-disabled-color: $global-muted-color !default;
+$button-primary-color: $global-inverse-color !default;
+$button-primary-active-color: $global-inverse-color !default;
+$button-primary-hover-color: $global-inverse-color !default;
+$button-secondary-color: $global-inverse-color !default;
+$button-secondary-active-color: $global-inverse-color !default;
+$button-secondary-hover-color: $global-inverse-color !default;
+$button-danger-color: $global-inverse-color !default;
+$button-danger-active-color: $global-inverse-color !default;
+$button-danger-hover-color: $global-inverse-color !default;
+$button-link-color: $global-emphasis-color !default;
+$button-link-disabled-color: $global-muted-color !default;
+$button-link-hover-color: $global-muted-color !default;
+$button-text-color: $global-emphasis-color !default;
+$button-text-disabled-color: $global-muted-color !default;
+$button-text-hover-color: $global-emphasis-color !default;
+$inverse-button-default-color: $inverse-global-inverse-color !default;
+$inverse-button-default-active-color: $inverse-global-inverse-color !default;
+$inverse-button-default-hover-color: $inverse-global-inverse-color !default;
+$inverse-button-primary-color: $inverse-global-inverse-color !default;
+$inverse-button-primary-active-color: $inverse-global-inverse-color !default;
+$inverse-button-primary-hover-color: $inverse-global-inverse-color !default;
+$inverse-button-secondary-color: $inverse-global-inverse-color !default;
+$inverse-button-secondary-active-color: $inverse-global-inverse-color !default;
+$inverse-button-secondary-hover-color: $inverse-global-inverse-color !default;
+$inverse-button-text-color: $inverse-global-emphasis-color !default;
+$inverse-button-text-hover-color: $inverse-global-muted-color !default;
+$inverse-button-text-disabled-color: $inverse-global-muted-color !default;
+$inverse-button-link-color: $inverse-global-emphasis-color !default;
+$inverse-button-link-hover-color: $inverse-global-muted-color !default;
+// Background
+$button-default-background: transparent !default;
+$button-default-active-background: transparent !default;
+$button-default-hover-background: transparent !default;
+$button-disabled-background: transparent !default;
+$button-primary-background: $global-primary-background !default;
+$button-primary-active-background: color.adjust($button-primary-background, $lightness: -10%) !default;
+$button-primary-hover-background: color.adjust($button-primary-background, $lightness: -5%) !default;
+$button-secondary-background: $global-secondary-background !default;
+$button-secondary-active-background: color.adjust($button-secondary-background, $lightness: -10%) !default;
+$button-secondary-hover-background: color.adjust($button-secondary-background, $lightness: -5%) !default;
+$button-danger-background: $global-danger-background !default;
+$button-danger-active-background: color.adjust($button-danger-background, $lightness: -10%) !default;
+$button-danger-hover-background: color.adjust($button-danger-background, $lightness: -5%) !default;
+$inverse-button-default-background: $inverse-global-primary-background !default;
+$inverse-button-default-active-background: color.adjust($inverse-button-default-background, $lightness: -10%) !default;
+$inverse-button-default-hover-background: color.adjust($inverse-button-default-background, $lightness: -5%) !default;
+$inverse-button-primary-background: $inverse-global-primary-background !default;
+$inverse-button-primary-active-background: color.adjust($inverse-button-primary-background, $lightness: -10%) !default;
+$inverse-button-primary-hover-background: color.adjust($inverse-button-primary-background, $lightness: -5%) !default;
+$inverse-button-secondary-background: $inverse-global-primary-background !default;
+$inverse-button-secondary-active-background: color.adjust($inverse-button-secondary-background, $lightness: -10%) !default;
+$inverse-button-secondary-hover-background: color.adjust($inverse-button-secondary-background, $lightness: -5%) !default;
+// Border
+$button-default-border: $global-border !default;
+$button-default-active-border: color.adjust($global-border, $lightness: -30%) !default;
+$button-default-hover-border: color.adjust($global-border, $lightness: -20%) !default;
+$button-disabled-border: $global-border !default;
+$button-text-border: currentColor !default;
+
+// Color + Background
+$card-badge-color: $global-inverse-color !default;
+$card-badge-background: $global-primary-background !default;
+$card-hover-background: $global-muted-background !default;
+$card-default-background: $global-muted-background !default;
+$card-default-color: $global-color !default;
+$card-default-title-color: $global-emphasis-color !default;
+$card-default-hover-background: color.adjust($card-default-background, $lightness: -5%) !default;
+$card-default-color-mode: dark !default;
+$card-primary-background: $global-primary-background !default;
+$card-primary-color: $global-inverse-color !default;
+$card-primary-title-color: $card-primary-color !default;
+$card-primary-hover-background: color.adjust($card-primary-background, $lightness: -5%) !default;
+$card-primary-color-mode: light !default;
+$card-secondary-background: $global-secondary-background !default;
+$card-secondary-color: $global-inverse-color !default;
+$card-secondary-title-color: $card-secondary-color !default;
+$card-secondary-hover-background: color.adjust($card-secondary-background, $lightness: -5%) !default;
+$card-secondary-color-mode: light !default;
+$inverse-card-badge-background: $inverse-global-primary-background !default;
+$inverse-card-badge-color: $inverse-global-inverse-color !default;
+
+// Color
+$column-divider-rule-color: $global-border !default;
+$inverse-column-divider-rule-color: $inverse-global-border !default;
+
+// Color
+$comment-meta-color: $global-muted-color !default;
+
+$description-list-term-color: $global-emphasis-color !default;
+$description-list-divider-term-border: $global-border !default;
+
+// Color
+$divider-icon-color: $global-border !default;
+$divider-icon-line-border: $global-border !default;
+$divider-small-border: $global-border !default;
+$divider-vertical-border: $global-border !default;
+$inverse-divider-icon-color: $inverse-global-border !default;
+$inverse-divider-icon-line-border: $inverse-global-border !default;
+$inverse-divider-small-border: $inverse-global-border !default;
+$inverse-divider-vertical-border: $inverse-global-border !default;
+
+// Color
+$dotnav-item-background: rgba($global-color, 0.2) !default;
+$dotnav-item-hover-background: rgba($global-color, 0.6) !default;
+$dotnav-item-onclick-background: rgba($global-color, 0.2) !default;
+$dotnav-item-active-background: rgba($global-color, 0.6) !default;
+$inverse-dotnav-item-background: rgba($inverse-global-color, 0.5) !default;
+$inverse-dotnav-item-hover-background: rgba($inverse-global-color, 0.9) !default;
+$inverse-dotnav-item-onclick-background: rgba($inverse-global-color, 0.5) !default;
+$inverse-dotnav-item-active-background: rgba($inverse-global-color, 0.9) !default;
+
+// Color
+$dropbar-background: $global-muted-background !default;
+$dropbar-color: $global-color !default;
+$dropbar-color-mode: dark !default;
+
+// Color
+$dropdown-background: $global-muted-background !default;
+$dropdown-color: $global-color !default;
+$dropdown-color-mode: dark !default;
+
+// Color
+$dropdown-nav-item-color: $global-muted-color !default;
+$dropdown-nav-item-hover-color: $global-color !default;
+$dropdown-nav-header-color: $global-emphasis-color !default;
+$dropdown-nav-divider-border: $global-border !default;
+$dropdown-nav-sublist-item-color: $global-muted-color !default;
+$dropdown-nav-sublist-item-hover-color: $global-color !default;
+
+// Color
+$form-range-track-background: color.adjust($global-muted-background, $lightness: -5%) !default;
+$form-range-track-focus-background: color.adjust($form-range-track-background, $lightness: -5%) !default;
+$form-range-thumb-background: $global-color !default;
+$form-background: $global-muted-background !default;
+$form-color: $global-color !default;
+$form-focus-background: color.adjust($form-background, $lightness: -5%) !default;
+$form-focus-color: $global-color !default;
+$form-disabled-background: $global-muted-background !default;
+$form-disabled-color: $global-muted-color !default;
+$form-placeholder-color: $global-muted-color !default;
+$form-danger-color: $global-danger-background !default;
+$form-success-color: $global-success-background !default;
+$form-select-icon-color: $global-color !default;
+$form-select-option-color: $global-color !default;
+$form-select-disabled-icon-color: $global-muted-color !default;
+$form-datalist-icon-color: $global-color !default;
+$form-radio-background: color.adjust($global-muted-background, $lightness: -5%) !default;
+$form-radio-focus-background: color.adjust($form-radio-background, $lightness: -5%) !default;
+$form-radio-checked-background: $global-primary-background !default;
+$form-radio-checked-icon-color: $global-inverse-color !default;
+$form-radio-checked-focus-background: color.adjust($global-primary-background, $lightness: -10%) !default;
+$form-radio-disabled-background: $global-muted-background !default;
+$form-radio-disabled-icon-color: $global-muted-color !default;
+$form-icon-color: $global-muted-color !default;
+$form-icon-hover-color: $global-color !default;
+$inverse-global-muted-background: rgba($global-inverse-color, 0.1) !default;
+$inverse-form-background: $inverse-global-muted-background !default;
+$inverse-form-color: $inverse-global-color !default;
+$inverse-form-focus-background: color.adjust($inverse-form-background, $alpha: 0.05) !default;
+$inverse-form-focus-color: $inverse-global-color !default;
+$inverse-form-placeholder-color: $inverse-global-muted-color !default;
+$inverse-form-select-icon-color: $inverse-global-color !default;
+$inverse-form-datalist-icon-color: $inverse-global-color !default;
+$inverse-form-radio-background: $inverse-global-muted-background !default;
+$inverse-form-radio-focus-background: color.adjust($inverse-form-radio-background, $alpha: 0.05) !default;
+$inverse-form-radio-checked-background: $inverse-global-primary-background !default;
+$inverse-form-radio-checked-icon-color: $inverse-global-inverse-color !default;
+$inverse-form-radio-checked-focus-background: color.adjust($inverse-global-primary-background, $alpha: 0.1) !default;
+$inverse-form-icon-color: $inverse-global-muted-color !default;
+$inverse-form-icon-hover-color: $inverse-global-color !default;
+
+// Color
+$grid-divider-border: $global-border !default;
+$inverse-grid-divider-border: $inverse-global-border !default;
+
+// Color
+$heading-divider-border: $global-border !default;
+$heading-bullet-border: $global-border !default;
+$heading-line-border: $global-border !default;
+$inverse-heading-divider-border: $inverse-global-border !default;
+$inverse-heading-bullet-border: $inverse-global-border !default;
+$inverse-heading-line-border: $inverse-global-border !default;
+
+// Color
+$icon-link-color: $global-muted-color !default;
+$icon-link-hover-color: $global-color !default;
+$icon-link-active-color: color.adjust($global-color, $lightness: -5%) !default;
+$icon-button-background: $global-muted-background !default;
+$icon-button-color: $global-muted-color !default;
+$icon-button-hover-background: color.adjust($icon-button-background, $lightness: -5%) !default;
+$icon-button-hover-color: $global-color !default;
+$icon-button-active-background: color.adjust($icon-button-background, $lightness: -10%) !default;
+$icon-button-active-color: $global-color !default;
+$inverse-icon-link-color: $inverse-global-muted-color !default;
+$inverse-icon-link-hover-color: $inverse-global-color !default;
+$inverse-icon-link-active-color: $inverse-global-color !default;
+$inverse-icon-button-background: $inverse-global-muted-background !default;
+$inverse-icon-button-color: $inverse-global-muted-color !default;
+$inverse-icon-button-hover-background: color.adjust($inverse-icon-button-background, $alpha: 0.05) !default;
+$inverse-icon-button-hover-color: $inverse-global-color !default;
+$inverse-icon-button-active-background: color.adjust($inverse-icon-button-background, $alpha: 0.1) !default;
+$inverse-icon-button-active-color: $inverse-global-color !default;
+
+// Color
+$iconnav-item-color: $global-muted-color !default;
+$iconnav-item-hover-color: $global-color !default;
+$iconnav-item-active-color: $global-color !default;
+$inverse-iconnav-item-color: $inverse-global-muted-color !default;
+$inverse-iconnav-item-hover-color: $inverse-global-color !default;
+$inverse-iconnav-item-active-color: $inverse-global-color !default;
+
+// Color
+$label-background: $global-primary-background !default;
+$label-color: $global-inverse-color !default;
+$label-success-background: $global-success-background !default;
+$label-success-color: $global-inverse-color !default;
+$label-warning-background: $global-warning-background !default;
+$label-warning-color: $global-inverse-color !default;
+$label-danger-background: $global-danger-background !default;
+$label-danger-color: $global-inverse-color !default;
+$inverse-label-background: $inverse-global-primary-background !default;
+$inverse-label-color: $inverse-global-inverse-color !default;
+
+// Color
+$lightbox-background: $global-dark-color !default;
+$lightbox-focus-outline: $inverse-global-color !default;
+$lightbox-item-color: $inverse-global-color !default;
+$lightbox-toolbar-background: rgba($global-dark-color, 0.3) !default;
+$lightbox-toolbar-color: $inverse-global-color !default;
+$lightbox-toolbar-icon-color: $inverse-global-color !default;
+$lightbox-toolbar-icon-hover-color: $global-inverse-color !default;
+$lightbox-button-background: $lightbox-toolbar-background !default;
+$lightbox-button-color: $inverse-global-color !default;
+$lightbox-button-hover-color: $global-inverse-color !default;
+
+$link-muted-color: $global-muted-color !default;
+$link-muted-hover-color: $global-color !default;
+$link-text-hover-color: $global-muted-color !default;
+$link-heading-hover-color: $global-primary-background !default;
+$link-heading-hover-text-decoration: none !default;
+$inverse-link-muted-color: $inverse-global-muted-color !default;
+$inverse-link-muted-hover-color: $inverse-global-color !default;
+$inverse-link-text-hover-color: $inverse-global-muted-color !default;
+$inverse-link-heading-hover-color: $inverse-global-primary-background !default;
+
+// Color
+$list-muted-color: $global-muted-color !default;
+$list-emphasis-color: $global-emphasis-color !default;
+$list-primary-color: $global-primary-background !default;
+$list-secondary-color: $global-secondary-background !default;
+$list-bullet-icon-color: $global-color !default;
+$list-divider-border: $global-border !default;
+$list-striped-background: $global-muted-background !default;
+$inverse-list-muted-color: $inverse-global-muted-color !default;
+$inverse-list-emphasis-color: $inverse-global-emphasis-color !default;
+$inverse-list-primary-color: $inverse-global-primary-background !default;
+$inverse-list-secondary-color: $inverse-global-primary-background !default;
+$inverse-list-divider-border: $inverse-global-border !default;
+$inverse-list-striped-background: $inverse-global-muted-background !default;
+$inverse-list-bullet-icon-color: $inverse-global-color !default;
+
+// Color
+$marker-background: $global-secondary-background !default;
+$marker-color: $global-inverse-color !default;
+$marker-hover-color: $global-inverse-color !default;
+$inverse-marker-background: $global-muted-background !default;
+$inverse-marker-color: $global-color !default;
+$inverse-marker-hover-color: $global-color !default;
+
+// Color
+$modal-background: rgba($global-dark-color, 0.6) !default;
+$modal-dialog-background: $global-background !default;
+$modal-header-background: $global-muted-background !default;
+$modal-footer-background: $global-muted-background !default;
+$modal-close-outside-color: color.adjust($global-inverse-color, $lightness: 20%) !default;
+$modal-close-outside-hover-color: $global-inverse-color !default;
+
+// Color
+$nav-default-item-color: $global-muted-color !default;
+$nav-default-item-hover-color: $global-color !default;
+$nav-default-item-active-color: $global-emphasis-color !default;
+$nav-default-header-color: $global-emphasis-color !default;
+$nav-default-divider-border: $global-border !default;
+$nav-default-sublist-item-color: $global-muted-color !default;
+$nav-default-sublist-item-hover-color: $global-color !default;
+$nav-default-sublist-item-active-color: $global-emphasis-color !default;
+$nav-primary-item-color: $global-muted-color !default;
+$nav-primary-item-hover-color: $global-color !default;
+$nav-primary-item-active-color: $global-emphasis-color !default;
+$nav-primary-header-color: $global-emphasis-color !default;
+$nav-primary-divider-border: $global-border !default;
+$nav-primary-sublist-item-color: $global-muted-color !default;
+$nav-primary-sublist-item-hover-color: $global-color !default;
+$nav-primary-sublist-item-active-color: $global-emphasis-color !default;
+$nav-secondary-item-color: $global-emphasis-color !default;
+$nav-secondary-item-hover-color: $global-emphasis-color !default;
+$nav-secondary-item-active-color: $global-emphasis-color !default;
+$nav-secondary-subtitle-color: $global-muted-color !default;
+$nav-secondary-subtitle-hover-color: $global-color !default;
+$nav-secondary-subtitle-active-color: $global-emphasis-color !default;
+$nav-secondary-header-color: $global-emphasis-color !default;
+$nav-secondary-divider-border: $global-border !default;
+$nav-secondary-sublist-item-color: $global-muted-color !default;
+$nav-secondary-sublist-item-hover-color: $global-color !default;
+$nav-secondary-sublist-item-active-color: $global-emphasis-color !default;
+$nav-dividers-border: $global-border !default;
+$inverse-nav-default-item-color: $inverse-global-muted-color !default;
+$inverse-nav-default-item-hover-color: $inverse-global-color !default;
+$inverse-nav-default-item-active-color: $inverse-global-emphasis-color !default;
+$inverse-nav-default-header-color: $inverse-global-emphasis-color !default;
+$inverse-nav-default-divider-border: $inverse-global-border !default;
+$inverse-nav-default-sublist-item-color: $inverse-global-muted-color !default;
+$inverse-nav-default-sublist-item-hover-color: $inverse-global-color !default;
+$inverse-nav-default-sublist-item-active-color: $inverse-global-emphasis-color !default;
+$inverse-nav-primary-item-color: $inverse-global-muted-color !default;
+$inverse-nav-primary-item-hover-color: $inverse-global-color !default;
+$inverse-nav-primary-item-active-color: $inverse-global-emphasis-color !default;
+$inverse-nav-primary-header-color: $inverse-global-emphasis-color !default;
+$inverse-nav-primary-divider-border: $inverse-global-border !default;
+$inverse-nav-primary-sublist-item-color: $inverse-global-muted-color !default;
+$inverse-nav-primary-sublist-item-hover-color: $inverse-global-color !default;
+$inverse-nav-primary-sublist-item-active-color: $inverse-global-emphasis-color !default;
+$inverse-nav-secondary-item-color: $inverse-global-emphasis-color !default;
+$inverse-nav-secondary-item-hover-color: $inverse-global-emphasis-color !default;
+$inverse-nav-secondary-item-active-color: $inverse-global-emphasis-color !default;
+$inverse-nav-secondary-subtitle-color: $inverse-global-muted-color !default;
+$inverse-nav-secondary-subtitle-hover-color: $inverse-global-color !default;
+$inverse-nav-secondary-subtitle-active-color: $inverse-global-emphasis-color !default;
+$inverse-nav-secondary-header-color: $inverse-global-emphasis-color !default;
+$inverse-nav-secondary-divider-border: $inverse-global-border !default;
+$inverse-nav-secondary-sublist-item-color: $inverse-global-muted-color !default;
+$inverse-nav-secondary-sublist-item-hover-color: $inverse-global-color !default;
+$inverse-nav-secondary-sublist-item-active-color: $inverse-global-emphasis-color !default;
+$inverse-nav-dividers-border: $inverse-global-border !default;
+
+// Color
+$navbar-background: $global-muted-background !default;
+$navbar-color-mode: dark !default;
+$navbar-nav-item-color: $global-muted-color !default;
+$navbar-nav-item-hover-color: $global-color !default;
+$navbar-nav-item-onclick-color: $global-emphasis-color !default;
+$navbar-nav-item-active-color: $global-emphasis-color !default;
+$navbar-item-color: $global-color !default;
+$navbar-toggle-color: $global-muted-color !default;
+$navbar-toggle-hover-color: $global-color !default;
+$navbar-dropdown-background: $global-muted-background !default;
+$navbar-dropdown-color: $global-color !default;
+$navbar-dropdown-color-mode: dark !default;
+$navbar-dropdown-nav-item-color: $global-muted-color !default;
+$navbar-dropdown-nav-item-hover-color: $global-color !default;
+$navbar-dropdown-nav-item-active-color: $global-emphasis-color !default;
+$navbar-dropdown-nav-header-color: $global-emphasis-color !default;
+$navbar-dropdown-nav-divider-border: $global-border !default;
+$navbar-dropdown-nav-sublist-item-color: $global-muted-color !default;
+$navbar-dropdown-nav-sublist-item-hover-color: $global-color !default;
+$navbar-dropdown-nav-sublist-item-active-color: $global-emphasis-color !default;
+$inverse-navbar-nav-item-color: $inverse-global-muted-color !default;
+$inverse-navbar-nav-item-hover-color: $inverse-global-color !default;
+$inverse-navbar-nav-item-onclick-color: $inverse-global-emphasis-color !default;
+$inverse-navbar-nav-item-active-color: $inverse-global-emphasis-color !default;
+$inverse-navbar-item-color: $inverse-global-color !default;
+$inverse-navbar-toggle-color: $inverse-global-muted-color !default;
+$inverse-navbar-toggle-hover-color: $inverse-global-color !default;
+
+// Color
+$notification-message-background: $global-muted-background !default;
+$notification-message-color: $global-color !default;
+$notification-message-primary-color: $global-primary-background !default;
+$notification-message-success-color: $global-success-background !default;
+$notification-message-warning-color: $global-warning-background !default;
+$notification-message-danger-color: $global-danger-background !default;
+
+// Color
+$offcanvas-bar-background: $global-secondary-background !default;
+$offcanvas-bar-color-mode: light !default;
+$offcanvas-overlay-background: rgba($global-dark-color, 0.1) !default;
+
+// Color
+$overlay-default-background: rgba($global-background, 0.8) !default;
+$overlay-default-color-mode: dark !default;
+$overlay-primary-background: rgba($global-secondary-background, 0.8) !default;
+$overlay-primary-color-mode: light !default;
+
+// Color
+$pagination-item-color: $global-muted-color !default;
+$pagination-item-hover-color: $global-color !default;
+$pagination-item-active-color: $global-color !default;
+$pagination-item-disabled-color: $global-muted-color !default;
+$inverse-pagination-item-color: $inverse-global-muted-color !default;
+$inverse-pagination-item-hover-color: $inverse-global-color !default;
+$inverse-pagination-item-active-color: $inverse-global-color !default;
+$inverse-pagination-item-disabled-color: $inverse-global-muted-color !default;
+
+// Color
+$placeholder-background: $global-muted-background !default;
+
+// Color
+$progress-background: $global-muted-background !default;
+$progress-bar-background: $global-primary-background !default;
+
+// Color
+$search-color: $global-color !default;
+$search-placeholder-color: $global-muted-color !default;
+$search-icon-color: $global-muted-color !default;
+$search-default-background: $global-muted-background !default;
+$search-default-focus-background: color.adjust($search-default-background, $lightness: -2%) !default;
+$search-navbar-background: $global-background !default;
+$search-navbar-focus-background: color.adjust($search-navbar-background, $lightness: -1%) !default;
+$search-medium-background: transparent !default;
+$search-large-background: transparent !default;
+$search-toggle-color: $global-muted-color !default;
+$search-toggle-hover-color: $global-color !default;
+$inverse-search-color: $inverse-global-color !default;
+$inverse-search-placeholder-color: $inverse-global-muted-color !default;
+$inverse-search-icon-color: $inverse-global-muted-color !default;
+$inverse-search-default-background: $inverse-global-muted-background !default;
+$inverse-search-default-focus-background: color.adjust($inverse-search-default-background, $alpha: 0.05) !default;
+$inverse-search-navbar-background: $inverse-global-muted-background !default;
+$inverse-search-navbar-focus-background: color.adjust($inverse-search-navbar-background, $alpha: 0.05) !default;
+$inverse-search-medium-background: transparent !default;
+$inverse-search-large-background: transparent !default;
+$inverse-search-toggle-color: $inverse-global-muted-color !default;
+$inverse-search-toggle-hover-color: $inverse-global-color !default;
+
+// Color
+$section-default-background: $global-background !default;
+$section-default-color-mode: dark !default;
+$section-muted-background: $global-muted-background !default;
+$section-muted-color-mode: dark !default;
+$section-primary-background: $global-primary-background !default;
+$section-primary-color-mode: light !default;
+$section-secondary-background: $global-secondary-background !default;
+$section-secondary-color-mode: light !default;
+
+// Color
+$slidenav-color: rgba($global-color, 0.5) !default;
+$slidenav-hover-color: rgba($global-color, 0.9) !default;
+$slidenav-active-color: rgba($global-color, 0.5) !default;
+$inverse-slidenav-color: rgba($inverse-global-color, 0.7) !default;
+$inverse-slidenav-hover-color: rgba($inverse-global-color, 0.95) !default;
+$inverse-slidenav-active-color: rgba($inverse-global-color, 0.7) !default;
+
+// Color
+$subnav-item-color: $global-muted-color !default;
+$subnav-item-hover-color: $global-color !default;
+$subnav-item-active-color: $global-emphasis-color !default;
+$subnav-divider-border: $global-border !default;
+$subnav-pill-item-background: transparent !default;
+$subnav-pill-item-color: $subnav-item-color !default;
+$subnav-pill-item-hover-background: $global-muted-background !default;
+$subnav-pill-item-hover-color: $global-color !default;
+$subnav-pill-item-onclick-background: $subnav-pill-item-hover-background !default;
+$subnav-pill-item-onclick-color: $subnav-pill-item-hover-color !default;
+$subnav-pill-item-active-background: $global-primary-background !default;
+$subnav-pill-item-active-color: $global-inverse-color !default;
+$subnav-item-disabled-color: $global-muted-color !default;
+$inverse-subnav-item-color: $inverse-global-muted-color !default;
+$inverse-subnav-item-hover-color: $inverse-global-color !default;
+$inverse-subnav-item-active-color: $inverse-global-emphasis-color !default;
+$inverse-subnav-divider-border: $inverse-global-border !default;
+$inverse-subnav-pill-item-background: transparent !default;
+$inverse-subnav-pill-item-color: $inverse-global-muted-color !default;
+$inverse-subnav-pill-item-hover-background: $inverse-global-muted-background !default;
+$inverse-subnav-pill-item-hover-color: $inverse-global-color !default;
+$inverse-subnav-pill-item-onclick-background: $inverse-subnav-pill-item-hover-background !default;
+$inverse-subnav-pill-item-onclick-color: $inverse-subnav-pill-item-hover-color !default;
+$inverse-subnav-pill-item-active-background: $inverse-global-primary-background !default;
+$inverse-subnav-pill-item-active-color: $inverse-global-inverse-color !default;
+$inverse-subnav-item-disabled-color: $inverse-global-muted-color !default;
+
+// Color
+$tab-item-color: $global-muted-color !default;
+$tab-item-hover-color: $global-color !default;
+$tab-item-active-color: $global-emphasis-color !default;
+$tab-item-disabled-color: $global-muted-color !default;
+$inverse-tab-item-color: $inverse-global-muted-color !default;
+$inverse-tab-item-hover-color: $inverse-global-color !default;
+$inverse-tab-item-active-color: $inverse-global-emphasis-color !default;
+$inverse-tab-item-disabled-color: $inverse-global-muted-color !default;
+
+// Color
+$table-header-cell-color: $global-color !default;
+$table-caption-color: $global-muted-color !default;
+$table-row-active-background: $global-accent-color-1 !default;
+$table-divider-border: $global-border !default;
+$table-striped-row-background: $global-muted-background !default;
+$table-hover-row-background: $table-row-active-background !default;
+$inverse-table-header-cell-color: $inverse-global-color !default;
+$inverse-table-caption-color: $inverse-global-muted-color !default;
+$inverse-table-row-active-background: color.adjust($inverse-global-muted-background, $alpha: -0.02) !default;
+$inverse-table-divider-border: $inverse-global-border !default;
+$inverse-table-striped-row-background: $inverse-global-muted-background !default;
+$inverse-table-hover-row-background: $inverse-table-row-active-background !default;
+
+// Color
+$text-lead-color: $global-emphasis-color !default;
+$text-meta-color: $global-muted-color !default;
+$text-muted-color: $global-muted-color !default;
+$text-emphasis-color: $global-emphasis-color !default;
+$text-primary-color: $global-primary-background !default;
+$text-secondary-color: $global-secondary-background !default;
+$text-success-color: $global-success-background !default;
+$text-warning-color: $global-warning-background !default;
+$text-danger-color: $global-danger-background !default;
+$text-background-color: $global-primary-background !default;
+$inverse-text-lead-color: $inverse-global-color !default;
+$inverse-text-meta-color: $inverse-global-muted-color !default;
+$inverse-text-muted-color: $inverse-global-muted-color !default;
+$inverse-text-emphasis-color: $inverse-global-emphasis-color !default;
+$inverse-text-primary-color: $inverse-global-primary-background !default;
+$inverse-text-secondary-color: $inverse-global-primary-background !default;
+
+// Color
+$tile-default-background: $global-background !default;
+$tile-default-color-mode: dark !default;
+$tile-muted-background: $global-muted-background !default;
+$tile-muted-color-mode: dark !default;
+$tile-primary-background: $global-primary-background !default;
+$tile-primary-color-mode: light !default;
+$tile-secondary-background: $global-secondary-background !default;
+$tile-secondary-color-mode: light !default;
+
+// Color
+$tooltip-background: $global-color !default;
+$tooltip-color: $global-inverse-color !default;
+
+// Color
+$totop-color: $global-muted-color !default;
+$totop-hover-color: $global-color !default;
+$totop-active-color: $global-emphasis-color !default;
+$inverse-totop-color: $inverse-global-muted-color !default;
+$inverse-totop-hover-color: $inverse-global-color !default;
+$inverse-totop-active-color: $inverse-global-emphasis-color !default;
+
+// Color
+$panel-scrollable-border: $global-border !default;
+$box-shadow-bottom-background: rgba($global-shadow-color,0.3) !default;
+$dragover-box-shadow: 0 0 20px rgba($global-shadow-color,0.3) !default;
+// Color
+$logo-color: $global-emphasis-color !default;
+$logo-hover-color: $global-emphasis-color !default;
+$inverse-logo-color: $inverse-global-emphasis-color !default;
+$inverse-logo-hover-color: $inverse-global-emphasis-color !default;
+
