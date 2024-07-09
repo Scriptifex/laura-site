@@ -5,12 +5,10 @@ main:
     url: /about
   - title: "Contact"
     url: /contact
-  - title: "Blog"
-    url: /blog
+  
 mobile:
   - title: "About Us"
     url: /about
   - title: "Contact"
     url: /contact
-  - title: "Blog"
-    url: /blog
+  

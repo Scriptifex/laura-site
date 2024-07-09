@@ -667,7 +667,7 @@ h6, .uk-h6,
   margin: 0 0 20px 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: normal;
-  color: #892e29;
+  color: #fce4e3;
   text-transform: none;
 }
 
@@ -3486,7 +3486,6 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   color: #fce4e3;
 }
 
-/* stylelint-disable no-irregular-whitespace */
 /* ========================================================================
    Component: Alert
  ========================================================================== */
@@ -4075,7 +4074,6 @@ $spinner-radius:                                 math.floor(((variables.$spinner
   color: #8b605f;
 }
 
-/* stylelint-disable no-irregular-whitespace */
 /* ========================================================================
    Component: Accordion
  ========================================================================== */

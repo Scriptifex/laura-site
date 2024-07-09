@@ -2,14 +2,16 @@
 layout: page
 ---
 
-{{ content }}
-
 <ul>
     {% for member in site.members %}
-        <li>
-            <h2>{{ member.name }}</h2>
-            <h3>{{ member.position }}</h3>
-            <p>{{ member.content | markdownify }}</p>
-        </li>
+        <div class="uk-section uk-padding-remove-vertical">
+            <img class="uk-align-right" src="assets/images/members/{{ member.pic }}" alt="image of {{ member.name }}"/>
+            <div class="uk-container uk-container-expand">
+                <h2 class="uk-heading-medium uk-text-emphasis">{{ member.name }}</h2>
+                <h3 class="uk-heading-small uk-text-muted">{{ member.position }}</h3>
+                <p>{{ member.content | markdownify }}</p>
+            </div>
+            
+        </div>
     {% endfor %}
 </ul>
