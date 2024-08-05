@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/st4rlab/miniml#readme",
   "dependencies": {
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "sass-embedded": "^1.77.2",
     "stylelint": "^16.5.0",
     "stylelint-config-recommended-scss": "^14.0.0",
