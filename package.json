@@ -30,6 +30,6 @@
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-scss": "^6.3.0",
-    "uikit": "^3.20.10"
+    "uikit": "^3.21.11"
   }
 }
