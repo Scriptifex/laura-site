@@ -21,3 +21,5 @@ uikit/dist
 .sass-cache
 _asset_bundler_cache
 _site
+package-lock.json
+Gemfile.lock
