@@ -24,7 +24,7 @@
   "homepage": "https://github.com/st4rlab/miniml#readme",
   "dependencies": {
     "autoprefixer": "^10.4.19",
-    "sass-embedded": "^1.77.2",
+    "sass-embedded": "^1.79.4",
     "stylelint": "^16.5.0",
     "stylelint-config-recommended-scss": "^14.0.0",
     "stylelint-config-standard": "^36.0.0",
